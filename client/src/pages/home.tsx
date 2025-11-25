@@ -25,7 +25,7 @@ export default function Home() {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div 
@@ -53,7 +53,7 @@ export default function Home() {
               variants={fadeIn} 
               className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
             >
-              We build high-performance MVPs and robust testing infrastructures for visionary companies.
+              We create and test digital products at every stage — from concept to full implementation.
             </motion.p>
             
             <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
