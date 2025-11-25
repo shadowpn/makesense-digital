@@ -161,26 +161,38 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 container mx-auto px-6">
+      <section className="py-16 container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-16 md:p-20 text-center bg-gradient-to-br from-primary/10 via-transparent to-primary/5 border border-primary/20"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5"
         >
-          <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="rounded-full text-lg px-8">Get in Touch</Button>
-            </Link>
-            <Link href="/services">
-              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5">
-                View Services
-              </Button>
-            </Link>
+          <div 
+            className="absolute inset-0 z-0 opacity-30"
+            style={{
+              backgroundImage: `url(${heroBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
+          
+          <div className="relative z-20">
+            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="rounded-full text-lg px-8">Get in Touch</Button>
+              </Link>
+              <Link href="/services">
+                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5">
+                  View Services
+                </Button>
+              </Link>
+            </div>
           </div>
         </motion.div>
       </section>
