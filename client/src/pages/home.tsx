@@ -92,7 +92,7 @@ export default function Home() {
           </Link>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 md:grid-rows-2 gap-6 h-[720px]">
+        <div className="grid md:grid-cols-3 md:grid-rows-2 gap-6 h-[684px]">
           <motion.div 
             whileHover={{ scale: 0.98 }}
             className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5"
