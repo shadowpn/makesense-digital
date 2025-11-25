@@ -114,7 +114,7 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={sensestudyhubImg} alt="Sense StudyHub" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
-            <div className="absolute bottom-0 left-0 p-6 z-20">
+            <div className="absolute bottom-[30px] left-0 p-6 z-20">
               <div className="mb-2 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-mono inline-block backdrop-blur-md">EDTECH</div>
               <h3 className="text-xl font-display font-bold">Sense StudyHub</h3>
             </div>
@@ -126,7 +126,7 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={oraidImg} alt="Ora-Aid" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
-            <div className="absolute bottom-0 left-0 p-6 z-20">
+            <div className="absolute bottom-[30px] left-0 p-6 z-20">
               <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
               <h3 className="text-xl font-display font-bold mb-2">Ora-Aid</h3>
               <p className="text-gray-300 text-sm">Self-adhesive intraoral patch. Safe, simple, and effective solution for oral wound care and treatment.</p>
@@ -139,7 +139,7 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
-            <div className="absolute bottom-0 left-0 p-6 z-20">
+            <div className="absolute bottom-[30px] left-0 p-6 z-20">
               <div className="mb-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
               <h3 className="text-xl font-display font-bold">MVP Platform</h3>
             </div>
