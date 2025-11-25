@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
+import aussiewayImg from "@assets/stock_images/australia_landscape__7085a306.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -97,11 +98,11 @@ export default function Home() {
             className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" alt="Fintech App" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute bottom-0 left-0 p-10 z-20">
-              <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">FINTECH</div>
-              <h3 className="text-4xl font-display font-bold mb-2">Nova Banking</h3>
-              <p className="text-gray-300 max-w-md">Complete redesign of a digital banking experience focusing on accessibility and speed.</p>
+              <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">LEGAL TECH</div>
+              <h3 className="text-4xl font-display font-bold mb-2">Aussie Way Visa</h3>
+              <p className="text-gray-300 max-w-md">A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.</p>
             </div>
           </motion.div>
 
@@ -112,8 +113,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute bottom-0 left-0 p-8 z-20">
-              <div className="mb-3 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono inline-block backdrop-blur-md">DEV TOOLS</div>
-              <h3 className="text-2xl font-display font-bold">CodeStream</h3>
+              <div className="mb-3 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
+              <h3 className="text-2xl font-display font-bold">MVP Platform</h3>
             </div>
           </motion.div>
 
