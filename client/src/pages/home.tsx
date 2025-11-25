@@ -7,7 +7,7 @@ import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
-import oraidImg from "@assets/stock_images/medical_therapeutic__0bfc71d6.jpg";
+import oraidImg from "@assets/изображение_1764057133973.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -129,7 +129,7 @@ export default function Home() {
             <div className="absolute bottom-[30px] left-0 p-6 z-20">
               <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
               <h3 className="text-xl font-display font-bold mb-2">Ora-Aid</h3>
-              <p className="text-gray-300 text-sm">Self-adhesive intraoral patch. Safe, simple, and effective solution for oral wound care and treatment.</p>
+              <p className="text-gray-300 text-xs">Self-adhesive intraoral patch for safe, effective oral wound care.</p>
             </div>
           </motion.div>
 
