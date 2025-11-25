@@ -128,7 +128,8 @@ export default function Home() {
             <img src={oraidImg} alt="Ora-Aid" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 z-20">
               <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
-              <h3 className="text-xl font-display font-bold">Ora-Aid</h3>
+              <h3 className="text-xl font-display font-bold mb-2">Ora-Aid</h3>
+              <p className="text-gray-300 text-sm">Self-adhesive intraoral patch. Safe, simple, and effective solution for oral wound care and treatment.</p>
             </div>
           </motion.div>
 
