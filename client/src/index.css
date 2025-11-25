@@ -103,4 +103,13 @@
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
   }
+
+  /* Hide scrollbar but allow scrolling */
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
