@@ -74,7 +74,7 @@ export function Sidebar() {
                 <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
               </div>
             </motion.div>
-            <h1 className="text-lg font-display font-bold tracking-tight mb-1 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            <h1 className="text-2xl font-display font-black tracking-tight mb-1 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
               SensePower
               <br/>Digital
             </h1>
