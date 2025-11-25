@@ -177,7 +177,7 @@ export default function Home() {
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-br from-background/60 via-background/50 to-background/60" />
           
           <div className="relative z-20">
             <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
