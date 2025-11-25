@@ -165,16 +165,16 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Engineered for Excellence.</h2>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">We Build, Test & Craft.</h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                We don't just build; we verify. Our unique approach combines rapid MVP development with rigorous automated testing strategies to ensure your product scales without debt.
+                From fullstack development to rigorous QA testing and creative vibe coding. We deliver products that look stunning, work flawlessly, and delight users at every interaction.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Rapid MVP Development with Next.js",
-                  "End-to-End Automated Testing Suites",
-                  "Performance & Accessibility Audits",
-                  "Scalable Frontend Architectures"
+                  "Fullstack Development – Next.js, React, Backend APIs",
+                  "Comprehensive QA Testing – Manual, Automated & Performance",
+                  "Vibe Coding – Modern animations, polished UX, creative interactions",
+                  "Production-Ready Solutions – From MVP to Scale"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-lg">
                     <CheckCircle className="text-primary" size={20} />
@@ -184,7 +184,7 @@ export default function Home() {
               </ul>
               <Link href="/services">
                 <Button variant="outline" className="rounded-full border-primary/20 hover:bg-primary/10 text-primary">
-                  Explore Methodologies
+                  Explore Our Services
                 </Button>
               </Link>
             </div>
@@ -192,25 +192,25 @@ export default function Home() {
               <div className="space-y-4 mt-12">
                 <div className="p-8 rounded-3xl bg-background border border-white/5">
                   <Code className="mb-4 text-primary" size={32} />
-                  <h3 className="font-bold mb-2">MVP Dev</h3>
-                  <p className="text-sm text-muted-foreground">0 to 1 in weeks, not months.</p>
+                  <h3 className="font-bold mb-2">Fullstack</h3>
+                  <p className="text-sm text-muted-foreground">End-to-end solutions with modern tech stacks.</p>
                 </div>
                 <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
                   <Smartphone className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">Responsive</h3>
-                  <p className="text-sm text-muted-foreground">Mobile-first architecture.</p>
+                  <p className="text-sm text-muted-foreground">Perfect on every screen size.</p>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
-                  <Cpu className="mb-4 text-primary" size={32} />
-                  <h3 className="font-bold mb-2">Automation</h3>
-                  <p className="text-sm text-muted-foreground">Robust CI/CD pipelines.</p>
-                </div>
                 <div className="p-8 rounded-3xl bg-background border border-white/5">
                   <CheckCircle className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">QA Testing</h3>
-                  <p className="text-sm text-muted-foreground">Manual & Automated verification.</p>
+                  <p className="text-sm text-muted-foreground">Automated & manual verification.</p>
+                </div>
+                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                  <Cpu className="mb-4 text-primary" size={32} />
+                  <h3 className="font-bold mb-2">Vibe Coding</h3>
+                  <p className="text-sm text-muted-foreground">Animations & creative polish.</p>
                 </div>
               </div>
             </div>
