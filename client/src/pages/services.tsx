@@ -4,6 +4,7 @@ import { Check, Code2, Bug, Zap, Database, LayoutTemplate } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import { Button } from "@/components/ui/button";
+import { AnimatedText } from "@/components/animated-text";
 
 const services = [
   {
@@ -42,7 +43,7 @@ export default function Services() {
           className="max-w-3xl mb-20"
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            Our Expertise
+            <AnimatedText text="Our Expertise" staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" />
           </h1>
           <p className="text-xl text-muted-foreground">
             We combine engineering precision with design intuition to build

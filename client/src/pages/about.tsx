@@ -98,7 +98,7 @@ export default function About() {
 
         {/* Expertise Section */}
         <div className="border-t border-b border-white/10 py-20 mb-24">
-          <h2 className="text-4xl font-display font-bold mb-16 text-center"><AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} /></h2>
+          <h2 className="text-4xl font-display font-bold mb-16 text-center"><AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { label: "Projects", value: "50+" },
