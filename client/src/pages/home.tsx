@@ -37,7 +37,7 @@ export default function Home() {
               AVAILABLE FOR NEW PROJECTS
             </motion.div>
             
-            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[1.15] mb-8 text-glow">
+            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.95] mb-8 text-glow">
               <AnimatedText text="Designing the" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
               <br />
               <AnimatedText 
