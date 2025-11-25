@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0 opacity-40"
           style={{
@@ -26,7 +26,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
-        <div className="container mx-auto px-6 relative z-20 pt-20">
+        <div className="container mx-auto px-6 relative z-20">
           <motion.div 
             initial="initial"
             animate="animate"

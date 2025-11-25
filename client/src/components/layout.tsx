@@ -1,83 +1,7 @@
-import { Link, useLocation } from "wouter";
+import { Sidebar } from "@/components/sidebar";
 import { motion } from "framer-motion";
-import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-
-const navItems = [
-  { name: "Work", path: "/portfolio" },
-  { name: "Services", path: "/services" },
-  { name: "About", path: "/about" },
-  { name: "Research", path: "/research" },
-  { name: "Contact", path: "/contact" },
-];
-
-export function Navbar() {
-  const [location] = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/">
-          <a className="text-2xl font-display font-bold tracking-tighter hover:opacity-80 transition-opacity">
-            NEXUS<span className="text-primary">.</span>
-          </a>
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <Link key={item.path} href={item.path}>
-              <a
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location === item.path ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                {item.name}
-              </a>
-            </Link>
-          ))}
-          <Button variant="outline" className="ml-4 rounded-full border-white/10 hover:bg-white/5 hover:text-primary">
-            Book a Call
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
-      </div>
-
-      {/* Mobile Nav */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="absolute top-20 left-0 right-0 bg-background border-b border-white/5 p-6 md:hidden"
-        >
-          <div className="flex flex-col gap-4">
-            {navItems.map((item) => (
-              <Link key={item.path} href={item.path}>
-                <a
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
-              </Link>
-            ))}
-            <Button className="w-full mt-4">Book a Call</Button>
-          </div>
-        </motion.div>
-      )}
-    </nav>
-  );
-}
+import { Github, Linkedin, Twitter } from "lucide-react";
+import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -133,12 +57,14 @@ export function Footer() {
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
-      <Navbar />
-      <main className="flex-grow pt-20">
-        {children}
-      </main>
-      <Footer />
+    <div className="min-h-screen bg-background text-foreground flex">
+      <Sidebar />
+      <div className="flex-grow flex flex-col">
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
