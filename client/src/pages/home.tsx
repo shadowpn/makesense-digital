@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Code, Smartphone, CheckCircle, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 const fadeIn = {
@@ -36,15 +37,16 @@ export default function Home() {
               AVAILABLE FOR NEW PROJECTS
             </motion.div>
             
-            <motion.h1 
-              variants={fadeIn} 
-              className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-tight mb-8 text-glow"
-            >
-              Designing the <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">
-                Future of Digital.
-              </span>
-            </motion.h1>
+            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-tight mb-8 text-glow">
+              <AnimatedText text="Designing the" staggerDelay={0.04} duration={0.4} />
+              <br />
+              <AnimatedText 
+                text="Future of Digital." 
+                staggerDelay={0.04} 
+                duration={0.4}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+              />
+            </div>
             
             <motion.p 
               variants={fadeIn} 
