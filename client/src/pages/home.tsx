@@ -8,6 +8,7 @@ import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_bac
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
+import beautybotImg from "@assets/stock_images/beauty_course_online_da449890.jpg";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -142,6 +143,18 @@ export default function Home() {
             <div className="absolute bottom-[30px] left-0 p-6 z-20">
               <div className="mb-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
               <h3 className="text-xl font-display font-bold">MVP Platform</h3>
+            </div>
+          </motion.div>
+
+          <motion.div 
+             whileHover={{ scale: 0.98 }}
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+            <img src={beautybotImg} alt="Beauty Bot" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
+            <div className="absolute bottom-[30px] left-0 p-6 z-20">
+              <div className="mb-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-mono inline-block backdrop-blur-md">TELEGRAM BOT</div>
+              <h3 className="text-xl font-display font-bold">Beauty Bot</h3>
             </div>
           </motion.div>
         </div>
