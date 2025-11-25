@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Smartphone, CheckCircle, Cpu } from "lucide-react";
+import { ArrowRight, Code, Smartphone, CheckCircle, Cpu, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
@@ -188,30 +188,31 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4 mt-12">
-                <div className="p-8 rounded-3xl bg-background border border-white/5">
-                  <Code className="mb-4 text-primary" size={32} />
-                  <h3 className="font-bold mb-2">Fullstack</h3>
-                  <p className="text-sm text-muted-foreground">End-to-end solutions with modern tech stacks.</p>
-                </div>
-                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
-                  <Smartphone className="mb-4 text-primary" size={32} />
-                  <h3 className="font-bold mb-2">Responsive</h3>
-                  <p className="text-sm text-muted-foreground">Perfect on every screen size.</p>
-                </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="p-8 rounded-3xl bg-background border border-white/5">
+                <Code className="mb-4 text-primary" size={32} />
+                <h3 className="font-bold mb-2">Fullstack</h3>
+                <p className="text-sm text-muted-foreground">End-to-end solutions with modern tech stacks.</p>
               </div>
-              <div className="space-y-4">
-                <div className="p-8 rounded-3xl bg-background border border-white/5">
-                  <CheckCircle className="mb-4 text-primary" size={32} />
-                  <h3 className="font-bold mb-2">QA Testing</h3>
-                  <p className="text-sm text-muted-foreground">Automated & manual verification.</p>
-                </div>
-                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
-                  <Cpu className="mb-4 text-primary" size={32} />
-                  <h3 className="font-bold mb-2">Vibe Coding</h3>
-                  <p className="text-sm text-muted-foreground">Animations & creative polish.</p>
-                </div>
+              <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                <CheckCircle className="mb-4 text-primary" size={32} />
+                <h3 className="font-bold mb-2">QA Testing</h3>
+                <p className="text-sm text-muted-foreground">Automated & manual verification.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                <Cpu className="mb-4 text-primary" size={32} />
+                <h3 className="font-bold mb-2">Vibe Coding</h3>
+                <p className="text-sm text-muted-foreground">Animations & creative polish.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                <Smartphone className="mb-4 text-primary" size={32} />
+                <h3 className="font-bold mb-2">Responsive</h3>
+                <p className="text-sm text-muted-foreground">Perfect on every screen size.</p>
+              </div>
+              <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                <Search className="mb-4 text-primary" size={32} />
+                <h3 className="font-bold mb-2">SEO</h3>
+                <p className="text-sm text-muted-foreground">Optimized for search & discovery.</p>
               </div>
             </div>
           </div>
