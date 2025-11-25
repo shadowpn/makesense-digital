@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 const navItems = [
   { name: "Work", path: "/portfolio" },
   { name: "Services", path: "/services" },
+  { name: "About", path: "/about" },
   { name: "Research", path: "/research" },
   { name: "Contact", path: "/contact" },
 ];
@@ -98,6 +99,7 @@ export function Footer() {
               <li><Link href="/"><a className="hover:text-primary transition-colors">Home</a></Link></li>
               <li><Link href="/portfolio"><a className="hover:text-primary transition-colors">Work</a></Link></li>
               <li><Link href="/services"><a className="hover:text-primary transition-colors">Services</a></Link></li>
+              <li><Link href="/about"><a className="hover:text-primary transition-colors">About</a></Link></li>
               <li><Link href="/research"><a className="hover:text-primary transition-colors">Research</a></Link></li>
             </ul>
           </div>

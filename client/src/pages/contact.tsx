@@ -46,7 +46,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Office</h3>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Wolli Creek, NSW, Australia</p>
                 </div>
               </div>
             </div>
