@@ -5,6 +5,7 @@ interface AnimatedTextProps {
   className?: string;
   staggerDelay?: number;
   duration?: number;
+  repeat?: boolean;
 }
 
 export function AnimatedText({
@@ -12,6 +13,7 @@ export function AnimatedText({
   className = "",
   staggerDelay = 0.05,
   duration = 0.5,
+  repeat = true,
 }: AnimatedTextProps) {
   const letters = text.split("");
 
@@ -35,13 +37,24 @@ export function AnimatedText({
     transition: {
       duration: duration,
       ease: [0.25, 0.46, 0.45, 0.94],
+      repeat: repeat ? Infinity : 0,
+      repeatDelay: repeat ? 300 : 0,
     },
   };
 
   return (
-    <motion.div variants={container} initial="initial" animate="animate" className={className}>
+    <motion.div 
+      variants={container} 
+      initial="initial" 
+      animate="animate"
+      className={className}
+    >
       {letters.map((letter, i) => (
-        <motion.span key={i} variants={child} className="inline-block">
+        <motion.span 
+          key={i} 
+          variants={child} 
+          className="inline-block"
+        >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}

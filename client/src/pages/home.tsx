@@ -37,13 +37,13 @@ export default function Home() {
               AVAILABLE FOR NEW PROJECTS
             </motion.div>
             
-            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-tight mb-8 text-glow">
-              <AnimatedText text="Designing the" staggerDelay={0.04} duration={0.4} />
+            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-none mb-8 text-glow">
+              <AnimatedText text="Designing the" staggerDelay={0.06} duration={0.6} />
               <br />
               <AnimatedText 
                 text="Future of Digital." 
-                staggerDelay={0.04} 
-                duration={0.4}
+                staggerDelay={0.06} 
+                duration={0.6}
                 className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
               />
             </div>
