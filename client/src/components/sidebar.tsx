@@ -14,7 +14,7 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { icon: "💬", href: "https://wa.me/61414599822", label: "WhatsApp" },
+  { icon: "Wa", href: "https://wa.me/61414599822", label: "WhatsApp" },
   { icon: "◆", href: "https://github.com/Petrychuk", label: "GitHub" },
   { icon: "in", href: "https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/", label: "LinkedIn" },
   { icon: "✉", href: "mailto:nataliia.petrychuk@gmail.com", label: "Email" },
