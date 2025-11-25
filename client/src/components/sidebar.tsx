@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import avatarImg from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
+import logoImg from "@assets/generated_images/sensepower_digital_logo.png";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
@@ -70,8 +70,8 @@ export function Sidebar() {
               whileTap={{ scale: 0.95 }}
               className="mb-4 flex justify-center"
             >
-              <div className="w-20 h-20 rounded-full border-2 border-primary/30 overflow-hidden bg-black/30 shadow-lg hover:border-primary/60 transition-colors">
-                <img src={avatarImg} alt="Profile" className="w-full h-full object-cover" />
+              <div className="w-20 h-20 rounded-lg border-2 border-primary/30 overflow-hidden bg-white/5 shadow-lg hover:border-primary/60 transition-colors">
+                <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-contain p-2" />
               </div>
             </motion.div>
             <h1 className="text-lg font-display font-bold tracking-tight mb-1 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
