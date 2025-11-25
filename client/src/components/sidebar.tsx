@@ -1,23 +1,23 @@
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Menu, X } from "lucide-react";
+import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import avatarImg from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 
 const navItems = [
-  { name: "Home", path: "/", icon: "🏠" },
-  { name: "Work", path: "/portfolio", icon: "🎨" },
-  { name: "Services", path: "/services", icon: "⚙️" },
-  { name: "About", path: "/about", icon: "👤" },
-  { name: "Research", path: "/research", icon: "📚" },
-  { name: "Contact", path: "/contact", icon: "✉️" },
+  { name: "Home", path: "/", icon: Home },
+  { name: "Work", path: "/portfolio", icon: Briefcase },
+  { name: "Services", path: "/services", icon: Zap },
+  { name: "About", path: "/about", icon: User },
+  { name: "Research", path: "/research", icon: BookOpen },
+  { name: "Contact", path: "/contact", icon: Mail },
 ];
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Mail, href: "#", label: "Email" },
+  { icon: "𝕏", href: "#", label: "Twitter" },
+  { icon: "◆", href: "#", label: "GitHub" },
+  { icon: "in", href: "#", label: "LinkedIn" },
+  { icon: "✉", href: "#", label: "Email" },
 ];
 
 export function Sidebar() {
@@ -74,8 +74,9 @@ export function Sidebar() {
                 <img src={avatarImg} alt="Profile" className="w-full h-full object-cover" />
               </div>
             </motion.div>
-            <h1 className="text-xl font-display font-bold tracking-tight mb-1">
-              NEXUS<span className="text-primary">.</span>
+            <h1 className="text-lg font-display font-bold tracking-tight mb-1 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              SensePower
+              <br/>Digital
             </h1>
             <p className="text-xs text-muted-foreground font-mono">digital studio</p>
           </motion.div>
@@ -88,7 +89,6 @@ export function Sidebar() {
             className="flex justify-center gap-3"
           >
             {socialLinks.map((social, i) => {
-              const Icon = social.icon;
               return (
                 <motion.a
                   key={social.label}
@@ -96,21 +96,22 @@ export function Sidebar() {
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="p-2 rounded-lg bg-white/5 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-300 border border-white/5 hover:border-primary/30"
+                  className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 text-muted-foreground hover:text-primary transition-all duration-300 border border-white/5 hover:border-primary/50 font-bold text-sm"
                   title={social.label}
                 >
-                  <Icon size={18} />
+                  {social.icon}
                 </motion.a>
               );
             })}
           </motion.div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
           {/* Navigation */}
           <nav className="space-y-2 flex-1">
             {navItems.map((item, i) => {
+              const Icon = item.icon;
               const isActive = location === item.path;
               return (
                 <motion.div
@@ -124,24 +125,17 @@ export function Sidebar() {
                       onClick={() => isMobile && setIsOpen(false)}
                       className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 relative overflow-hidden group ${
                         isActive
-                          ? "bg-primary/20 text-primary"
-                          : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+                          ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/50"
+                          : "text-muted-foreground hover:text-foreground hover:bg-white/5 border border-transparent hover:border-primary/30"
                       }`}
                     >
-                      {/* Background animation for active state */}
-                      {isActive && (
-                        <motion.div
-                          layoutId="activeNav"
-                          className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent"
-                          transition={{ type: "spring", stiffness: 380, damping: 40 }}
-                        />
-                      )}
-
                       {/* Hover effect border */}
-                      <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-primary/30 transition-colors duration-300" />
+                      <div className="absolute inset-0 rounded-xl" />
 
                       {/* Content */}
-                      <span className="relative z-10 text-lg">{item.icon}</span>
+                      <span className="relative z-10">
+                        <Icon size={20} className={isActive ? "text-primary" : "group-hover:text-primary transition-colors"} />
+                      </span>
                       <span className="relative z-10 text-sm font-medium">{item.name}</span>
 
                       {/* Active indicator dot */}
@@ -167,12 +161,12 @@ export function Sidebar() {
             className="text-center space-y-3 pt-6 border-t border-white/5"
           >
             <p className="text-xs text-muted-foreground">
-              © 2025 Nexus Studio
+              © 2025 SensePower Digital
             </p>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full px-4 py-2 rounded-lg bg-primary/10 text-primary text-xs font-medium hover:bg-primary/20 transition-colors border border-primary/20 hover:border-primary/40"
+              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-white text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary"
             >
               Let's Talk
             </motion.button>

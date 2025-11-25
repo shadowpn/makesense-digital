@@ -9,8 +9,8 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h3 className="text-2xl font-display font-bold tracking-tighter">
-              NEXUS<span className="text-primary">.</span>
+            <h3 className="text-2xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              SensePower Digital
             </h3>
             <p className="text-muted-foreground text-sm max-w-xs">
               Crafting digital experiences that blend aesthetic excellence with functional precision.
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-20 pt-8 border-t border-white/5 text-center text-sm text-muted-foreground">
-          © 2025 Nexus Digital Studio. All rights reserved.
+          © 2025 SensePower Digital. All rights reserved.
         </div>
       </div>
     </footer>

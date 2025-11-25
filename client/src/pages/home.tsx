@@ -41,7 +41,7 @@ export default function Home() {
               className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-tight mb-8 text-glow"
             >
               Designing the <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-purple-500 animate-gradient-x">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">
                 Future of Digital.
               </span>
             </motion.h1>

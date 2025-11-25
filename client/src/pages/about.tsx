@@ -15,7 +15,7 @@ export default function About() {
           className="max-w-4xl mx-auto mb-24 text-center"
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            About Nexus<span className="text-primary">.</span>
+            About <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">SensePower Digital</span>
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             We're a digital studio obsessed with the intersection of design excellence and engineering precision. 
