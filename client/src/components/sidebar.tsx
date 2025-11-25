@@ -15,9 +15,9 @@ const navItems = [
 
 const socialLinks = [
   { icon: "𝕏", href: "#", label: "Twitter" },
-  { icon: "◆", href: "#", label: "GitHub" },
-  { icon: "in", href: "#", label: "LinkedIn" },
-  { icon: "✉", href: "#", label: "Email" },
+  { icon: "◆", href: "https://github.com/Petrychuk", label: "GitHub" },
+  { icon: "in", href: "https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/", label: "LinkedIn" },
+  { icon: "✉", href: "mailto:nataliia.petrychuk@gmail.com", label: "Email" },
 ];
 
 export function Sidebar() {
