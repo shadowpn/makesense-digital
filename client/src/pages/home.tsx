@@ -98,7 +98,7 @@ export default function Home() {
             className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 scale-90" />
             <div className="absolute bottom-0 left-0 p-10 z-20">
               <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">LEGAL TECH</div>
               <h3 className="text-4xl font-display font-bold mb-2">Aussie Way Visa</h3>
