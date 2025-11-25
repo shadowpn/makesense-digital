@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
-import aussiewayImg from "@assets/изображение_1764055147650.png";
+import aussiewayImg from "@assets/изображение_1764055739030.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -95,10 +95,10 @@ export default function Home() {
         <div className="grid md:grid-cols-3 md:grid-rows-2 gap-6 h-[618px]">
           <motion.div 
             whileHover={{ scale: 0.98 }}
-            className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5"
+            className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-6"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-10 z-20">
               <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">LEGAL TECH</div>
               <h3 className="text-4xl font-display font-bold mb-2">Aussie Way Visa</h3>
