@@ -43,7 +43,7 @@ export default function Services() {
           className="max-w-3xl mb-20"
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            <AnimatedText text="Our Expertise" staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" />
+            <AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" />
           </h1>
           <p className="text-xl text-muted-foreground">
             We combine engineering precision with design intuition to build
