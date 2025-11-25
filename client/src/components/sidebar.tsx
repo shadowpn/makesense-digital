@@ -55,7 +55,7 @@ export function Sidebar() {
         initial={isMobile ? "closed" : "open"}
         animate={isMobile ? (isOpen ? "open" : "closed") : "open"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-background via-background to-background/95 border-r border-white/10 backdrop-blur-xl z-40 md:relative md:z-30 overflow-y-auto hide-scrollbar"
+        className="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-background via-background to-background/95 border-r border-white/10 backdrop-blur-xl z-40 md:sticky md:top-0 md:z-30 overflow-y-auto hide-scrollbar"
       >
         <div className="p-8 space-y-8 h-full flex flex-col">
           {/* Profile Section */}
