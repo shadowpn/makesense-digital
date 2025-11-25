@@ -63,12 +63,12 @@ export default function Home() {
             
             <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
               <Link href="/portfolio">
-                <Button size="lg" className="h-14 px-8 rounded-full text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20">
+                <Button size="lg" className="h-14 px-8 rounded-full text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-purple-500/40">
                   View Case Studies
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm">
+                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm shadow-lg shadow-purple-500/40">
                   Our Services
                 </Button>
               </Link>
@@ -221,7 +221,7 @@ export default function Home() {
                 ))}
               </ul>
               <Link href="/services">
-                <Button variant="outline" className="rounded-full border-primary/20 hover:bg-primary/10 text-primary">
+                <Button variant="outline" className="rounded-full border-primary/20 hover:bg-primary/10 text-primary shadow-lg shadow-purple-500/40">
                   Explore Our Services
                 </Button>
               </Link>
