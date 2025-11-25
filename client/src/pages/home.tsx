@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
-import aussiewayImg from "@assets/stock_images/australia_landscape__7085a306.jpg";
+import aussiewayImg from "@assets/изображение_1764055147650.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
