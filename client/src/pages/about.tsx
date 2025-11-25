@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, Zap, Users, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { AnimatedText } from "@/components/animated-text";
 
 export default function About() {
   return (
@@ -15,7 +16,13 @@ export default function About() {
           className="max-w-4xl mx-auto mb-24 text-center"
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            About <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">SensePower Digital</span>
+            About <AnimatedText 
+              text="SensePower Digital" 
+              staggerDelay={0.06} 
+              duration={0.6}
+              initialDelay={0.3}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary"
+            />
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             We're a digital studio obsessed with the intersection of design excellence and engineering precision. 
