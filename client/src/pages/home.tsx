@@ -63,12 +63,12 @@ export default function Home() {
             
             <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
               <Link href="/portfolio">
-                <Button size="lg" className="h-14 px-8 rounded-full text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-purple-500/40">
+                <Button size="lg" className="h-14 px-8 rounded-full text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-purple-500/40 cursor-pointer">
                   View Case Studies
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm shadow-lg shadow-purple-500/40">
+                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm shadow-lg shadow-purple-500/40 cursor-pointer">
                   Our Services
                 </Button>
               </Link>
@@ -90,7 +90,7 @@ export default function Home() {
             <p className="text-muted-foreground">Recent projects and experiments.</p>
           </div>
           <Link href="/portfolio">
-            <a className="hidden md:flex items-center gap-2 hover:text-primary transition-colors font-medium group">
+            <a className="hidden md:flex items-center gap-2 hover:text-primary transition-colors font-medium group cursor-pointer">
               View all projects <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
             </a>
           </Link>
@@ -186,10 +186,10 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40">Get in Touch</Button>
+                <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">Get in Touch</Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40">
+                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
                   View Services
                 </Button>
               </Link>
@@ -221,7 +221,7 @@ export default function Home() {
                 ))}
               </ul>
               <Link href="/services">
-                <Button variant="outline" className="rounded-full border-primary/20 hover:bg-primary/10 text-primary shadow-lg shadow-purple-500/40">
+                <Button variant="outline" className="rounded-full border-primary/20 hover:bg-primary/10 text-primary shadow-lg shadow-purple-500/40 cursor-pointer">
                   Explore Our Services
                 </Button>
               </Link>
