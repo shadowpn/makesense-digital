@@ -7,7 +7,7 @@ import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
-import oraidImg from "@assets/изображение_1764057133973.png";
+import oraidImg from "@assets/изображение_1764057538171.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
