@@ -200,11 +200,6 @@ export default function Home() {
                   <h3 className="font-bold mb-2">Responsive</h3>
                   <p className="text-sm text-muted-foreground">Perfect on every screen size.</p>
                 </div>
-                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
-                  <Search className="mb-4 text-primary" size={32} />
-                  <h3 className="font-bold mb-2">SEO</h3>
-                  <p className="text-sm text-muted-foreground">Optimized for search & discovery.</p>
-                </div>
               </div>
               <div className="space-y-4">
                 <div className="p-8 rounded-3xl bg-background border border-white/5">
@@ -216,6 +211,11 @@ export default function Home() {
                   <Cpu className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">Vibe Coding</h3>
                   <p className="text-sm text-muted-foreground">Animations & creative polish.</p>
+                </div>
+                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                  <Search className="mb-4 text-primary" size={32} />
+                  <h3 className="font-bold mb-2">SEO</h3>
+                  <p className="text-sm text-muted-foreground">Optimized for search & discovery.</p>
                 </div>
               </div>
             </div>
