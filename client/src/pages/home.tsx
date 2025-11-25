@@ -6,6 +6,7 @@ import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
+import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -92,7 +93,7 @@ export default function Home() {
           </Link>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 md:grid-rows-2 gap-6 h-[618px]">
+        <div className="grid md:grid-cols-3 md:grid-rows-3 gap-6 h-[927px]">
           <motion.div 
             whileHover={{ scale: 0.98 }}
             className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-6"
@@ -108,25 +109,37 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute bottom-0 left-0 p-8 z-20">
-              <div className="mb-3 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
-              <h3 className="text-2xl font-display font-bold">MVP Platform</h3>
+            <img src={sensestudyhubImg} alt="Sense StudyHub" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
+            <div className="absolute bottom-0 left-0 p-6 z-20">
+              <div className="mb-2 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-mono inline-block backdrop-blur-md">EDTECH</div>
+              <h3 className="text-xl font-display font-bold">Sense StudyHub</h3>
             </div>
           </motion.div>
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="Analytics" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            <div className="absolute bottom-0 left-0 p-8 z-20">
-              <div className="mb-3 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">ANALYTICS</div>
-              <h3 className="text-2xl font-display font-bold">DataFlow</h3>
+            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
+            <div className="absolute bottom-0 left-0 p-6 z-20">
+              <div className="mb-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
+              <h3 className="text-xl font-display font-bold">MVP Platform</h3>
+            </div>
+          </motion.div>
+
+          <motion.div 
+             whileHover={{ scale: 0.98 }}
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80" alt="Analytics" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
+            <div className="absolute bottom-0 left-0 p-6 z-20">
+              <div className="mb-2 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono inline-block backdrop-blur-md">ANALYTICS</div>
+              <h3 className="text-xl font-display font-bold">DataFlow</h3>
             </div>
           </motion.div>
         </div>
