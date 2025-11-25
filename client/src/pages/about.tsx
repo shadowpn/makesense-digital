@@ -17,7 +17,7 @@ export default function About() {
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
             About <AnimatedText 
-              text="SensePower Digital" 
+              text="SensePower Digital." 
               staggerDelay={0.06} 
               duration={0.6}
               initialDelay={0.3}
@@ -98,7 +98,7 @@ export default function About() {
 
         {/* Expertise Section */}
         <div className="border-t border-b border-white/10 py-20 mb-24">
-          <h2 className="text-4xl font-display font-bold mb-16 text-center">Our Expertise</h2>
+          <h2 className="text-4xl font-display font-bold mb-16 text-center"><AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} /></h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { label: "Projects", value: "50+" },

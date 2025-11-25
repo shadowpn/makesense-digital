@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { AnimatedText } from "@/components/animated-text";
 
 const projects = [
   {
@@ -49,7 +50,7 @@ export default function Portfolio() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-2xl"
           >
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">Selected Work</h1>
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6"><AnimatedText text="Selected Work." staggerDelay={0.06} duration={0.6} initialDelay={0.3} /></h1>
             <p className="text-xl text-muted-foreground">
               A collection of projects where design meets rigorous engineering.
             </p>

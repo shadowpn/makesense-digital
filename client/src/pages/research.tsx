@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { FileText, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatedText } from "@/components/animated-text";
 
 const articles = [
   {
@@ -54,7 +55,7 @@ export default function Research() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl mb-20"
         >
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">Research Hub</h1>
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6"><AnimatedText text="Research Hub." staggerDelay={0.06} duration={0.6} initialDelay={0.3} /></h1>
           <p className="text-xl text-muted-foreground">
             Artifacts, whitepapers, and thoughts on the future of software development.
           </p>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { AnimatedText } from "@/components/animated-text";
 
 export default function Contact() {
   return (
@@ -14,7 +15,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-8">Let's talk.</h1>
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-8"><AnimatedText text="Let's talk." staggerDelay={0.06} duration={0.6} initialDelay={0.3} /></h1>
             <p className="text-xl text-muted-foreground mb-12">
               Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.
             </p>
