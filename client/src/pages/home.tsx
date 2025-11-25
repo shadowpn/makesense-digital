@@ -186,10 +186,10 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-8">Get in Touch</Button>
+                <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40">Get in Touch</Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5">
+                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40">
                   View Services
                 </Button>
               </Link>
