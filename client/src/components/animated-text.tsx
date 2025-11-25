@@ -6,6 +6,7 @@ interface AnimatedTextProps {
   staggerDelay?: number;
   duration?: number;
   repeat?: boolean;
+  initialDelay?: number;
 }
 
 export function AnimatedText({
@@ -14,6 +15,7 @@ export function AnimatedText({
   staggerDelay = 0.05,
   duration = 0.5,
   repeat = true,
+  initialDelay = 0.3,
 }: AnimatedTextProps) {
   const letters = text.split("");
 
@@ -23,7 +25,7 @@ export function AnimatedText({
       opacity: 1,
       transition: {
         staggerChildren: staggerDelay,
-        delayChildren: 0.3,
+        delayChildren: initialDelay,
       },
     },
   };
