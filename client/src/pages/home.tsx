@@ -122,13 +122,13 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4 row-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
+            <img src={oraidImg} alt="Ora-Aid" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 z-20">
-              <div className="mb-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
-              <h3 className="text-xl font-display font-bold">MVP Platform</h3>
+              <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
+              <h3 className="text-xl font-display font-bold">Ora-Aid</h3>
             </div>
           </motion.div>
 
@@ -137,10 +137,10 @@ export default function Home() {
              className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src={oraidImg} alt="Ora-Aid" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 z-20">
-              <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
-              <h3 className="text-xl font-display font-bold">Ora-Aid</h3>
+              <div className="mb-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
+              <h3 className="text-xl font-display font-bold">MVP Platform</h3>
             </div>
           </motion.div>
         </div>
