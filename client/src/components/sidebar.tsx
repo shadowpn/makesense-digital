@@ -70,7 +70,7 @@ export function Sidebar() {
               whileTap={{ scale: 0.95 }}
               className="mb-4 flex justify-center"
             >
-              <div className="w-20 h-20 rounded-lg border-2 border-primary/30 overflow-hidden bg-white/5 shadow-lg hover:border-primary/60 transition-colors">
+              <div className="w-20 h-20 rounded-full border-2 border-primary/30 overflow-hidden bg-white/5 shadow-lg hover:border-primary/60 transition-colors">
                 <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
               </div>
             </motion.div>
