@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import logoImg from "@assets/generated_images/sensepower_digital_logo.png";
+import logoImg from "@assets/изображение_1764049026830.png";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
