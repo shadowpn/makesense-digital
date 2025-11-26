@@ -228,8 +228,11 @@ export default function About() {
           </motion.div>
 
           <div className="relative">
-            {/* Center Vertical Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
+            {/* Center Vertical Line - Work Section */}
+            <div className="absolute left-1/2 top-0 h-1/2 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/50 transform -translate-x-1/2" />
+            
+            {/* Center Vertical Line - Education Section */}
+            <div className="absolute left-1/2 bottom-0 h-1/3 w-0.5 bg-gradient-to-b from-primary/50 via-accent to-primary/30 transform -translate-x-1/2" />
             
             {/* Timeline Grid - 2 Columns */}
             <div className="grid md:grid-cols-2 gap-0">
