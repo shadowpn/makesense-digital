@@ -4,17 +4,32 @@ import { CheckCircle, Zap, Users, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
+import introduceBg from "@assets/Introduce_1764120672692.jpg";
+import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
+import coreSkillsImg from "@assets/изображение_1764120932523.png";
+import resumeImg from "@assets/изображение_1764121001448.png";
 
 export default function About() {
   return (
     <Layout>
-      <div className="container mx-auto px-6 py-20">
-        {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-4xl mx-auto mb-24 text-center"
-        >
+      {/* Hero Section with Background */}
+      <section className="relative py-20">
+        <div 
+          className="absolute inset-0 z-0 opacity-30"
+          style={{
+            backgroundImage: `url(${introduceBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/60 via-background/50 to-background/60" />
+        
+        <div className="container mx-auto px-6 relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl mx-auto mb-24 text-center"
+          >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
             About <AnimatedText 
               text="SensePower Digital." 
@@ -28,7 +43,73 @@ export default function About() {
             We're a digital studio obsessed with the intersection of design excellence and engineering precision. 
             Since 2022, we've helped forward-thinking companies launch, scale, and perfect their digital products.
           </p>
-        </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-6">
+        {/* Cofounder Section */}
+        <section className="py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-12 items-start"
+          >
+            {/* Photo */}
+            <div className="md:col-span-1">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="rounded-3xl overflow-hidden"
+              >
+                <img src={nataliiaPhoto} alt="Nataliia Petrychuk" className="w-full h-full object-cover" />
+              </motion.div>
+            </div>
+
+            {/* Info */}
+            <div className="md:col-span-2 space-y-8">
+              {/* Header */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-3">Nataliia Petrychuk</h2>
+                <p className="text-xl text-primary font-semibold mb-4">Full-Stack Developer & QA Engineer</p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Results-oriented Full Stack Developer with extensive experience in building responsive, user-friendly web applications and implementing scalable back-end solutions. Proficient in HTML, CSS, JavaScript, React js, and Node js. Strong expertise in API development, SDLC, REST API design, and UI/UX principles.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  Extensive experience as a Quality Assurance Engineer, skilled in manual testing, automation frameworks, test case creation, and API testing. Adept at problem solving, collaborative teamwork, and quickly adapting to new technologies.
+                </p>
+              </div>
+
+              {/* Core Skills */}
+              <div>
+                <h3 className="text-2xl font-display font-bold mb-6">Core Skills</h3>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="rounded-2xl overflow-hidden"
+                >
+                  <img src={coreSkillsImg} alt="Core Skills" className="w-full h-auto" />
+                </motion.div>
+              </div>
+
+              {/* Resume */}
+              <div>
+                <h3 className="text-2xl font-display font-bold mb-6">Professional Experience & Education</h3>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="rounded-2xl overflow-hidden border border-white/10"
+                >
+                  <img src={resumeImg} alt="Resume" className="w-full h-auto" />
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </section>
 
         {/* Core Values Grid */}
         <div className="grid md:grid-cols-2 gap-12 mb-32">
