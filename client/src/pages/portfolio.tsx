@@ -66,7 +66,7 @@ export default function Portfolio() {
               <AnimatedText text="Explore" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
               <br />
               <AnimatedText 
-                text="Our Work." 
+                text="Our Works." 
                 staggerDelay={0.06} 
                 duration={0.6}
                 initialDelay={1.8}
