@@ -368,17 +368,7 @@ export default function About() {
           viewport={{ once: true }}
           className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5"
         >
-          <div 
-            className="absolute inset-0 z-0 opacity-10"
-            style={{
-              backgroundImage: `url(${ctaBg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div className="absolute inset-0 z-10" />
-          
-          <div className="relative z-20">
+          <div className="relative">
             <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
