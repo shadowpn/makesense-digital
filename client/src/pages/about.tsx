@@ -1,14 +1,90 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { CheckCircle, Zap, Users, Target } from "lucide-react";
+import { CheckCircle, Zap, Users, Target, Briefcase, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
+import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
-import resumeImg from "@assets/изображение_1764121001448.png";
 
 export default function About() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % 8);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const timeline = [
+    {
+      type: "work",
+      title: "Full-Stack Developer",
+      company: "Sense Power Digital",
+      location: "Sydney, Australia",
+      period: "2023 - Present",
+      description: "Full-Stack Development, APIs, SEO & UI/UX"
+    },
+    {
+      type: "work",
+      title: "Middle QA Engineer",
+      company: "Foxteam Digital",
+      location: "Ukraine, Remote",
+      period: "2021 - Present",
+      description: "Enterprise-scale CRM/E-commerce Testing, Automation"
+    },
+    {
+      type: "work",
+      title: "QA Engineer",
+      company: "Miber AB",
+      location: "Sweden, Remote",
+      period: "2020 - 2021",
+      description: "End-to-end Testing, Defect Reporting, QA"
+    },
+    {
+      type: "work",
+      title: "Junior QA Engineer",
+      company: "UVOTEAM",
+      location: "Kyiv, Ukraine",
+      period: "2018 - 2020",
+      description: "Test Suite Development, UI Testing, QA"
+    },
+    {
+      type: "education",
+      title: "Diploma of Information Technology",
+      company: "TAFE ULTIMO",
+      location: "NSW, Australia",
+      period: "2023",
+      description: "Full-Stack Development, HTML, CSS, JavaScript, React, Node.js"
+    },
+    {
+      type: "education",
+      title: "Certificate in QA Engineering",
+      company: "QA Engineering Course",
+      location: "Kyiv, Ukraine",
+      period: "2017",
+      description: "Manual Testing, Test Management, SDLC"
+    },
+    {
+      type: "education",
+      title: "Master of Manager Organisations",
+      company: "Kyiv University of Tourism",
+      location: "Ukraine",
+      period: "1999 - 2005",
+      description: "Hospitality Management, Tourism, Business Operations"
+    },
+    {
+      type: "education",
+      title: "Online Courses & Bootcamps",
+      company: "Udemy, SheCodes, Harvard",
+      location: "Online",
+      period: "2022 - Present",
+      description: "Full-Stack, JavaScript, React, Node.js, MongoDB, Playwright, CS50"
+    }
+  ];
+
   return (
     <Layout>
       {/* Hero Section with Background */}
@@ -83,15 +159,55 @@ export default function About() {
 
               {/* Resume */}
               <div>
-                <h3 className="text-2xl font-display font-bold mb-6">Professional Experience & Education</h3>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  className="rounded-2xl overflow-hidden border border-white/10"
-                >
-                  <img src={resumeImg} alt="Resume" className="w-full h-auto" />
-                </motion.div>
+                <h3 className="text-2xl font-display font-bold mb-6">Professional Journey</h3>
+                <div className="relative">
+                  {/* Vertical Line */}
+                  <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30" />
+                  
+                  {/* Timeline Items */}
+                  <div className="space-y-6">
+                    {timeline.map((item, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.1 }}
+                        viewport={{ once: true }}
+                        className={`ml-16 p-4 rounded-xl transition-all duration-300 ${
+                          activeIndex === idx
+                            ? "bg-primary/30 border border-primary/50 shadow-lg shadow-purple-500/20"
+                            : "bg-background border border-white/10 hover:border-primary/30"
+                        }`}
+                      >
+                        {/* Icon */}
+                        <div className="absolute -left-8 top-4">
+                          <div className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
+                            activeIndex === idx
+                              ? "bg-primary shadow-lg shadow-primary/50"
+                              : "bg-white/10 border border-white/20"
+                          }`}>
+                            {item.type === "work" ? (
+                              <Briefcase size={16} className="text-background" />
+                            ) : (
+                              <GraduationCap size={16} className="text-background" />
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Content */}
+                        <div>
+                          <div className="flex items-start justify-between mb-2">
+                            <h4 className="text-lg font-bold">{item.title}</h4>
+                            <span className="text-xs text-muted-foreground font-mono">{item.period}</span>
+                          </div>
+                          <p className="text-sm text-primary font-semibold mb-1">{item.company}</p>
+                          <p className="text-xs text-muted-foreground mb-3">{item.location}</p>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
