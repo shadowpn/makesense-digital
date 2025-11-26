@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
-import nataliiaPhoto from "@assets/Main_desk_1764137522258.jpg";
+import nataliiaPhoto from "@assets/About_desk_1764138287441.jpg";
 import journeyBg from "@assets/generated_images/modern_vibrant_technology_gradient_background.png";
 import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
 
