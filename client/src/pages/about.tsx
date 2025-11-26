@@ -369,7 +369,7 @@ export default function About() {
           className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5"
         >
           <div 
-            className="absolute inset-0 z-0 opacity-30"
+            className="absolute inset-0 z-0 opacity-15"
             style={{
               backgroundImage: `url(${ctaBg})`,
               backgroundSize: 'cover',
