@@ -126,7 +126,7 @@ export function Sidebar() {
                       className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 relative overflow-hidden group ${
                         isActive
                           ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/50"
-                          : "text-muted-foreground hover:text-foreground hover:bg-white/5 border border-transparent hover:border-primary/30"
+                          : "text-foreground/70 hover:text-foreground hover:bg-white/5 border border-transparent hover:border-primary/30"
                       }`}
                     >
                       {/* Hover effect border */}
