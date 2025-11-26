@@ -168,27 +168,22 @@ export default function About() {
             className="grid md:grid-cols-3 gap-12 items-start"
           >
             {/* Photo */}
-            <div className="md:col-span-1 relative">
-              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 400" preserveAspectRatio="none" style={{ filter: 'drop-shadow(0 0 20px rgba(168, 85, 247, 0.3))' }}>
-                {/* Top border brush strokes */}
-                <path d="M 0 20 Q 20 5 40 15 Q 60 25 80 10 Q 100 -5 120 15 Q 140 35 160 15 Q 180 -5 200 15 Q 220 35 240 10 Q 260 -15 280 15 Q 290 25 300 20" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-                
-                {/* Left border brush strokes */}
-                <path d="M 15 40 Q 0 60 10 80 Q 20 100 5 120 Q -10 140 10 160 Q 30 180 10 200 Q -10 220 10 240 Q 30 260 10 280 Q -10 300 15 320" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-                
-                {/* Right border brush strokes */}
-                <path d="M 285 40 Q 300 60 290 80 Q 280 100 295 120 Q 310 140 290 160 Q 270 180 290 200 Q 310 220 290 240 Q 270 260 290 280 Q 310 300 285 320" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-                
-                {/* Bottom border brush strokes */}
-                <path d="M 0 380 Q 20 395 40 385 Q 60 375 80 390 Q 100 405 120 385 Q 140 365 160 385 Q 180 405 200 385 Q 220 365 240 390 Q 260 415 280 380 Q 290 375 300 380" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-                
-                <defs>
-                  <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
-                    <stop offset="50%" style={{ stopColor: '#d946ef', stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: '#7c3aed', stopOpacity: 1 }} />
-                  </linearGradient>
-                </defs>
+            <div className="md:col-span-1 relative pt-8 pb-8 px-8">
+              <svg className="absolute -top-2 -left-2 -right-2 -bottom-2 w-auto pointer-events-none" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid meet" style={{ filter: 'drop-shadow(0 0 25px rgba(168, 85, 247, 0.4))' }}>
+                {/* Decorative brush strokes frame */}
+                {/* Top left */}
+                <path d="M 10 30 Q 5 10 20 25 L 35 15 Q 30 35 45 28" stroke="#a855f7" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
+                {/* Top right */}
+                <path d="M 290 30 Q 295 10 280 25 L 265 15 Q 270 35 255 28" stroke="#d946ef" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
+                {/* Bottom left */}
+                <path d="M 10 370 Q 5 390 20 375 L 35 385 Q 30 365 45 372" stroke="#7c3aed" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
+                {/* Bottom right */}
+                <path d="M 290 370 Q 295 390 280 375 L 265 385 Q 270 365 255 372" stroke="#a855f7" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
+                {/* Side strokes */}
+                <path d="M 5 80 Q 0 95 12 105 Q 8 120 15 135" stroke="#d946ef" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
+                <path d="M 295 80 Q 300 95 288 105 Q 292 120 285 135" stroke="#7c3aed" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
+                <path d="M 5 250 Q 0 265 12 275 Q 8 290 15 305" stroke="#a855f7" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
+                <path d="M 295 250 Q 300 265 288 275 Q 292 290 285 305" stroke="#d946ef" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
               </svg>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
