@@ -244,7 +244,7 @@ export default function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1 }}
                     viewport={{ once: true }}
-                    className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${isFirstEducation ? 'col-span-full my-12' : ''}`}
+                    className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${isFirstEducation ? 'mt-12 pt-16' : ''}`}
                   >
                     {/* Icon on center line */}
                     <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'}`}>
