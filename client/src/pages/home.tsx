@@ -9,7 +9,7 @@ import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.pn
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
-import expertlashImg from "@assets/generated_images/expertlash_premium_beauty_booking_app.png";
+import expertlashImg from "@assets/generated_images/expertlash_connect_with_rich_pink_design.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
