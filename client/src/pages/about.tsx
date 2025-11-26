@@ -257,16 +257,16 @@ export default function About() {
                       className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${idx === 5 ? 'mt-48' : ''}`}
                   >
                     {/* Icon on center line */}
-                    <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'}`}>
+                    <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}>
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                         activeIndex === idx
-                          ? "bg-primary shadow-lg shadow-primary/50 scale-110"
-                          : "bg-white/10 border border-white/20"
+                          ? "bg-primary scale-110"
+                          : "bg-primary"
                       }`}>
                         {item.type === "work" ? (
-                          <Briefcase size={20} className="text-primary" />
+                          <Briefcase size={20} className={`transition-colors ${activeIndex === idx ? "text-background" : "text-background"}`} />
                         ) : (
-                          <GraduationCap size={20} className="text-primary" />
+                          <GraduationCap size={20} className={`transition-colors ${activeIndex === idx ? "text-background" : "text-background"}`} />
                         )}
                       </div>
                     </div>
