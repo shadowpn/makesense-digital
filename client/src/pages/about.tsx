@@ -81,38 +81,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Core Skills */}
-              <div>
-                <h3 className="text-2xl font-display font-bold mb-6">Core Skills</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {[
-                    { category: "Frontend", skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"] },
-                    { category: "Backend", skills: ["Node.js", "Express", "PostgreSQL", "REST APIs"] },
-                    { category: "Testing", skills: ["Playwright", "Jest", "Manual QA", "Automation"] },
-                    { category: "Tools", skills: ["Git", "Docker", "CI/CD", "Figma"] }
-                  ].map((skillGroup, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: idx * 0.1 }}
-                      viewport={{ once: true }}
-                      className="p-6 rounded-2xl bg-background border border-white/10 hover:border-primary/30 transition-colors"
-                    >
-                      <h4 className="text-lg font-bold mb-4 text-primary">{skillGroup.category}</h4>
-                      <div className="space-y-2">
-                        {skillGroup.skills.map((skill, i) => (
-                          <div key={i} className="flex items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-primary" />
-                            <span className="text-sm text-muted-foreground">{skill}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
               {/* Resume */}
               <div>
                 <h3 className="text-2xl font-display font-bold mb-6">Professional Experience & Education</h3>
@@ -127,6 +95,60 @@ export default function About() {
               </div>
             </div>
           </motion.div>
+        </section>
+
+        {/* Core Skills Section - Full Width Below */}
+        <section className="py-24 border-t border-white/10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-4xl font-display font-bold mb-4">Core Skills & Expertise</h2>
+            <p className="text-lg text-muted-foreground">Deep technical proficiency across QA, automation, and full-stack development</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "QA & Testing",
+                description: "Manual Testing • Functional & Regression • UI Testing • API Testing (Postman, Swagger) • Integration Testing • Test Data Creation • AIO Testing (Jira)"
+              },
+              {
+                title: "Automation (Foundational + Growing)",
+                description: "Playwright (JavaScript) • Postman Automation • Knowledge of Git, CI/CD workflows • Strong coding skills (JS/Python) enabling fast ramp-up for test automation"
+              },
+              {
+                title: "Agile & SDLC",
+                description: "Scrum • Kanban • Jira • TestRail • Confluence • GitLab/GitHub • CI/CD (GitHub Actions, Jenkins)"
+              },
+              {
+                title: "Databases & Data Validation",
+                description: "SQL (MySQL, PostgreSQL) • Data accuracy checks • Database-level testing • JSON & CSV data structures"
+              },
+              {
+                title: "Technical Stack",
+                description: "JavaScript • Python • CMS • Custom eCommerce • CRM • API integrations • Responsive Web Apps"
+              },
+              {
+                title: "Soft Skills",
+                description: "Clear communicator • Detail-oriented • Strong analytical skills • Team player • Growth mindset"
+              }
+            ].map((skill, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.08 }}
+                viewport={{ once: true }}
+                className="group p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+              >
+                <h3 className="text-xl font-display font-bold mb-4 text-primary group-hover:text-accent transition-colors">{skill.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{skill.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </section>
 
         {/* Core Values Grid */}
