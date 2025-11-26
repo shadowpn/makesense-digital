@@ -9,6 +9,7 @@ import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
 import beautybotImg from "@assets/stock_images/beauty_course_online_da449890.jpg";
+import expertlashImg from "@assets/generated_images/expertlash_beauty_app_mobile_interface.png";
 
 const projects = [
   {
@@ -42,6 +43,14 @@ const projects = [
     description: "Intelligent Telegram bot for beauty recommendations and virtual consultations.",
     tags: ["Bot", "AI", "Telegram"],
     image: beautybotImg
+  },
+  {
+    id: 5,
+    title: "ExpertLash",
+    category: "Beauty Tech",
+    description: "Professional lash extension booking and consultation platform. Connect with expert lash technicians and manage appointments seamlessly.",
+    tags: ["Mobile App", "Booking System", "Beauty Services"],
+    image: expertlashImg
   }
 ];
 
