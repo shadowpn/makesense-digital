@@ -14,7 +14,7 @@ export default function About() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % 8);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
@@ -250,8 +250,8 @@ export default function About() {
                       </motion.div>
                     )}
                     <motion.div
-                      initial={{ opacity: 0, x: isLeft ? -20 : 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 }}
                       viewport={{ once: true }}
                       className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${idx === 5 ? 'mt-48' : ''}`}
