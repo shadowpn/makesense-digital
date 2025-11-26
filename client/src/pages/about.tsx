@@ -369,14 +369,14 @@ export default function About() {
           className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5"
         >
           <div 
-            className="absolute inset-0 z-0 opacity-15"
+            className="absolute inset-0 z-0 opacity-5"
             style={{
               backgroundImage: `url(${ctaBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/15 via-background/10 to-background/15" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/5 via-background/0 to-background/5" />
           
           <div className="relative z-20">
             <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
