@@ -184,9 +184,10 @@ export default function About() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="rounded-3xl overflow-hidden relative z-10"
+                className="rounded-3xl overflow-hidden relative z-10 shadow-2xl shadow-purple-500/40"
               >
                 <img src={nataliiaPhoto} alt="Nataliia Petrychuk" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-transparent to-transparent rounded-3xl pointer-events-none" />
               </motion.div>
             </div>
 
