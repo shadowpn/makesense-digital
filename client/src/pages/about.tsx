@@ -72,7 +72,15 @@ export default function About() {
       company: "UVOTEAM",
       location: "Kyiv, Ukraine",
       period: "2018 - 2020",
-      description: "Test Suite Development, UI Testing, QA"
+      description: "Test Suite Development, UI Testing, QA",
+      details: [
+        "Developed comprehensive test suites for multilingual web applications, ensuring functionality across multiple languages and locales",
+        "Conducted front-end and UI testing, validating user interactions, visual consistency, and accessibility compliance",
+        "Worked closely with developers and product managers to enhance testing coverage and overall software quality",
+        "Executed manual test cases and created detailed bug reports with reproduction steps and severity classification",
+        "Performed regression testing for new releases, ensuring backward compatibility and system stability",
+        "Collaborated with team members to document testing procedures and maintain test case repositories"
+      ]
     },
     {
       type: "education",
