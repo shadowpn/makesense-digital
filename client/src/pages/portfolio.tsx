@@ -17,7 +17,7 @@ const projects = [
     title: "Aussie Way Visa",
     category: "Legal Tech",
     description: "A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.",
-    tags: ["Next.js", "OpenAI API", "Calendly", "Express.js"],
+    tags: ["Next.js", "OpenAI API", "Calendly", "Express.js", "Node", "JavaScript", "Tailwind", "REST APIs"],
     image: aussiewayImg
   },
   {
