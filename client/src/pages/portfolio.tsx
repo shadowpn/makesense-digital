@@ -9,7 +9,7 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
-import expertlashImg from "@assets/generated_images/expertlash_app_pink_background_version.png";
+import expertlashImg from "@assets/generated_images/expertlash_telegram_miniapp_rose_pink_design.png";
 
 const projects = [
   {
