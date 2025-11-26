@@ -7,6 +7,7 @@ import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
+import journeyBg from "@assets/generated_images/subtle_tech_professional_background.png";
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -247,18 +248,29 @@ export default function About() {
         </section>
 
         {/* Professional Journey Section - 2 Column Timeline */}
-        <section className="py-24 border-t border-white/10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h2 className="text-4xl font-display font-bold mb-4">Professional Journey</h2>
-            <p className="text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
-          </motion.div>
+        <section className="py-24 border-t border-white/10 relative overflow-hidden">
+          <div 
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: `url(${journeyBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/40" />
+          
+          <div className="relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-display font-bold mb-4">Professional Journey</h2>
+              <p className="text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
+            </motion.div>
 
-          <div className="relative">
+            <div className="relative">
             {/* Center Vertical Line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
             
