@@ -42,7 +42,14 @@ export default function About() {
       company: "Foxteam Digital",
       location: "Ukraine, Remote",
       period: "2021 - Present",
-      description: "Enterprise-scale CRM/E-commerce Testing, Automation"
+      description: "Enterprise-scale CRM/E-commerce Testing, Automation",
+      details: [
+        "Leading QA processes for enterprise-scale CRM and e-commerce platforms, ensuring high system reliability and performance",
+        "Conducting manual and automated testing for APIs, payment systems, and content management systems",
+        "Performing cross-browser and mobile-responsive testing to guarantee seamless UX/UI across all devices",
+        "Collaborating with developers to identify and resolve defects, enhancing system efficiency and stability",
+        "Implementing test automation frameworks (Playwright, Cypress) to streamline regression testing cycles"
+      ]
     },
     {
       type: "work",
