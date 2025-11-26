@@ -250,14 +250,19 @@ export default function About() {
                       </motion.div>
                     )}
                     <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, x: isLeft ? -20 : 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: idx * 0.1 }}
                       viewport={{ once: true }}
                       className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${idx === 5 ? 'mt-48' : ''}`}
                   >
                     {/* Icon on center line */}
-                    <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}>
+                    <motion.div
+                      initial={activeIndex === idx ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+                      animate={activeIndex === idx ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                      className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}
+                    >
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                         activeIndex === idx
                           ? "bg-accent scale-110"
@@ -269,7 +274,7 @@ export default function About() {
                           <GraduationCap size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
                         )}
                       </div>
-                    </div>
+                    </motion.div>
 
                     {/* Content Card */}
                     <div className="p-6 rounded-xl transition-all duration-300 bg-background border border-white/10 hover:border-primary/30">
