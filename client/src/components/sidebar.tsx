@@ -6,9 +6,9 @@ import logoImg from "@assets/изображение_1764049161428.png";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
+  { name: "About", path: "/about", icon: User },
   { name: "Work", path: "/portfolio", icon: Briefcase },
   { name: "Services", path: "/services", icon: Zap },
-  { name: "About", path: "/about", icon: User },
   { name: "Research", path: "/research", icon: BookOpen },
   { name: "Contact", path: "/contact", icon: Mail },
 ];
