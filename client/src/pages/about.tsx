@@ -9,6 +9,7 @@ import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/About_desk_1764138287441.jpg";
 import journeyBg from "@assets/generated_images/modern_vibrant_technology_gradient_background.png";
 import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
+import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -371,17 +372,17 @@ export default function About() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section with Background */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px]"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px] mt-20"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
             style={{
-              backgroundImage: `url(${ctaBg})`,
+              backgroundImage: `url(${workHeroBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
