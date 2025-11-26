@@ -25,7 +25,16 @@ export default function About() {
       company: "Sense Power Digital",
       location: "Sydney, Australia",
       period: "2023 - Present",
-      description: "Full-Stack Development, APIs, SEO & UI/UX"
+      description: "Full-Stack Development, APIs, SEO & UI/UX",
+      details: [
+        "Full-Stack Development & Mobile Responsiveness: Designed and developed responsive websites using HTML, CSS, JavaScript, React.js, and Bootstrap 5",
+        "API Development: Created and integrated APIs for seamless data exchange with external services like Calendly and MailChimp",
+        "Implemented SEO best practices for improved search rankings and engagement",
+        "Version Control & Collaboration: Managed repositories using GitHub for effective collaboration",
+        "UI/UX Design Implementation: Translated Figma designs into functional web pages while ensuring UX consistency",
+        "Content Management Systems: Integrated Decap CMS to streamline content updates",
+        "Bug Fixing & Debugging: Diagnosed and resolved performance and functionality issues"
+      ]
     },
     {
       type: "work",
@@ -284,7 +293,18 @@ export default function About() {
                       </div>
                       <p className="text-sm text-primary font-semibold mb-1">{item.company}</p>
                       <p className="text-xs text-muted-foreground mb-3">{item.location}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                      {item.details ? (
+                        <ul className="space-y-2">
+                          {item.details.map((detail, i) => (
+                            <li key={i} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                              <span className="text-primary flex-shrink-0 mt-1">•</span>
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                      )}
                     </div>
                     </motion.div>
                   </div>
