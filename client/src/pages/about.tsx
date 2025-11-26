@@ -186,10 +186,16 @@ export default function About() {
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-3">Nataliia Petrychuk</h2>
                 <p className="text-xl text-primary font-semibold mb-4">Full-Stack Developer & QA Engineer</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Results-oriented Full Stack Developer with extensive experience in building responsive, user-friendly web applications and implementing scalable back-end solutions. Proficient in HTML, CSS, JavaScript, React js, and Node js. Strong expertise in API development, SDLC, REST API design, and UI/UX principles.
+                  Full Stack Developer and QA Engineer passionate about building modern, user-centric, and reliable web products. I combine front-end and back-end development skills with strong QA expertise to deliver applications that are not only functional, but truly work at scale. Experienced with React.js, Node.js, REST APIs, and end-to-end testing practices, I enjoy turning ideas into working MVPs and improving products through thoughtful testing and iteration.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                  Extensive experience as a Quality Assurance Engineer, skilled in manual testing, automation frameworks, test case creation, and API testing. Adept at problem solving, collaborative teamwork, and quickly adapting to new technologies.
+                  I am driven by curiosity and continuous learning — exploring new frameworks, AI-powered tools, automation techniques, and UX trends that move digital products forward. I love working on solutions that simplify processes, enhance usability, and make technology more accessible.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  <span className="font-semibold text-foreground">Hobbies & Interests</span> — Outside of tech, I am actively involved in sports. I regularly play tennis and take part in amateur tournaments, which helps me stay focused, disciplined, and goal-oriented — qualities I apply in my professional life as well. I enjoy challenges, competition, and constant improvement, both on the court and in my career.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                  <span className="font-semibold text-foreground">What motivates me</span> — Building products that solve real problems and make a meaningful impact. For me, development is not just about writing code — it's about understanding the idea behind it, shaping it, and bringing it to life with quality and purpose.
                 </p>
               </div>
 
