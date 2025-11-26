@@ -258,9 +258,9 @@ export default function About() {
                   >
                     {/* Icon on center line */}
                     <motion.div
-                      initial={activeIndex === idx ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
-                      animate={activeIndex === idx ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8 }}
+                      initial={{ opacity: 1, y: 0 }}
+                      animate={activeIndex === idx ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
                       className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}
                     >
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
