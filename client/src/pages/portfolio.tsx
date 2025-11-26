@@ -25,7 +25,7 @@ const projects = [
     title: "Sense StudyHub",
     category: "EdTech",
     description: "Comprehensive online learning platform with interactive courses and student engagement tools.",
-    tags: ["Education", "React", "Node.js"],
+    tags: ["Python", "JavaScript", "Django", "Next.js", "Tailwind", "Authentication", "HTML", "CSS"],
     image: sensestudyhubImg
   },
   {
