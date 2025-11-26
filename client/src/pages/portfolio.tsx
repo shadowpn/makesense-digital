@@ -87,31 +87,6 @@ export default function Portfolio() {
       </section>
 
       <div className="container mx-auto px-6 py-20">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-2xl"
-          >
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6"><AnimatedText text="Selected Work." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h1>
-            <p className="text-xl text-muted-foreground">
-              A collection of projects where design meets rigorous engineering.
-            </p>
-          </motion.div>
-          
-          <div className="flex gap-2 overflow-x-auto pb-2">
-            {["All", "Fintech", "Healthcare", "Enterprise", "Creative"].map((filter, i) => (
-              <Button 
-                key={filter} 
-                variant={i === 0 ? "default" : "outline"}
-                className={`rounded-full ${i !== 0 ? "border-white/10 bg-transparent hover:bg-white/5" : ""}`}
-              >
-                {filter}
-              </Button>
-            ))}
-          </div>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <motion.div
