@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
@@ -131,6 +132,41 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px] mt-20"
+        >
+          <div 
+            className="absolute inset-0 z-0 opacity-40"
+            style={{
+              backgroundImage: `url(${workHeroBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          
+          <div className="relative z-20">
+            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">Get in Touch</Button>
+              </Link>
+              <Link href="/services">
+                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                  View Services
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </Layout>
   );

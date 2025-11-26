@@ -154,7 +154,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={expertlashImg} alt="ExpertLash" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-6 z-20">
-              <div className="mb-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-mono inline-block backdrop-blur-md">BEAUTY TECH</div>
+              <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">BEAUTY TECH</div>
               <h3 className="text-xl font-display font-bold">ExpertLash</h3>
             </div>
           </motion.div>
