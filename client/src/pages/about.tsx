@@ -326,14 +326,14 @@ export default function About() {
                       {item.details ? (
                         <ul className="space-y-2">
                           {item.details.map((detail, i) => (
-                            <li key={i} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                            <li key={i} className="text-sm md:text-base text-foreground leading-relaxed flex gap-2">
                               <span className="text-primary flex-shrink-0 mt-1">•</span>
                               <span>{detail}</span>
                             </li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                        <p className="text-sm md:text-base text-foreground leading-relaxed">{item.description}</p>
                       )}
                     </div>
                     </motion.div>
