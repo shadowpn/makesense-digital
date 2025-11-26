@@ -176,7 +176,6 @@ export default function About() {
                 className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-500/40"
               >
                 <img src={nataliiaPhoto} alt="Nataliia Petrychuk" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-transparent to-transparent rounded-3xl pointer-events-none" />
               </motion.div>
             </div>
 
