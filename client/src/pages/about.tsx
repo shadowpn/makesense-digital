@@ -6,7 +6,6 @@ import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
-import coreSkillsImg from "@assets/изображение_1764120932523.png";
 import resumeImg from "@assets/изображение_1764121001448.png";
 
 export default function About() {
@@ -85,14 +84,33 @@ export default function About() {
               {/* Core Skills */}
               <div>
                 <h3 className="text-2xl font-display font-bold mb-6">Core Skills</h3>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  className="rounded-2xl overflow-hidden"
-                >
-                  <img src={coreSkillsImg} alt="Core Skills" className="w-full h-auto" />
-                </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    { category: "Frontend", skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"] },
+                    { category: "Backend", skills: ["Node.js", "Express", "PostgreSQL", "REST APIs"] },
+                    { category: "Testing", skills: ["Playwright", "Jest", "Manual QA", "Automation"] },
+                    { category: "Tools", skills: ["Git", "Docker", "CI/CD", "Figma"] }
+                  ].map((skillGroup, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                      viewport={{ once: true }}
+                      className="p-6 rounded-2xl bg-background border border-white/10 hover:border-primary/30 transition-colors"
+                    >
+                      <h4 className="text-lg font-bold mb-4 text-primary">{skillGroup.category}</h4>
+                      <div className="space-y-2">
+                        {skillGroup.skills.map((skill, i) => (
+                          <div key={i} className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-primary" />
+                            <span className="text-sm text-muted-foreground">{skill}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               {/* Resume */}
