@@ -266,7 +266,7 @@ export default function About() {
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                         activeIndex === idx
                           ? "bg-accent scale-110"
-                          : ""
+                          : "bg-accent"
                       }`}>
                         {item.type === "work" ? (
                           <Briefcase size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
