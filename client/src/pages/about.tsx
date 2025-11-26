@@ -57,7 +57,14 @@ export default function About() {
       company: "Miber AB",
       location: "Sweden, Remote",
       period: "2020 - 2021",
-      description: "End-to-end Testing, Defect Reporting, QA"
+      description: "End-to-end Testing, Defect Reporting, QA",
+      details: [
+        "Performed end-to-end testing for an online education platform, ensuring smooth student registration, class management, and teacher material development workflows",
+        "Analyzed business requirements and technical documentation, developing comprehensive test cases for functional and integration testing",
+        "Conducted defect reporting and debugging sessions with actionable insights, improving overall product reliability and performance",
+        "Executed UI/UX testing across multiple browsers, devices, and operating systems to ensure a consistently high-quality user experience",
+        "Produced detailed reports on issues with recommendations for continuous improvement"
+      ]
     },
     {
       type: "work",
