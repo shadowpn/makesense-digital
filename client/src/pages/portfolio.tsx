@@ -33,7 +33,7 @@ const projects = [
     title: "Ora-Aid",
     category: "HealthTech",
     description: "Self-adhesive intraoral patch for safe, effective oral wound care. Innovative healthcare solution.",
-    tags: ["HealthCare", "Product Design", "Innovation"],
+    tags: ["Landing Page", "Bootstrap 5", "HTML", "CSS", "E-commerce", "Email Integration"],
     image: oraidImg
   },
   {
