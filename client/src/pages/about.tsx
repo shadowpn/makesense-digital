@@ -157,58 +157,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Resume */}
-              <div>
-                <h3 className="text-2xl font-display font-bold mb-6">Professional Journey</h3>
-                <div className="relative">
-                  {/* Vertical Line */}
-                  <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30" />
-                  
-                  {/* Timeline Items */}
-                  <div className="space-y-6">
-                    {timeline.map((item, idx) => (
-                      <motion.div
-                        key={idx}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.1 }}
-                        viewport={{ once: true }}
-                        className={`ml-16 p-4 rounded-xl transition-all duration-300 ${
-                          activeIndex === idx
-                            ? "bg-primary/30 border border-primary/50 shadow-lg shadow-purple-500/20"
-                            : "bg-background border border-white/10 hover:border-primary/30"
-                        }`}
-                      >
-                        {/* Icon */}
-                        <div className="absolute -left-8 top-4">
-                          <div className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            activeIndex === idx
-                              ? "bg-primary shadow-lg shadow-primary/50"
-                              : "bg-white/10 border border-white/20"
-                          }`}>
-                            {item.type === "work" ? (
-                              <Briefcase size={16} className="text-background" />
-                            ) : (
-                              <GraduationCap size={16} className="text-background" />
-                            )}
-                          </div>
-                        </div>
-
-                        {/* Content */}
-                        <div>
-                          <div className="flex items-start justify-between mb-2">
-                            <h4 className="text-lg font-bold">{item.title}</h4>
-                            <span className="text-xs text-muted-foreground font-mono">{item.period}</span>
-                          </div>
-                          <p className="text-sm text-primary font-semibold mb-1">{item.company}</p>
-                          <p className="text-xs text-muted-foreground mb-3">{item.location}</p>
-                          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </section>
@@ -264,6 +212,71 @@ export default function About() {
                 <p className="text-muted-foreground leading-relaxed">{skill.description}</p>
               </motion.div>
             ))}
+          </div>
+        </section>
+
+        {/* Professional Journey Section - 2 Column Timeline */}
+        <section className="py-24 border-t border-white/10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-4xl font-display font-bold mb-4">Professional Journey</h2>
+            <p className="text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Center Vertical Line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
+            
+            {/* Timeline Grid - 2 Columns */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {timeline.map((item, idx) => {
+                const isLeft = idx % 2 === 0;
+                return (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: isLeft ? -20 : 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className={`relative ${isLeft ? 'pr-8' : 'pl-8'}`}
+                  >
+                    {/* Icon on center line */}
+                    <div className="absolute left-1/2 top-6 transform -translate-x-1/2 z-10">
+                      <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        activeIndex === idx
+                          ? "bg-primary shadow-lg shadow-primary/50 scale-110"
+                          : "bg-white/10 border border-white/20"
+                      }`}>
+                        {item.type === "work" ? (
+                          <Briefcase size={18} className="text-primary" />
+                        ) : (
+                          <GraduationCap size={18} className="text-primary" />
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Content Card */}
+                    <div className={`p-6 rounded-xl transition-all duration-300 ${
+                      activeIndex === idx
+                        ? "bg-primary/30 border border-primary/50 shadow-lg shadow-purple-500/20"
+                        : "bg-background border border-white/10 hover:border-primary/30"
+                    }`}>
+                      <div className="flex items-start justify-between mb-2">
+                        <h4 className="text-lg font-bold pr-4">{item.title}</h4>
+                        <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{item.period}</span>
+                      </div>
+                      <p className="text-sm text-primary font-semibold mb-1">{item.company}</p>
+                      <p className="text-xs text-muted-foreground mb-3">{item.location}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
