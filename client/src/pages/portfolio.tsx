@@ -41,7 +41,7 @@ const projects = [
     title: "ExpertLash",
     category: "Beauty Tech",
     description: "Professional lash extension booking and consultation platform. Connect with expert lash technicians and manage appointments seamlessly.",
-    tags: ["Mobile App", "Booking System", "Beauty Services"],
+    tags: ["Telegram Bot", "Telegram MiniApp", "Paid Subscription", "Stripe", "PayPal", "Authentication", "Python", "Supabase", "Next.js", "Tailwind"],
     image: expertlashImg
   }
 ];
