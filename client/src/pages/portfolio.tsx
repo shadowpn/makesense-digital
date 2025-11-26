@@ -5,39 +5,43 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
+import aussiewayImg from "@assets/изображение_1764055739030.png";
+import sensestudyhubImg from "@assets/изображение_1764056223710.png";
+import oraidImg from "@assets/изображение_1764057538171.png";
+import beautybotImg from "@assets/stock_images/beauty_course_online_da449890.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "Nebula Finance",
-    category: "Fintech",
-    description: "A next-generation trading platform with real-time analytics.",
-    tags: ["React", "Node.js", "WebSockets"],
-    image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?auto=format&fit=crop&q=80"
+    title: "Aussie Way Visa",
+    category: "Legal Tech",
+    description: "A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.",
+    tags: ["React", "Full-Stack", "Visa Services"],
+    image: aussiewayImg
   },
   {
     id: 2,
-    title: "Aero Systems",
-    category: "Enterprise",
-    description: "Internal resource management dashboard for aviation logistics.",
-    tags: ["Next.js", "PostgreSQL", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
+    title: "Sense StudyHub",
+    category: "EdTech",
+    description: "Comprehensive online learning platform with interactive courses and student engagement tools.",
+    tags: ["Education", "React", "Node.js"],
+    image: sensestudyhubImg
   },
   {
     id: 3,
-    title: "Zenith Health",
-    category: "Healthcare",
-    description: "Patient portal and appointment scheduling system.",
-    tags: ["Mobile App", "React Native", "HIPAA"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80"
+    title: "Ora-Aid",
+    category: "HealthTech",
+    description: "Self-adhesive intraoral patch for safe, effective oral wound care. Innovative healthcare solution.",
+    tags: ["HealthCare", "Product Design", "Innovation"],
+    image: oraidImg
   },
   {
     id: 4,
-    title: "Echo Stream",
-    category: "Entertainment",
-    description: "Audio streaming service with social features.",
-    tags: ["Audio API", "Social Graph", "AWS"],
-    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80"
+    title: "Beauty Bot",
+    category: "Telegram Bot",
+    description: "Intelligent Telegram bot for beauty recommendations and virtual consultations.",
+    tags: ["Bot", "AI", "Telegram"],
+    image: beautybotImg
   }
 ];
 
