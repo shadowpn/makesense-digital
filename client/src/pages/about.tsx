@@ -121,39 +121,43 @@ export default function About() {
   return (
     <Layout>
       {/* Hero Section with Background */}
-      <section className="relative py-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 z-0 opacity-60"
+          className="absolute inset-0 z-0 opacity-40"
           style={{
             backgroundImage: `url(${introduceBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/15 via-background/10 to-background/15" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mx-auto mb-24 text-center"
+            className="max-w-4xl"
           >
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            About <AnimatedText 
-              text="SensePower Digital." 
-              staggerDelay={0.06} 
-              duration={0.6}
-              initialDelay={0.3}
-              className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary"
-            />
-          </h1>
-          <p className="text-xl text-foreground leading-relaxed mb-6">
-            Founded by Nataliia Petrychuk. We're obsessed with design excellence and engineering precision, helping forward-thinking companies launch and scale their digital products since 2022.
-          </p>
-          <p className="text-lg text-foreground leading-relaxed italic">
-            "Building great digital products is equal parts craft and science. It requires discipline, creativity, and an obsessive attention to detail."
-          </p>
-          <p className="text-sm text-muted-foreground mt-4">— Designer, Engineer, Entrepreneur</p>
+            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
+              <AnimatedText text="About" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
+              <br />
+              <AnimatedText 
+                text="SensePower Digital." 
+                staggerDelay={0.06} 
+                duration={0.6}
+                initialDelay={1.8}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+              />
+            </div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
+            >
+              Founded by Nataliia Petrychuk. We're obsessed with design excellence and engineering precision, helping forward-thinking companies launch and scale their digital products since 2022.
+            </motion.p>
           </motion.div>
         </div>
       </section>
