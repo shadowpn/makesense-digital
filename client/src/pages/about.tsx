@@ -168,28 +168,12 @@ export default function About() {
             className="grid md:grid-cols-3 gap-12 items-start"
           >
             {/* Photo */}
-            <div className="md:col-span-1 relative pt-8 pb-8 px-8">
-              <svg className="absolute -top-2 -left-2 -right-2 -bottom-2 w-auto pointer-events-none" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid meet" style={{ filter: 'drop-shadow(0 0 25px rgba(168, 85, 247, 0.4))' }}>
-                {/* Decorative brush strokes frame */}
-                {/* Top left */}
-                <path d="M 10 30 Q 5 10 20 25 L 35 15 Q 30 35 45 28" stroke="#a855f7" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
-                {/* Top right */}
-                <path d="M 290 30 Q 295 10 280 25 L 265 15 Q 270 35 255 28" stroke="#d946ef" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
-                {/* Bottom left */}
-                <path d="M 10 370 Q 5 390 20 375 L 35 385 Q 30 365 45 372" stroke="#7c3aed" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
-                {/* Bottom right */}
-                <path d="M 290 370 Q 295 390 280 375 L 265 385 Q 270 365 255 372" stroke="#a855f7" strokeWidth="5" fill="none" strokeLinecap="round" opacity="0.8" />
-                {/* Side strokes */}
-                <path d="M 5 80 Q 0 95 12 105 Q 8 120 15 135" stroke="#d946ef" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-                <path d="M 295 80 Q 300 95 288 105 Q 292 120 285 135" stroke="#7c3aed" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-                <path d="M 5 250 Q 0 265 12 275 Q 8 290 15 305" stroke="#a855f7" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-                <path d="M 295 250 Q 300 265 288 275 Q 292 290 285 305" stroke="#d946ef" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
-              </svg>
+            <div className="md:col-span-1">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="rounded-3xl overflow-hidden relative z-10 shadow-2xl shadow-purple-500/40"
+                className="rounded-3xl overflow-hidden shadow-2xl shadow-purple-500/40"
               >
                 <img src={nataliiaPhoto} alt="Nataliia Petrychuk" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-transparent to-transparent rounded-3xl pointer-events-none" />
