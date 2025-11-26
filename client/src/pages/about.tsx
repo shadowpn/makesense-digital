@@ -6,7 +6,7 @@ import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
-import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
+import nataliiaPhoto from "@assets/Main_desk_1764137522258.jpg";
 import journeyBg from "@assets/generated_images/modern_vibrant_technology_gradient_background.png";
 import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
 
@@ -169,13 +169,23 @@ export default function About() {
           >
             {/* Photo */}
             <div className="md:col-span-1 relative">
-              <svg className="absolute -top-4 -left-4 w-full h-full pointer-events-none" viewBox="0 0 300 400" style={{ filter: 'drop-shadow(0 0 15px rgba(168, 85, 247, 0.2))' }}>
-                <path d="M 20 50 Q 30 60 40 55 Q 50 50 60 65 Q 70 80 80 70 Q 90 60 100 75" stroke="url(#brushGradient)" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
-                <path d="M 280 100 Q 270 110 260 105 Q 250 100 240 115 Q 230 130 220 120 Q 210 110 200 125" stroke="url(#brushGradient)" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
-                <path d="M 50 380 Q 60 370 70 375 Q 80 380 90 365 Q 100 350 110 360 Q 120 370 130 355" stroke="url(#brushGradient)" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 400" preserveAspectRatio="none" style={{ filter: 'drop-shadow(0 0 20px rgba(168, 85, 247, 0.3))' }}>
+                {/* Top border brush strokes */}
+                <path d="M 0 20 Q 20 5 40 15 Q 60 25 80 10 Q 100 -5 120 15 Q 140 35 160 15 Q 180 -5 200 15 Q 220 35 240 10 Q 260 -15 280 15 Q 290 25 300 20" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
+                
+                {/* Left border brush strokes */}
+                <path d="M 15 40 Q 0 60 10 80 Q 20 100 5 120 Q -10 140 10 160 Q 30 180 10 200 Q -10 220 10 240 Q 30 260 10 280 Q -10 300 15 320" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
+                
+                {/* Right border brush strokes */}
+                <path d="M 285 40 Q 300 60 290 80 Q 280 100 295 120 Q 310 140 290 160 Q 270 180 290 200 Q 310 220 290 240 Q 270 260 290 280 Q 310 300 285 320" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
+                
+                {/* Bottom border brush strokes */}
+                <path d="M 0 380 Q 20 395 40 385 Q 60 375 80 390 Q 100 405 120 385 Q 140 365 160 385 Q 180 405 200 385 Q 220 365 240 390 Q 260 415 280 380 Q 290 375 300 380" stroke="url(#brushGradient)" strokeWidth="4" fill="none" strokeLinecap="round" opacity="0.7" />
+                
                 <defs>
                   <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
+                    <stop offset="50%" style={{ stopColor: '#d946ef', stopOpacity: 1 }} />
                     <stop offset="100%" style={{ stopColor: '#7c3aed', stopOpacity: 1 }} />
                   </linearGradient>
                 </defs>
