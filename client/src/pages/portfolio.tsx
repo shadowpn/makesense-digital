@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
+import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
 const projects = [
   {
@@ -43,6 +44,48 @@ const projects = [
 export default function Portfolio() {
   return (
     <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0 opacity-40"
+          style={{
+            backgroundImage: `url(${workHeroBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
+        
+        <div className="container mx-auto px-6 relative z-20">
+          <motion.div 
+            initial="initial"
+            animate="animate"
+            className="max-w-4xl"
+          >
+            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
+              <AnimatedText text="Our" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
+              <br />
+              <AnimatedText 
+                text="Work." 
+                staggerDelay={0.06} 
+                duration={0.6}
+                initialDelay={1.8}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+              />
+            </div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
+            >
+              A collection of projects where design meets rigorous engineering.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
       <div className="container mx-auto px-6 py-20">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <motion.div 
