@@ -122,14 +122,14 @@ export default function About() {
       {/* Hero Section with Background */}
       <section className="relative py-20">
         <div 
-          className="absolute inset-0 z-0 opacity-50"
+          className="absolute inset-0 z-0 opacity-60"
           style={{
             backgroundImage: `url(${introduceBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/30 via-background/20 to-background/30" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/15 via-background/10 to-background/15" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div
