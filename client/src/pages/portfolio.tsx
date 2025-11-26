@@ -63,10 +63,10 @@ export default function Portfolio() {
             className="max-w-4xl"
           >
             <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
-              <AnimatedText text="Our" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
+              <AnimatedText text="Explore" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
               <br />
               <AnimatedText 
-                text="Work." 
+                text="Our Work." 
                 staggerDelay={0.06} 
                 duration={0.6}
                 initialDelay={1.8}
