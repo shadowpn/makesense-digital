@@ -366,7 +366,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px]"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
