@@ -146,7 +146,7 @@ export default function About() {
               className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary"
             />
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+          <p className="text-xl text-foreground leading-relaxed mb-6">
             Founded by Nataliia Petrychuk. We're obsessed with design excellence and engineering precision, helping forward-thinking companies launch and scale their digital products since 2022.
           </p>
           <p className="text-lg text-foreground leading-relaxed italic">
