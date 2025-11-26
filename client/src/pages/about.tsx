@@ -308,8 +308,10 @@ export default function About() {
                     </motion.div>
 
                     {/* Content Card */}
-                    <div className={`p-6 rounded-xl transition-all duration-300 bg-background border border-white/10 hover:border-primary/30 ${
-                      activeIndex === idx ? "shadow-lg shadow-primary/40" : ""
+                    <div className={`p-6 rounded-xl transition-all duration-300 bg-background ${
+                      activeIndex === idx
+                        ? "border-2 border-primary shadow-lg shadow-primary/40"
+                        : "border border-white/10 hover:border-primary/30"
                     }`}>
                       <div className="flex items-start justify-between mb-2">
                         <h4 className="text-lg font-bold pr-4">{item.title}</h4>
