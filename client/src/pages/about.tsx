@@ -260,23 +260,19 @@ export default function About() {
                     <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}>
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                         activeIndex === idx
-                          ? "bg-primary scale-110"
-                          : "bg-primary"
+                          ? "bg-accent scale-110"
+                          : "bg-primary/30"
                       }`}>
                         {item.type === "work" ? (
-                          <Briefcase size={20} className={`transition-colors ${activeIndex === idx ? "text-background" : "text-background"}`} />
+                          <Briefcase size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
                         ) : (
-                          <GraduationCap size={20} className={`transition-colors ${activeIndex === idx ? "text-background" : "text-background"}`} />
+                          <GraduationCap size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
                         )}
                       </div>
                     </div>
 
                     {/* Content Card */}
-                    <div className={`p-6 rounded-xl transition-all duration-300 ${
-                      activeIndex === idx
-                        ? "bg-primary/30 border border-primary/50 shadow-lg shadow-purple-500/20"
-                        : "bg-background border border-white/10 hover:border-primary/30"
-                    }`}>
+                    <div className="p-6 rounded-xl transition-all duration-300 bg-background border border-white/10 hover:border-primary/30">
                       <div className="flex items-start justify-between mb-2">
                         <h4 className="text-lg font-bold pr-4">{item.title}</h4>
                         <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{item.period}</span>
