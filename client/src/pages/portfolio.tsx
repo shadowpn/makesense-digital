@@ -9,7 +9,7 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
-import expertlashImg from "@assets/generated_images/expertlash_header_with_pink_background_and_text.png";
+import expertlashImg from "@assets/generated_images/pure_rose_pink_clean_background.png";
 
 const projects = [
   {
