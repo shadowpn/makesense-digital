@@ -94,79 +94,83 @@ export default function Portfolio() {
       <div className="container mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group cursor-pointer"
-            >
-              <div className="relative aspect-[4/3] mb-6 rounded-3xl overflow-hidden border border-white/10">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
-                
-                <div className="absolute top-6 right-6 p-3 bg-black/50 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-white/10">
-                  <ArrowUpRight className="text-white" />
+            <>
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group cursor-pointer"
+              >
+                <div className="relative aspect-[4/3] mb-6 rounded-3xl overflow-hidden border border-white/10">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+                  
+                  <div className="absolute top-6 right-6 p-3 bg-black/50 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-white/10">
+                    <ArrowUpRight className="text-white" />
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-start justify-between mb-2">
-                <h3 className="text-3xl font-display font-bold group-hover:text-primary transition-colors">{project.title}</h3>
-                <span className="text-muted-foreground font-mono text-sm pt-2">{project.category}</span>
-              </div>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-3xl font-display font-bold group-hover:text-primary transition-colors">{project.title}</h3>
+                  <span className="text-muted-foreground font-mono text-sm pt-2">{project.category}</span>
+                </div>
+                
+                <p className="text-muted-foreground mb-4 max-w-md">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => (
+                    <Badge key={tag} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-white/5">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              </motion.div>
               
-              <p className="text-muted-foreground mb-4 max-w-md">{project.description}</p>
-              
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map(tag => (
-                  <Badge key={tag} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-white/5">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </motion.div>
+              {index === 1 && (
+                <motion.div
+                  key="cta"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 md:col-span-2"
+                >
+                  <div 
+                    className="absolute inset-0 z-0 opacity-40"
+                    style={{
+                      backgroundImage: `url(${workHeroBg})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center'
+                    }}
+                  />
+                  <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+                  
+                  <div className="relative z-20">
+                    <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
+                    <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+                      Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      <Link href="/contact">
+                        <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">Get in Touch</Button>
+                      </Link>
+                      <Link href="/services">
+                        <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                          View Services
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px] mt-20"
-        >
-          <div 
-            className="absolute inset-0 z-0 opacity-40"
-            style={{
-              backgroundImage: `url(${workHeroBg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
-          
-          <div className="relative z-20">
-            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">Get in Touch</Button>
-              </Link>
-              <Link href="/services">
-                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
-                  View Services
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </Layout>
   );
