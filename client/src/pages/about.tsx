@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
 import journeyBg from "@assets/generated_images/modern_vibrant_technology_gradient_background.png";
-import ctaBg from "@assets/generated_images/futuristic_dark_tech_background.png";
+import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -368,7 +368,17 @@ export default function About() {
           viewport={{ once: true }}
           className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5"
         >
-          <div className="relative">
+          <div 
+            className="absolute inset-0 z-0 opacity-40"
+            style={{
+              backgroundImage: `url(${ctaBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          
+          <div className="relative z-20">
             <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
               Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
