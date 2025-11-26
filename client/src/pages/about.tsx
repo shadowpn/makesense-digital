@@ -7,7 +7,7 @@ import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
-import journeyBg from "@assets/generated_images/premium_light_technology_background.png";
+import journeyBg from "@assets/generated_images/modern_vibrant_technology_gradient_background.png";
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
