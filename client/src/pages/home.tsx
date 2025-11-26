@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
-import ctaBg from "@assets/generated_images/futuristic_dark_tech_background.png";
+import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
@@ -167,17 +167,17 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px]"
         >
           <div 
-            className="absolute inset-0 z-0 opacity-30"
+            className="absolute inset-0 z-0 opacity-40"
             style={{
               backgroundImage: `url(${ctaBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-br from-background/60 via-background/50 to-background/60" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
             <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
