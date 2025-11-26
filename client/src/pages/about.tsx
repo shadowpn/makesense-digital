@@ -7,7 +7,7 @@ import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/Nataliia_about_1764120672692.jpg";
-import journeyBg from "@assets/generated_images/bright_light_tech_professional_background.png";
+import journeyBg from "@assets/generated_images/premium_light_technology_background.png";
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -250,16 +250,16 @@ export default function About() {
         {/* Professional Journey Section - 2 Column Timeline */}
         <section className="py-24 border-t border-white/10 relative overflow-hidden">
           <div 
-            className="absolute inset-0 opacity-40"
+            className="absolute inset-0 opacity-50"
             style={{
               backgroundImage: `url(${journeyBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/50 to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background/20" />
           
-          <div className="relative z-10">
+          <div className="relative z-10 px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
