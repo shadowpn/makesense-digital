@@ -233,6 +233,17 @@ export default function About() {
             
             {/* Timeline Grid - 2 Columns */}
             <div className="grid md:grid-cols-2 gap-0">
+              {/* Education Label */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="mt-12 pt-8 pr-12 mb-6"
+              >
+                <h3 className="text-2xl font-display font-bold text-primary">Education</h3>
+              </motion.div>
+              <div />
+              
               {timeline.map((item, idx) => {
                 const isLeft = idx % 2 === 0;
                 const isEducation = idx >= 4;
@@ -244,7 +255,7 @@ export default function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1 }}
                     viewport={{ once: true }}
-                    className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${isFirstEducation ? 'mt-12 pt-16' : ''}`}
+                    className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${isFirstEducation ? 'pt-8' : ''}`}
                   >
                     {/* Icon on center line */}
                     <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'}`}>
