@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, LayoutTemplate, Code2, Bug, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
@@ -172,6 +172,99 @@ export default function Portfolio() {
           ))}
         </div>
       </div>
+
+      {/* The Process Section */}
+      <section className="py-32 container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+            How We <AnimatedText 
+              text="Build." 
+              staggerDelay={0.06} 
+              duration={0.6}
+              initialDelay={0.3}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary"
+            />
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Our proven methodology delivers exceptional results, every time.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-4 gap-6">
+          {[
+            {
+              icon: <LayoutTemplate size={32} />,
+              title: "Discovery",
+              desc: "We map out requirements and define success metrics.",
+              number: "01"
+            },
+            {
+              icon: <Code2 size={32} />,
+              title: "Development",
+              desc: "Iterative builds with bi-weekly demos and feedback.",
+              number: "02"
+            },
+            {
+              icon: <Bug size={32} />,
+              title: "Testing",
+              desc: "Rigorous automated and manual testing cycles.",
+              number: "03"
+            },
+            {
+              icon: <Zap size={32} />,
+              title: "Deployment",
+              desc: "Smooth rollout with monitoring and support.",
+              number: "04"
+            },
+          ].map((step, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 hover:border-primary/50 transition-all duration-300"
+            >
+              {/* Background gradient on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+              
+              <div className="relative z-10">
+                {/* Step number */}
+                <div className="text-6xl font-display font-black text-white/5 group-hover:text-white/10 transition-colors mb-4">
+                  {step.number}
+                </div>
+
+                {/* Icon */}
+                <div className="w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300 border border-primary/20 group-hover:border-primary/50 shadow-lg shadow-primary/10">
+                  {step.icon}
+                </div>
+
+                {/* Title */}
+                <h4 className="text-2xl font-display font-bold mb-3 group-hover:text-primary transition-colors">
+                  {step.title}
+                </h4>
+
+                {/* Description */}
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {step.desc}
+                </p>
+
+                {/* Arrow indicator for next step */}
+                {i < 3 && (
+                  <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2">
+                    <ArrowUpRight size={24} className="text-white/10 group-hover:text-primary/30 transition-colors rotate-90" />
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
     </Layout>
   );
 }
