@@ -232,7 +232,7 @@ export default function About() {
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
             
             {/* Timeline Grid - 2 Columns */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-0">
               {timeline.map((item, idx) => {
                 const isLeft = idx % 2 === 0;
                 return (
@@ -242,19 +242,19 @@ export default function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1 }}
                     viewport={{ once: true }}
-                    className={`relative ${isLeft ? 'pr-8' : 'pl-8'}`}
+                    className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''}`}
                   >
                     {/* Icon on center line */}
-                    <div className="absolute left-1/2 top-6 transform -translate-x-1/2 z-10">
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'}`}>
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                         activeIndex === idx
                           ? "bg-primary shadow-lg shadow-primary/50 scale-110"
                           : "bg-white/10 border border-white/20"
                       }`}>
                         {item.type === "work" ? (
-                          <Briefcase size={18} className="text-primary" />
+                          <Briefcase size={20} className="text-primary" />
                         ) : (
-                          <GraduationCap size={18} className="text-primary" />
+                          <GraduationCap size={20} className="text-primary" />
                         )}
                       </div>
                     </div>
