@@ -146,10 +146,13 @@ export default function About() {
               className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary"
             />
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            We're a digital studio obsessed with the intersection of design excellence and engineering precision. 
-            Since 2022, we've helped forward-thinking companies launch, scale, and perfect their digital products.
+          <p className="text-xl text-muted-foreground leading-relaxed mb-4">
+            Founded by Nataliia Petrychuk, SensePower Digital is a digital studio obsessed with the intersection of design excellence and engineering precision. Since 2022, we've helped forward-thinking companies launch, scale, and perfect their digital products.
           </p>
+          <p className="text-lg text-foreground leading-relaxed italic">
+            "Building great digital products is equal parts craft and science. It requires discipline, creativity, and an obsessive attention to detail."
+          </p>
+          <p className="text-sm text-muted-foreground mt-4">— Designer, Engineer, Entrepreneur</p>
           </motion.div>
         </div>
       </section>
