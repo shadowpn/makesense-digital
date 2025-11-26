@@ -250,14 +250,14 @@ export default function About() {
         {/* Professional Journey Section - 2 Column Timeline */}
         <section className="py-24 border-t border-white/10 relative overflow-hidden">
           <div 
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0 opacity-60"
             style={{
               backgroundImage: `url(${journeyBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/15 via-background/10 to-background/15" />
           
           <div className="relative z-10 px-6">
             <motion.div
