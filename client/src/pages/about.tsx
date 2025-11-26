@@ -228,16 +228,15 @@ export default function About() {
           </motion.div>
 
           <div className="relative">
-            {/* Center Vertical Line - Work Section */}
-            <div className="absolute left-1/2 top-0 h-1/2 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/50 transform -translate-x-1/2" />
-            
-            {/* Center Vertical Line - Education Section */}
-            <div className="absolute left-1/2 bottom-0 h-1/3 w-0.5 bg-gradient-to-b from-primary/50 via-accent to-primary/30 transform -translate-x-1/2" />
+            {/* Center Vertical Line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
             
             {/* Timeline Grid - 2 Columns */}
             <div className="grid md:grid-cols-2 gap-0">
               {timeline.map((item, idx) => {
                 const isLeft = idx % 2 === 0;
+                const isEducation = idx >= 4;
+                const isFirstEducation = idx === 4;
                 return (
                   <motion.div
                     key={idx}
@@ -245,7 +244,7 @@ export default function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: idx * 0.1 }}
                     viewport={{ once: true }}
-                    className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''}`}
+                    className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${isFirstEducation ? 'col-span-full my-12' : ''}`}
                   >
                     {/* Icon on center line */}
                     <div className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'}`}>
