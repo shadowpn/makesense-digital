@@ -184,7 +184,7 @@ export default function About() {
               {/* Header */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">Nataliia Petrychuk</h2>
-                <p className="text-xl text-primary font-semibold mb-4">Full-Stack Developer & QA Engineer</p>
+                <p className="text-xl text-foreground font-semibold mb-4">Full-Stack Developer & QA Engineer</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Full Stack Developer and QA Engineer passionate about building modern, user-centric, and reliable web products. I combine front-end and back-end development skills with strong QA expertise to deliver applications that are not only functional, but truly work at scale. Experienced with React.js, Node.js, REST APIs, and end-to-end testing practices, I enjoy turning ideas into working MVPs and improving products through thoughtful testing and iteration.
                 </p>
