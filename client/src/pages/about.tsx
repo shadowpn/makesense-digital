@@ -168,12 +168,23 @@ export default function About() {
             className="grid md:grid-cols-3 gap-12 items-start"
           >
             {/* Photo */}
-            <div className="md:col-span-1">
+            <div className="md:col-span-1 relative">
+              <svg className="absolute -top-4 -left-4 w-full h-full pointer-events-none" viewBox="0 0 300 400" style={{ filter: 'drop-shadow(0 0 15px rgba(168, 85, 247, 0.2))' }}>
+                <path d="M 20 50 Q 30 60 40 55 Q 50 50 60 65 Q 70 80 80 70 Q 90 60 100 75" stroke="url(#brushGradient)" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
+                <path d="M 280 100 Q 270 110 260 105 Q 250 100 240 115 Q 230 130 220 120 Q 210 110 200 125" stroke="url(#brushGradient)" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
+                <path d="M 50 380 Q 60 370 70 375 Q 80 380 90 365 Q 100 350 110 360 Q 120 370 130 355" stroke="url(#brushGradient)" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
+                <defs>
+                  <linearGradient id="brushGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: '#7c3aed', stopOpacity: 1 }} />
+                  </linearGradient>
+                </defs>
+              </svg>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="rounded-3xl overflow-hidden"
+                className="rounded-3xl overflow-hidden relative z-10"
               >
                 <img src={nataliiaPhoto} alt="Nataliia Petrychuk" className="w-full h-full object-cover" />
               </motion.div>
