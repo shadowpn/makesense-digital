@@ -339,9 +339,9 @@ export default function Services() {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { 
-                title: "Vibe Coding", 
+                title: "Vibe Coding & AI", 
                 Icon: Lightbulb, 
-                items: ["Replit", "Figma", "User-Centric Design"],
+                items: ["Replit", "Figma", "Confluence", "Responsive Design", "Lovable"],
                 color: "from-violet-600/30 to-purple-600/30"
               },
               { 
