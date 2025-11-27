@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings } from "lucide-react";
+import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import telegramIcon from "@assets/generated_images/modern_telegram_bot_illustration.png";
@@ -123,7 +123,6 @@ const pricingPlans = [
 export default function Services() {
   const [, setLocation] = useLocation();
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  const [techVariant, setTechVariant] = useState(0);
 
   const handleContactClick = () => {
     setLocation("/contact");
@@ -323,7 +322,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Our Technology Section - Multiple Modern Variants */}
+        {/* Our Technology Section - Connected Flow */}
         <div className="border-t border-white/10 py-16 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -332,147 +331,70 @@ export default function Services() {
             className="mb-12"
           >
             <h2 className="text-4xl font-display font-bold text-center mb-4">Our Technology Stack</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
               We leverage the best-in-class technologies across all projects for scalability and performance
             </p>
-            
-            {/* Variant Switcher */}
-            <div className="flex justify-center gap-4 flex-wrap">
-              <button
-                onClick={() => setTechVariant(0)}
-                className={`px-4 py-2 rounded-full font-mono text-sm transition-all cursor-pointer ${techVariant === 0 ? "bg-primary text-primary-foreground shadow-lg shadow-primary/40" : "border border-white/10 hover:border-primary/50"}`}
-              >
-                ✨ 3D Cards
-              </button>
-              <button
-                onClick={() => setTechVariant(1)}
-                className={`px-4 py-2 rounded-full font-mono text-sm transition-all cursor-pointer ${techVariant === 1 ? "bg-primary text-primary-foreground shadow-lg shadow-primary/40" : "border border-white/10 hover:border-primary/50"}`}
-              >
-                🎯 Hexagons
-              </button>
-              <button
-                onClick={() => setTechVariant(2)}
-                className={`px-4 py-2 rounded-full font-mono text-sm transition-all cursor-pointer ${techVariant === 2 ? "bg-primary text-primary-foreground shadow-lg shadow-primary/40" : "border border-white/10 hover:border-primary/50"}`}
-              >
-                🔗 Connected
-              </button>
-            </div>
           </motion.div>
 
-          <div className="max-w-7xl mx-auto">
-            {/* VARIANT 0: 3D Flip Cards with Animated Border */}
-            {techVariant === 0 && (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {[
-                  { name: "React", cat: "Frontend", emoji: "⚛️", colors: "from-blue-500/30 to-cyan-500/30" },
-                  { name: "Next.js", cat: "Framework", emoji: "▲", colors: "from-slate-700/30 to-slate-900/30" },
-                  { name: "TypeScript", cat: "Language", emoji: "📘", colors: "from-blue-600/30 to-blue-400/30" },
-                  { name: "Node.js", cat: "Runtime", emoji: "🟩", colors: "from-green-600/30 to-green-400/30" },
-                  { name: "Express", cat: "Backend", emoji: "⚡", colors: "from-yellow-600/30 to-yellow-400/30" },
-                  { name: "PostgreSQL", cat: "Database", emoji: "🐘", colors: "from-blue-700/30 to-blue-500/30" },
-                  { name: "MongoDB", cat: "Database", emoji: "🍃", colors: "from-green-600/30 to-green-500/30" },
-                  { name: "Tailwind CSS", cat: "Styling", emoji: "🎨", colors: "from-cyan-500/30 to-blue-500/30" },
-                  { name: "Docker", cat: "DevOps", emoji: "🐳", colors: "from-blue-600/30 to-cyan-500/30" },
-                  { name: "AWS", cat: "Cloud", emoji: "☁️", colors: "from-orange-600/30 to-orange-400/30" },
-                  { name: "Playwright", cat: "Testing", emoji: "🎭", colors: "from-purple-600/30 to-purple-400/30" },
-                  { name: "Stripe", cat: "Payments", emoji: "💳", colors: "from-blue-600/30 to-purple-600/30" },
-                ].map((tech, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, rotateY: -180, y: 20 }}
-                    whileInView={{ opacity: 1, rotateY: 0, y: 0 }}
-                    transition={{ delay: i * 0.05 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -12, rotateZ: 2 }}
-                    className="group"
-                    style={{ perspective: "1000px" }}
-                  >
-                    <div className={`relative bg-gradient-to-br ${tech.colors} backdrop-blur-xl border border-white/10 rounded-2xl p-6 h-32 flex flex-col items-center justify-center cursor-pointer overflow-hidden group-hover:border-primary/50 transition-all duration-300`}>
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="relative z-10 text-center">
-                        <div className="text-4xl mb-2">{tech.emoji}</div>
-                        <h3 className="font-display font-bold text-base md:text-lg group-hover:text-primary transition-colors">{tech.name}</h3>
-                        <p className="text-xs text-muted-foreground mt-1">{tech.cat}</p>
-                      </div>
-                      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{
-                        background: "radial-gradient(circle at 30% 30%, rgba(132, 204, 22, 0.3) 0%, transparent 50%)"
-                      }} />
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            {[
+              { 
+                title: "Frontend Stack", 
+                Icon: Cpu, 
+                items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+                color: "from-blue-500/10 to-cyan-500/10"
+              },
+              { 
+                title: "Backend & API", 
+                Icon: Server, 
+                items: ["Node.js", "Express", "GraphQL", "REST APIs"],
+                color: "from-emerald-500/10 to-teal-500/10"
+              },
+              { 
+                title: "Data Layer", 
+                Icon: Database, 
+                items: ["PostgreSQL", "MongoDB", "Firebase"],
+                color: "from-purple-500/10 to-pink-500/10"
+              },
+              { 
+                title: "DevOps & Tools", 
+                Icon: Wrench, 
+                items: ["Docker", "AWS", "CI/CD", "Git", "Playwright", "Stripe"],
+                color: "from-orange-500/10 to-red-500/10"
+              },
+            ].map((group, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className={`relative border border-white/10 group-hover:border-primary/50 rounded-3xl p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20`}>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="p-3 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
+                      <group.Icon size={28} className="text-primary group-hover:scale-110 transition-transform duration-300" />
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
-
-            {/* VARIANT 1: Hexagon Grid */}
-            {techVariant === 1 && (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 place-items-center">
-                {[
-                  "React", "Next.js", "TypeScript", "Node.js", "Express",
-                  "PostgreSQL", "MongoDB", "Tailwind", "Docker", "AWS",
-                  "Playwright", "Cypress", "JavaScript", "Python", "Git",
-                  "CI/CD", "Figma", "GraphQL", "REST APIs", "Stripe"
-                ].map((tech, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: i * 0.03 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.2 }}
-                    className="w-24 h-24 md:w-28 md:h-28 cursor-pointer relative group"
-                  >
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-300" />
-                    <div className="relative w-full h-full border-2 border-white/10 group-hover:border-primary/50 rounded-2xl flex items-center justify-center transition-all duration-300 bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-xl hover:bg-primary/10">
-                      <div className="text-center">
-                        <p className="font-display font-bold text-sm md:text-base group-hover:text-primary transition-colors">{tech}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
-
-            {/* VARIANT 2: Connected Flow */}
-            {techVariant === 2 && (
-              <div className="grid md:grid-cols-2 gap-8">
-                {[
-                  { title: "Frontend Stack", icon: "🎨", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-                  { title: "Backend & API", icon: "⚙️", items: ["Node.js", "Express", "GraphQL", "REST APIs"] },
-                  { title: "Data Layer", icon: "💾", items: ["PostgreSQL", "MongoDB", "Firebase"] },
-                  { title: "DevOps & Tools", icon: "🛠️", items: ["Docker", "AWS", "CI/CD", "Git", "Playwright", "Stripe"] },
-                ].map((group, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    className="group"
-                  >
-                    <div className="relative border border-white/10 group-hover:border-primary/50 rounded-3xl p-8 bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20">
-                      <div className="flex items-center gap-3 mb-6">
-                        <span className="text-3xl">{group.icon}</span>
-                        <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-colors">{group.title}</h3>
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {group.items.map((item, j) => (
-                          <motion.span
-                            key={j}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: i * 0.1 + j * 0.05 }}
-                            viewport={{ once: true }}
-                            className="px-4 py-2 rounded-full font-mono text-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 text-primary hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer"
-                          >
-                            {item}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
+                    <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-colors">{group.title}</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((item, j) => (
+                      <motion.span
+                        key={j}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: i * 0.1 + j * 0.05 }}
+                        viewport={{ once: true }}
+                        className="px-4 py-2 rounded-full font-mono text-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 text-primary hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/20"
+                      >
+                        {item}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
