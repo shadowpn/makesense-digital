@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench, Lightbulb, GitBranch, Trophy } from "lucide-react";
+import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench, Lightbulb, GitBranch, Trophy, HelpCircle } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import telegramIcon from "@assets/generated_images/modern_telegram_bot_illustration.png";
@@ -548,7 +548,8 @@ export default function Services() {
                     {/* Step Circle */}
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center text-lime-200 border-2 border-lime-200/50 bg-gradient-to-br ${step.color} backdrop-blur-md relative overflow-hidden group-hover:border-lime-200 transition-all duration-300`}
+                      className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center border-2 border-lime-200/50 bg-gradient-to-br ${step.color} backdrop-blur-md relative overflow-hidden group-hover:border-lime-200 transition-all duration-300`}
+                      style={{ color: '#daeb8f' }}
                     >
                       {/* Animated gradient background on hover */}
                       <div className="absolute inset-0 bg-gradient-to-r from-lime-400/0 via-lime-400/10 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -727,7 +728,9 @@ export default function Services() {
                 className="group border border-white/10 rounded-2xl p-6 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-start gap-4">
-                  <div className="text-lime-200 font-bold text-lg mt-1">Q</div>
+                  <div style={{ color: '#daeb8f' }} className="font-bold text-lg mt-1">
+                    <HelpCircle size={24} />
+                  </div>
                   <div className="flex-1">
                     <h4 className="text-lg font-display font-bold mb-2 group-hover:text-lime-100 transition-colors">{item.q}</h4>
                     <p className="text-muted-foreground leading-relaxed">{item.a}</p>
