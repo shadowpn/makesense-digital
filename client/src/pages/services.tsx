@@ -80,20 +80,6 @@ export default function Services() {
       </section>
 
       <div className="container mx-auto px-6 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-3xl mb-20"
-        >
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            <AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" />
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            We combine engineering precision with design intuition to build
-            software that works flawlessly and looks exceptional.
-          </p>
-        </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-12 mb-32">
           {services.map((service, index) => (
             <motion.div
