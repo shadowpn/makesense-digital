@@ -5,7 +5,7 @@ import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.pn
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/animated-text";
-import servicesHeroBg from "@assets/generated_images/modern_tech_services_background.png";
+import servicesHeroBg from "@assets/generated_images/services_hexagon_professional_design.png";
 
 const services = [
   {
