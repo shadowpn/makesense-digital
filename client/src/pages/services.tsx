@@ -353,7 +353,7 @@ export default function Services() {
               { 
                 title: "Backend & API", 
                 Icon: Server, 
-                items: ["Node.js", "Python", "Django", "REST APIs", "JWT/Authentication", "Stripe/PayPal"],
+                items: ["Node.js", "Python", "Django", "REST APIs", "Stripe/PayPal", "JWT/Authentication"],
                 color: "from-emerald-500/10 to-teal-500/10"
               },
               { 
