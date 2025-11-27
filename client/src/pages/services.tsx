@@ -11,6 +11,8 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import fullstackImg from "@assets/generated_images/modern_fullstack_workspace.png";
 import designImg from "@assets/generated_images/professional_design_system_ui.png";
 import devopsImg from "@assets/generated_images/modern_cloud_deployment_tech.png";
+import { useLocation } from "wouter";
+import { useState } from "react";
 
 const services = [
   {
@@ -118,6 +120,13 @@ const pricingPlans = [
 ];
 
 export default function Services() {
+  const [, setLocation] = useLocation();
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const handleContactClick = () => {
+    setLocation("/contact");
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -240,10 +249,10 @@ export default function Services() {
               Let's transform your vision into reality. Whether you need an MVP, comprehensive testing, or complete development—we're ready to help.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">
+              <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
                 Start Your Project
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
                 Schedule Consultation
               </Button>
             </div>
@@ -337,15 +346,31 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15 }}
                 viewport={{ once: true }}
-                className={`rounded-2xl p-8 transition-all duration-300 ${
-                  plan.highlight
+                onClick={() => setSelectedPlan(plan.id)}
+                className={`rounded-2xl p-8 transition-all duration-300 cursor-pointer relative ${
+                  selectedPlan === plan.id || plan.highlight
                     ? "border-2 border-primary bg-gradient-to-br from-primary/10 to-transparent shadow-2xl shadow-primary/30 scale-105"
                     : "border border-white/10 bg-muted/10 hover:bg-muted/20"
                 }`}
               >
-                {plan.highlight && (
+                {(selectedPlan === plan.id || plan.highlight) && (
+                  <motion.div
+                    className="absolute inset-0 rounded-2xl border-2 border-primary pointer-events-none"
+                    animate={{
+                      boxShadow: [
+                        "0 0 0 0 rgba(168, 85, 247, 0.4)",
+                        "0 0 0 10px rgba(168, 85, 247, 0)",
+                      ],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                    }}
+                  />
+                )}
+                {(plan.highlight || selectedPlan === plan.id) && (
                   <div className="mb-4 inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold">
-                    Most Popular
+                    {selectedPlan === plan.id ? "Selected" : "Most Popular"}
                   </div>
                 )}
                 <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
@@ -355,8 +380,12 @@ export default function Services() {
                   <div className="text-sm text-muted-foreground">{plan.period}</div>
                 </div>
                 <Button 
-                  className={`w-full rounded-full mb-8 ${plan.highlight ? "" : "border-primary/20"}`}
-                  variant={plan.highlight ? "default" : "outline"}
+                  className={`w-full rounded-full mb-8 ${selectedPlan === plan.id || plan.highlight ? "" : "border-primary/20"}`}
+                  variant={selectedPlan === plan.id || plan.highlight ? "default" : "outline"}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleContactClick();
+                  }}
                 >
                   Get Started
                 </Button>
