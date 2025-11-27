@@ -365,13 +365,13 @@ export default function Services() {
               { 
                 title: "Testing & Automation", 
                 Icon: CheckCircle, 
-                items: ["Playwright", "Cypress", "Jest", "Postman", "API Testing"],
+                items: ["Playwright", "Postman", "API Testing", "TestRail"],
                 color: "from-orange-500/10 to-amber-500/10"
               },
               { 
                 title: "Agile & SDLC", 
                 Icon: Wrench, 
-                items: ["Jira", "TestRail", "Scrum/Kanban", "Git", "CI/CD", "SEO"],
+                items: ["Jira", "Scrum/Kanban", "Git", "CI/CD", "SEO"],
                 color: "from-red-500/10 to-pink-500/10"
               },
             ].map((group, i) => (
