@@ -1,11 +1,15 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target } from "lucide-react";
+import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/animated-text";
 import servicesHeroBg from "@assets/generated_images/professional_tablet_holographic_tech.png";
+import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
+import fullstackImg from "@assets/generated_images/fullstack_development_illustration.png";
+import designImg from "@assets/generated_images/design_system_ui_illustration.png";
+import devopsImg from "@assets/generated_images/devops_deployment_illustration.png";
 
 const services = [
   {
@@ -31,6 +35,70 @@ const services = [
       "Scalable Design Systems",
       "Production Deployment",
     ],
+  },
+  {
+    id: "fullstack",
+    title: "Fullstack Development",
+    description: "Complete end-to-end solutions from frontend to backend.",
+    icon: null,
+    features: [
+      "Frontend Architecture",
+      "Backend API Development",
+      "Database Design",
+      "Deployment & Scaling",
+    ],
+  },
+];
+
+const pricingPlans = [
+  {
+    id: "starter",
+    name: "Starter",
+    price: "$2,500",
+    period: "per project",
+    description: "Perfect for small projects and startups",
+    features: [
+      "Up to 2 weeks delivery",
+      "Basic feature set",
+      "2 rounds of revisions",
+      "Email support",
+      "Source code included",
+    ],
+    highlight: false,
+  },
+  {
+    id: "professional",
+    name: "Professional",
+    price: "$7,500",
+    period: "per project",
+    description: "Ideal for growing businesses",
+    features: [
+      "Up to 6 weeks delivery",
+      "Full feature implementation",
+      "Unlimited revisions",
+      "Priority support",
+      "Complete documentation",
+      "Post-launch optimization",
+      "Analytics setup",
+    ],
+    highlight: true,
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise",
+    price: "Custom",
+    period: "let's talk",
+    description: "For complex, large-scale solutions",
+    features: [
+      "Custom timeline",
+      "Advanced features & integrations",
+      "Dedicated team",
+      "24/7 support",
+      "Training included",
+      "Ongoing maintenance",
+      "Scalability planning",
+    ],
+    highlight: false,
   },
 ];
 
@@ -90,12 +158,16 @@ export default function Services() {
               className="group relative rounded-[2rem] overflow-hidden border border-white/10 bg-muted/10 hover:bg-muted/20 transition-colors"
             >
               <div className="p-10 md:p-16 relative z-10">
-                <div className="w-24 h-24 mb-8 rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-2xl">
-                  <img
-                    src={service.icon}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-24 h-24 mb-8 rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-2xl flex items-center justify-center">
+                  {service.icon ? (
+                    <img
+                      src={service.icon}
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Code2 className="w-12 h-12 text-primary" />
+                  )}
                 </div>
 
                 <h3 className="text-4xl font-display font-bold mb-4">
@@ -254,8 +326,128 @@ export default function Services() {
           </div>
         </div>
 
+        {/* Visual Services Section */}
+        <div className="border-t border-white/10 py-32 mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-4xl font-display font-bold text-center mb-4">Additional Services</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+              Beyond our core offerings, we provide specialized services to enhance your digital product
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Fullstack Development",
+                desc: "Complete end-to-end development from frontend UI to backend infrastructure",
+                image: fullstackImg,
+                icon: <Code2 size={24} />,
+              },
+              {
+                title: "UI/UX Design Systems",
+                desc: "Custom design systems and component libraries for consistent branding",
+                image: designImg,
+                icon: <Palette size={24} />,
+              },
+              {
+                title: "DevOps & Deployment",
+                desc: "Cloud infrastructure, CI/CD pipelines, and production optimization",
+                image: devopsImg,
+                icon: <Cloud size={24} />,
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="group rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="relative h-48 overflow-hidden bg-muted/20">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-8 bg-muted/10 group-hover:bg-muted/20 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/20 transition-colors">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div className="py-32 mb-24 border-t border-white/10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-4xl font-display font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+              Choose the plan that fits your project scope. All plans include support, revisions, and deployment.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {pricingPlans.map((plan, i) => (
+              <motion.div
+                key={plan.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className={`rounded-2xl p-8 transition-all duration-300 ${
+                  plan.highlight
+                    ? "border-2 border-primary bg-gradient-to-br from-primary/10 to-transparent shadow-2xl shadow-primary/30 scale-105"
+                    : "border border-white/10 bg-muted/10 hover:bg-muted/20"
+                }`}
+              >
+                {plan.highlight && (
+                  <div className="mb-4 inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
+                <p className="text-muted-foreground text-sm mb-6">{plan.description}</p>
+                <div className="mb-8">
+                  <div className="text-4xl font-bold text-primary">{plan.price}</div>
+                  <div className="text-sm text-muted-foreground">{plan.period}</div>
+                </div>
+                <Button 
+                  className={`w-full rounded-full mb-8 ${plan.highlight ? "" : "border-primary/20"}`}
+                  variant={plan.highlight ? "default" : "outline"}
+                >
+                  Get Started
+                </Button>
+                <ul className="space-y-4">
+                  {plan.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <Check size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* Process Section */}
-        <div className="border-t border-white/10 pt-20">
+        <div className="border-t border-white/10 py-32 mb-32">
           <h2 className="text-3xl font-display font-bold mb-16 text-center">
             The Process
           </h2>
@@ -292,6 +484,39 @@ export default function Services() {
             ))}
           </div>
         </div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 mb-0"
+        >
+          <div 
+            className="absolute inset-0 z-0 opacity-30"
+            style={{
+              backgroundImage: `url(${workHeroBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/20 via-background/40 to-background" />
+          
+          <div className="relative z-20">
+            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let's transform your vision into reality. Whether you need an MVP, comprehensive testing, or complete development—we're ready to help.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">
+                Start Your Project
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                Schedule Consultation
+              </Button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </Layout>
   );
