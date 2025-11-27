@@ -181,10 +181,10 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="group relative rounded-[2rem] overflow-hidden border border-white/10 bg-muted/10 hover:bg-muted/20 transition-colors"
+              className="group relative rounded-[2rem] overflow-hidden border border-[#d2f7be]/10 bg-muted/10 hover:bg-muted/20 transition-colors"
             >
               <div className="p-10 md:p-16 relative z-10">
-                <div className="w-24 h-24 mb-8 rounded-2xl overflow-hidden bg-black/50 border border-white/10 shadow-2xl flex items-center justify-center">
+                <div className="w-24 h-24 mb-8 rounded-2xl overflow-hidden bg-black/50 border border-[#d2f7be]/10 shadow-2xl flex items-center justify-center">
                   {service.icon ? (
                     <img
                       src={service.icon}
@@ -232,7 +232,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 mb-16"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 mb-16"
         >
           <div 
             className="absolute inset-0 z-0 opacity-30"
@@ -253,7 +253,7 @@ export default function Services() {
               <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
                 Start Your Project
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
+              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
                 Schedule Consultation
               </Button>
             </div>
@@ -261,7 +261,7 @@ export default function Services() {
         </motion.div>
 
         {/* Visual Services Section */}
-        <div className="border-t border-white/10 py-16 mb-16">
+        <div className="border-t border-[#d2f7be]/10 py-16 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -301,7 +301,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
+                className="group rounded-2xl overflow-hidden border border-[#d2f7be]/10 hover:border-primary/50 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden bg-muted/20">
                   <img 
@@ -323,7 +323,7 @@ export default function Services() {
         </div>
 
         {/* Our Technology Section - Connected Flow */}
-        <div className="border-t border-white/10 py-16 mb-16">
+        <div className="border-t border-[#d2f7be]/10 py-16 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -383,7 +383,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className={`relative border border-white/10 group-hover:border-violet-500/50 rounded-3xl p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
+                <div className={`relative border border-[#d2f7be]/10 group-hover:border-violet-500/50 rounded-3xl p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="p-3 rounded-2xl bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-500/50 group-hover:to-purple-500/50 transition-all duration-300">
                       <group.Icon size={28} className="text-lime-200 group-hover:text-lime-100 group-hover:scale-110 transition-all duration-300" />
@@ -411,7 +411,7 @@ export default function Services() {
         </div>
 
         {/* Pricing Section */}
-        <div className="py-16 mb-16 border-t border-white/10">
+        <div className="py-16 mb-16 border-t border-[#d2f7be]/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -446,7 +446,7 @@ export default function Services() {
                 className={`rounded-2xl p-8 transition-all duration-300 cursor-pointer relative ${
                   (selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)
                     ? "border-2 border-transparent"
-                    : "border border-white/10 bg-muted/10 hover:bg-muted/20"
+                    : "border border-[#d2f7be]/10 bg-muted/10 hover:bg-muted/20"
                 }`}
               >
                 <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
@@ -479,7 +479,7 @@ export default function Services() {
         </div>
 
         {/* Process Section - Animated Roadmap */}
-        <div className="border-t border-white/10 py-20 mb-16">
+        <div className="border-t border-[#d2f7be]/10 py-20 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -612,7 +612,7 @@ export default function Services() {
         </div>
 
         {/* Core Values Grid */}
-        <div className="border-t border-white/10 pt-16 mb-16">
+        <div className="border-t border-[#d2f7be]/10 pt-16 mb-16">
           <h2 className="text-4xl font-display font-bold mb-12 text-center">Our Unwavering Values</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
@@ -670,7 +670,7 @@ export default function Services() {
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     "Excellence isn't a destination—it's a commitment we make to you every single day. We build products that don't just meet expectations, they exceed them."
                   </p>
-                  <div className="pt-4 border-t border-white/10">
+                  <div className="pt-4 border-t border-[#d2f7be]/10">
                     <p className="font-display font-bold text-lg">Nataliia Petrychuk</p>
                     <p className="text-sm text-muted-foreground">Founder, SensePower Digital</p>
                   </div>
@@ -681,7 +681,7 @@ export default function Services() {
         </div>
 
         {/* FAQ Section */}
-        <div className="border-t border-white/10 py-20 mb-0">
+        <div className="border-t border-[#d2f7be]/10 py-20 mb-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -725,7 +725,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 viewport={{ once: true }}
-                className="group border border-white/10 rounded-2xl p-6 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md transition-all duration-300 cursor-pointer"
+                className="group border border-[#d2f7be]/10 rounded-2xl p-6 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-start gap-4">
                   <div style={{ color: '#c3ecac' }} className="font-bold text-lg mt-1">
@@ -745,7 +745,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mt-16 pt-12 border-t border-white/10"
+            className="text-center mt-16 pt-12 border-t border-[#d2f7be]/10"
           >
             <p className="text-muted-foreground mb-6">Still have questions? We'd love to help.</p>
             <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }} onClick={handleContactClick}>

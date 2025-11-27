@@ -55,7 +55,7 @@ export function Sidebar() {
         initial={isMobile ? "closed" : "open"}
         animate={isMobile ? (isOpen ? "open" : "closed") : "open"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-background via-background to-background/95 border-r border-white/10 backdrop-blur-xl z-40 md:sticky md:top-0 md:z-30 overflow-y-auto hide-scrollbar"
+        className="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-background via-background to-background/95 border-r border-[#d2f7be]/10 backdrop-blur-xl z-40 md:sticky md:top-0 md:z-30 overflow-y-auto hide-scrollbar"
       >
         <div className="p-8 space-y-8 h-full flex flex-col">
           {/* Profile Section */}
@@ -70,7 +70,7 @@ export function Sidebar() {
               whileTap={{ scale: 0.95 }}
               className="mb-4 flex justify-center"
             >
-              <div className="w-20 h-20 rounded-full border-2 border-primary/30 overflow-hidden bg-white/5 shadow-lg hover:border-primary/60 transition-colors">
+              <div className="w-20 h-20 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors">
                 <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
               </div>
             </motion.div>
@@ -96,7 +96,7 @@ export function Sidebar() {
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 text-muted-foreground hover:text-primary transition-all duration-300 border border-white/5 hover:border-primary/50 font-bold text-sm"
+                  className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 text-muted-foreground hover:text-primary transition-all duration-300 border border-[#d2f7be]/5 hover:border-primary/50 font-bold text-sm"
                   title={social.label}
                 >
                   {social.icon}
@@ -126,7 +126,7 @@ export function Sidebar() {
                       className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 relative overflow-hidden group ${
                         isActive
                           ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/50"
-                          : "text-foreground/70 hover:text-foreground hover:bg-white/5 border border-transparent hover:border-primary/30"
+                          : "text-foreground/70 hover:text-foreground hover:bg-[#d2f7be]/5 border border-transparent hover:border-primary/30"
                       }`}
                     >
                       {/* Hover effect border */}
@@ -158,7 +158,7 @@ export function Sidebar() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-center space-y-3 pt-6 border-t border-white/5"
+            className="text-center space-y-3 pt-6 border-t border-[#d2f7be]/5"
           >
             <p className="text-xs text-muted-foreground">
               © 2025 SensePower Digital
@@ -166,7 +166,7 @@ export function Sidebar() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-white text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary"
+              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-[#d2f7be] text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary"
             >
               Let's Talk
             </motion.button>

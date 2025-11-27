@@ -69,7 +69,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-white/10 bg-white/5 hover:bg-white/10 backdrop-blur-sm shadow-lg shadow-purple-500/40 cursor-pointer">
+                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 bg-[#d2f7be]/5 hover:bg-[#d2f7be]/10 backdrop-blur-sm shadow-lg shadow-purple-500/40 cursor-pointer">
                   Our Services
                 </Button>
               </Link>
@@ -100,7 +100,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 md:grid-rows-3 gap-6 h-[927px]">
           <motion.div 
             whileHover={{ scale: 0.98 }}
-            className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-6"
+            className="md:col-span-2 row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
@@ -113,7 +113,7 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={sensestudyhubImg} alt="Sense StudyHub" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
@@ -125,7 +125,7 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4 row-span-2"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 row-span-2"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={oraidImg} alt="Ora-Aid" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
@@ -138,7 +138,7 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
@@ -150,7 +150,7 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-white/5 p-4"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={expertlashImg} alt="ExpertLash" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
@@ -168,7 +168,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px]"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 m-[15px]"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
@@ -190,7 +190,7 @@ export default function Home() {
                 <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">Get in Touch</Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
                   View Services
                 </Button>
               </Link>
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-12 bg-muted/20 border-y border-white/5">
+      <section className="py-12 bg-muted/20 border-y border-[#d2f7be]/5">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
@@ -229,29 +229,29 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 mt-12">
-                <div className="p-8 rounded-3xl bg-background border border-white/5">
+                <div className="p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
                   <Code className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">Fullstack</h3>
                   <p className="text-sm text-muted-foreground">End-to-end solutions with modern tech stacks.</p>
                 </div>
-                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                <div className="p-8 rounded-3xl bg-background border border-[#d2f7be]/5 opacity-60">
                   <Smartphone className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">Responsive</h3>
                   <p className="text-sm text-muted-foreground">Perfect on every screen size.</p>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="p-8 rounded-3xl bg-background border border-white/5">
+                <div className="p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
                   <CheckCircle className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">QA Testing</h3>
                   <p className="text-sm text-muted-foreground">Automated & manual verification.</p>
                 </div>
-                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                <div className="p-8 rounded-3xl bg-background border border-[#d2f7be]/5 opacity-60">
                   <Cpu className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">Vibe Coding</h3>
                   <p className="text-sm text-muted-foreground">Animations & creative polish.</p>
                 </div>
-                <div className="p-8 rounded-3xl bg-background border border-white/5 opacity-60">
+                <div className="p-8 rounded-3xl bg-background border border-[#d2f7be]/5 opacity-60">
                   <Search className="mb-4 text-primary" size={32} />
                   <h3 className="font-bold mb-2">SEO</h3>
                   <p className="text-sm text-muted-foreground">Optimized for search & discovery.</p>

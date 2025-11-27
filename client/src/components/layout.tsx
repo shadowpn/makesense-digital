@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-black/20 py-20">
+    <footer className="border-t border-[#d2f7be]/5 bg-black/20 py-20">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-4">
@@ -48,7 +48,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-20 pt-8 border-t border-white/5 text-center text-sm text-muted-foreground">
+        <div className="mt-20 pt-8 border-t border-[#d2f7be]/5 text-center text-sm text-muted-foreground">
           © 2025 SensePower Digital. All rights reserved.
         </div>
       </div>

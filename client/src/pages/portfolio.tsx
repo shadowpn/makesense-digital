@@ -103,7 +103,7 @@ export default function Portfolio() {
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
-                <div className="relative aspect-[4/3] mb-6 rounded-3xl overflow-hidden border border-white/10">
+                <div className="relative aspect-[4/3] mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -111,8 +111,8 @@ export default function Portfolio() {
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
                   
-                  <div className="absolute top-6 right-6 p-3 bg-black/50 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-white/10">
-                    <ArrowUpRight className="text-white" />
+                  <div className="absolute top-6 right-6 p-3 bg-black/50 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-[#d2f7be]/10">
+                    <ArrowUpRight className="text-[#d2f7be]" />
                   </div>
                 </div>
 
@@ -125,7 +125,7 @@ export default function Portfolio() {
                 
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map(tag => (
-                    <Badge key={tag} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-white/5">
+                    <Badge key={tag} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-[#d2f7be]/5">
                       {tag}
                     </Badge>
                   ))}
@@ -138,7 +138,7 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 md:col-span-2"
+                  className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 md:col-span-2"
                 >
                   <div 
                     className="absolute inset-0 z-0 opacity-40"
@@ -160,7 +160,7 @@ export default function Portfolio() {
                         <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">Get in Touch</Button>
                       </Link>
                       <Link href="/services">
-                        <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                        <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
                           View Services
                         </Button>
                       </Link>
@@ -228,14 +228,14 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/0 hover:border-primary/50 transition-all duration-300"
+              className="group relative p-8 rounded-3xl border border-[#d2f7be]/10 bg-gradient-to-br from-white/5 to-white/0 hover:border-primary/50 transition-all duration-300"
             >
               {/* Background gradient on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
               
               <div className="relative z-10">
                 {/* Step number */}
-                <div className="text-6xl font-display font-black text-white/5 group-hover:text-white/10 transition-colors mb-4">
+                <div className="text-6xl font-display font-black text-[#d2f7be]/5 group-hover:text-[#d2f7be]/10 transition-colors mb-4">
                   {step.number}
                 </div>
 
@@ -257,7 +257,7 @@ export default function Portfolio() {
                 {/* Arrow indicator for next step */}
                 {i < 3 && (
                   <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2">
-                    <ArrowUpRight size={24} className="text-white/10 group-hover:text-primary/30 transition-colors rotate-90" />
+                    <ArrowUpRight size={24} className="text-[#d2f7be]/10 group-hover:text-primary/30 transition-colors rotate-90" />
                   </div>
                 )}
               </div>

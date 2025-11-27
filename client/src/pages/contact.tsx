@@ -22,7 +22,7 @@ export default function Contact() {
 
             <div className="space-y-8">
               <div className="flex items-center gap-4">
-                <div className="p-4 rounded-full bg-muted/30 border border-white/5 text-primary">
+                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="p-4 rounded-full bg-muted/30 border border-white/5 text-primary">
+                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -42,7 +42,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-4 rounded-full bg-muted/30 border border-white/5 text-primary">
+                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -57,28 +57,28 @@ export default function Contact() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-muted/10 p-8 md:p-10 rounded-3xl border border-white/5"
+            className="bg-muted/10 p-8 md:p-10 rounded-3xl border border-[#d2f7be]/5"
           >
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium ml-1">Name</label>
-                  <Input placeholder="John Doe" className="bg-background/50 border-white/10 h-12 focus:border-primary/50" />
+                  <Input placeholder="John Doe" className="bg-background/50 border-[#d2f7be]/10 h-12 focus:border-primary/50" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium ml-1">Email</label>
-                  <Input placeholder="john@example.com" className="bg-background/50 border-white/10 h-12 focus:border-primary/50" />
+                  <Input placeholder="john@example.com" className="bg-background/50 border-[#d2f7be]/10 h-12 focus:border-primary/50" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium ml-1">Subject</label>
-                <Input placeholder="Project Inquiry" className="bg-background/50 border-white/10 h-12 focus:border-primary/50" />
+                <Input placeholder="Project Inquiry" className="bg-background/50 border-[#d2f7be]/10 h-12 focus:border-primary/50" />
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium ml-1">Message</label>
-                <Textarea placeholder="Tell us about your project..." className="bg-background/50 border-white/10 min-h-[150px] focus:border-primary/50 resize-none" />
+                <Textarea placeholder="Tell us about your project..." className="bg-background/50 border-[#d2f7be]/10 min-h-[150px] focus:border-primary/50 resize-none" />
               </div>
 
               <Button className="w-full h-12 text-lg font-medium mt-4 bg-primary text-primary-foreground hover:bg-primary/90">

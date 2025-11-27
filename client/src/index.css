@@ -95,7 +95,7 @@
 
 @layer utilities {
   .glass-panel {
-    @apply bg-background/60 backdrop-blur-md border border-white/10;
+    @apply bg-background/60 backdrop-blur-md border border-[#d2f7be]/10;
   }
   
   .text-glow {

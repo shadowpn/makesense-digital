@@ -209,7 +209,7 @@ export default function About() {
         </section>
 
         {/* Core Skills Section - Full Width Below */}
-        <section className="py-24 border-t border-white/10">
+        <section className="py-24 border-t border-[#d2f7be]/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -263,7 +263,7 @@ export default function About() {
         </section>
 
         {/* Professional Journey Section - 2 Column Timeline */}
-        <section className="py-24 border-t border-white/10 relative overflow-hidden">
+        <section className="py-24 border-t border-[#d2f7be]/10 relative overflow-hidden">
           <div 
             className="absolute inset-0 opacity-60"
             style={{
@@ -335,7 +335,7 @@ export default function About() {
                     </motion.div>
 
                     {/* Content Card */}
-                    <div className={`p-6 rounded-xl transition-all duration-300 bg-background border border-white/10 hover:border-primary/30 ${
+                    <div className={`p-6 rounded-xl transition-all duration-300 bg-background border border-[#d2f7be]/10 hover:border-primary/30 ${
                       isEducation
                         ? activeIndex === idx
                           ? "shadow-2xl shadow-primary/60"
@@ -377,7 +377,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 m-[15px] mt-20"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 m-[15px] mt-20"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
@@ -399,7 +399,7 @@ export default function About() {
                 <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">Get in Touch</Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
                   View Services
                 </Button>
               </Link>

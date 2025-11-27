@@ -106,7 +106,7 @@ export default function Research() {
 
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-8">
-            <h2 className="text-2xl font-bold mb-8 border-b border-white/10 pb-4">Latest Articles</h2>
+            <h2 className="text-2xl font-bold mb-8 border-b border-[#d2f7be]/10 pb-4">Latest Articles</h2>
             {articles.map((article, i) => (
               <motion.article 
                 key={i}
@@ -128,17 +128,17 @@ export default function Research() {
           </div>
 
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold mb-8 border-b border-white/10 pb-4">Artifacts</h2>
+            <h2 className="text-2xl font-bold mb-8 border-b border-[#d2f7be]/10 pb-4">Artifacts</h2>
             {artifacts.map((item, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-2xl bg-muted/10 border border-white/5 hover:border-primary/50 transition-colors group"
+                className="p-6 rounded-2xl bg-muted/10 border border-[#d2f7be]/5 hover:border-primary/50 transition-colors group"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="p-2 rounded-lg bg-background text-primary border border-white/10">
+                  <div className="p-2 rounded-lg bg-background text-primary border border-[#d2f7be]/10">
                     <FileText size={20} />
                   </div>
                   <ExternalLink size={16} className="text-muted-foreground group-hover:text-primary transition-colors" />
@@ -146,7 +146,7 @@ export default function Research() {
                 <h4 className="font-bold mb-1">{item.title}</h4>
                 <div className="text-xs font-mono text-primary mb-2">{item.type}</div>
                 <p className="text-sm text-muted-foreground mb-4">{item.desc}</p>
-                <Button variant="outline" size="sm" className="w-full border-white/10 hover:bg-white/5">
+                <Button variant="outline" size="sm" className="w-full border-[#d2f7be]/10 hover:bg-[#d2f7be]/5">
                   <Download size={14} className="mr-2" /> Access
                 </Button>
               </motion.div>
