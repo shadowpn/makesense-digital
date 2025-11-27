@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/animated-text";
 import servicesHeroBg from "@assets/generated_images/professional_tablet_holographic_tech.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
-import fullstackImg from "@assets/generated_images/fullstack_development_illustration.png";
-import designImg from "@assets/generated_images/design_system_ui_illustration.png";
-import devopsImg from "@assets/generated_images/devops_deployment_illustration.png";
+import fullstackImg from "@assets/generated_images/minimalist_fullstack_tech_design.png";
+import designImg from "@assets/generated_images/modern_design_system_layout.png";
+import devopsImg from "@assets/generated_images/modern_cloud_infrastructure.png";
 
 const services = [
   {
