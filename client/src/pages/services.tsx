@@ -5,25 +5,7 @@ import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.pn
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/animated-text";
-import servicesHeroBg from "@assets/generated_images/hexagon_services_consulting_design.png";
-
-const serviceHighlights = [
-  {
-    id: "qa",
-    title: "QA Software",
-    description: "Rigorous testing strategies to ensure zero-defect releases.",
-  },
-  {
-    id: "mvp",
-    title: "MVP Development",
-    description: "Rapid prototyping and development for startup validation.",
-  },
-  {
-    id: "fullstack",
-    title: "Fullstack Development",
-    description: "Complete end-to-end solutions from frontend to backend.",
-  },
-];
+import servicesHeroBg from "@assets/generated_images/modern_tech_services_background.png";
 
 const services = [
   {
@@ -58,93 +40,42 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 z-0 opacity-50"
+          className="absolute inset-0 z-0 opacity-60"
           style={{
             backgroundImage: `url(${servicesHeroBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/20 via-background/40 to-background" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Text */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
+              <AnimatedText text="Our" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
+              <br />
+              <AnimatedText 
+                text="Services." 
+                staggerDelay={0.06} 
+                duration={0.6}
+                initialDelay={1.8}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+              />
+            </div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="max-w-2xl"
+              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
             >
-              <div className="text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9] mb-8 text-glow">
-                <AnimatedText text="Our" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
-                <br />
-                <AnimatedText 
-                  text="Services." 
-                  staggerDelay={0.06} 
-                  duration={0.6}
-                  initialDelay={1.8}
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
-                />
-              </div>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
-              >
-                We combine engineering precision with design intuition to deliver software that works flawlessly and looks exceptional.
-              </motion.p>
-            </motion.div>
-
-            {/* Right Side - Hexagon Services */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative h-96 flex items-center justify-center"
-            >
-              <div className="grid grid-cols-3 gap-4 relative">
-                {serviceHighlights.map((service, idx) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-                    whileHover={{ scale: 1.05, shadow: "0 0 20px rgba(168, 85, 247, 0.5)" }}
-                    className="group relative"
-                  >
-                    <div className="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center relative cursor-pointer">
-                      {/* Hexagon Background */}
-                      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                        <defs>
-                          <linearGradient id={`grad-${service.id}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#a855f7" stopOpacity="0.3" />
-                            <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.5" />
-                          </linearGradient>
-                        </defs>
-                        <polygon 
-                          points="50,0 100,25 100,75 50,100 0,75 0,25" 
-                          fill={`url(#grad-${service.id})`}
-                          stroke="#a855f7"
-                          strokeWidth="1.5"
-                          className="group-hover:stroke-white transition-colors"
-                        />
-                      </svg>
-                      
-                      {/* Content */}
-                      <div className="relative z-10 text-center px-2">
-                        <p className="text-xs md:text-sm font-bold text-primary group-hover:text-white transition-colors leading-tight">
-                          {service.title}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+              We combine engineering precision with design intuition to build software that works flawlessly and looks exceptional.
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
