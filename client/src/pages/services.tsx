@@ -383,7 +383,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className={`relative border border-white/10 group-hover:border-primary/50 rounded-3xl p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20`}>
+                <div className={`relative border border-white/10 group-hover:border-violet-500/50 rounded-3xl p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="p-3 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
                       <group.Icon size={28} className="text-primary group-hover:scale-110 transition-transform duration-300" />
