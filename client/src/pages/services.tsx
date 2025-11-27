@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench } from "lucide-react";
+import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench, Lightbulb, GitBranch } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import telegramIcon from "@assets/generated_images/modern_telegram_bot_illustration.png";
@@ -336,12 +336,12 @@ export default function Services() {
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { 
                 title: "Frontend Stack", 
-                Icon: Cpu, 
-                items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+                Icon: Palette, 
+                items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Figma"],
                 color: "from-blue-500/10 to-cyan-500/10"
               },
               { 
@@ -357,10 +357,22 @@ export default function Services() {
                 color: "from-purple-500/10 to-pink-500/10"
               },
               { 
+                title: "Testing & QA", 
+                Icon: CheckCircle, 
+                items: ["Playwright", "Cypress", "Jest", "Integration Testing"],
+                color: "from-orange-500/10 to-amber-500/10"
+              },
+              { 
                 title: "DevOps & Tools", 
                 Icon: Wrench, 
-                items: ["Docker", "AWS", "CI/CD", "Git", "Playwright", "Stripe"],
-                color: "from-orange-500/10 to-red-500/10"
+                items: ["Docker", "AWS", "CI/CD", "Git", "Stripe"],
+                color: "from-red-500/10 to-pink-500/10"
+              },
+              { 
+                title: "Vibe Coding & Agile", 
+                Icon: Lightbulb, 
+                items: ["Replit Vibe Coding", "Agile Methodology", "SEO Optimization", "User-Centric Design"],
+                color: "from-yellow-500/10 to-lime-500/10"
               },
             ].map((group, i) => (
               <motion.div
