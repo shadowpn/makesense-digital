@@ -385,10 +385,10 @@ export default function Services() {
               >
                 <div className={`relative border border-white/10 group-hover:border-violet-500/50 rounded-3xl p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
-                      <group.Icon size={28} className="text-primary group-hover:scale-110 transition-transform duration-300" />
+                    <div className="p-3 rounded-2xl bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-500/50 group-hover:to-purple-500/50 transition-all duration-300">
+                      <group.Icon size={28} className="text-violet-400 group-hover:text-violet-300 group-hover:scale-110 transition-all duration-300" />
                     </div>
-                    <h3 className="text-2xl font-display font-bold group-hover:text-primary transition-colors">{group.title}</h3>
+                    <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-violet-300 via-purple-300 to-violet-300 bg-clip-text text-transparent group-hover:from-violet-200 group-hover:via-purple-200 group-hover:to-violet-200 transition-all duration-300">{group.title}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((item, j) => (
