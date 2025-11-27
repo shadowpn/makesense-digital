@@ -11,7 +11,7 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import fullstackImg from "@assets/generated_images/modern_fullstack_workspace.png";
 import designImg from "@assets/generated_images/professional_design_system_ui.png";
 import devopsImg from "@assets/generated_images/modern_cloud_deployment_tech.png";
-import pricingBg from "@assets/generated_images/modern_abstract_pricing_background.png";
+import pricingBg from "@assets/generated_images/high_contrast_modern_pricing_background.png";
 import { useLocation } from "wouter";
 import { useState } from "react";
 
