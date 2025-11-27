@@ -321,7 +321,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Our Technology Section */}
+        {/* Our Technology Section - VARIANT 1: Grid with Glow (Current) */}
         <div className="border-t border-white/10 py-16 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -336,6 +336,7 @@ export default function Services() {
           </motion.div>
 
           <div className="max-w-6xl mx-auto">
+            {/* VARIANT 1: Grid with Glow Effects */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {[
                 { name: "React", category: "Frontend", color: "from-blue-500 to-cyan-500" },
@@ -376,6 +377,13 @@ export default function Services() {
                 </motion.div>
               ))}
             </div>
+          </div>
+
+          {/* Toggle to show other variants */}
+          <div className="text-center mt-12 opacity-50 hover:opacity-100 transition-opacity">
+            <p className="text-sm text-muted-foreground font-mono">
+              💡 Хотиш бачити інші варіанти? Дай мені знак!
+            </p>
           </div>
         </div>
 
