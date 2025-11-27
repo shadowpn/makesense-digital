@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import logoImg from "@assets/изображение_1764049161428.png";
-import nataliiaPhoto from "@assets/About_desk_1764138287441.jpg";
+import nataliiaPhoto from "@assets/Main_desk_1764233126320.jpg";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
