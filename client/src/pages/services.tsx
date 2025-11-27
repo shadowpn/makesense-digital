@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
-import telegramIcon from "@assets/generated_images/telegram_bot_dev_icon.png";
+import telegramIcon from "@assets/generated_images/modern_telegram_bot_illustration.png";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/animated-text";
 import servicesHeroBg from "@assets/generated_images/professional_tablet_holographic_tech.png";
