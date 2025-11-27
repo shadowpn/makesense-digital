@@ -347,7 +347,7 @@ export default function Services() {
               { 
                 title: "Frontend Stack", 
                 Icon: Palette, 
-                items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+                items: ["React", "Next.js", "JavaScript", "HTML", "CSS", "Bootstrap", "Tailwind CSS"],
                 color: "from-blue-500/10 to-cyan-500/10"
               },
               { 
