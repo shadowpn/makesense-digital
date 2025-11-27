@@ -35,6 +35,12 @@ export function Sidebar() {
   }, []);
 
   useEffect(() => {
+    // Preload the image
+    const img = new Image();
+    img.src = nataliiaPhoto;
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setShowPhoto((prev) => !prev);
     }, 30000);
@@ -90,7 +96,7 @@ export function Sidebar() {
               >
                 <img 
                   src={showPhoto ? nataliiaPhoto : logoImg} 
-                  alt={showPhoto ? "Nataliia Petrychuk" : "SensePower Digital Logo"} 
+                  alt="" 
                   className="w-full h-full object-cover" 
                 />
               </motion.div>
