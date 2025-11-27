@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FileText, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/animated-text";
+import researchHeroBg from "@assets/generated_images/research_knowledge_hub_design.png";
 
 const articles = [
   {
@@ -49,6 +50,48 @@ const artifacts = [
 export default function Research() {
   return (
     <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0 opacity-40"
+          style={{
+            backgroundImage: `url(${researchHeroBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
+        
+        <div className="container mx-auto px-6 relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
+              <AnimatedText text="Research" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
+              <br />
+              <AnimatedText 
+                text="Hub." 
+                staggerDelay={0.06} 
+                duration={0.6}
+                initialDelay={1.8}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+              />
+            </div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
+            >
+              Artifacts, whitepapers, and thoughts on the future of software development.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
       <div className="container mx-auto px-6 py-20">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
