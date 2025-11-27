@@ -353,7 +353,7 @@ export default function Services() {
                     : "border border-white/10 bg-muted/10 hover:bg-muted/20"
                 }`}
               >
-                {(selectedPlan === plan.id || plan.highlight) && (
+                {((selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)) && (
                   <motion.div
                     className="absolute inset-0 rounded-2xl border-2 border-primary pointer-events-none"
                     animate={{
@@ -368,7 +368,7 @@ export default function Services() {
                     }}
                   />
                 )}
-                {(plan.highlight || selectedPlan === plan.id) && (
+                {((selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)) && (
                   <div className="mb-4 inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold">
                     {selectedPlan === plan.id ? "Selected" : "Most Popular"}
                   </div>
