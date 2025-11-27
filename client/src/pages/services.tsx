@@ -322,7 +322,7 @@ export default function Services() {
         </div>
 
         {/* Pricing Section */}
-        <div className="py-16 mb-16 border-t border-white/10">
+        <div className="py-16 mb-16 border-t border-white/10 bg-muted/5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
