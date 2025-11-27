@@ -64,7 +64,7 @@ export default function Home() {
             
             <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
               <Link href="/portfolio">
-                <Button size="lg" className="h-14 px-8 rounded-full text-lg bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-purple-500/40 cursor-pointer">
+                <Button size="lg" className="h-14 px-8 rounded-full text-lg text-primary-foreground shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>
                   View Case Studies
                 </Button>
               </Link>
