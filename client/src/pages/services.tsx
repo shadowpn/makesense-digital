@@ -339,9 +339,15 @@ export default function Services() {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { 
+                title: "Vibe Coding", 
+                Icon: Lightbulb, 
+                items: ["Replit", "Figma", "User-Centric Design", "Rapid Prototyping"],
+                color: "from-violet-600/30 to-purple-600/30"
+              },
+              { 
                 title: "Frontend Stack", 
                 Icon: Palette, 
-                items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Figma"],
+                items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
                 color: "from-blue-500/10 to-cyan-500/10"
               },
               { 
@@ -357,22 +363,16 @@ export default function Services() {
                 color: "from-purple-500/10 to-pink-500/10"
               },
               { 
-                title: "Testing & QA", 
+                title: "Testing & Automation", 
                 Icon: CheckCircle, 
-                items: ["Playwright", "Cypress", "Jest", "Integration Testing"],
+                items: ["Playwright", "Cypress", "Jest", "Postman", "API Testing"],
                 color: "from-orange-500/10 to-amber-500/10"
               },
               { 
-                title: "DevOps & Tools", 
+                title: "Agile & SDLC", 
                 Icon: Wrench, 
-                items: ["Docker", "AWS", "CI/CD", "Git", "Stripe"],
+                items: ["Jira", "TestRail", "Scrum/Kanban", "Git", "CI/CD", "SEO"],
                 color: "from-red-500/10 to-pink-500/10"
-              },
-              { 
-                title: "Vibe Coding & Agile", 
-                Icon: Lightbulb, 
-                items: ["Replit Vibe Coding", "Agile Methodology", "SEO Optimization", "User-Centric Design"],
-                color: "from-violet-600/30 to-purple-600/30"
               },
             ].map((group, i) => (
               <motion.div
