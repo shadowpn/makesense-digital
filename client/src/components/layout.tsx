@@ -1,7 +1,8 @@
 import { Sidebar } from "@/components/sidebar";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
+import { useEffect } from "react";
 
 export function Footer() {
   return (
@@ -56,6 +57,12 @@ export function Footer() {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-background text-foreground flex">
       <Sidebar />
