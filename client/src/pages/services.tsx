@@ -486,7 +486,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-6 text-center">Our Journey to Excellence</h2>
+            <h2 className="text-4xl font-display font-bold mb-6 text-center text-lime-100">Our Journey to Excellence</h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">Follow the path from concept to launch, delivering quality services and products</p>
           </motion.div>
 
@@ -687,7 +687,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-4 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 text-center text-lime-100">Frequently Asked Questions</h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">Everything you need to know about our services, process, and partnerships</p>
           </motion.div>
 
