@@ -372,7 +372,7 @@ export default function Services() {
                 title: "Vibe Coding & Agile", 
                 Icon: Lightbulb, 
                 items: ["Replit Vibe Coding", "Agile Methodology", "SEO Optimization", "User-Centric Design"],
-                color: "from-yellow-500/10 to-lime-500/10"
+                color: "from-purple-500/10 to-violet-500/10"
               },
             ].map((group, i) => (
               <motion.div
