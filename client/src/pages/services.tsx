@@ -359,7 +359,7 @@ export default function Services() {
               { 
                 title: "Data Layer", 
                 Icon: Database, 
-                items: ["PostgreSQL", "MongoDB", "Firebase"],
+                items: ["PostgreSQL", "MongoDB", "Supabase", "MyPHP"],
                 color: "from-purple-500/10 to-pink-500/10"
               },
               { 
