@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
+import telegramIcon from "@assets/generated_images/telegram_bot_dev_icon.png";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/animated-text";
 import servicesHeroBg from "@assets/generated_images/professional_tablet_holographic_tech.png";
@@ -46,6 +47,18 @@ const services = [
       "Backend API Development",
       "Database Design",
       "Deployment & Scaling",
+    ],
+  },
+  {
+    id: "telegram",
+    title: "Telegram Bot Development",
+    description: "Custom bots for messaging, automation, and user engagement.",
+    icon: telegramIcon,
+    features: [
+      "Bot Logic & Automation",
+      "Telegram API Integration",
+      "Database & State Management",
+      "Payment & Webhook Setup",
     ],
   },
 ];
@@ -148,7 +161,7 @@ export default function Services() {
       </section>
 
       <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 mb-32 auto-rows-max">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
