@@ -323,10 +323,9 @@ export default function Services() {
 
         {/* Pricing Section */}
         <div className="py-16 mb-16 border-t border-white/10" style={{
-          backgroundImage: 'url(/attached_assets/generated_images/minimalist_dark_pricing_background.png)',
+          backgroundImage: 'url(/attached_assets/generated_images/abstract_dark_pricing_section_background.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundPosition: 'center'
         }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
