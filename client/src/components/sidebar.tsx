@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import logoImg from "@assets/изображение_1764049161428.png";
+import nataliiaPhoto from "@assets/About_desk_1764138287441.jpg";
 
 const navItems = [
   { name: "Home", path: "/", icon: Home },
@@ -24,12 +25,20 @@ export function Sidebar() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showPhoto, setShowPhoto] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowPhoto((prev) => !prev);
+    }, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   const sidebarVariants = {
@@ -68,11 +77,23 @@ export function Sidebar() {
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mb-4 flex justify-center"
+              className="mb-4 flex justify-center perspective"
             >
-              <div className="w-20 h-20 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors">
-                <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
-              </div>
+              <motion.div
+                key={showPhoto ? "photo" : "logo"}
+                initial={{ rotateY: -90, opacity: 0 }}
+                animate={{ rotateY: 0, opacity: 1 }}
+                exit={{ rotateY: 90, opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className="w-20 h-20 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <img 
+                  src={showPhoto ? nataliiaPhoto : logoImg} 
+                  alt={showPhoto ? "Nataliia Petrychuk" : "SensePower Digital Logo"} 
+                  className="w-full h-full object-cover" 
+                />
+              </motion.div>
             </motion.div>
             <h1 className="text-2xl font-display font-black tracking-tight mb-1 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
               SensePower
