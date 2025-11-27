@@ -347,32 +347,19 @@ export default function Services() {
                 transition={{ delay: i * 0.15 }}
                 viewport={{ once: true }}
                 onClick={() => setSelectedPlan(plan.id)}
+                style={
+                  (selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)
+                    ? {
+                        background: "linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)) padding-box, linear-gradient(135deg, #84cc16, #a855f7) border-box",
+                      }
+                    : {}
+                }
                 className={`rounded-2xl p-8 transition-all duration-300 cursor-pointer relative ${
                   (selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)
-                    ? "border-2 border-primary bg-gradient-to-br from-primary/10 to-transparent shadow-2xl shadow-primary/30 scale-105"
+                    ? "border-2 border-transparent"
                     : "border border-white/10 bg-muted/10 hover:bg-muted/20"
                 }`}
               >
-                {((selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)) && (
-                  <motion.div
-                    className="absolute inset-0 rounded-2xl border-2 border-primary pointer-events-none"
-                    animate={{
-                      boxShadow: [
-                        "0 0 0 0 rgba(168, 85, 247, 0.4)",
-                        "0 0 0 10px rgba(168, 85, 247, 0)",
-                      ],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                    }}
-                  />
-                )}
-                {((selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)) && (
-                  <div className="mb-4 inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold">
-                    {selectedPlan === plan.id ? "Selected" : "Most Popular"}
-                  </div>
-                )}
                 <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
                 <p className="text-muted-foreground text-sm mb-6">{plan.description}</p>
                 <div className="mb-8">
