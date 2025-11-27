@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench, Lightbulb, GitBranch } from "lucide-react";
+import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench, Lightbulb, GitBranch, Trophy } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import telegramIcon from "@assets/generated_images/modern_telegram_bot_illustration.png";
@@ -597,11 +597,14 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mt-16 p-8 rounded-2xl border border-lime-200/30 bg-gradient-to-r from-lime-500/10 via-purple-500/10 to-lime-500/10 backdrop-blur-md"
+              className="text-center mt-16 p-8 rounded-2xl border border-lime-100/30 bg-gradient-to-r from-lime-500/10 via-purple-500/10 to-lime-500/10 backdrop-blur-md"
             >
-              <p className="text-lg font-display font-bold text-lime-200 mb-2">🎯 The Result</p>
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <Trophy size={28} className="text-lime-100" />
+                <p className="text-lg font-display font-bold text-lime-100">The Result</p>
+              </div>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                After completing this journey, you receive a <span className="text-lime-200 font-semibold">production-ready product</span> built with precision, tested rigorously, and optimized for performance. Quality delivered, on time, every time.
+                After completing this journey, you receive a <span className="text-lime-100 font-semibold">production-ready product</span> built with precision, tested rigorously, and optimized for performance. Quality delivered, on time, every time.
               </p>
             </motion.div>
           </div>
