@@ -161,7 +161,8 @@ export default function Services() {
       </section>
 
       <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 mb-32 auto-rows-max">
+        {/* Core Services Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16 auto-rows-max">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -214,10 +215,200 @@ export default function Services() {
           ))}
         </div>
 
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 mb-16"
+        >
+          <div 
+            className="absolute inset-0 z-0 opacity-30"
+            style={{
+              backgroundImage: `url(${workHeroBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/20 via-background/40 to-background" />
+          
+          <div className="relative z-20">
+            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let's transform your vision into reality. Whether you need an MVP, comprehensive testing, or complete development—we're ready to help.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">
+                Start Your Project
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                Schedule Consultation
+              </Button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Visual Services Section */}
+        <div className="border-t border-white/10 py-16 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-4xl font-display font-bold text-center mb-4">Additional Services</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+              Beyond our core offerings, we provide specialized services to enhance your digital product
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Fullstack Development",
+                desc: "Complete end-to-end development from frontend UI to backend infrastructure",
+                image: fullstackImg,
+                icon: <Code2 size={24} />,
+              },
+              {
+                title: "UI/UX Design Systems",
+                desc: "Custom design systems and component libraries for consistent branding",
+                image: designImg,
+                icon: <Palette size={24} />,
+              },
+              {
+                title: "DevOps & Deployment",
+                desc: "Cloud infrastructure, CI/CD pipelines, and production optimization",
+                image: devopsImg,
+                icon: <Cloud size={24} />,
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="group rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="relative h-48 overflow-hidden bg-muted/20">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-8 bg-muted/10 group-hover:bg-muted/20 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/20 transition-colors">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div className="py-16 mb-16 border-t border-white/10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-4xl font-display font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+              Choose the plan that fits your project scope. All plans include support, revisions, and deployment.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {pricingPlans.map((plan, i) => (
+              <motion.div
+                key={plan.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className={`rounded-2xl p-8 transition-all duration-300 ${
+                  plan.highlight
+                    ? "border-2 border-primary bg-gradient-to-br from-primary/10 to-transparent shadow-2xl shadow-primary/30 scale-105"
+                    : "border border-white/10 bg-muted/10 hover:bg-muted/20"
+                }`}
+              >
+                {plan.highlight && (
+                  <div className="mb-4 inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
+                <p className="text-muted-foreground text-sm mb-6">{plan.description}</p>
+                <div className="mb-8">
+                  <div className="text-4xl font-bold text-primary">{plan.price}</div>
+                  <div className="text-sm text-muted-foreground">{plan.period}</div>
+                </div>
+                <Button 
+                  className={`w-full rounded-full mb-8 ${plan.highlight ? "" : "border-primary/20"}`}
+                  variant={plan.highlight ? "default" : "outline"}
+                >
+                  Get Started
+                </Button>
+                <ul className="space-y-4">
+                  {plan.features.map((feature, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <Check size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Process Section */}
+        <div className="border-t border-white/10 py-16 mb-16">
+          <h2 className="text-3xl font-display font-bold mb-12 text-center">The Process</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <LayoutTemplate />,
+                title: "Discovery",
+                desc: "We map out requirements and define success metrics.",
+              },
+              {
+                icon: <Code2 />,
+                title: "Development",
+                desc: "Iterative builds with bi-weekly demos and feedback.",
+              },
+              {
+                icon: <Bug />,
+                title: "Testing",
+                desc: "Rigorous automated and manual testing cycles.",
+              },
+              {
+                icon: <Zap />,
+                title: "Deployment",
+                desc: "Smooth rollout with monitoring and support.",
+              },
+            ].map((step, i) => (
+              <div key={i} className="text-center">
+                <div className="w-16 h-16 mx-auto bg-muted/30 rounded-2xl flex items-center justify-center text-primary mb-6 border border-white/5">
+                  {step.icon}
+                </div>
+                <h4 className="text-xl font-bold mb-2">{step.title}</h4>
+                <p className="text-sm text-muted-foreground">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Core Values Grid */}
-        <div className="border-t border-white/10 pt-20 mb-20">
-          <h2 className="text-4xl font-display font-bold mb-16 text-center">Our Unwavering Values</h2>
-          <div className="grid md:grid-cols-2 gap-12 mb-32">
+        <div className="border-t border-white/10 pt-16 mb-16">
+          <h2 className="text-4xl font-display font-bold mb-12 text-center">Our Unwavering Values</h2>
+          <div className="grid md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -284,8 +475,8 @@ export default function Services() {
         </div>
 
         {/* Expertise Section */}
-        <div className="border-t border-b border-white/10 py-20 mb-24">
-          <h2 className="text-4xl font-display font-bold mb-16 text-center"><AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h2>
+        <div className="border-t border-white/10 py-16 mb-0">
+          <h2 className="text-4xl font-display font-bold mb-12 text-center"><AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h2>
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { label: "Projects", value: "50+" },
@@ -307,229 +498,6 @@ export default function Services() {
             ))}
           </div>
         </div>
-
-        {/* Tech Stack */}
-        <div className="mb-32">
-          <h2 className="text-3xl font-display font-bold mb-12">Our Technology Stack</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: "Frontend", techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-              { name: "Backend", techs: ["Node.js", "Express", "PostgreSQL", "Drizzle ORM", "WebSockets"] },
-              { name: "Testing", techs: ["Playwright", "Jest", "Cypress", "Load Testing", "CI/CD Pipelines"] }
-            ].map((stack, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="p-8 rounded-2xl bg-muted/10 border border-white/5"
-              >
-                <h3 className="text-xl font-bold mb-6">{stack.name}</h3>
-                <ul className="space-y-3">
-                  {stack.techs.map((tech, j) => (
-                    <li key={j} className="flex items-center gap-3 text-muted-foreground">
-                      <CheckCircle size={16} className="text-primary" />
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Visual Services Section */}
-        <div className="border-t border-white/10 py-32 mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h2 className="text-4xl font-display font-bold text-center mb-4">Additional Services</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-              Beyond our core offerings, we provide specialized services to enhance your digital product
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Fullstack Development",
-                desc: "Complete end-to-end development from frontend UI to backend infrastructure",
-                image: fullstackImg,
-                icon: <Code2 size={24} />,
-              },
-              {
-                title: "UI/UX Design Systems",
-                desc: "Custom design systems and component libraries for consistent branding",
-                image: designImg,
-                icon: <Palette size={24} />,
-              },
-              {
-                title: "DevOps & Deployment",
-                desc: "Cloud infrastructure, CI/CD pipelines, and production optimization",
-                image: devopsImg,
-                icon: <Cloud size={24} />,
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="group rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-300"
-              >
-                <div className="relative h-48 overflow-hidden bg-muted/20">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-8 bg-muted/10 group-hover:bg-muted/20 transition-colors">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/20 transition-colors">
-                    {item.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Pricing Section */}
-        <div className="py-32 mb-24 border-t border-white/10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h2 className="text-4xl font-display font-bold text-center mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-              Choose the plan that fits your project scope. All plans include support, revisions, and deployment.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, i) => (
-              <motion.div
-                key={plan.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15 }}
-                viewport={{ once: true }}
-                className={`rounded-2xl p-8 transition-all duration-300 ${
-                  plan.highlight
-                    ? "border-2 border-primary bg-gradient-to-br from-primary/10 to-transparent shadow-2xl shadow-primary/30 scale-105"
-                    : "border border-white/10 bg-muted/10 hover:bg-muted/20"
-                }`}
-              >
-                {plan.highlight && (
-                  <div className="mb-4 inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground text-sm mb-6">{plan.description}</p>
-                <div className="mb-8">
-                  <div className="text-4xl font-bold text-primary">{plan.price}</div>
-                  <div className="text-sm text-muted-foreground">{plan.period}</div>
-                </div>
-                <Button 
-                  className={`w-full rounded-full mb-8 ${plan.highlight ? "" : "border-primary/20"}`}
-                  variant={plan.highlight ? "default" : "outline"}
-                >
-                  Get Started
-                </Button>
-                <ul className="space-y-4">
-                  {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <Check size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Process Section */}
-        <div className="border-t border-white/10 py-32 mb-32">
-          <h2 className="text-3xl font-display font-bold mb-16 text-center">
-            The Process
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <LayoutTemplate />,
-                title: "Discovery",
-                desc: "We map out requirements and define success metrics.",
-              },
-              {
-                icon: <Code2 />,
-                title: "Development",
-                desc: "Iterative builds with bi-weekly demos and feedback.",
-              },
-              {
-                icon: <Bug />,
-                title: "Testing",
-                desc: "Rigorous automated and manual testing cycles.",
-              },
-              {
-                icon: <Zap />,
-                title: "Deployment",
-                desc: "Smooth rollout with monitoring and support.",
-              },
-            ].map((step, i) => (
-              <div key={i} className="text-center">
-                <div className="w-16 h-16 mx-auto bg-muted/30 rounded-2xl flex items-center justify-center text-primary mb-6 border border-white/5">
-                  {step.icon}
-                </div>
-                <h4 className="text-xl font-bold mb-2">{step.title}</h4>
-                <p className="text-sm text-muted-foreground">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-white/5 mb-0"
-        >
-          <div 
-            className="absolute inset-0 z-0 opacity-30"
-            style={{
-              backgroundImage: `url(${workHeroBg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/20 via-background/40 to-background" />
-          
-          <div className="relative z-20">
-            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let's transform your vision into reality. Whether you need an MVP, comprehensive testing, or complete development—we're ready to help.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer">
-                Start Your Project
-              </Button>
-              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-white/10 hover:bg-white/5 shadow-lg shadow-purple-500/40 cursor-pointer">
-                Schedule Consultation
-              </Button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </Layout>
   );
