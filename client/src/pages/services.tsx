@@ -11,6 +11,7 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import fullstackImg from "@assets/generated_images/modern_fullstack_workspace.png";
 import designImg from "@assets/generated_images/professional_design_system_ui.png";
 import devopsImg from "@assets/generated_images/modern_cloud_deployment_tech.png";
+import pricingBg from "@assets/generated_images/modern_abstract_pricing_background.png";
 import { useLocation } from "wouter";
 import { useState } from "react";
 
@@ -323,7 +324,7 @@ export default function Services() {
 
         {/* Pricing Section */}
         <div className="py-16 mb-16 border-t border-white/10" style={{
-          backgroundImage: 'url(/attached_assets/generated_images/modern_abstract_pricing_background.png)',
+          backgroundImage: `url(${pricingBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
