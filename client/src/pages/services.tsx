@@ -549,7 +549,7 @@ export default function Services() {
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center border-2 border-lime-200/50 bg-gradient-to-br ${step.color} backdrop-blur-md relative overflow-hidden group-hover:border-lime-200 transition-all duration-300`}
-                      style={{ color: '#daeb8f' }}
+                      style={{ color: '#d2f7be' }}
                     >
                       {/* Animated gradient background on hover */}
                       <div className="absolute inset-0 bg-gradient-to-r from-lime-400/0 via-lime-400/10 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -728,7 +728,7 @@ export default function Services() {
                 className="group border border-white/10 rounded-2xl p-6 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-start gap-4">
-                  <div style={{ color: '#daeb8f' }} className="font-bold text-lg mt-1">
+                  <div style={{ color: '#d2f7be' }} className="font-bold text-lg mt-1">
                     <HelpCircle size={24} />
                   </div>
                   <div className="flex-1">
