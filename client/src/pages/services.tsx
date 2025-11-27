@@ -214,73 +214,88 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Core Values Grid */}
-        <div className="border-t border-white/10 pt-20 mb-20">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-16 text-center">Our Values</h2>
-          <div className="grid md:grid-cols-2 gap-12 mb-32">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <Zap size={24} />
-                  </div>
-                  <h3 className="text-2xl font-display font-bold">Velocity + Quality</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  We prove that speed and rigor aren't mutually exclusive. Our process delivers production-ready code in weeks, not months.
-                </p>
-              </div>
+        {/* Core Values Grid - Motivational */}
+        <div className="border-t border-white/10 pt-32 mb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-20 text-center"
+          >
+            <h2 className="text-5xl md:text-6xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
+              Our Unwavering Values
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              We don't just build software—we build trust, deliver excellence, and create lasting partnerships. These values drive everything we do.
+            </p>
+          </motion.div>
 
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <Target size={24} />
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                icon: <Zap size={32} />,
+                title: "Velocity + Quality",
+                desc: "We shatter the false choice between speed and excellence. Agile, rigorous, production-ready—delivered fast.",
+                highlight: "Weeks, not months"
+              },
+              {
+                icon: <Target size={32} />,
+                title: "User-Obsessed",
+                desc: "Every pixel, every line of code serves a purpose. We listen, iterate, and refine until perfection.",
+                highlight: "Relentless iteration"
+              },
+              {
+                icon: <Users size={32} />,
+                title: "True Partnership",
+                desc: "We're an extension of your team, invested in your vision. Your wins are our wins, your challenges are ours to solve.",
+                highlight: "Your success = Our success"
+              },
+            ].map((value, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -8 }}
+                className="group relative rounded-2xl p-8 bg-gradient-to-br from-primary/10 via-transparent to-transparent border border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20"
+              >
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {value.icon}
                   </div>
-                  <h3 className="text-2xl font-display font-bold">User-Centric</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  Every design decision and line of code serves a purpose. We obsess over user feedback and iterate relentlessly.
-                </p>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <Users size={24} />
-                  </div>
-                  <h3 className="text-2xl font-display font-bold">Partnership</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  We're not vendors—we're extensions of your team. We invest in your success and celebrate your wins as our own.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative h-full rounded-3xl overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-3xl" />
-              <div className="relative p-12 h-full flex flex-col justify-center space-y-6">
-                <div className="space-y-4">
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    "Building great digital products is equal parts craft and science. It requires discipline, creativity, and an obsessive attention to detail."
-                  </p>
-                  <div className="pt-4 border-t border-white/10">
-                    <p className="font-display font-bold text-lg">Our Founder</p>
-                    <p className="text-sm text-muted-foreground">Designer, Engineer, Entrepreneur</p>
+                  <h3 className="text-2xl font-display font-bold mb-3 group-hover:text-primary transition-colors">{value.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{value.desc}</p>
+                  <div className="pt-4 border-t border-primary/20">
+                    <span className="text-sm font-semibold text-primary">{value.highlight}</span>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
+
+          {/* Motivational Quote */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative rounded-3xl overflow-hidden p-12 md:p-16 bg-gradient-to-br from-primary/15 via-primary/5 to-transparent border-2 border-primary/40"
+          >
+            <div className="absolute top-4 left-6 text-4xl text-primary/30 font-serif">"</div>
+            <div className="relative z-10">
+              <p className="text-2xl md:text-3xl font-display font-bold mb-8 leading-relaxed text-foreground">
+                Excellence isn't a destination—it's a commitment we make to you every single day. We build products that don't just meet expectations, they exceed them.
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/40" />
+                <div>
+                  <p className="font-display font-bold text-lg">Nataliia Petrychuk</p>
+                  <p className="text-sm text-muted-foreground">Founder, SensePower Digital</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Expertise Section */}
