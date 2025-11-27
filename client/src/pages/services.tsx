@@ -748,7 +748,7 @@ export default function Services() {
             className="text-center mt-16 pt-12 border-t border-white/10"
           >
             <p className="text-muted-foreground mb-6">Still have questions? We'd love to help.</p>
-            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
+            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40 cursor-pointer" style={{ color: '#d2f7be' }} onClick={handleContactClick}>
               Get in Touch
             </Button>
           </motion.div>
