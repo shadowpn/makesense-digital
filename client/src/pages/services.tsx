@@ -321,6 +321,46 @@ export default function Services() {
           </div>
         </div>
 
+        {/* Our Technology Section */}
+        <div className="border-t border-white/10 py-16 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-4xl font-display font-bold text-center mb-4">Our Technology Stack</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+              We use cutting-edge technologies and tools to build scalable, high-performance solutions
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {[
+              { name: "React", desc: "Modern UI library" },
+              { name: "Next.js", desc: "Full-stack framework" },
+              { name: "TypeScript", desc: "Type-safe development" },
+              { name: "Tailwind CSS", desc: "Utility-first styling" },
+              { name: "PostgreSQL", desc: "Reliable database" },
+              { name: "Docker", desc: "Container orchestration" },
+              { name: "AWS", desc: "Cloud infrastructure" },
+              { name: "Playwright", desc: "E2E testing" },
+            ].map((tech, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="border border-white/10 rounded-xl p-6 text-center hover:border-primary/50 transition-all duration-300 hover:bg-primary/5"
+              >
+                <h3 className="font-semibold text-lg mb-2">{tech.name}</h3>
+                <p className="text-sm text-muted-foreground">{tech.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* Pricing Section */}
         <div className="py-16 mb-16 border-t border-white/10">
           <motion.div
