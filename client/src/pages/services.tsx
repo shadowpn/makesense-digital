@@ -398,7 +398,7 @@ export default function Services() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: i * 0.1 + j * 0.05 }}
                         viewport={{ once: true }}
-                        className="px-4 py-2 rounded-full font-mono text-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 text-primary hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/20"
+                        className="px-4 py-2 rounded-full font-mono text-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 text-lime-200 hover:text-lime-100 hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/20"
                       >
                         {item}
                       </motion.span>
