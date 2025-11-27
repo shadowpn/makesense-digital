@@ -347,20 +347,9 @@ export default function Services() {
                 transition={{ delay: i * 0.15 }}
                 viewport={{ once: true }}
                 onClick={() => setSelectedPlan(plan.id)}
-                style={
-                  plan.highlight && selectedPlan !== plan.id ? {
-                    backgroundImage: 'linear-gradient(135deg, rgb(168, 85, 247), rgb(219, 39, 119))',
-                    backgroundClip: 'padding-box',
-                    border: '2px solid transparent',
-                    backgroundOrigin: 'border-box',
-                    background: 'linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)) padding-box, linear-gradient(135deg, rgb(168, 85, 247), rgb(219, 39, 119)) border-box',
-                  } : undefined
-                }
-                className={`rounded-2xl p-8 transition-all duration-300 cursor-pointer relative scale-105 ${
-                  selectedPlan === plan.id
-                    ? "border-2 border-primary bg-gradient-to-br from-primary/10 to-transparent shadow-2xl shadow-primary/30"
-                    : plan.highlight && selectedPlan !== plan.id
-                    ? "bg-muted/10 hover:bg-muted/20"
+                className={`rounded-2xl p-8 transition-all duration-300 cursor-pointer relative ${
+                  selectedPlan === plan.id || plan.highlight
+                    ? "border-2 border-primary bg-gradient-to-br from-primary/10 to-transparent shadow-2xl shadow-primary/30 scale-105"
                     : "border border-white/10 bg-muted/10 hover:bg-muted/20"
                 }`}
               >
