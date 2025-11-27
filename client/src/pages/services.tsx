@@ -341,7 +341,7 @@ export default function Services() {
               { 
                 title: "Vibe Coding", 
                 Icon: Lightbulb, 
-                items: ["Replit", "Figma", "User-Centric Design", "Rapid Prototyping"],
+                items: ["Replit", "Figma", "User-Centric Design"],
                 color: "from-violet-600/30 to-purple-600/30"
               },
               { 
