@@ -478,40 +478,132 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Process Section */}
-        <div className="border-t border-white/10 py-16 mb-16">
-          <h2 className="text-3xl font-display font-bold mb-12 text-center">The Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <LayoutTemplate />,
-                title: "Discovery",
-                desc: "We map out requirements and define success metrics.",
-              },
-              {
-                icon: <Code2 />,
-                title: "Development",
-                desc: "Iterative builds with bi-weekly demos and feedback.",
-              },
-              {
-                icon: <Bug />,
-                title: "Testing",
-                desc: "Rigorous automated and manual testing cycles.",
-              },
-              {
-                icon: <Zap />,
-                title: "Deployment",
-                desc: "Smooth rollout with monitoring and support.",
-              },
-            ].map((step, i) => (
-              <div key={i} className="text-center">
-                <div className="w-16 h-16 mx-auto bg-muted/30 rounded-2xl flex items-center justify-center text-primary mb-6 border border-white/5">
-                  {step.icon}
-                </div>
-                <h4 className="text-xl font-bold mb-2">{step.title}</h4>
-                <p className="text-sm text-muted-foreground">{step.desc}</p>
+        {/* Process Section - Animated Roadmap */}
+        <div className="border-t border-white/10 py-20 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-4xl font-display font-bold mb-6 text-center">Our Journey to Excellence</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">Follow the path from concept to launch, delivering quality services and products</p>
+          </motion.div>
+
+          {/* Roadmap Container */}
+          <div className="max-w-6xl mx-auto">
+            <div className="relative">
+              {/* Animated Background Line */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                viewport={{ once: true }}
+                className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-lime-400 via-purple-400 to-lime-400 origin-left"
+                style={{ originX: 0 }}
+              />
+
+              {/* Steps Grid */}
+              <div className="grid md:grid-cols-5 gap-6">
+                {[
+                  { 
+                    icon: <LayoutTemplate size={32} />, 
+                    title: "Discovery", 
+                    desc: "Map requirements & define success",
+                    color: "from-blue-500/20 to-cyan-500/20"
+                  },
+                  { 
+                    icon: <Code2 size={32} />, 
+                    title: "Development", 
+                    desc: "Build with iterative demos",
+                    color: "from-emerald-500/20 to-teal-500/20"
+                  },
+                  { 
+                    icon: <Bug size={32} />, 
+                    title: "Testing", 
+                    desc: "Rigorous quality assurance",
+                    color: "from-orange-500/20 to-amber-500/20"
+                  },
+                  { 
+                    icon: <Zap size={32} />, 
+                    title: "Deployment", 
+                    desc: "Smooth & monitored rollout",
+                    color: "from-red-500/20 to-pink-500/20"
+                  },
+                  { 
+                    icon: <CheckCircle size={32} />, 
+                    title: "Success", 
+                    desc: "Quality product delivered",
+                    color: "from-violet-500/20 to-purple-500/20"
+                  },
+                ].map((step, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.15 }}
+                    viewport={{ once: true }}
+                    className="relative group"
+                  >
+                    {/* Step Circle */}
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center text-lime-200 border-2 border-lime-200/50 bg-gradient-to-br ${step.color} backdrop-blur-md relative overflow-hidden group-hover:border-lime-200 transition-all duration-300`}
+                    >
+                      {/* Animated gradient background on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-lime-400/0 via-lime-400/10 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="relative z-10">{step.icon}</div>
+                      
+                      {/* Pulse animation */}
+                      <motion.div
+                        animate={{ scale: [1, 1.3, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+                        className="absolute inset-0 rounded-full border-2 border-lime-400/30"
+                      />
+                    </motion.div>
+
+                    {/* Step Content */}
+                    <div className="text-center relative z-10">
+                      <h4 className="text-lg font-display font-bold mb-2 bg-gradient-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent">{step.title}</h4>
+                      <p className="text-xs text-muted-foreground">{step.desc}</p>
+                    </div>
+
+                    {/* Connection arrows (hidden on last step) */}
+                    {i < 4 && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: i * 0.15 + 0.3 }}
+                        viewport={{ once: true }}
+                        className="absolute top-8 -right-3 hidden md:block"
+                      >
+                        <motion.div
+                          animate={{ x: [0, 4, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
+                          className="text-lime-400/60 text-2xl"
+                        >
+                          →
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Goal message */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mt-16 p-8 rounded-2xl border border-lime-200/30 bg-gradient-to-r from-lime-500/10 via-purple-500/10 to-lime-500/10 backdrop-blur-md"
+            >
+              <p className="text-lg font-display font-bold text-lime-200 mb-2">🎯 The Result</p>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                After completing this journey, you receive a <span className="text-lime-200 font-semibold">production-ready product</span> built with precision, tested rigorously, and optimized for performance. Quality delivered, on time, every time.
+              </p>
+            </motion.div>
           </div>
         </div>
 
