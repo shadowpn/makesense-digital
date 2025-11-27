@@ -679,29 +679,76 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Expertise Section */}
-        <div className="border-t border-white/10 py-16 mb-0">
-          <h2 className="text-4xl font-display font-bold mb-12 text-center"><AnimatedText text="Our Expertise." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h2>
-          <div className="grid md:grid-cols-4 gap-8">
+        {/* FAQ Section */}
+        <div className="border-t border-white/10 py-20 mb-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-4xl font-display font-bold mb-4 text-center">Frequently Asked Questions</h2>
+            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">Everything you need to know about our services, process, and partnerships</p>
+          </motion.div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
             {[
-              { label: "Projects", value: "50+" },
-              { label: "Team Members", value: "12" },
-              { label: "Industries Served", value: "8+" },
-              { label: "Countries", value: "6" }
-            ].map((stat, i) => (
+              {
+                q: "How long does a typical project take?",
+                a: "Project timelines vary based on complexity. Starter projects: 2 weeks, Professional: 4 weeks, Enterprise: custom timeline. We'll provide a detailed schedule after discovery."
+              },
+              {
+                q: "What's included in the price?",
+                a: "All packages include development, testing, deployment, and documentation. Professional plans include unlimited revisions, priority support, and post-launch optimization. Pricing is indicative—actual costs depend on project complexity."
+              },
+              {
+                q: "Do you provide post-launch support?",
+                a: "Yes! Professional and Enterprise plans include post-launch optimization, analytics setup, and ongoing support. We ensure your product performs flawlessly after launch."
+              },
+              {
+                q: "Can you help with ongoing maintenance?",
+                a: "Absolutely. Enterprise customers receive 24/7 support and ongoing maintenance planning. We're partners in your success, not just developers."
+              },
+              {
+                q: "What's your tech stack?",
+                a: "We use modern technologies: React/Next.js (frontend), Node.js/Python/Django (backend), PostgreSQL/MongoDB (databases), and cloud platforms like AWS/Netlify. Full list on our Technology Stack section."
+              },
+              {
+                q: "How do you ensure quality?",
+                a: "Rigorous testing at every stage: automated (Playwright, Jest), API testing (Postman), and manual QA. We deliver production-ready code with zero-defect commitment."
+              }
+            ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.08 }}
                 viewport={{ once: true }}
-                className="text-center p-8 rounded-2xl bg-muted/10 border border-white/5 hover:border-primary/50 transition-colors"
+                className="group border border-white/10 rounded-2xl p-6 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md transition-all duration-300 cursor-pointer"
               >
-                <div className="text-4xl font-display font-bold text-primary mb-2">{stat.value}</div>
-                <p className="text-muted-foreground font-medium">{stat.label}</p>
+                <div className="flex items-start gap-4">
+                  <div className="text-lime-200 font-bold text-lg mt-1">Q</div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-display font-bold mb-2 group-hover:text-lime-100 transition-colors">{item.q}</h4>
+                    <p className="text-muted-foreground leading-relaxed">{item.a}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mt-16 pt-12 border-t border-white/10"
+          >
+            <p className="text-muted-foreground mb-6">Still have questions? We'd love to help.</p>
+            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
+              Get in Touch
+            </Button>
+          </motion.div>
         </div>
       </div>
     </Layout>
