@@ -341,7 +341,7 @@ export default function Services() {
               { 
                 title: "Vibe Coding & AI", 
                 Icon: Lightbulb, 
-                items: ["Replit", "Figma", "Confluence", "Responsive Design", "Lovable"],
+                items: ["Replit", "Figma", "Confluence", "Responsive Design", "Lovable", "Netlify", "Decap CMS"],
                 color: "from-violet-600/30 to-purple-600/30"
               },
               { 
