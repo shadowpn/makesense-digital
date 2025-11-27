@@ -67,11 +67,12 @@ const pricingPlans = [
   {
     id: "starter",
     name: "Starter",
-    price: "$2,500",
+    price: "$3,200",
     period: "per project",
     description: "Perfect for small projects and startups",
     features: [
       "Up to 2 weeks delivery",
+      "80 hours estimation",
       "Basic feature set",
       "2 rounds of revisions",
       "Email support",
@@ -82,11 +83,12 @@ const pricingPlans = [
   {
     id: "professional",
     name: "Professional",
-    price: "$7,500",
+    price: "$6,400",
     period: "per project",
     description: "Ideal for growing businesses",
     features: [
-      "Up to 6 weeks delivery",
+      "Up to 4 weeks delivery",
+      "160 hours estimation",
       "Full feature implementation",
       "Unlimited revisions",
       "Priority support",
@@ -319,8 +321,11 @@ export default function Services() {
             className="mb-12"
           >
             <h2 className="text-4xl font-display font-bold text-center mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-              Choose the plan that fits your project scope. All plans include support, revisions, and deployment.
+            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-4">
+              Pricing below is indicative only based on estimated project complexity ($40/hour rate). Actual costs depend on specific project requirements, complexity, and scope.
+            </p>
+            <p className="text-base text-muted-foreground text-center max-w-3xl mx-auto">
+              Every project is unique—we'll provide a custom quote after understanding your vision and technical needs.
             </p>
           </motion.div>
 
