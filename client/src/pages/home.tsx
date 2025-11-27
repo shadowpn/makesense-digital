@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-32 bg-muted/20 border-y border-white/5">
+      <section className="py-12 bg-muted/20 border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
