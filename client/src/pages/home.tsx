@@ -163,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 container mx-auto px-6">
+      <section className="py-0 container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
