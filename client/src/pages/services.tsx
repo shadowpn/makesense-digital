@@ -331,33 +331,51 @@ export default function Services() {
           >
             <h2 className="text-4xl font-display font-bold text-center mb-4">Our Technology Stack</h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
-              We use cutting-edge technologies and tools to build scalable, high-performance solutions
+              We leverage the best-in-class technologies across all projects for scalability and performance
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { name: "React", desc: "Modern UI library" },
-              { name: "Next.js", desc: "Full-stack framework" },
-              { name: "TypeScript", desc: "Type-safe development" },
-              { name: "Tailwind CSS", desc: "Utility-first styling" },
-              { name: "PostgreSQL", desc: "Reliable database" },
-              { name: "Docker", desc: "Container orchestration" },
-              { name: "AWS", desc: "Cloud infrastructure" },
-              { name: "Playwright", desc: "E2E testing" },
-            ].map((tech, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-                viewport={{ once: true }}
-                className="border border-white/10 rounded-xl p-6 text-center hover:border-primary/50 transition-all duration-300 hover:bg-primary/5"
-              >
-                <h3 className="font-semibold text-lg mb-2">{tech.name}</h3>
-                <p className="text-sm text-muted-foreground">{tech.desc}</p>
-              </motion.div>
-            ))}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { name: "React", category: "Frontend", color: "from-blue-500 to-cyan-500" },
+                { name: "Next.js", category: "Framework", color: "from-slate-700 to-slate-900" },
+                { name: "TypeScript", category: "Language", color: "from-blue-600 to-blue-400" },
+                { name: "Node.js", category: "Runtime", color: "from-green-600 to-green-400" },
+                { name: "Express", category: "Backend", color: "from-yellow-600 to-yellow-400" },
+                { name: "PostgreSQL", category: "Database", color: "from-blue-700 to-blue-500" },
+                { name: "MongoDB", category: "Database", color: "from-green-600 to-green-500" },
+                { name: "Tailwind CSS", category: "Styling", color: "from-cyan-500 to-blue-500" },
+                { name: "Docker", category: "DevOps", color: "from-blue-600 to-cyan-500" },
+                { name: "AWS", category: "Cloud", color: "from-orange-600 to-orange-400" },
+                { name: "Playwright", category: "Testing", color: "from-purple-600 to-purple-400" },
+                { name: "Cypress", category: "Testing", color: "from-green-600 to-cyan-500" },
+                { name: "JavaScript", category: "Language", color: "from-yellow-500 to-yellow-400" },
+                { name: "Python", category: "Language", color: "from-blue-600 to-yellow-500" },
+                { name: "Git & GitHub", category: "VCS", color: "from-gray-700 to-gray-900" },
+                { name: "CI/CD", category: "DevOps", color: "from-purple-600 to-pink-500" },
+                { name: "Figma", category: "Design", color: "from-purple-600 to-pink-500" },
+                { name: "GraphQL", category: "API", color: "from-pink-600 to-pink-400" },
+                { name: "REST APIs", category: "API", color: "from-emerald-600 to-emerald-400" },
+                { name: "Stripe", category: "Payments", color: "from-blue-600 to-purple-600" },
+              ].map((tech, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ delay: (i % 10) * 0.05 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.08, y: -5 }}
+                  className="relative group"
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${tech.color} rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition-all duration-300`} />
+                  <div className="relative bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-xl border border-white/10 rounded-xl p-5 text-center hover:border-primary/50 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/20 h-full flex flex-col justify-center">
+                    <h3 className="font-display font-bold text-base md:text-lg mb-1 group-hover:text-primary transition-colors">{tech.name}</h3>
+                    <p className="text-xs text-muted-foreground group-hover:text-primary/60 transition-colors font-mono">{tech.category}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 
