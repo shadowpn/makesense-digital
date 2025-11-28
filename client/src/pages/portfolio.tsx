@@ -91,7 +91,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <div className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <>
@@ -178,7 +178,7 @@ export default function Portfolio() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="container mx-auto px-6 py-20"
+        className="container mx-auto px-6"
       >
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 inline-block">
