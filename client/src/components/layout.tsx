@@ -69,14 +69,14 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 pt-8 border-t border-[#d2f7be]/5 space-y-4">
-          <div className="text-xs text-muted-foreground/60 max-w-4xl mx-auto space-y-2">
+        <div className="mt-16 pt-8 border-t border-[#d2f7be]/5 space-y-4 px-[50px]">
+          <div className="text-xs text-muted-foreground/40 max-w-4xl mx-auto space-y-2">
             <p><strong>Disclaimer:</strong> SensePower Digital provides general information only. This website does not constitute legal, financial, or professional advice.</p>
             <p><strong>Australian Consumer Law:</strong> Our services are subject to the ACL. Consumers have statutory guarantees that cannot be excluded. For disputes, contact the Australian Small Business Commissioner or ACCC.</p>
             <p><strong>Privacy:</strong> Your information is handled per the Privacy Act 1988 (Cth). See our Privacy Policy for full details.</p>
           </div>
           
-          <div className="text-center text-xs text-muted-foreground/50 pt-4">
+          <div className="text-center text-xs text-muted-foreground/30 pt-4">
             © 2025 SensePower Digital. All rights reserved.
           </div>
         </div>
