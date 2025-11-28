@@ -174,14 +174,14 @@ export default function Portfolio() {
       </div>
 
       {/* The Process Section */}
-      <section className="py-32 container mx-auto px-6">
+      <section className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 whitespace-nowrap">
             How We <AnimatedText 
               text="Build." 
               staggerDelay={0.06} 
