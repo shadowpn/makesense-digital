@@ -81,7 +81,7 @@ export default function Contact() {
                 <Textarea placeholder="Tell us about your project..." className="bg-background/50 border-[#d2f7be]/10 min-h-[150px] focus:border-primary/50 resize-none" />
               </div>
 
-              <Button className="w-full h-12 text-lg font-medium mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button size="lg" className="w-full h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer mt-4" style={{ backgroundColor: '#d2f7be' }}>
                 Send Message
               </Button>
             </form>

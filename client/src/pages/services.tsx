@@ -218,7 +218,7 @@ export default function Services() {
                   ))}
                 </div>
 
-                <Button className="rounded-full" variant="secondary">
+                <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>
                   Learn more
                 </Button>
               </div>
@@ -251,10 +251,10 @@ export default function Services() {
               Let's transform your vision into reality. Whether you need an MVP, comprehensive testing, or complete development—we're ready to help.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
+              <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick} style={{ backgroundColor: '#d2f7be' }}>
                 Start Your Project
               </Button>
-              <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
+              <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
                 Schedule Consultation
               </Button>
             </div>
@@ -457,8 +457,10 @@ export default function Services() {
                   <div className="text-sm text-muted-foreground">{plan.period}</div>
                 </div>
                 <Button 
-                  className={`w-full rounded-full mb-8 ${selectedPlan === plan.id || plan.highlight ? "" : "border-primary/20"}`}
+                  size="lg"
+                  className={`w-full h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer mb-8 ${selectedPlan === plan.id || plan.highlight ? "" : "border-[#d2f7be]/10"}`}
                   variant={selectedPlan === plan.id || plan.highlight ? "default" : "outline"}
+                  style={selectedPlan === plan.id || plan.highlight ? { backgroundColor: '#d2f7be' } : {}}
                   onClick={(e) => {
                     e.stopPropagation();
                     handleContactClick();
@@ -787,7 +789,7 @@ export default function Services() {
             className="text-center mt-16 pt-12 border-t border-[#d2f7be]/10"
           >
             <p className="text-muted-foreground mb-6">Still have questions? We'd love to help.</p>
-            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }} onClick={handleContactClick}>
+            <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }} onClick={handleContactClick}>
               Get in Touch
             </Button>
           </motion.div>

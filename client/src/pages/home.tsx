@@ -185,7 +185,7 @@ export default function Home() {
                 ))}
               </ul>
               <Link href="/services">
-                <Button variant="outline" className="rounded-full border-primary/20 hover:bg-primary/10 text-primary shadow-lg shadow-purple-500/40 cursor-pointer">
+                <Button size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
                   Explore Our Services
                 </Button>
               </Link>
