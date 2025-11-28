@@ -173,7 +173,7 @@ export default function Services() {
         </div>
       </section>
 
-      <div className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-6">
         {/* Core Services Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16 auto-rows-max">
           {services.map((service, index) => (
