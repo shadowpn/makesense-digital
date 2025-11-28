@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X, MessageCircle, Github, Linkedin } from "lucide-react";
+import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X, MessageCircle, Github, Linkedin, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import logoImg from "@assets/изображение_1764049161428.png";
 import nataliiaPhoto from "@assets/Main_desk_1764233126320.jpg";
@@ -193,9 +193,10 @@ export function Sidebar() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-primary-foreground text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary"
+              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-primary-foreground text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary flex items-center justify-center gap-2"
             >
-              Let's Talk
+              Start Project
+              <ArrowRight size={14} />
             </motion.button>
           </motion.div>
         </div>
