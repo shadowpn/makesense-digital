@@ -1,4 +1,5 @@
 import { Sidebar } from "@/components/sidebar";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { Link, useLocation } from "wouter";
@@ -101,6 +102,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </main>
         <Footer />
       </div>
+      <ScrollToTop />
     </div>
   );
 }
