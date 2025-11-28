@@ -193,10 +193,10 @@ export function Sidebar() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-primary-foreground text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary flex items-center justify-center gap-2"
+              className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary flex items-center justify-center gap-2"
             >
               Start Project
-              <ArrowRight size={14} />
+              <ArrowRight size={18} />
             </motion.button>
           </motion.div>
         </div>
