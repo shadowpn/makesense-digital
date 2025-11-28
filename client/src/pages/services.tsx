@@ -123,6 +123,7 @@ const pricingPlans = [
 export default function Services() {
   const [, setLocation] = useLocation();
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [selectedFaq, setSelectedFaq] = useState<number | null>(null);
 
   const handleContactClick = () => {
     setLocation("/contact");
@@ -741,7 +742,19 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 viewport={{ once: true }}
-                className="group border border-[#d2f7be]/10 rounded-2xl p-6 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md transition-all duration-300 cursor-pointer"
+                onClick={() => setSelectedFaq(selectedFaq === i ? null : i)}
+                style={
+                  selectedFaq === i
+                    ? {
+                        background: "linear-gradient(rgb(16, 16, 16), rgb(16, 16, 16)) padding-box, linear-gradient(135deg, #84cc16, #a855f7) border-box",
+                      }
+                    : {}
+                }
+                className={`group rounded-2xl p-6 transition-all duration-300 cursor-pointer ${
+                  selectedFaq === i
+                    ? "border-2 border-transparent"
+                    : "border border-[#d2f7be]/10 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md"
+                }`}
               >
                 <div className="flex items-start gap-4">
                   <div style={{ color: '#c3ecac' }} className="font-bold text-lg mt-1">
@@ -749,7 +762,17 @@ export default function Services() {
                   </div>
                   <div className="flex-1">
                     <h4 className="text-lg font-display font-bold mb-2 group-hover:text-lime-100 transition-colors">{item.q}</h4>
-                    <p className="text-muted-foreground leading-relaxed">{item.a}</p>
+                    {selectedFaq === i && (
+                      <motion.p 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-muted-foreground leading-relaxed"
+                      >
+                        {item.a}
+                      </motion.p>
+                    )}
                   </div>
                 </div>
               </motion.div>
