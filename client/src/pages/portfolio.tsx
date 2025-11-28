@@ -181,13 +181,13 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 whitespace-nowrap">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 inline-block">
             How We <AnimatedText 
               text="Build." 
               staggerDelay={0.06} 
               duration={0.6}
               initialDelay={0.3}
-              className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary inline"
             />
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
