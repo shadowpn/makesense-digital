@@ -157,10 +157,10 @@ export default function Portfolio() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <Link href="/contact">
-                        <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
+                        <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
                       </Link>
                       <Link href="/services">
-                        <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                        <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
                           View Services
                         </Button>
                       </Link>
