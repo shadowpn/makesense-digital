@@ -695,28 +695,44 @@ export default function Services() {
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
-                q: "How long does a typical project take?",
-                a: "Project timelines vary based on complexity. Starter projects: 2 weeks, Professional: 4 weeks, Enterprise: custom timeline. We'll provide a detailed schedule after discovery."
+                q: "What services do you provide?",
+                a: "I help startups and businesses transform ideas into digital products. My expertise spans manual and automated QA, MVP development, no-code solutions, and building production-ready web applications and payment-enabled platforms. Whether you need to validate an idea, improve product quality, or launch a scalable solution — I can take your project from concept to deployment."
               },
               {
-                q: "What's included in the price?",
-                a: "All packages include development, testing, deployment, and documentation. Professional plans include unlimited revisions, priority support, and post-launch optimization. Pricing is indicative—actual costs depend on project complexity."
+                q: "What types of projects do you work on?",
+                a: "I work on products that require rapid delivery, measurable value, and technical reliability — including web platforms, SaaS tools, Telegram bots, subscription-based systems, and payment integrations with Stripe and PayPal. If your project needs testing, automation, or a functional MVP — I'm a good match."
               },
               {
-                q: "Do you provide post-launch support?",
-                a: "Yes! Professional and Enterprise plans include post-launch optimization, analytics setup, and ongoing support. We ensure your product performs flawlessly after launch."
+                q: "How long does it take to build an MVP?",
+                a: "Timelines depend on complexity, but a typical MVP takes 2–6 weeks. I focus on delivering only essential features that validate your business idea quickly, so you can test real user feedback before investing in full-scale development."
               },
               {
-                q: "Can you help with ongoing maintenance?",
-                a: "Absolutely. Enterprise customers receive 24/7 support and ongoing maintenance planning. We're partners in your success, not just developers."
+                q: "What tech stack do you use?",
+                a: "I use modern, battle-tested tools — Python, Flask, Aiogram, JavaScript, Next.js, SQL, Supabase, and no-code platforms when speed matters. I also implement CI/CD pipelines, automated testing, and secure payment flows when required."
               },
               {
-                q: "What's your tech stack?",
-                a: "We use modern technologies: React/Next.js (frontend), Node.js/Python/Django (backend), PostgreSQL/MongoDB (databases), and cloud platforms like AWS/Netlify. Full list on our Technology Stack section."
+                q: "Do you work with existing products?",
+                a: "Yes. I can audit, test, refactor, or extend an existing system. If your product lacks documentation, tests, or structure — I help stabilize it, reduce technical debt, and prepare it for scaling."
               },
               {
-                q: "How do you ensure quality?",
-                a: "Rigorous testing at every stage: automated (Playwright, Jest), API testing (Postman), and manual QA. We deliver production-ready code with zero-defect commitment."
+                q: "Do you provide QA and automated testing separately?",
+                a: "Absolutely. You can engage me for manual testing, test automation, performance audits, or full QA ownership. My approach ensures your product behaves predictably and can confidently grow without fear of breaking changes."
+              },
+              {
+                q: "Can you help me choose the right solution if I don't know what I need?",
+                a: "Yes. I specialize in translating non-technical ideas into clear implementation plans. After a short briefing, I propose a solution, timeline, and cost — without unnecessary complexity or jargon."
+              },
+              {
+                q: "How much does it cost to work with you?",
+                a: "Pricing depends on project scope, complexity, and urgency. I offer transparent, milestone-based estimates so you always know what you are paying for. There are no hidden fees, and you can start small."
+              },
+              {
+                q: "Do you provide ongoing support after launch?",
+                a: "Yes. I can deliver post-launch support, bug fixes, updates, analytics, and new features to ensure your product evolves with your users and the market."
+              },
+              {
+                q: "Why should we work together?",
+                a: "Because I combine QA thinking, product mindset, and full-stack delivery skills — meaning I don't just build features, I build solutions that work, scale, and make sense. My goal is not to write code; it's to create products that succeed."
               }
             ].map((item, i) => (
               <motion.div
