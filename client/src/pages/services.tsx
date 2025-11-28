@@ -682,7 +682,7 @@ export default function Services() {
         </div>
 
         {/* FAQ Section */}
-        <div className="border-t border-[#d2f7be]/10 py-20 mb-0">
+        <div className="border-t border-[#d2f7be]/10 py-10 mb-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
