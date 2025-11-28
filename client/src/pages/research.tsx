@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { FileText, Download, ExternalLink } from "lucide-react";
+import { FileText, Download, ExternalLink, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
@@ -13,23 +13,60 @@ const articles = [
     excerpt: "Why Playwright is overtaking Cypress and what it means for your CI/CD pipeline.",
     date: "Nov 12, 2025",
     readTime: "8 min read",
-    category: "Engineering"
+    category: "Engineering",
+    rating: 5,
+    reviewCount: 24
   },
   {
     title: "Designing for Dark Mode First",
     excerpt: "A comprehensive guide to color theory in low-light interfaces.",
     date: "Oct 24, 2025",
     readTime: "6 min read",
-    category: "Design"
+    category: "Design",
+    rating: 5,
+    reviewCount: 18
   },
   {
     title: "MVP Architecture Patterns",
     excerpt: "How to structure your Next.js app for scalability without over-engineering.",
     date: "Oct 10, 2025",
     readTime: "12 min read",
-    category: "Architecture"
+    category: "Architecture",
+    rating: 4.5,
+    reviewCount: 31
   }
 ];
+
+const StarRating = ({ rating, reviewCount }: { rating: number; reviewCount: number }) => {
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+  
+  return (
+    <div className="flex items-center gap-3 mt-4">
+      <div className="flex items-center gap-1">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <div key={i}>
+            {i < fullStars ? (
+              <Star size={16} className="fill-[#d2f7be] text-[#d2f7be]" />
+            ) : i === fullStars && hasHalfStar ? (
+              <div className="relative">
+                <Star size={16} className="text-[#d2f7be]/30" />
+                <div className="absolute inset-0 overflow-hidden w-1/2">
+                  <Star size={16} className="fill-[#d2f7be] text-[#d2f7be]" />
+                </div>
+              </div>
+            ) : (
+              <Star size={16} className="text-[#d2f7be]/30" />
+            )}
+          </div>
+        ))}
+      </div>
+      <span className="text-sm text-muted-foreground font-mono">
+        {rating} • {reviewCount} reviews
+      </span>
+    </div>
+  );
+};
 
 const artifacts = [
   {
@@ -113,7 +150,8 @@ export default function Research() {
                   <span className="px-2 py-0.5 rounded bg-primary/10 text-primary">{article.category}</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{article.title}</h3>
-                <p className="text-muted-foreground">{article.excerpt}</p>
+                <p className="text-muted-foreground mb-4">{article.excerpt}</p>
+                <StarRating rating={article.rating} reviewCount={article.reviewCount} />
               </motion.article>
             ))}
           </div>
