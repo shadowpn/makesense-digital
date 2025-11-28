@@ -3,16 +3,36 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useEffect } from "react";
+import logoImg from "@assets/изображение_1764049161428.png";
+import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#d2f7be]/5 bg-black/20 py-20">
-      <div className="container mx-auto px-6">
+    <footer className="relative border-t border-[#d2f7be]/5 py-20 overflow-hidden">
+      <div 
+        className="absolute inset-0 z-0 opacity-30"
+        style={{
+          backgroundImage: `url(${ctaBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+      
+      <div className="container mx-auto px-6 relative z-20">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h3 className="text-2xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-              SensePower Digital
-            </h3>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="mb-4 flex items-center gap-3"
+            >
+              <div className="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors flex-shrink-0">
+                <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                SensePower<br/>Digital
+              </h3>
+            </motion.div>
             <p className="text-muted-foreground text-sm max-w-xs">
               Crafting digital experiences that blend aesthetic excellence with functional precision.
             </p>
