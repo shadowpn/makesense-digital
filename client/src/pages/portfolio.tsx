@@ -174,13 +174,13 @@ export default function Portfolio() {
       </div>
 
       {/* The Process Section */}
-      <section className="container mx-auto px-6 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="container mx-auto px-6 py-20"
+      >
+        <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 inline-block">
             How We <AnimatedText 
               text="Build." 
@@ -193,7 +193,7 @@ export default function Portfolio() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Our proven methodology delivers exceptional results, every time.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-4 gap-6">
           {[
