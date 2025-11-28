@@ -131,7 +131,7 @@ export default function Research() {
         </div>
       </section>
 
-      <div className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-8">
             <h2 className="text-2xl font-bold mb-8 border-b border-[#d2f7be]/10 pb-4">Latest Articles</h2>
