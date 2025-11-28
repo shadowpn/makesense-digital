@@ -52,10 +52,10 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>QA & Automation</li>
               <li>MVP Development</li>
-              <li>UI/UX Design</li>
-              <li>Manual Testing</li>
-              <li>Test Automation</li>
+              <li>Fullstack Development</li>
+              <li>Telegram Bot Development</li>
             </ul>
           </div>
 
