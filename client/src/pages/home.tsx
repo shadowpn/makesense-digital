@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Selected Works - Bento Grid */}
-      <section className="py-32 container mx-auto px-6">
+      <section className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
