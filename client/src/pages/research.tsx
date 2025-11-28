@@ -10,7 +10,7 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 const articles = [
   {
     title: "The State of Automated Testing in 2025",
-    excerpt: "Why Playwright is overtaking Cypress and what it means for your CI/CD pipeline.",
+    excerpt: "Why Playwright is overtaking Cypress and what it means for your CI/CD pipeline. We explore performance metrics, ease of use, and integration capabilities. This deep dive covers real-world scenarios from our latest projects.",
     date: "Nov 12, 2025",
     readTime: "8 min read",
     category: "Engineering",
@@ -19,7 +19,7 @@ const articles = [
   },
   {
     title: "Designing for Dark Mode First",
-    excerpt: "A comprehensive guide to color theory in low-light interfaces.",
+    excerpt: "A comprehensive guide to color theory in low-light interfaces and accessibility best practices. Learn how to maintain contrast ratios while creating visually stunning experiences. Includes practical techniques and tools we use daily.",
     date: "Oct 24, 2025",
     readTime: "6 min read",
     category: "Design",
@@ -28,7 +28,7 @@ const articles = [
   },
   {
     title: "MVP Architecture Patterns",
-    excerpt: "How to structure your Next.js app for scalability without over-engineering.",
+    excerpt: "How to structure your Next.js app for scalability without over-engineering. We break down monolithic vs. modular approaches and share real examples from successful startups. Perfect for teams balancing speed and maintainability.",
     date: "Oct 10, 2025",
     readTime: "12 min read",
     category: "Architecture",
