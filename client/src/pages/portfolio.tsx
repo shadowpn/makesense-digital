@@ -264,7 +264,7 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </motion.div>
     </Layout>
   );
 }
