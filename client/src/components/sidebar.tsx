@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X } from "lucide-react";
+import { Home, Briefcase, Zap, User, BookOpen, Mail, Menu, X, MessageCircle, Github, Linkedin } from "lucide-react";
 import { useState, useEffect } from "react";
 import logoImg from "@assets/изображение_1764049161428.png";
 import nataliiaPhoto from "@assets/Main_desk_1764233126320.jpg";
@@ -15,10 +15,10 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { icon: "Wa", href: "https://wa.me/61414599822", label: "WhatsApp" },
-  { icon: "◆", href: "https://github.com/Petrychuk", label: "GitHub" },
-  { icon: "in", href: "https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/", label: "LinkedIn" },
-  { icon: "✉", href: "mailto:nataliia.petrychuk@gmail.com", label: "Email" },
+  { icon: MessageCircle, href: "https://wa.me/61414599822", label: "WhatsApp" },
+  { icon: Github, href: "https://github.com/Petrychuk", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:nataliia.petrychuk@gmail.com", label: "Email" },
 ];
 
 export function Sidebar() {
@@ -116,17 +116,20 @@ export function Sidebar() {
             className="flex justify-center gap-3"
           >
             {socialLinks.map((social, i) => {
+              const Icon = social.icon;
               return (
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 text-muted-foreground hover:text-primary transition-all duration-300 border border-[#d2f7be]/5 hover:border-primary/50 font-bold text-sm"
                   title={social.label}
                 >
-                  {social.icon}
+                  <Icon size={20} />
                 </motion.a>
               );
             })}

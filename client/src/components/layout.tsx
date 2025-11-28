@@ -69,8 +69,22 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-20 pt-8 border-t border-[#d2f7be]/5 text-center text-sm text-muted-foreground">
-          © 2025 SensePower Digital. All rights reserved.
+        <div className="mt-20 pt-8 border-t border-[#d2f7be]/5 space-y-6">
+          <div className="text-center text-sm text-muted-foreground">
+            © 2025 SensePower Digital. All rights reserved.
+          </div>
+          
+          <div className="text-xs text-muted-foreground/70 max-w-4xl mx-auto space-y-3">
+            <p>
+              <strong>Disclaimer:</strong> SensePower Digital is an independent service provider. This website contains general information only and does not constitute legal, financial, or professional advice. While we strive for accuracy, we make no warranties about the completeness or reliability of content. Services are provided on an "as-is" basis. By using this website, you acknowledge that you have read and agree to these terms.
+            </p>
+            <p>
+              <strong>Australian Consumer Law:</strong> Our services are subject to the Australian Consumer Law (ACL). Consumers have certain statutory guarantees that cannot be excluded. For small businesses, certain ACL protections may be limited. For disputes, consumers may seek remedies through the Australian Small Business Commissioner or seek advice from the ACCC (Australian Competition and Consumer Commission).
+            </p>
+            <p>
+              <strong>Privacy:</strong> Your personal information is handled in accordance with the Privacy Act 1988 (Cth) and our Privacy Policy. Visit our website for full details on how we collect, use, and disclose your information.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
