@@ -162,43 +162,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-0 container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 m-[15px]"
-        >
-          <div 
-            className="absolute inset-0 z-0 opacity-40"
-            style={{
-              backgroundImage: `url(${workHeroBg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
-          
-          <div className="relative z-20">
-            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
-              </Link>
-              <Link href="/services">
-                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
-                  View Services
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
       {/* Services Preview */}
       <section className="py-12 bg-muted/20 border-y border-[#d2f7be]/5">
         <div className="container mx-auto px-6">
@@ -260,6 +223,43 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-0 container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 m-[15px]"
+        >
+          <div 
+            className="absolute inset-0 z-0 opacity-40"
+            style={{
+              backgroundImage: `url(${workHeroBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          
+          <div className="relative z-20">
+            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
+            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+              Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="rounded-full text-lg px-8 shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
+              </Link>
+              <Link href="/services">
+                <Button variant="outline" size="lg" className="rounded-full text-lg px-8 border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                  View Services
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </section>
     </Layout>
   );
