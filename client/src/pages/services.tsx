@@ -262,7 +262,7 @@ export default function Services() {
         </motion.div>
 
         {/* Visual Services Section */}
-        <div className="border-t border-[#d2f7be]/10 py-16 mb-16">
+        <div className="border-t border-[#d2f7be]/10 py-10 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
