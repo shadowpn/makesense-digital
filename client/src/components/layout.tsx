@@ -8,7 +8,7 @@ import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.pn
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-[#d2f7be]/5 py-20 overflow-hidden">
+    <footer className="relative border-t border-[#d2f7be]/5 py-8 overflow-hidden">
       <div 
         className="absolute inset-0 z-0 opacity-30"
         style={{
