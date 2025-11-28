@@ -188,11 +188,8 @@ export function Sidebar() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-center space-y-3 pt-6 border-t border-[#d2f7be]/5"
+            className="text-center pt-6 border-t border-[#d2f7be]/5"
           >
-            <p className="text-xs text-muted-foreground">
-              © 2025 SensePower Digital
-            </p>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
