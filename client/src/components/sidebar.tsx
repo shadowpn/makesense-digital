@@ -193,7 +193,7 @@ export function Sidebar() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-[#d2f7be] text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary"
+              className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-white text-xs font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary"
             >
               Let's Talk
             </motion.button>
