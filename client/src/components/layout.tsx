@@ -1,6 +1,6 @@
 import { Sidebar } from "@/components/sidebar";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useEffect } from "react";
 import logoImg from "@assets/изображение_1764049161428.png";
@@ -62,9 +62,10 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex gap-4 text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Github size={20} /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Linkedin size={20} /></a>
+              <a href="mailto:nataliia.petrychuk@gmail.com" className="hover:text-primary transition-colors" title="Email"><Mail size={20} /></a>
+              <a href="https://wa.me/61414599822" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="WhatsApp"><MessageCircle size={20} /></a>
+              <a href="https://github.com/Petrychuk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="GitHub"><Github size={20} /></a>
+              <a href="https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="LinkedIn"><Linkedin size={20} /></a>
             </div>
           </div>
         </div>
