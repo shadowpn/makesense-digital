@@ -233,7 +233,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 mb-16"
+          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 mb-[50px]"
         >
           <div 
             className="absolute inset-0 z-0 opacity-30"
