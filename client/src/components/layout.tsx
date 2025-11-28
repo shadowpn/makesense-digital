@@ -40,13 +40,14 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Sitemap</h4>
+            <h4 className="font-semibold mb-4">Pages</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="/"><a className="hover:text-primary transition-colors">Home</a></Link></li>
-              <li><Link href="/portfolio"><a className="hover:text-primary transition-colors">Work</a></Link></li>
-              <li><Link href="/services"><a className="hover:text-primary transition-colors">Services</a></Link></li>
               <li><Link href="/about"><a className="hover:text-primary transition-colors">About</a></Link></li>
+              <li><Link href="/portfolio"><a className="hover:text-primary transition-colors">Portfolio</a></Link></li>
+              <li><Link href="/services"><a className="hover:text-primary transition-colors">Services</a></Link></li>
               <li><Link href="/research"><a className="hover:text-primary transition-colors">Research</a></Link></li>
+              <li><Link href="/contact"><a className="hover:text-primary transition-colors">Contact</a></Link></li>
             </ul>
           </div>
 
