@@ -86,12 +86,12 @@ const pricingPlans = [
   {
     id: "professional",
     name: "Professional",
-    price: "$6,400",
+    price: "$9,600",
     period: "per project",
     description: "Ideal for growing businesses",
     features: [
-      "Up to 4 weeks delivery",
-      "160 hours estimation",
+      "Up to 6 weeks delivery",
+      "240 hours estimation",
       "Full feature implementation",
       "Unlimited revisions",
       "Priority support",
