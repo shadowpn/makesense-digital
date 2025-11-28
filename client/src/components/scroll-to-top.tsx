@@ -3,7 +3,9 @@ import { ArrowUp } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(() => {
+    return typeof window !== "undefined" && window.scrollY > window.innerHeight;
+  });
 
   useEffect(() => {
     const toggleVisibility = () => {
