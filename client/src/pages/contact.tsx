@@ -52,7 +52,9 @@ export default function Contact() {
         body: formDataToSend
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         toast.success('Message sent successfully! We\'ll get back to you soon.');
         setFormData({
           name: '',
@@ -63,8 +65,19 @@ export default function Contact() {
           message: '',
           file: null
         });
+      } else if (response.ok) {
+        toast.success('Message received! We\'ll review it shortly.');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          projectType: '',
+          budget: '',
+          message: '',
+          file: null
+        });
       } else {
-        toast.error('Failed to send message. Please try again.');
+        toast.error(data.error || 'Failed to send message. Please try again.');
       }
     } catch (error) {
       toast.error('An error occurred. Please try again.');

@@ -20,19 +20,6 @@ const upload = multer({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Configure nodemailer - will use environment variable for email config
-  let transporter: any = null;
-  
-  if (process.env.CONTACT_EMAIL_USER && process.env.CONTACT_EMAIL_PASSWORD) {
-    transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.CONTACT_EMAIL_USER,
-        pass: process.env.CONTACT_EMAIL_PASSWORD
-      }
-    });
-  }
-
   app.post("/api/contact", upload.single("file"), async (req, res) => {
     try {
       const { name, email, company, projectType, budget, message } = req.body;
@@ -66,43 +53,58 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ${req.file ? `<p><strong>File Attached:</strong> ${req.file.originalname}</p>` : ''}
       `;
 
-      // Send email
-      if (transporter) {
-        try {
-          await transporter.sendMail({
-            from: process.env.CONTACT_EMAIL_USER,
-            to: process.env.CONTACT_EMAIL_RECIPIENT || process.env.CONTACT_EMAIL_USER,
-            subject: `New Project Inquiry from ${name}`,
-            html: emailContent,
-            replyTo: email,
-            attachments: req.file ? [{
-              filename: req.file.originalname,
-              content: req.file.buffer
-            }] : []
-          });
-          console.log('Email sent successfully to admin');
-        } catch (emailError) {
-          console.error('Email sending failed:', emailError);
-          // Still return success since form was saved
-        }
-
-        // Send reply to user
-        try {
-          await transporter.sendMail({
-            from: process.env.CONTACT_EMAIL_USER,
-            to: email,
-            subject: 'We received your message - SensePowerDigital',
-            html: `<p>Hi ${name},</p><p>Thank you for reaching out to us. We've received your message and will get back to you within 24 hours.</p><p>Best regards,<br>SensePowerDigital Team</p>`
-          });
-          console.log('Reply email sent successfully to:', email);
-        } catch (replyError) {
-          console.error('Reply email failed:', replyError);
-        }
-      } else {
+      // Check if email credentials are available
+      if (!process.env.CONTACT_EMAIL_USER || !process.env.CONTACT_EMAIL_PASSWORD) {
         console.warn('Email credentials not configured - form saved but email not sent');
+        console.warn('CONTACT_EMAIL_USER:', process.env.CONTACT_EMAIL_USER ? 'SET' : 'NOT SET');
+        console.warn('CONTACT_EMAIL_PASSWORD:', process.env.CONTACT_EMAIL_PASSWORD ? 'SET' : 'NOT SET');
+        return res.json({ 
+          success: true, 
+          submissionId: submission.id,
+          message: 'Form received but email sending is not configured'
+        });
       }
 
-      res.json({ success: true, submissionId: submission.id });
+      // Send email
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.CONTACT_EMAIL_USER,
+          pass: process.env.CONTACT_EMAIL_PASSWORD
+        }
+      });
+
+      try {
+        await transporter.sendMail({
+          from: process.env.CONTACT_EMAIL_USER,
+          to: process.env.CONTACT_EMAIL_RECIPIENT || process.env.CONTACT_EMAIL_USER,
+          subject: `New Project Inquiry from ${name}`,
+          html: emailContent,
+          replyTo: email,
+          attachments: req.file ? [{
+            filename: req.file.originalname,
+            content: req.file.buffer
+          }] : []
+        });
+        console.log('Email sent successfully to admin');
+      } catch (emailError) {
+        console.error('Email sending to admin failed:', emailError);
+      }
+
+      // Send reply to user
+      try {
+        await transporter.sendMail({
+          from: process.env.CONTACT_EMAIL_USER,
+          to: email,
+          subject: 'We received your message - SensePowerDigital',
+          html: `<p>Hi ${name},</p><p>Thank you for reaching out to us. We've received your message and will get back to you within 24 hours.</p><p>Best regards,<br>SensePowerDigital Team</p>`
+        });
+        console.log('Reply email sent successfully to:', email);
+      } catch (replyError) {
+        console.error('Reply email failed:', replyError);
+      }
+
+      res.json({ success: true, submissionId: submission.id, message: 'Email sent successfully' });
     } catch (error) {
       console.error('Contact form error:', error);
       res.status(500).json({ error: "Failed to process contact form" });
