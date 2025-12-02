@@ -150,33 +150,32 @@ export function Sidebar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
                 >
-                  <Link href={item.path}>
-                    <a
-                      onClick={() => isMobile && setIsOpen(false)}
-                      className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 relative overflow-hidden group ${
-                        isActive
-                          ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/50"
-                          : "text-foreground/70 hover:text-foreground hover:bg-[#d2f7be]/5 border border-transparent hover:border-primary/30"
-                      }`}
-                    >
-                      {/* Hover effect border */}
-                      <div className="absolute inset-0 rounded-xl" />
+                  <Link 
+                    href={item.path}
+                    onClick={() => isMobile && setIsOpen(false)}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 relative overflow-hidden group ${
+                      isActive
+                        ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/50"
+                        : "text-foreground/70 hover:text-foreground hover:bg-[#d2f7be]/5 border border-transparent hover:border-primary/30"
+                    }`}
+                  >
+                    {/* Hover effect border */}
+                    <div className="absolute inset-0 rounded-xl" />
 
-                      {/* Content */}
-                      <span className="relative z-10">
-                        <Icon size={20} className={isActive ? "text-primary" : "group-hover:text-primary transition-colors"} />
-                      </span>
-                      <span className="relative z-10 text-sm font-medium">{item.name}</span>
+                    {/* Content */}
+                    <span className="relative z-10">
+                      <Icon size={20} className={isActive ? "text-primary" : "group-hover:text-primary transition-colors"} />
+                    </span>
+                    <span className="relative z-10 text-sm font-medium">{item.name}</span>
 
-                      {/* Active indicator dot */}
-                      {isActive && (
-                        <motion.div
-                          layoutId="activeDot"
-                          className="absolute right-3 w-2 h-2 rounded-full bg-primary"
-                          transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                        />
-                      )}
-                    </a>
+                    {/* Active indicator dot */}
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeDot"
+                        className="absolute right-3 w-2 h-2 rounded-full bg-primary"
+                        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                      />
+                    )}
                   </Link>
                 </motion.div>
               );
