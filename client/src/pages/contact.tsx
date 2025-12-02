@@ -47,15 +47,21 @@ export default function Contact() {
         formDataToSend.append('file', formData.file);
       }
 
+      console.log('Sending form data...');
+      
       const response = await fetch('/api/contact', {
         method: 'POST',
         body: formDataToSend
       });
 
-      const data = await response.json();
+      console.log('Response status:', response.status);
 
-      if (response.ok && data.success) {
-        toast.success('Message sent successfully! We\'ll get back to you soon.');
+      const data = await response.json();
+      console.log('Response data:', data);
+
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        toast.success('Сообщение отправлено! Спасибо, мы ответим вам в течение 24 часов.');
         setFormData({
           name: '',
           email: '',
@@ -65,22 +71,18 @@ export default function Contact() {
           message: '',
           file: null
         });
-      } else if (response.ok) {
-        toast.success('Message received! We\'ll review it shortly.');
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          projectType: '',
-          budget: '',
-          message: '',
-          file: null
-        });
+        // Reset file input
+        const fileInput = document.getElementById('file-upload') as HTMLInputElement;
+        if (fileInput) {
+          fileInput.value = '';
+        }
       } else {
-        toast.error(data.error || 'Failed to send message. Please try again.');
+        console.log('Error response:', data);
+        toast.error(data.error || 'Ошибка при отправке сообщения');
       }
     } catch (error) {
-      toast.error('An error occurred. Please try again.');
+      console.error('Submit error:', error);
+      toast.error('Произошла ошибка. Пожалуйста, попробуйте снова.');
     } finally {
       setLoading(false);
     }
