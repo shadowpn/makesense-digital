@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, LayoutTemplate, Code2, Bug, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
+import { Fragment } from "react";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
@@ -94,9 +95,8 @@ export default function Portfolio() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
-            <>
+            <Fragment key={project.id}>
               <motion.div
-                key={project.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -124,8 +124,8 @@ export default function Portfolio() {
                 <p className="text-muted-foreground mb-4 max-w-md">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map(tag => (
-                    <Badge key={tag} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-[#d2f7be]/5">
+                  {project.tags.map((tag, tagIndex) => (
+                    <Badge key={`${project.id}-${tagIndex}`} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-[#d2f7be]/5">
                       {tag}
                     </Badge>
                   ))}
@@ -134,7 +134,6 @@ export default function Portfolio() {
               
               {index === 1 && (
                 <motion.div
-                  key="cta"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -156,10 +155,10 @@ export default function Portfolio() {
                       Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                      <Link href="/contact">
+                      <Link href="/contact" className="inline-block">
                         <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
                       </Link>
-                      <Link href="/services">
+                      <Link href="/services" className="inline-block">
                         <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
                           View Services
                         </Button>
@@ -168,7 +167,7 @@ export default function Portfolio() {
                   </div>
                 </motion.div>
               )}
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
