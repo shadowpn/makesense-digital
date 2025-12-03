@@ -557,7 +557,7 @@ export default function Services() {
                     transition={{ delay: i * 0.15 }}
                     viewport={{ once: true }}
                     className="relative group"
-                    style={i === 4 ? { gridColumn: '1 / -1', justifySelf: 'start' } : i % 2 === 0 ? { justifySelf: 'start' } : { justifySelf: 'end' }}
+                    style={{ textAlign: i % 2 === 0 ? 'left' : 'right' }}
                   >
                     {/* Step Circle */}
                     <motion.div
@@ -578,7 +578,7 @@ export default function Services() {
                     </motion.div>
 
                     {/* Step Content */}
-                    <div className="text-center relative z-10">
+                    <div className="md:text-center relative z-10">
                       <h4 className="text-lg font-display font-bold mb-2 bg-gradient-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent">{step.title}</h4>
                       <p className="text-xs text-muted-foreground">{step.desc}</p>
                     </div>
