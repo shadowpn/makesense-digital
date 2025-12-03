@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
-import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Settings, Cpu, Brackets, Server, Wrench, Lightbulb, GitBranch, Trophy, HelpCircle } from "lucide-react";
+import { Check, Code2, Bug, Zap, Database, LayoutTemplate, CheckCircle, Users, Target, Palette, Cloud, Server, Wrench, Lightbulb, Trophy, HelpCircle } from "lucide-react";
 import qaIcon from "@assets/generated_images/abstract_qa_testing_concept_icon.png";
 import mvpIcon from "@assets/generated_images/abstract_mvp_development_concept_icon.png";
 import telegramIcon from "@assets/generated_images/modern_telegram_bot_illustration.png";
@@ -13,7 +13,6 @@ import designImg from "@assets/generated_images/professional_design_system_ui.pn
 import devopsImg from "@assets/generated_images/modern_cloud_deployment_tech.png";
 import { useLocation } from "wouter";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const services = [
   {
@@ -626,9 +625,9 @@ export default function Services() {
         </div>
 
         {/* Core Values Grid */}
-        <div className="border-t border-[#d2f7be]/10 pt-16 mb-16">
-          <h2 className="text-4xl font-display font-bold mb-12 text-center">Our Unwavering Values</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="border-t border-[#d2f7be]/10 pt-8 md:pt-16 mb-8 md:mb-16">
+          <h2 className="text-2xl md:text-4xl font-display font-bold mb-6 md:mb-12 text-center">Our Unwavering Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -636,37 +635,37 @@ export default function Services() {
               className="space-y-8"
             >
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <Zap size={24} />
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                    <Zap size={20} />
                   </div>
-                  <h3 className="text-2xl font-display font-bold">Velocity + Quality</h3>
+                  <h3 className="text-lg md:text-2xl font-display font-bold">Velocity + Quality</h3>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-xs md:text-base text-muted-foreground">
                   We shatter the false choice between speed and excellence. Agile, rigorous, production-ready—delivered in weeks, not months.
                 </p>
               </div>
 
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <Target size={24} />
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                    <Target size={20} />
                   </div>
-                  <h3 className="text-2xl font-display font-bold">User-Obsessed</h3>
+                  <h3 className="text-lg md:text-2xl font-display font-bold">User-Obsessed</h3>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-xs md:text-base text-muted-foreground">
                   Every pixel, every line of code serves a purpose. We listen, iterate, and refine with relentless dedication to perfection.
                 </p>
               </div>
 
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                    <Users size={24} />
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                    <Users size={20} />
                   </div>
-                  <h3 className="text-2xl font-display font-bold">True Partnership</h3>
+                  <h3 className="text-lg md:text-2xl font-display font-bold">True Partnership</h3>
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-xs md:text-base text-muted-foreground">
                   We're an extension of your team, invested in your vision. Your wins are our wins, your challenges are ours to solve together.
                 </p>
               </div>
@@ -676,17 +675,17 @@ export default function Services() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative h-full rounded-3xl overflow-hidden"
+              className="relative rounded-3xl overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-3xl" />
-              <div className="relative p-12 h-full flex flex-col justify-center space-y-6">
+              <div className="relative p-6 md:p-12 flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                     "Excellence isn't a destination—it's a commitment we make to you every single day. We build products that don't just meet expectations, they exceed them."
                   </p>
                   <div className="pt-4 border-t border-[#d2f7be]/10">
-                    <p className="font-display font-bold text-lg">Nataliia Petrychuk</p>
-                    <p className="text-sm text-muted-foreground">Founder, SensePower Digital</p>
+                    <p className="font-display font-bold text-base md:text-lg">Nataliia Petrychuk</p>
+                    <p className="text-xs md:text-sm text-muted-foreground">Founder, SensePower Digital</p>
                   </div>
                 </div>
               </div>
@@ -695,18 +694,18 @@ export default function Services() {
         </div>
 
         {/* FAQ Section */}
-        <div className="border-t border-[#d2f7be]/10 py-20 mb-0">
+        <div className="border-t border-[#d2f7be]/10 py-8 md:py-20 mb-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16 text-center"
+            className="mb-8 md:mb-16 text-center"
           >
-            <h2 className="text-4xl font-display font-bold mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Frequently Asked Questions</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">Everything you need to know about our services, process, and partnerships</p>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Frequently Asked Questions</h2>
+            <p className="text-sm md:text-lg text-muted-foreground text-center max-w-2xl mx-auto">Everything you need to know about our services, process, and partnerships</p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-3 md:space-y-4 px-4 md:px-0">
             {[
               {
                 q: "What services do you provide?",
@@ -763,25 +762,25 @@ export default function Services() {
                       }
                     : {}
                 }
-                className={`group rounded-2xl p-6 transition-all duration-300 cursor-pointer ${
+                className={`group rounded-2xl p-4 md:p-6 transition-all duration-300 cursor-pointer ${
                   selectedFaq === i
                     ? "border-2 border-transparent"
                     : "border border-[#d2f7be]/10 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md"
                 }`}
               >
-                <div className="flex items-start gap-4">
-                  <div style={{ color: '#c3ecac' }} className="font-bold text-lg mt-1">
-                    <HelpCircle size={24} />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div style={{ color: '#c3ecac' }} className="font-bold flex-shrink-0 mt-0.5">
+                    <HelpCircle size={20} className="md:w-6 md:h-6" />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-display font-bold mb-2 group-hover:text-lime-100 transition-colors">{item.q}</h4>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-base md:text-lg font-display font-bold mb-2 group-hover:text-lime-100 transition-colors">{item.q}</h4>
                     {selectedFaq === i && (
                       <motion.p 
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="text-muted-foreground leading-relaxed"
+                        className="text-xs md:text-sm text-muted-foreground leading-relaxed"
                       >
                         {item.a}
                       </motion.p>
@@ -797,10 +796,10 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mt-16 pt-12 border-t border-[#d2f7be]/10"
+            className="text-center mt-8 md:mt-16 pt-8 md:pt-12 border-t border-[#d2f7be]/10"
           >
-            <p className="text-muted-foreground mb-6">Still have questions? We'd love to help.</p>
-            <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }} onClick={handleContactClick}>
+            <p className="text-xs md:text-base text-muted-foreground mb-4 md:mb-6">Still have questions? We'd love to help.</p>
+            <Button size="lg" className="h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }} onClick={handleContactClick}>
               Get in Touch
             </Button>
           </motion.div>
