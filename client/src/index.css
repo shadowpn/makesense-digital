@@ -145,17 +145,18 @@ select option:first-child {
   color: #cbd5e0;
 }
 
-/* Default select text color for placeholder */
+/* Default select text color for placeholder and selected */
 select:required:invalid {
   color: #cbd5e0;
 }
 
+/* All select text - light color */
 select {
-  color: #1a1a1a;
+  color: #cbd5e0;
 }
 
-/* Placeholder state */
-select[value=""] {
+/* When select has a value - keep light color */
+select:valid {
   color: #cbd5e0;
 }
 
