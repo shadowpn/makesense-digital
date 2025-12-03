@@ -93,7 +93,7 @@ export default function Portfolio() {
       </section>
 
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12">
           {projects.map((project, index) => (
             <Fragment key={project.id}>
               <motion.div
@@ -103,7 +103,7 @@ export default function Portfolio() {
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
-                <div className="relative aspect-[4/3] mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
+                <div className="relative aspect-[4/3] mb-3 md:mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -177,9 +177,9 @@ export default function Portfolio() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="container mx-auto px-6 py-20"
+        className="container mx-auto px-6 py-8 md:py-20"
       >
-        <div className="text-center mb-20">
+        <div className="text-center mb-8 md:mb-20">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 inline-block">
             How We <AnimatedText 
               text="Build." 
