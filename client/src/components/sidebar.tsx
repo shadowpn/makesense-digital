@@ -18,7 +18,7 @@ const socialLinks = [
   { icon: MessageCircle, href: "https://wa.me/61414599822", label: "WhatsApp" },
   { icon: Github, href: "https://github.com/Petrychuk", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:nataliia.petrychuk@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:makeinfosense@gmail.com", label: "Email" },
 ];
 
 export function Sidebar() {

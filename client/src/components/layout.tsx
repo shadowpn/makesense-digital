@@ -64,7 +64,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex gap-4 text-muted-foreground">
-              <a href="mailto:nataliia.petrychuk@gmail.com" className="hover:text-primary transition-colors" title="Email"><Mail size={20} /></a>
+              <a href="mailto:makeinfosense@gmail.com" className="hover:text-primary transition-colors" title="Email"><Mail size={20} /></a>
               <a href="https://wa.me/61414599822" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="WhatsApp"><MessageCircle size={20} /></a>
               <a href="https://github.com/Petrychuk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="GitHub"><Github size={20} /></a>
               <a href="https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="LinkedIn"><Linkedin size={20} /></a>
