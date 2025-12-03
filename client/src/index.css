@@ -133,7 +133,7 @@ select option:hover {
   background-color: #e0e0e0;
 }
 
-/* Default/placeholder option styling */
+/* Select options styling */
 select option {
   background-color: #f0f0f0;
   color: #1a1a1a;
@@ -145,8 +145,8 @@ select option:first-child {
   color: #cbd5e0;
 }
 
-/* When select has empty value (default state) - show placeholder text */
-select:invalid {
+/* Default select text color for placeholder */
+select:required:invalid {
   color: #cbd5e0;
 }
 
@@ -154,7 +154,8 @@ select {
   color: #1a1a1a;
 }
 
-select:invalid {
+/* Placeholder state */
+select[value=""] {
   color: #cbd5e0;
 }
 
