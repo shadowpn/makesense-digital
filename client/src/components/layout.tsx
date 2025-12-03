@@ -63,9 +63,9 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 flex flex-col items-center md:items-start">
             <h4 className="font-semibold mb-4">Connect</h4>
-            <div className="flex gap-4 text-muted-foreground">
+            <div className="flex gap-4 text-muted-foreground justify-center md:justify-start">
               <a href="mailto:makeinfosense@gmail.com" className="hover:text-primary transition-colors" title="Email"><Mail size={20} /></a>
               <a href="https://wa.me/61414599822" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="WhatsApp"><MessageCircle size={20} /></a>
               <a href="https://github.com/Petrychuk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="GitHub"><Github size={20} /></a>
