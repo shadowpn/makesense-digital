@@ -533,7 +533,7 @@ export default function Contact() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <div className="p-4 rounded-full bg-[#d2f7be]/15 border border-[#d2f7be]/20 text-[#d2f7be] shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 hover:bg-[#d2f7be]/25 transition-all duration-300 flex items-center justify-center group">
+        <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 hover:bg-primary/20 transition-all duration-300 flex items-center justify-center group">
           <Send size={24} className="group-hover:scale-110 transition-transform" />
         </div>
       </motion.a>
