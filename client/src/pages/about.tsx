@@ -165,7 +165,7 @@ export default function About() {
 
       <div className="container mx-auto px-6">
         {/* Cofounder Section */}
-        <section className="py-24">
+        <section className="py-12 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -209,7 +209,7 @@ export default function About() {
         </section>
 
         {/* Core Skills Section - Full Width Below */}
-        <section className="py-24 border-t border-[#d2f7be]/10">
+        <section className="py-12 md:py-24 border-t border-[#d2f7be]/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
