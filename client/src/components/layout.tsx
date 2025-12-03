@@ -21,8 +21,9 @@ export function Footer() {
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
       
       <div className="container mx-auto px-6 relative z-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12">
-          <div className="md:col-span-1 space-y-4">
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-8">
+          <div className="space-y-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="mb-4 flex items-center gap-3"
@@ -39,7 +40,7 @@ export function Footer() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 gap-6 md:col-span-3">
+          <div className="grid grid-cols-2 gap-6">
             <div>
               <h4 className="font-semibold mb-4">Pages</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
@@ -63,9 +64,61 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-1 flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center">
             <h4 className="font-semibold mb-4">Connect</h4>
-            <div className="flex gap-4 text-muted-foreground justify-center md:justify-start">
+            <div className="flex gap-4 text-muted-foreground justify-center">
+              <a href="mailto:makeinfosense@gmail.com" className="hover:text-primary transition-colors" title="Email"><Mail size={20} /></a>
+              <a href="https://wa.me/61414599822" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="WhatsApp"><MessageCircle size={20} /></a>
+              <a href="https://github.com/Petrychuk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="GitHub"><Github size={20} /></a>
+              <a href="https://www.linkedin.com/in/nataliia-petrychuk-4068bb56/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="LinkedIn"><Linkedin size={20} /></a>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-4 gap-12">
+          <div className="space-y-4">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="mb-4 flex items-center gap-3"
+            >
+              <div className="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors flex-shrink-0">
+                <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                SensePower<br/>Digital
+              </h3>
+            </motion.div>
+            <p className="text-muted-foreground text-sm max-w-xs">
+              Crafting digital experiences that blend aesthetic excellence with functional precision.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4">Pages</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
+              <li><Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/research" className="hover:text-primary transition-colors">Research</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>QA & Automation</li>
+              <li>MVP Development</li>
+              <li>Fullstack Development</li>
+              <li>Telegram Bot Development</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4">Connect</h4>
+            <div className="flex gap-4 text-muted-foreground">
               <a href="mailto:makeinfosense@gmail.com" className="hover:text-primary transition-colors" title="Email"><Mail size={20} /></a>
               <a href="https://wa.me/61414599822" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="WhatsApp"><MessageCircle size={20} /></a>
               <a href="https://github.com/Petrychuk" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" title="GitHub"><Github size={20} /></a>
