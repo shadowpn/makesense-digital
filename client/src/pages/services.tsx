@@ -689,9 +689,9 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-16 text-center"
           >
-            <h2 className="text-4xl font-display font-bold mb-4 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Frequently Asked Questions</h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">Everything you need to know about our services, process, and partnerships</p>
           </motion.div>
 
