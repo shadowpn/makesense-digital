@@ -5,18 +5,12 @@ import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useEffect } from "react";
 import logoImg from "@assets/изображение_1764049161428.png";
-import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
 
 export function Footer() {
   return (
     <footer className="relative border-t border-[#d2f7be]/5 py-8 overflow-hidden">
       <div 
-        className="absolute inset-0 z-0 opacity-30"
-        style={{
-          backgroundImage: `url(${ctaBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
+        className="absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5"
       />
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
       
