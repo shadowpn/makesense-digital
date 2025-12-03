@@ -156,8 +156,20 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-20">
+      <div 
+        className="min-h-screen relative"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: '700px 700px',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/70 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#d2f7be]/1 via-transparent to-transparent" />
+        
+        <div className="container mx-auto px-6 py-20 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -443,6 +455,7 @@ export default function Contact() {
               </form>
             </div>
           </motion.div>
+          </div>
         </div>
       </div>
 
