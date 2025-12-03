@@ -7,7 +7,7 @@ import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/About_desk_1764138287441.jpg";
-import journeyBg from "@assets/generated_images/soft_gradient_background.png";
+import journeyBg from "@assets/generated_images/modern_tech_services_background.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
 export default function About() {

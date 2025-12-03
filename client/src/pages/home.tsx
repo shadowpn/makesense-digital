@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
-import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
+import ctaBg from "@assets/generated_images/abstract_tech_geometric_pattern_background.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
