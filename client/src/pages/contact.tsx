@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Loader, X } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
 import { useState } from "react";
+import backgroundImage from "@assets/generated_images/abstract_tech_geometric_pattern_background.png";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -201,10 +202,19 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="relative mt-12 pt-8 border-t border-[#d2f7be]/10"
+                className="relative mt-12 pt-8 border-t border-[#d2f7be]/10 overflow-hidden rounded-2xl"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/5 via-transparent to-[#c3ecac]/3 rounded-2xl blur-2xl opacity-50" />
-                <div className="relative space-y-4">
+                <div 
+                  className="absolute inset-0 opacity-15"
+                  style={{
+                    backgroundImage: `url(${backgroundImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/60 to-background/40" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/3 via-transparent to-[#c3ecac]/2 blur-xl" />
+                <div className="relative space-y-4 p-4">
                   <h3 className="text-lg font-bold text-[#d2f7be]">Why Provide Details?</h3>
                   <ul className="space-y-3 text-sm text-muted-foreground">
                     <li className="flex items-start gap-3">
