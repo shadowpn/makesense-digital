@@ -39,7 +39,7 @@ export function Footer() {
             </p>
           </div>
           
-          <div>
+          <div className="mt-6 md:mt-0">
             <h4 className="font-semibold mb-4">Pages</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
