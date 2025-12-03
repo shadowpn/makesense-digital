@@ -135,12 +135,13 @@ select option:hover {
 
 /* Default/placeholder option styling */
 select option:first-child {
-  color: #8b8b8b;
+  background-color: #f0f0f0;
+  color: #718096;
 }
 
 /* When select has empty value (default state) */
 select:invalid {
-  color: #8b8b8b;
+  color: #718096;
 }
 
 /* Uniform autofill styling - same as manual input */
