@@ -21,7 +21,7 @@ export function Footer() {
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
       
       <div className="container mx-auto px-6 relative z-20">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
           <div className="space-y-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -71,7 +71,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 pt-8 border-t border-[#d2f7be]/5 space-y-4 px-[50px] pb-2">
+        <div className="mt-16 pt-8 border-t border-[#d2f7be]/5 space-y-4 px-0 md:px-[50px] pb-2">
           <div className="text-xs font-semibold space-y-2">
             <p><strong>Disclaimer:</strong> SensePower Digital provides general information only. This website does not constitute legal, financial, or professional advice.</p>
             <p><strong>Australian Consumer Law:</strong> Our services are subject to the ACL. Consumers have statutory guarantees that cannot be excluded. For disputes, contact the Australian Small Business Commissioner or ACCC.</p>
