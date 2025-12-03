@@ -139,7 +139,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
+            <div className="text-3xl md:text-5xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-6 md:mb-8 text-glow">
               <AnimatedText text="About" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
               <br />
               <AnimatedText 
@@ -155,7 +155,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
             >
               Founded by Nataliia Petrychuk. We're obsessed with design excellence and engineering precision, helping forward-thinking companies launch and scale their digital products since 2022.
             </motion.p>
@@ -170,10 +170,10 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-12 items-start"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start"
           >
             {/* Photo */}
-            <div className="md:col-span-1">
+            <div className="col-span-1">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -185,21 +185,21 @@ export default function About() {
             </div>
 
             {/* Info */}
-            <div className="md:col-span-2 space-y-8">
+            <div className="col-span-1 md:col-span-2 space-y-6 md:space-y-8">
               {/* Header */}
               <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">Nataliia Petrychuk</h2>
-                <p className="text-xl text-foreground font-semibold mb-4">Full-Stack Developer & QA Engineer</p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">Nataliia Petrychuk</h2>
+                <p className="text-base md:text-xl text-foreground font-semibold mb-4">Full-Stack Developer & QA Engineer</p>
+                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                   Full Stack Developer and QA Engineer passionate about building modern, user-centric, and reliable web products. I combine front-end and back-end development skills with strong QA expertise to deliver applications that are not only functional, but truly work at scale. Experienced with React.js, Node.js, REST APIs, and end-to-end testing practices, I enjoy turning ideas into working MVPs and improving products through thoughtful testing and iteration.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mt-4">
                   I am driven by curiosity and continuous learning — exploring new frameworks, AI-powered tools, automation techniques, and UX trends that move digital products forward. I love working on solutions that simplify processes, enhance usability, and make technology more accessible.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mt-4">
                   <span className="font-semibold text-foreground">Hobbies & Interests</span> — Outside of tech, I am actively involved in sports. I regularly play tennis and take part in amateur tournaments, which helps me stay focused, disciplined, and goal-oriented — qualities I apply in my professional life as well. I enjoy challenges, competition, and constant improvement, both on the court and in my career.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mt-4">
                   <span className="font-semibold text-foreground">What motivates me</span> — Building products that solve real problems and make a meaningful impact. For me, development is not just about writing code — it's about understanding the idea behind it, shaping it, and bringing it to life with quality and purpose.
                 </p>
               </div>
@@ -216,11 +216,11 @@ export default function About() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Core Skills & Expertise</h2>
-            <p className="text-lg text-muted-foreground">Deep technical proficiency across QA, automation, and full-stack development</p>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Core Skills & Expertise</h2>
+            <p className="text-base md:text-lg text-muted-foreground">Deep technical proficiency across QA, automation, and full-stack development</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {[
               {
                 title: "QA & Testing",
@@ -253,10 +253,10 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.08 }}
                 viewport={{ once: true }}
-                className="group p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+                className="group p-6 md:p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
               >
-                <h3 className="text-xl font-display font-bold mb-4 text-primary group-hover:text-accent transition-colors">{skill.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{skill.description}</p>
+                <h3 className="text-base md:text-xl font-display font-bold mb-4 text-primary group-hover:text-accent transition-colors">{skill.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{skill.description}</p>
               </motion.div>
             ))}
           </div>
@@ -281,8 +281,8 @@ export default function About() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-4xl font-display font-bold mb-4">Professional Journey</h2>
-              <p className="text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
+              <h2 className="text-2xl md:text-4xl font-display font-bold mb-4">Professional Journey</h2>
+              <p className="text-base md:text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
             </motion.div>
 
             <div className="relative">
@@ -290,7 +290,7 @@ export default function About() {
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
             
             {/* Timeline Grid - 2 Columns */}
-            <div className="grid md:grid-cols-2 gap-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
               {timeline.map((item, idx) => {
                 const isLeft = idx % 2 === 0;
                 const isEducation = idx >= 4;
@@ -304,7 +304,7 @@ export default function About() {
                         viewport={{ once: true }}
                         className="col-span-full mb-2 mt-8 px-4 md:px-0"
                       >
-                        <h3 className="text-2xl font-display font-bold text-primary">Education</h3>
+                        <h3 className="text-xl md:text-2xl font-display font-bold text-primary">Education</h3>
                       </motion.div>
                     )}
                     <motion.div
@@ -345,7 +345,7 @@ export default function About() {
                         : ""
                     }`}>
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="text-lg font-bold pr-4">{item.title}</h4>
+                        <h4 className="text-base md:text-lg font-bold pr-4">{item.title}</h4>
                         <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{item.period}</span>
                       </div>
                       <p className="text-sm text-primary font-semibold mb-1">{item.company}</p>
@@ -353,14 +353,14 @@ export default function About() {
                       {item.details ? (
                         <ul className="space-y-2">
                           {item.details.map((detail, i) => (
-                            <li key={i} className="text-sm md:text-base text-foreground leading-relaxed flex gap-2">
+                            <li key={i} className="text-xs md:text-sm lg:text-base text-foreground leading-relaxed flex gap-2">
                               <span className="text-primary flex-shrink-0 mt-1">•</span>
                               <span>{detail}</span>
                             </li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-sm md:text-base text-foreground leading-relaxed">{item.description}</p>
+                        <p className="text-xs md:text-sm lg:text-base text-foreground leading-relaxed">{item.description}</p>
                       )}
                     </div>
                     </motion.div>
@@ -377,7 +377,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 m-[15px]"
+          className="relative rounded-3xl overflow-hidden p-6 md:p-16 text-center border border-[#d2f7be]/5 m-4 md:m-[15px]"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
@@ -390,16 +390,16 @@ export default function About() {
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
-            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>
+            <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-10 max-w-2xl mx-auto">
               Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col md:flex-row flex-wrap justify-center gap-3 md:gap-4">
               <Link href="/contact">
-                <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
+                <Button size="lg" className="h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg shadow-lg shadow-purple-500/40 cursor-pointer w-full md:w-auto" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                <Button variant="outline" size="lg" className="h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer w-full md:w-auto">
                   View Services
                 </Button>
               </Link>
