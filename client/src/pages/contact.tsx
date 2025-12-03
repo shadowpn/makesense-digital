@@ -525,9 +525,7 @@ export default function Contact() {
 
       {/* Quick Chat Button */}
       <motion.a
-        href="https://t.me/61414599822"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="tel:+61414599822"
         className="fixed bottom-8 right-8 z-40"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -535,7 +533,7 @@ export default function Contact() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <div className="p-4 rounded-full bg-gradient-to-r from-[#d2f7be] to-[#c3ecac] text-black shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center group">
+        <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-[#d2f7be] shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 hover:bg-primary/20 hover:scale-110 transition-all duration-300 flex items-center justify-center group">
           <Send size={24} className="group-hover:scale-110 transition-transform" />
         </div>
       </motion.a>
