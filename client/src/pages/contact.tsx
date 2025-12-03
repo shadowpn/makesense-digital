@@ -203,122 +203,198 @@ export default function Contact() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-muted/10 p-8 md:p-10 rounded-3xl border border-[#d2f7be]/5"
+            className="relative"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium ml-1">Name *</label>
-                  <Input 
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="John Doe" 
-                    className={`bg-background/50 h-12 focus:border-primary/50 ${errors.name ? 'border-red-500 border-2' : 'border-[#d2f7be]/10'}`}
-                  />
-                  {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium ml-1">Email *</label>
-                  <Input 
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="john@example.com" 
-                    className={`bg-background/50 h-12 focus:border-primary/50 ${errors.email ? 'border-red-500 border-2' : 'border-[#d2f7be]/10'}`}
-                  />
-                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium ml-1">Company</label>
-                  <Input 
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    placeholder="Your Company" 
-                    className="bg-background/50 border-[#d2f7be]/10 h-12 focus:border-primary/50" 
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium ml-1">Project Type</label>
-                  <select 
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    className="w-full bg-background/50 border border-[#d2f7be]/10 h-12 px-3 rounded-md focus:border-primary/50 focus:outline-none"
+            <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/5 via-transparent to-[#c3ecac]/3 rounded-3xl blur-2xl" />
+            <div className="relative bg-gradient-to-br from-muted/20 via-muted/10 to-muted/5 p-8 md:p-12 rounded-3xl border border-[#d2f7be]/15 backdrop-blur-sm shadow-2xl shadow-purple-500/10">
+              <form onSubmit={handleSubmit} className="space-y-7">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <motion.div 
+                    className="space-y-3"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
                   >
-                    <option value="">Select project type</option>
-                    <option value="mvp">MVP Development</option>
-                    <option value="fullstack">Fullstack Development</option>
-                    <option value="qa">QA & Testing</option>
-                    <option value="design">Design System</option>
-                    <option value="other">Other</option>
-                  </select>
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Name *</label>
+                    <Input 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="John Doe" 
+                      className={`bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 transition-all duration-300 px-4 text-base font-medium ${errors.name ? 'border-red-500 shadow-lg shadow-red-500/20' : 'border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 shadow-lg shadow-purple-500/10'}`}
+                    />
+                    {errors.name && <p className="text-red-400 text-xs ml-1 font-medium">{errors.name}</p>}
+                  </motion.div>
+                  <motion.div 
+                    className="space-y-3"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.35 }}
+                  >
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Email *</label>
+                    <Input 
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com" 
+                      className={`bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 transition-all duration-300 px-4 text-base font-medium ${errors.email ? 'border-red-500 shadow-lg shadow-red-500/20' : 'border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 shadow-lg shadow-purple-500/10'}`}
+                    />
+                    {errors.email && <p className="text-red-400 text-xs ml-1 font-medium">{errors.email}</p>}
+                  </motion.div>
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium ml-1">Budget Range</label>
-                <select 
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full bg-background/50 border border-[#d2f7be]/10 h-12 px-3 rounded-md focus:border-primary/50 focus:outline-none"
+                <div className="grid md:grid-cols-2 gap-6">
+                  <motion.div 
+                    className="space-y-3"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Company</label>
+                    <Input 
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      placeholder="Your Company" 
+                      className="bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 transition-all duration-300 px-4 text-base font-medium shadow-lg shadow-purple-500/10"
+                    />
+                  </motion.div>
+                  <motion.div 
+                    className="space-y-3"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45 }}
+                  >
+                    <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Project Type</label>
+                    <select 
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleChange}
+                      className="w-full bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 transition-all duration-300 px-4 text-base font-medium focus:outline-none shadow-lg shadow-purple-500/10 appearance-none cursor-pointer"
+                      style={{
+                        backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d2f7be' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'right 1rem center',
+                        backgroundSize: '1.5em',
+                        paddingRight: '2.5rem'
+                      }}
+                    >
+                      <option value="">Select project type</option>
+                      <option value="mvp">MVP Development</option>
+                      <option value="fullstack">Fullstack Development</option>
+                      <option value="qa">QA & Testing</option>
+                      <option value="design">Design System</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </motion.div>
+                </div>
+
+                <motion.div 
+                  className="space-y-3"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
                 >
-                  <option value="">Select budget range</option>
-                  <option value="under-5k">Under $5,000</option>
-                  <option value="5k-15k">$5,000 - $15,000</option>
-                  <option value="15k-50k">$15,000 - $50,000</option>
-                  <option value="50k+">$50,000+</option>
-                </select>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium ml-1">Project Details *</label>
-                <Textarea 
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your project, goals, and timeline..." 
-                  className="bg-background/50 border-[#d2f7be]/10 min-h-[120px] focus:border-primary/50 resize-none" 
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-medium ml-1">Upload Files (Prototypes, Designs, etc.)</label>
-                <div className="border-2 border-dashed border-[#d2f7be]/20 rounded-lg p-6 text-center hover:border-[#d2f7be]/40 transition-colors cursor-pointer">
-                  <input 
-                    type="file"
-                    onChange={handleFileChange}
-                    className="hidden"
-                    id="file-upload"
-                    accept=".pdf,.zip,.figma,.xd,.sketch,.jpg,.png,.mp4"
+                  <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Budget Range</label>
+                  <select 
+                    name="budget"
+                    value={formData.budget}
+                    onChange={handleChange}
+                    className="w-full bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 transition-all duration-300 px-4 text-base font-medium focus:outline-none shadow-lg shadow-purple-500/10 appearance-none cursor-pointer"
+                    style={{
+                      backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d2f7be' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'right 1rem center',
+                      backgroundSize: '1.5em',
+                      paddingRight: '2.5rem'
+                    }}
+                  >
+                    <option value="">Select budget range</option>
+                    <option value="under-5k">Under $5,000</option>
+                    <option value="5k-15k">$5,000 - $15,000</option>
+                    <option value="15k-50k">$15,000 - $50,000</option>
+                    <option value="50k+">$50,000+</option>
+                  </select>
+                </motion.div>
+                
+                <motion.div 
+                  className="space-y-3"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.55 }}
+                >
+                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Project Details *</label>
+                  <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your project, goals, and timeline..." 
+                    className="bg-gradient-to-br from-background/40 to-background/20 border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 rounded-xl min-h-[140px] focus:outline-none resize-none transition-all duration-300 px-4 py-3 text-base font-medium shadow-lg shadow-purple-500/10"
+                    required
                   />
-                  <label htmlFor="file-upload" className="cursor-pointer">
-                    <p className="text-sm text-muted-foreground">
-                      {formData.file ? `📎 ${formData.file.name}` : 'Drag and drop or click to upload'}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">PDF, ZIP, Images, Video, Design files</p>
-                  </label>
-                </div>
-              </div>
+                </motion.div>
 
-              <Button 
-                type="submit"
-                disabled={loading}
-                size="lg" 
-                className="h-14 px-12 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer mt-6" 
-                style={{ backgroundColor: '#d2f7be' }}
-              >
-                {loading ? <Loader className="w-4 h-4 animate-spin mr-2" /> : null}
-                {loading ? 'Sending...' : 'Send Message'}
-              </Button>
-            </form>
+                <motion.div 
+                  className="space-y-3"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                >
+                  <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Upload Files</label>
+                  <div className="border-2 border-dashed border-[#d2f7be]/30 rounded-xl p-8 text-center hover:border-[#d2f7be]/60 hover:bg-[#d2f7be]/5 transition-all duration-300 cursor-pointer shadow-lg shadow-purple-500/5 group">
+                    <input 
+                      type="file"
+                      onChange={handleFileChange}
+                      className="hidden"
+                      id="file-upload"
+                      accept=".pdf,.zip,.figma,.xd,.sketch,.jpg,.png,.mp4"
+                    />
+                    <label htmlFor="file-upload" className="cursor-pointer block">
+                      <div className="mb-3 flex justify-center">
+                        <div className="p-3 rounded-full bg-[#d2f7be]/10 group-hover:bg-[#d2f7be]/20 transition-all duration-300">
+                          <svg className="w-6 h-6 text-[#d2f7be]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                          </svg>
+                        </div>
+                      </div>
+                      <p className="text-base font-semibold text-[#d2f7be] mb-1">
+                        {formData.file ? `📎 ${formData.file.name}` : 'Drag and drop or click'}
+                      </p>
+                      <p className="text-xs text-muted-foreground">PDF, ZIP, Images, Video, Design files • Max 5MB</p>
+                    </label>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.65 }}
+                  className="pt-4"
+                >
+                  <Button 
+                    type="submit"
+                    disabled={loading}
+                    className="w-full h-14 rounded-full text-lg font-semibold shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 disabled:opacity-70 group"
+                    style={{ backgroundColor: '#d2f7be', color: '#000' }}
+                  >
+                    {loading ? (
+                      <>
+                        <Loader className="w-5 h-5 animate-spin mr-2" />
+                        <span>Sending...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                        <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </>
+                    )}
+                  </Button>
+                </motion.div>
+              </form>
+            </div>
           </motion.div>
         </div>
       </div>
