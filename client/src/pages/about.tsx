@@ -216,7 +216,7 @@ export default function About() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-4xl font-display font-bold mb-4">Core Skills & Expertise</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Core Skills & Expertise</h2>
             <p className="text-lg text-muted-foreground">Deep technical proficiency across QA, automation, and full-stack development</p>
           </motion.div>
 
