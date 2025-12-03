@@ -173,70 +173,70 @@ export default function Contact() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
         
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20">
+        <div className="container mx-auto px-6 py-8 md:py-20 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-8"><AnimatedText text="Let's talk." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h1>
-            <p className="text-xl text-muted-foreground mb-12">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-4 md:mb-8"><AnimatedText text="Let's talk." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h1>
+            <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-12">
               Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-4 md:space-y-8">
               <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
+                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
               >
-                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                  <Mail size={24} />
+                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                  <Mail size={20} className="md:w-6 md:h-6" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-lg">Email</h3>
-                  <a href="mailto:makeinfosense@gmail.com" className="text-foreground/90 hover:text-primary transition-colors">makeinfosense@gmail.com</a>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-base md:text-lg">Email</h3>
+                  <a href="mailto:makeinfosense@gmail.com" className="text-foreground/90 hover:text-primary transition-colors text-xs md:text-sm break-all">makeinfosense@gmail.com</a>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => copyToClipboard('makeinfosense@gmail.com', 'email')}
-                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all"
+                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all flex-shrink-0"
                 >
-                  {copied === 'email' ? <Check size={20} /> : <Copy size={20} />}
+                  {copied === 'email' ? <Check size={18} /> : <Copy size={18} />}
                 </motion.button>
               </motion.div>
               
               <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
+                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
               >
-                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                  <Phone size={24} />
+                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                  <Phone size={20} className="md:w-6 md:h-6" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-lg">Phone</h3>
-                  <a href="tel:+61414599822" className="text-foreground/90 hover:text-primary transition-colors">+61 414 599 822</a>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-base md:text-lg">Phone</h3>
+                  <a href="tel:+61414599822" className="text-foreground/90 hover:text-primary transition-colors text-xs md:text-sm">+61 414 599 822</a>
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => copyToClipboard('+61 414 599 822', 'phone')}
-                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all"
+                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all flex-shrink-0"
                 >
-                  {copied === 'phone' ? <Check size={20} /> : <Copy size={20} />}
+                  {copied === 'phone' ? <Check size={18} /> : <Copy size={18} />}
                 </motion.button>
               </motion.div>
 
               <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 group"
+                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 group"
               >
-                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                  <MapPin size={24} />
+                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                  <MapPin size={20} className="md:w-6 md:h-6" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg">Office</h3>
-                  <p className="text-foreground/90">Wolli Creek, NSW, Australia</p>
+                <div className="min-w-0">
+                  <h3 className="font-bold text-base md:text-lg">Office</h3>
+                  <p className="text-foreground/90 text-xs md:text-sm">Wolli Creek, NSW, Australia</p>
                 </div>
               </motion.div>
 
@@ -244,7 +244,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="relative mt-12 pt-8 border-t border-[#d2f7be]/10 overflow-hidden rounded-2xl"
+                className="relative mt-6 md:mt-12 pt-4 md:pt-8 border-t border-[#d2f7be]/10 overflow-hidden rounded-2xl"
               >
                 <div 
                   className="absolute inset-0 opacity-15"
@@ -256,22 +256,22 @@ export default function Contact() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/60 to-background/40" />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/3 via-transparent to-[#c3ecac]/2 blur-xl" />
-                <div className="relative space-y-4 p-4">
-                  <h3 className="text-lg font-bold text-[#d2f7be]">Why Provide Details?</h3>
-                  <ul className="space-y-3 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-3">
+                <div className="relative space-y-2 md:space-y-4 p-3 md:p-4">
+                  <h3 className="text-base md:text-lg font-bold text-[#d2f7be]">Why Provide Details?</h3>
+                  <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2 md:gap-3">
                       <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Better Analysis</strong> - More information helps us understand your vision</span>
                     </li>
-                    <li className="flex items-center gap-3">
+                    <li className="flex items-start gap-2 md:gap-3">
                       <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Accurate Quotes</strong> - Detailed requirements lead to precise pricing</span>
                     </li>
-                    <li className="flex items-center gap-3">
+                    <li className="flex items-start gap-2 md:gap-3">
                       <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Faster Solutions</strong> - Clear specifications speed up development</span>
                     </li>
-                    <li className="flex items-center gap-3">
+                    <li className="flex items-start gap-2 md:gap-3">
                       <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Perfect Fit</strong> - We deliver exactly what you need</span>
                     </li>
@@ -288,16 +288,16 @@ export default function Contact() {
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/5 via-transparent to-[#c3ecac]/3 rounded-3xl blur-2xl" />
-            <div className="relative bg-gradient-to-br from-muted/20 via-muted/10 to-muted/5 p-8 md:p-12 rounded-3xl border border-[#d2f7be]/15 backdrop-blur-sm shadow-2xl shadow-purple-500/10">
-              <form onSubmit={handleSubmit} className="space-y-7">
-                <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative bg-gradient-to-br from-muted/20 via-muted/10 to-muted/5 p-4 md:p-8 lg:p-12 rounded-3xl border border-[#d2f7be]/15 backdrop-blur-sm shadow-2xl shadow-purple-500/10">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 lg:space-y-7">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <motion.div 
-                    className="space-y-3"
+                    className="space-y-2 md:space-y-3"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Name</label>
+                    <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Name</label>
                     <Input 
                       name="name"
                       value={formData.name}
@@ -308,12 +308,12 @@ export default function Contact() {
                     {errors.name && <p className="text-red-400 text-xs ml-1 font-medium">{errors.name}</p>}
                   </motion.div>
                   <motion.div 
-                    className="space-y-3"
+                    className="space-y-2 md:space-y-3"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Email</label>
+                    <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Email</label>
                     <Input 
                       name="email"
                       type="email"
@@ -326,14 +326,14 @@ export default function Contact() {
                   </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <motion.div 
-                    className="space-y-3"
+                    className="space-y-2 md:space-y-3"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Company</label>
+                    <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Company</label>
                     <Input 
                       name="company"
                       value={formData.company}
@@ -343,12 +343,12 @@ export default function Contact() {
                     />
                   </motion.div>
                   <motion.div 
-                    className="space-y-3"
+                    className="space-y-2 md:space-y-3"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.45 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Project Type</label>
+                    <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Project Type</label>
                     <select 
                       name="projectType"
                       value={formData.projectType}
@@ -374,12 +374,12 @@ export default function Contact() {
                 </div>
 
                 <motion.div 
-                  className="space-y-3"
+                  className="space-y-2 md:space-y-3"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Budget Range</label>
+                  <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Budget Range</label>
                   <select 
                     name="budget"
                     value={formData.budget}
@@ -403,12 +403,12 @@ export default function Contact() {
                 </motion.div>
                 
                 <motion.div 
-                  className="space-y-3"
+                  className="space-y-2 md:space-y-3"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.55 }}
                 >
-                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Project Details</label>
+                  <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Project Details</label>
                   <Textarea 
                     name="message"
                     value={formData.message}
@@ -425,13 +425,13 @@ export default function Contact() {
                 </motion.div>
 
                 <motion.div 
-                  className="space-y-3"
+                  className="space-y-2 md:space-y-3"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Upload Files</label>
-                  <div className="border-2 border-dashed border-[#d2f7be]/30 rounded-xl p-8 text-center hover:border-[#d2f7be]/60 hover:bg-[#d2f7be]/5 transition-all duration-300 cursor-pointer shadow-lg shadow-purple-500/5 group">
+                  <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Upload Files</label>
+                  <div className="border-2 border-dashed border-[#d2f7be]/30 rounded-xl p-4 md:p-8 text-center hover:border-[#d2f7be]/60 hover:bg-[#d2f7be]/5 transition-all duration-300 cursor-pointer shadow-lg shadow-purple-500/5 group">
                     <input 
                       type="file"
                       onChange={handleFileChange}
@@ -440,14 +440,14 @@ export default function Contact() {
                       accept=".pdf,.zip,.figma,.xd,.sketch,.jpg,.png,.mp4"
                     />
                     <label htmlFor="file-upload" className="cursor-pointer block">
-                      <div className="mb-3 flex justify-center">
-                        <div className="p-3 rounded-full bg-[#d2f7be]/10 group-hover:bg-[#d2f7be]/20 transition-all duration-300">
-                          <svg className="w-6 h-6 text-[#d2f7be]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="mb-2 md:mb-3 flex justify-center">
+                        <div className="p-2 md:p-3 rounded-full bg-[#d2f7be]/10 group-hover:bg-[#d2f7be]/20 transition-all duration-300">
+                          <svg className="w-5 h-5 md:w-6 md:h-6 text-[#d2f7be]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                           </svg>
                         </div>
                       </div>
-                      <p className="text-base font-semibold text-[#d2f7be] mb-1">
+                      <p className="text-sm md:text-base font-semibold text-[#d2f7be] mb-1">
                         {formData.file ? `📎 ${formData.file.name}` : 'Drag and drop or click'}
                       </p>
                       <p className="text-xs text-muted-foreground">PDF, ZIP, Images, Video, Design files • Max 5MB</p>
@@ -459,17 +459,17 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.65 }}
-                  className="pt-4"
+                  className="pt-2 md:pt-4"
                 >
                   <Button 
                     type="submit"
                     disabled={loading}
-                    className="w-auto px-12 h-14 rounded-full text-lg font-semibold shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 disabled:opacity-70 group"
+                    className="w-full md:w-auto px-8 md:px-12 h-12 md:h-14 rounded-full text-base md:text-lg font-semibold shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 disabled:opacity-70 group"
                     style={{ backgroundColor: '#d2f7be', color: '#000' }}
                   >
                     {loading ? (
                       <>
-                        <Loader className="w-5 h-5 animate-spin mr-2" />
+                        <Loader className="w-4 md:w-5 h-4 md:h-5 animate-spin mr-2" />
                         <span>Sending...</span>
                       </>
                     ) : (
