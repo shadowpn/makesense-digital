@@ -280,7 +280,7 @@ export default function Contact() {
                         paddingRight: '2.5rem'
                       }}
                     >
-                      <option value="">Select project type</option>
+                      <option value="" disabled hidden selected>Select project type</option>
                       <option value="mvp">MVP Development</option>
                       <option value="fullstack">Fullstack Development</option>
                       <option value="qa">QA & Testing</option>
@@ -310,7 +310,7 @@ export default function Contact() {
                       paddingRight: '2.5rem'
                     }}
                   >
-                    <option value="">Select budget range</option>
+                    <option value="" disabled hidden selected>Select budget range</option>
                     <option value="under-5k">Under $5,000</option>
                     <option value="5k-15k">$5,000 - $15,000</option>
                     <option value="15k-50k">$15,000 - $50,000</option>
