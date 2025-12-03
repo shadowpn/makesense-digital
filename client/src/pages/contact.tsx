@@ -251,7 +251,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Company</label>
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Company</label>
                     <Input 
                       name="company"
                       value={formData.company}
@@ -266,7 +266,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.45 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Project Type</label>
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Project Type</label>
                     <select 
                       name="projectType"
                       value={formData.projectType}
@@ -296,7 +296,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Budget Range</label>
+                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Budget Range</label>
                   <select 
                     name="budget"
                     value={formData.budget}
@@ -341,7 +341,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <label className="text-sm font-semibold ml-1 text-muted-foreground uppercase tracking-wide">Upload Files</label>
+                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Upload Files</label>
                   <div className="border-2 border-dashed border-[#d2f7be]/30 rounded-xl p-8 text-center hover:border-[#d2f7be]/60 hover:bg-[#d2f7be]/5 transition-all duration-300 cursor-pointer shadow-lg shadow-purple-500/5 group">
                     <input 
                       type="file"
