@@ -116,3 +116,19 @@
     display: none;
   }
 }
+/* Select option styling */
+select option {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  padding: 8px;
+}
+
+select option:checked {
+  background: linear-gradient(#d2f7be, #d2f7be);
+  background-color: #d2f7be;
+  color: #1a1a1a;
+}
+
+select option:hover {
+  background-color: #e0e0e0;
+}

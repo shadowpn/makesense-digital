@@ -271,7 +271,7 @@ export default function Contact() {
                       name="projectType"
                       value={formData.projectType}
                       onChange={handleChange}
-                      className="w-full bg-gradient-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-white"
+                      className="w-full bg-gradient-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-[#1a1a1a]"
                       style={{
                         backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d2f7be' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
                         backgroundRepeat: 'no-repeat',
@@ -301,7 +301,7 @@ export default function Contact() {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full bg-gradient-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-white"
+                    className="w-full bg-gradient-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-[#1a1a1a]"
                     style={{
                       backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d2f7be' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
                       backgroundRepeat: 'no-repeat',
