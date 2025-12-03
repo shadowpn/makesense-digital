@@ -69,7 +69,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 bg-[#d2f7be]/5 text-foreground hover:bg-[#d2f7be]/10 hover:text-primary hover:border-[#d2f7be]/40 backdrop-blur-sm shadow-lg shadow-purple-500/40 cursor-pointer transition-colors">
+                <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 bg-[#d2f7be]/5 text-foreground hover:bg-[#d2f7be]/25 hover:text-primary hover:border-[#d2f7be]/40 backdrop-blur-sm shadow-lg shadow-purple-500/40 cursor-pointer transition-colors">
                   Our Services
                 </Button>
               </Link>
