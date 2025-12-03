@@ -331,7 +331,7 @@ export default function Contact() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your project, goals, and timeline..." 
+                    placeholder="Tell us about your project, goals, timeline, and requirements...&#10;The more details you provide, the better we can analyze and deliver accurate solutions.&#10;Include: project scope, target audience, desired features, tech preferences, budget considerations, and any specific challenges." 
                     className="bg-gradient-to-br from-background/40 to-background/20 border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 rounded-xl min-h-[140px] focus:outline-none resize-none transition-all duration-300 px-4 py-3 text-base font-medium shadow-lg shadow-purple-500/10"
                     required
                   />
