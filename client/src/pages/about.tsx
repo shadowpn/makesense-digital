@@ -280,7 +280,7 @@ export default function About() {
               viewport={{ once: true }}
               className="mb-10 md:mb-16"
             >
-              <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Professional Journey</h2>
+              <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary">Professional Journey</h2>
               <p className="text-base md:text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
             </motion.div>
 
