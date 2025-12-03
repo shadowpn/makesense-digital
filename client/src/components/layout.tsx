@@ -63,12 +63,12 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Pages</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-                <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
-                <li><Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
-                <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
-                <li><Link href="/research" className="hover:text-primary transition-colors">Research</Link></li>
-                <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                <li><Link href="/"><span className="hover:text-primary transition-colors cursor-pointer">Home</span></Link></li>
+                <li><Link href="/about"><span className="hover:text-primary transition-colors cursor-pointer">About</span></Link></li>
+                <li><Link href="/portfolio"><span className="hover:text-primary transition-colors cursor-pointer">Portfolio</span></Link></li>
+                <li><Link href="/services"><span className="hover:text-primary transition-colors cursor-pointer">Services</span></Link></li>
+                <li><Link href="/research"><span className="hover:text-primary transition-colors cursor-pointer">Research</span></Link></li>
+                <li><Link href="/contact"><span className="hover:text-primary transition-colors cursor-pointer">Contact</span></Link></li>
               </ul>
             </div>
 
@@ -116,12 +116,12 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Pages</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="/research" className="hover:text-primary transition-colors">Research</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/"><span className="hover:text-primary transition-colors cursor-pointer">Home</span></Link></li>
+              <li><Link href="/about"><span className="hover:text-primary transition-colors cursor-pointer">About</span></Link></li>
+              <li><Link href="/portfolio"><span className="hover:text-primary transition-colors cursor-pointer">Portfolio</span></Link></li>
+              <li><Link href="/services"><span className="hover:text-primary transition-colors cursor-pointer">Services</span></Link></li>
+              <li><Link href="/research"><span className="hover:text-primary transition-colors cursor-pointer">Research</span></Link></li>
+              <li><Link href="/contact"><span className="hover:text-primary transition-colors cursor-pointer">Contact</span></Link></li>
             </ul>
           </div>
 
