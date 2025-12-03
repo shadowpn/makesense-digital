@@ -196,6 +196,36 @@ export default function Contact() {
                   <p className="text-muted-foreground">Wolli Creek, NSW, Australia</p>
                 </div>
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="relative mt-12 pt-8 border-t border-[#d2f7be]/10"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/5 via-transparent to-[#c3ecac]/3 rounded-2xl blur-2xl opacity-50" />
+                <div className="relative space-y-4">
+                  <h3 className="text-lg font-bold text-[#d2f7be]">Why Provide Details?</h3>
+                  <ul className="space-y-3 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#d2f7be] font-bold mt-1">→</span>
+                      <span><strong className="text-foreground">Better Analysis</strong> - More information helps us understand your vision</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#d2f7be] font-bold mt-1">→</span>
+                      <span><strong className="text-foreground">Accurate Quotes</strong> - Detailed requirements lead to precise pricing</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#d2f7be] font-bold mt-1">→</span>
+                      <span><strong className="text-foreground">Faster Solutions</strong> - Clear specifications speed up development</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-[#d2f7be] font-bold mt-1">→</span>
+                      <span><strong className="text-foreground">Perfect Fit</strong> - We deliver exactly what you need</span>
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -330,9 +360,14 @@ export default function Contact() {
                   <Textarea 
                     name="message"
                     value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your project, goals, timeline, and requirements...&#10;The more details you provide, the better we can analyze and deliver accurate solutions.&#10;Include: project scope, target audience, desired features, tech preferences, budget considerations, and any specific challenges." 
-                    className="bg-gradient-to-br from-background/40 to-background/20 border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 rounded-xl min-h-[140px] focus:outline-none resize-none transition-all duration-300 px-4 py-3 text-base font-medium shadow-lg shadow-purple-500/10"
+                    onChange={(e) => {
+                      handleChange(e);
+                      const textarea = e.target;
+                      textarea.style.height = 'auto';
+                      textarea.style.height = Math.max(140, textarea.scrollHeight) + 'px';
+                    }}
+                    placeholder="Tell us about your project, goals, timeline, and requirements..." 
+                    className="bg-gradient-to-br from-background/40 to-background/20 border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 rounded-xl min-h-[140px] focus:outline-none resize-none transition-all duration-300 px-4 py-3 text-base font-medium shadow-lg shadow-purple-500/10 overflow-hidden"
                     required
                   />
                 </motion.div>
