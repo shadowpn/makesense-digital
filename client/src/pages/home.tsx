@@ -188,33 +188,33 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-4 mt-8 md:mt-0">
-              <div className="space-y-3 md:space-y-4 md:mt-12">
-                <div className="p-6 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
-                  <Code className="mb-4 text-primary" size={28} />
-                  <h3 className="font-bold mb-2 text-sm md:text-base">Fullstack</h3>
+            <div className="grid grid-cols-2 gap-2 md:gap-4 mt-8 md:mt-0">
+              <div className="space-y-2 md:space-y-4 md:mt-12">
+                <div className="p-4 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
+                  <Code className="mb-3 md:mb-4 text-primary" size={20} className="md:w-7 md:h-7" />
+                  <h3 className="font-bold mb-2 text-xs md:text-base">Fullstack</h3>
                   <p className="text-xs md:text-sm text-muted-foreground">End-to-end solutions with modern tech stacks.</p>
                 </div>
-                <div className="p-6 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
-                  <Smartphone className="mb-4 text-primary" size={28} />
-                  <h3 className="font-bold mb-2 text-sm md:text-base">Responsive</h3>
+                <div className="p-4 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
+                  <Smartphone className="mb-3 md:mb-4 text-primary" size={20} className="md:w-7 md:h-7" />
+                  <h3 className="font-bold mb-2 text-xs md:text-base">Responsive</h3>
                   <p className="text-xs md:text-sm text-muted-foreground">Perfect on every screen size.</p>
                 </div>
               </div>
-              <div className="space-y-3 md:space-y-4">
-                <div className="p-6 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
-                  <CheckCircle className="mb-4 text-primary" size={28} />
-                  <h3 className="font-bold mb-2 text-sm md:text-base">QA Testing</h3>
+              <div className="space-y-2 md:space-y-4">
+                <div className="p-4 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
+                  <CheckCircle className="mb-3 md:mb-4 text-primary" size={20} className="md:w-7 md:h-7" />
+                  <h3 className="font-bold mb-2 text-xs md:text-base">QA Testing</h3>
                   <p className="text-xs md:text-sm text-muted-foreground">Automated & manual verification.</p>
                 </div>
-                <div className="p-6 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
-                  <Cpu className="mb-4 text-primary" size={28} />
-                  <h3 className="font-bold mb-2 text-sm md:text-base">Vibe Coding</h3>
+                <div className="p-4 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
+                  <Cpu className="mb-3 md:mb-4 text-primary" size={20} className="md:w-7 md:h-7" />
+                  <h3 className="font-bold mb-2 text-xs md:text-base">Vibe Coding</h3>
                   <p className="text-xs md:text-sm text-muted-foreground">Animations & creative polish.</p>
                 </div>
-                <div className="p-6 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
-                  <Search className="mb-4 text-primary" size={28} />
-                  <h3 className="font-bold mb-2 text-sm md:text-base">SEO</h3>
+                <div className="p-4 md:p-8 rounded-3xl bg-background border border-[#d2f7be]/5">
+                  <Search className="mb-3 md:mb-4 text-primary" size={20} className="md:w-7 md:h-7" />
+                  <h3 className="font-bold mb-2 text-xs md:text-base">SEO</h3>
                   <p className="text-xs md:text-sm text-muted-foreground">Optimized for search & discovery.</p>
                 </div>
               </div>

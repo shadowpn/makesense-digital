@@ -68,7 +68,7 @@ export default function Portfolio() {
             animate="animate"
             className="max-w-4xl"
           >
-            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
+            <div className="text-3xl md:text-5xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-6 md:mb-8 text-glow">
               <AnimatedText text="Explore" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
               <br />
               <AnimatedText 
@@ -84,7 +84,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
             >
               A collection of projects where design meets rigorous engineering.
             </motion.p>
@@ -93,7 +93,7 @@ export default function Portfolio() {
       </section>
 
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
           {projects.map((project, index) => (
             <Fragment key={project.id}>
               <motion.div
@@ -103,7 +103,7 @@ export default function Portfolio() {
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
-                <div className="relative aspect-[4/3] mb-3 md:mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
+                <div className="relative aspect-[4/3] mb-2 md:mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -116,16 +116,16 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-3xl font-display font-bold group-hover:text-primary transition-colors">{project.title}</h3>
-                  <span className="text-muted-foreground font-mono text-sm pt-2">{project.category}</span>
+                <div className="flex items-start justify-between mb-2 gap-2">
+                  <h3 className="text-xl md:text-3xl font-display font-bold group-hover:text-primary transition-colors">{project.title}</h3>
+                  <span className="text-muted-foreground font-mono text-xs md:text-sm pt-1 md:pt-2 whitespace-nowrap">{project.category}</span>
                 </div>
                 
-                <p className="text-muted-foreground mb-4 max-w-md">{project.description}</p>
+                <p className="text-xs md:text-base text-muted-foreground mb-3 md:mb-4 max-w-md">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge key={`${project.id}-${tagIndex}`} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-[#d2f7be]/5">
+                    <Badge key={`${project.id}-${tagIndex}`} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-[#d2f7be]/5 text-xs md:text-sm">
                       {tag}
                     </Badge>
                   ))}
@@ -137,7 +137,7 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 md:col-span-2"
+                  className="relative rounded-3xl overflow-hidden p-6 md:p-16 text-center border border-[#d2f7be]/5 col-span-1 md:col-span-2"
                 >
                   <div 
                     className="absolute inset-0 z-0 opacity-40"
@@ -150,16 +150,16 @@ export default function Portfolio() {
                   <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
                   
                   <div className="relative z-20">
-                    <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
-                    <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+                    <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>
+                    <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-10 max-w-2xl mx-auto">
                       Let's build something exceptional. Whether you need an MVP, testing strategy, or design system—we're ready to help.
                     </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                      <Link href="/contact" className="inline-block">
-                        <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
+                    <div className="flex flex-col md:flex-row flex-wrap justify-center gap-3 md:gap-4">
+                      <Link href="/contact" className="inline-block w-full md:w-auto">
+                        <Button size="lg" className="h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg shadow-lg shadow-purple-500/40 cursor-pointer w-full" style={{ backgroundColor: '#d2f7be' }}>Get in Touch</Button>
                       </Link>
-                      <Link href="/services" className="inline-block">
-                        <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer">
+                      <Link href="/services" className="inline-block w-full md:w-auto">
+                        <Button variant="outline" size="lg" className="h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer w-full">
                           View Services
                         </Button>
                       </Link>
@@ -180,7 +180,7 @@ export default function Portfolio() {
         className="container mx-auto px-6 py-8 md:py-20"
       >
         <div className="text-center mb-8 md:mb-20">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 inline-block">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-4 inline-block">
             How We <AnimatedText 
               text="Build." 
               staggerDelay={0.06} 
@@ -189,12 +189,12 @@ export default function Portfolio() {
               className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary inline"
             />
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Our proven methodology delivers exceptional results, every time.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {[
             {
               icon: <LayoutTemplate size={32} />,
@@ -227,29 +227,29 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="group relative p-8 rounded-3xl border border-[#d2f7be]/10 bg-gradient-to-br from-white/5 to-white/0 hover:border-primary/50 transition-all duration-300"
+              className="group relative p-4 md:p-8 rounded-3xl border border-[#d2f7be]/10 bg-gradient-to-br from-white/5 to-white/0 hover:border-primary/50 transition-all duration-300"
             >
               {/* Background gradient on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
               
               <div className="relative z-10">
                 {/* Step number */}
-                <div className="text-6xl font-display font-black text-[#d2f7be]/5 group-hover:text-[#d2f7be]/10 transition-colors mb-4">
+                <div className="text-4xl md:text-6xl font-display font-black text-[#d2f7be]/5 group-hover:text-[#d2f7be]/10 transition-colors mb-3 md:mb-4">
                   {step.number}
                 </div>
 
                 {/* Icon */}
-                <div className="w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300 border border-primary/20 group-hover:border-primary/50 shadow-lg shadow-primary/10">
+                <div className="w-12 md:w-14 h-12 md:h-14 mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300 border border-primary/20 group-hover:border-primary/50 shadow-lg shadow-primary/10">
                   {step.icon}
                 </div>
 
                 {/* Title */}
-                <h4 className="text-2xl font-display font-bold mb-3 group-hover:text-primary transition-colors">
+                <h4 className="text-lg md:text-2xl font-display font-bold mb-2 md:mb-3 group-hover:text-primary transition-colors">
                   {step.title}
                 </h4>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                   {step.desc}
                 </p>
 

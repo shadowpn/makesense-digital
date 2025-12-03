@@ -274,25 +274,25 @@ export default function Services() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 title: "Fullstack Development",
                 desc: "Complete end-to-end development from frontend UI to backend infrastructure",
                 image: fullstackImg,
-                icon: <Code2 size={24} />,
+                icon: <Code2 size={20} className="md:w-6 md:h-6" />,
               },
               {
                 title: "UI/UX Design Systems",
                 desc: "Custom design systems and component libraries for consistent branding",
                 image: designImg,
-                icon: <Palette size={24} />,
+                icon: <Palette size={20} className="md:w-6 md:h-6" />,
               },
               {
                 title: "DevOps & Deployment",
                 desc: "Cloud infrastructure, CI/CD pipelines, and production optimization",
                 image: devopsImg,
-                icon: <Cloud size={24} />,
+                icon: <Cloud size={20} className="md:w-6 md:h-6" />,
               },
             ].map((item, i) => (
               <motion.div
@@ -303,18 +303,18 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group rounded-2xl overflow-hidden border border-[#d2f7be]/10 hover:border-primary/50 transition-all duration-300"
               >
-                <div className="relative h-32 md:h-48 overflow-hidden bg-muted/20">
+                <div className="relative h-28 md:h-48 overflow-hidden bg-muted/20">
                   <img 
                     src={item.image} 
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4 md:p-8 bg-muted/10 group-hover:bg-muted/20 transition-colors">
-                  <div className="w-10 md:w-12 h-10 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3 md:mb-4 group-hover:bg-primary/20 transition-colors">
+                <div className="p-3 md:p-8 bg-muted/10 group-hover:bg-muted/20 transition-colors">
+                  <div className="w-8 md:w-12 h-8 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-2 md:mb-4 group-hover:bg-primary/20 transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3">{item.title}</h3>
+                  <h3 className="text-base md:text-2xl font-bold mb-2 md:mb-3">{item.title}</h3>
                   <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
@@ -383,14 +383,14 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className={`relative border border-[#d2f7be]/10 group-hover:border-violet-500/50 rounded-3xl p-4 md:p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 rounded-2xl bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-500/50 group-hover:to-purple-500/50 transition-all duration-300">
-                      <group.Icon size={28} className="text-lime-200 group-hover:text-lime-100 group-hover:scale-110 transition-all duration-300" />
+                <div className={`relative border border-[#d2f7be]/10 group-hover:border-violet-500/50 rounded-3xl p-3 md:p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
+                  <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
+                    <div className="p-2 md:p-3 rounded-2xl bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-500/50 group-hover:to-purple-500/50 transition-all duration-300 flex-shrink-0">
+                      <group.Icon size={20} className="md:w-7 md:h-7 text-lime-200 group-hover:text-lime-100 group-hover:scale-110 transition-all duration-300" />
                     </div>
-                    <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent group-hover:from-lime-100 group-hover:via-yellow-50 group-hover:to-lime-100 transition-all duration-300">{group.title}</h3>
+                    <h3 className="text-base md:text-2xl font-display font-bold bg-gradient-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent group-hover:from-lime-100 group-hover:via-yellow-50 group-hover:to-lime-100 transition-all duration-300">{group.title}</h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1 md:gap-2">
                     {group.items.map((item, j) => (
                       <motion.span
                         key={j}
@@ -398,7 +398,7 @@ export default function Services() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: i * 0.1 + j * 0.05 }}
                         viewport={{ once: true }}
-                        className="px-4 py-2 rounded-full font-mono text-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 text-lime-200 hover:text-lime-100 hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/20"
+                        className="px-2 md:px-4 py-1 md:py-2 rounded-full font-mono text-xs md:text-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 text-lime-200 hover:text-lime-100 hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/20"
                       >
                         {item}
                       </motion.span>
