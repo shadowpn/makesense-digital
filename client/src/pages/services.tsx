@@ -419,7 +419,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-4xl font-display font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+            <h2 className="text-4xl font-display font-bold text-center mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Simple, Transparent Pricing</h2>
             <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-4">
               Pricing below is indicative only based on estimated project complexity ($40/hour rate). Actual costs depend on specific project requirements, complexity, and scope.
             </p>
