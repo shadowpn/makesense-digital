@@ -269,7 +269,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-4xl font-display font-bold text-center mb-4">Additional Services</h2>
+            <h2 className="text-4xl font-display font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Additional Services</h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
               Beyond our core offerings, we provide specialized services to enhance your digital product
             </p>
