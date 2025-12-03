@@ -224,23 +224,23 @@ export default function Contact() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/60 to-background/40" />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/3 via-transparent to-[#c3ecac]/2 blur-xl" />
-                <div className="relative space-y-4 p-4 text-center">
+                <div className="relative space-y-4 p-4">
                   <h3 className="text-lg font-bold text-[#d2f7be]">Why Provide Details?</h3>
                   <ul className="space-y-3 text-sm text-muted-foreground">
-                    <li className="flex items-center justify-center gap-3">
-                      <span className="text-[#d2f7be] font-bold">→</span>
+                    <li className="flex items-center gap-3">
+                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Better Analysis</strong> - More information helps us understand your vision</span>
                     </li>
-                    <li className="flex items-center justify-center gap-3">
-                      <span className="text-[#d2f7be] font-bold">→</span>
+                    <li className="flex items-center gap-3">
+                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Accurate Quotes</strong> - Detailed requirements lead to precise pricing</span>
                     </li>
-                    <li className="flex items-center justify-center gap-3">
-                      <span className="text-[#d2f7be] font-bold">→</span>
+                    <li className="flex items-center gap-3">
+                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Faster Solutions</strong> - Clear specifications speed up development</span>
                     </li>
-                    <li className="flex items-center justify-center gap-3">
-                      <span className="text-[#d2f7be] font-bold">→</span>
+                    <li className="flex items-center gap-3">
+                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
                       <span><strong className="text-foreground">Perfect Fit</strong> - We deliver exactly what you need</span>
                     </li>
                   </ul>
