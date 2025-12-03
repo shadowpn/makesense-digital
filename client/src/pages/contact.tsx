@@ -375,7 +375,7 @@ export default function Contact() {
                   <Button 
                     type="submit"
                     disabled={loading}
-                    className="w-full h-14 rounded-full text-lg font-semibold shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 disabled:opacity-70 group"
+                    className="w-auto px-12 h-14 rounded-full text-lg font-semibold shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/50 transition-all duration-300 disabled:opacity-70 group"
                     style={{ backgroundColor: '#d2f7be', color: '#000' }}
                   >
                     {loading ? (
