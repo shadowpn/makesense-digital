@@ -173,7 +173,7 @@ export default function Contact() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
         
-        <div className="container mx-auto px-6 py-8 md:py-20 relative z-10">
+        <div className="container mx-auto px-6 pt-16 md:pt-20 pb-8 md:pb-20 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
