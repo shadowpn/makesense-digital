@@ -7,8 +7,6 @@ import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/About_desk_1764138287441.jpg";
-import journeyBg from "@assets/generated_images/modern_vibrant_technology_gradient_background.png";
-import ctaBg from "@assets/generated_images/bright_futuristic_tech_background.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
 export default function About() {
@@ -265,14 +263,8 @@ export default function About() {
         {/* Professional Journey Section */}
         <section className="py-12 md:py-24 border-t border-[#d2f7be]/10 relative overflow-hidden">
           <div 
-            className="hidden md:block absolute inset-0 opacity-60"
-            style={{
-              backgroundImage: `url(${journeyBg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
+            className="hidden md:block absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5"
           />
-          <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-background/15 via-background/10 to-background/15" />
           
           <div className="relative z-10 px-6">
             <motion.div
