@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Loader, X } from "lucide-react";
+import { Mail, MapPin, Phone, Loader, X, Copy, Check, MessageCircle, Send } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
 import { useState } from "react";
 import backgroundImage from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
@@ -11,6 +11,7 @@ import backgroundImage from "@assets/generated_images/abstract_digital_dark_mode
 export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [copied, setCopied] = useState<string | null>(null);
   const [dialog, setDialog] = useState<{ open: boolean; title: string; message: string; isSuccess: boolean }>({
     open: false,
     title: '',
@@ -26,6 +27,12 @@ export default function Contact() {
     message: '',
     file: null as File | null
   });
+
+  const copyToClipboard = (text: string, type: string) => {
+    navigator.clipboard.writeText(text);
+    setCopied(type);
+    setTimeout(() => setCopied(null), 2000);
+  };
 
   const validateEmail = (email: string): boolean => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -178,35 +185,60 @@ export default function Contact() {
             </p>
 
             <div className="space-y-8">
-              <div className="flex items-center gap-4">
-                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary">
+              <motion.div 
+                whileHover={{ scale: 1.02, y: -2 }}
+                className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
+              >
+                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                   <Mail size={24} />
                 </div>
-                <div>
+                <div className="flex-1">
                   <h3 className="font-bold text-lg">Email</h3>
                   <a href="mailto:makeinfosense@gmail.com" className="text-foreground/90 hover:text-primary transition-colors">makeinfosense@gmail.com</a>
                 </div>
-              </div>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => copyToClipboard('makeinfosense@gmail.com', 'email')}
+                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all"
+                >
+                  {copied === 'email' ? <Check size={20} /> : <Copy size={20} />}
+                </motion.button>
+              </motion.div>
               
-              <div className="flex items-center gap-4">
-                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary">
+              <motion.div 
+                whileHover={{ scale: 1.02, y: -2 }}
+                className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
+              >
+                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                   <Phone size={24} />
                 </div>
-                <div>
+                <div className="flex-1">
                   <h3 className="font-bold text-lg">Phone</h3>
                   <a href="tel:+61414599822" className="text-foreground/90 hover:text-primary transition-colors">+61 414 599 822</a>
                 </div>
-              </div>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => copyToClipboard('+61 414 599 822', 'phone')}
+                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all"
+                >
+                  {copied === 'phone' ? <Check size={20} /> : <Copy size={20} />}
+                </motion.button>
+              </motion.div>
 
-              <div className="flex items-center gap-4">
-                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary">
+              <motion.div 
+                whileHover={{ scale: 1.02, y: -2 }}
+                className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 group"
+              >
+                <div className="p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                   <MapPin size={24} />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Office</h3>
                   <p className="text-foreground/90">Wolli Creek, NSW, Australia</p>
                 </div>
-              </div>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -265,7 +297,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Name *</label>
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-red-400">*</span> Name</label>
                     <Input 
                       name="name"
                       value={formData.name}
@@ -281,7 +313,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Email *</label>
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-red-400">*</span> Email</label>
                     <Input 
                       name="email"
                       type="email"
@@ -376,7 +408,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.55 }}
                 >
-                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Project Details *</label>
+                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-red-400">*</span> Project Details</label>
                   <Textarea 
                     name="message"
                     value={formData.message}
@@ -466,9 +498,12 @@ export default function Contact() {
             className="bg-background border border-[#d2f7be]/20 rounded-2xl p-8 max-w-md w-full shadow-2xl"
           >
             <div className="flex items-start justify-between mb-4">
-              <h2 className={`text-2xl font-bold ${dialog.isSuccess ? 'text-green-500' : 'text-red-500'}`}>
-                {dialog.title}
-              </h2>
+              <div className="flex items-center gap-3">
+                {dialog.isSuccess && <Check size={28} className="text-green-500" />}
+                <h2 className={`text-2xl font-bold ${dialog.isSuccess ? 'text-green-500' : 'text-red-500'}`}>
+                  {dialog.title}
+                </h2>
+              </div>
               <button
                 onClick={() => setDialog({ ...dialog, open: false })}
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -487,6 +522,35 @@ export default function Contact() {
           </motion.div>
         </div>
       )}
+
+      {/* Quick Chat Button */}
+      <motion.div 
+        className="fixed bottom-8 right-8 z-40 flex gap-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <motion.a
+          href="https://wa.me/61414599822"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="p-4 rounded-full bg-gradient-to-r from-[#d2f7be] to-[#c3ecac] text-black shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center group"
+        >
+          <MessageCircle size={24} className="group-hover:scale-110 transition-transform" />
+        </motion.a>
+        <motion.a
+          href="https://t.me/61414599822"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="p-4 rounded-full bg-gradient-to-r from-[#d2f7be] to-[#c3ecac] text-black shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center group"
+        >
+          <Send size={24} className="group-hover:scale-110 transition-transform" />
+        </motion.a>
+      </motion.div>
     </Layout>
   );
 }
