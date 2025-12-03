@@ -149,7 +149,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <div className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-8 text-glow">
+            <div className="text-3xl md:text-5xl lg:text-8xl font-display font-bold tracking-tighter leading-[0.8] mb-6 md:mb-8 text-glow">
               <AnimatedText text="Our" staggerDelay={0.06} duration={0.6} initialDelay={0.3} />
               <br />
               <AnimatedText 
@@ -165,7 +165,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
             >
               We combine engineering precision with design intuition to build software that works flawlessly and looks exceptional.
             </motion.p>
@@ -175,7 +175,7 @@ export default function Services() {
 
       <div className="container mx-auto px-6">
         {/* Core Services Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16 auto-rows-max">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-12 mb-8 md:mb-16 auto-rows-max">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -184,8 +184,8 @@ export default function Services() {
               transition={{ delay: index * 0.2 }}
               className="group relative rounded-[2rem] overflow-hidden border border-[#d2f7be]/10 bg-muted/10 hover:bg-muted/20 transition-colors"
             >
-              <div className="p-10 md:p-16 relative z-10">
-                <div className="w-24 h-24 mb-8 rounded-2xl overflow-hidden bg-black/50 border border-[#d2f7be]/10 shadow-2xl flex items-center justify-center">
+              <div className="p-6 md:p-10 lg:p-16 relative z-10">
+                <div className="w-20 md:w-24 h-20 md:h-24 mb-4 md:mb-8 rounded-2xl overflow-hidden bg-black/50 border border-[#d2f7be]/10 shadow-2xl flex items-center justify-center">
                   {service.icon ? (
                     <img
                       src={service.icon}
@@ -197,14 +197,14 @@ export default function Services() {
                   )}
                 </div>
 
-                <h3 className="text-4xl font-display font-bold mb-4">
+                <h3 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4">
                   {service.title}
                 </h3>
-                <p className="text-lg text-muted-foreground mb-10 max-w-md">
+                <p className="text-sm md:text-lg text-muted-foreground mb-6 md:mb-10 max-w-md">
                   {service.description}
                 </p>
 
-                <div className="grid sm:grid-cols-2 gap-4 mb-10">
+                <div className="grid sm:grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-10">
                   {service.features.map((feature, i) => (
                     <div
                       key={i}
@@ -233,7 +233,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden p-10 md:p-16 text-center border border-[#d2f7be]/5 m-[15px] mb-[50px]"
+          className="relative rounded-3xl overflow-hidden p-6 md:p-16 text-center border border-[#d2f7be]/5 m-4 md:m-[15px] mb-8 md:mb-[50px]"
         >
           <div 
             className="absolute inset-0 z-0 opacity-30"
@@ -246,15 +246,15 @@ export default function Services() {
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/20 via-background/40 to-background" />
           
           <div className="relative z-20">
-            <h2 className="text-4xl font-display font-bold mb-6">Ready to work together?</h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>
+            <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-10 max-w-2xl mx-auto">
               Let's transform your vision into reality. Whether you need an MVP, comprehensive testing, or complete development—we're ready to help.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick} style={{ backgroundColor: '#d2f7be' }}>
+            <div className="flex flex-col md:flex-row flex-wrap justify-center gap-3 md:gap-4">
+              <Button size="lg" className="h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg shadow-lg shadow-purple-500/40 cursor-pointer w-full md:w-auto" onClick={handleContactClick} style={{ backgroundColor: '#d2f7be' }}>
                 Start Your Project
               </Button>
-              <Button variant="outline" size="lg" className="h-14 px-8 rounded-full text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer" onClick={handleContactClick}>
+              <Button variant="outline" size="lg" className="h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg border-[#d2f7be]/10 hover:bg-[#d2f7be]/5 shadow-lg shadow-purple-500/40 cursor-pointer w-full md:w-auto" onClick={handleContactClick}>
                 Schedule Consultation
               </Button>
             </div>
@@ -262,20 +262,20 @@ export default function Services() {
         </motion.div>
 
         {/* Visual Services Section */}
-        <div className="border-t border-[#d2f7be]/10 py-16 mb-16">
+        <div className="border-t border-[#d2f7be]/10 py-8 md:py-16 mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+            className="mb-6 md:mb-12 text-center"
           >
-            <h2 className="text-4xl font-display font-bold mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Additional Services</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Additional Services</h2>
+            <p className="text-sm md:text-lg text-muted-foreground text-center max-w-2xl mx-auto">
               Beyond our core offerings, we provide specialized services to enhance your digital product
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 title: "Fullstack Development",
@@ -304,19 +304,19 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group rounded-2xl overflow-hidden border border-[#d2f7be]/10 hover:border-primary/50 transition-all duration-300"
               >
-                <div className="relative h-48 overflow-hidden bg-muted/20">
+                <div className="relative h-32 md:h-48 overflow-hidden bg-muted/20">
                   <img 
                     src={item.image} 
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-8 bg-muted/10 group-hover:bg-muted/20 transition-colors">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/20 transition-colors">
+                <div className="p-4 md:p-8 bg-muted/10 group-hover:bg-muted/20 transition-colors">
+                  <div className="w-10 md:w-12 h-10 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3 md:mb-4 group-hover:bg-primary/20 transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-3">{item.title}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -324,20 +324,20 @@ export default function Services() {
         </div>
 
         {/* Our Technology Section - Connected Flow */}
-        <div className="border-t border-[#d2f7be]/10 py-16 mb-16">
+        <div className="border-t border-[#d2f7be]/10 py-8 md:py-16 mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="mb-6 md:mb-12"
           >
-            <h2 className="text-4xl font-display font-bold text-center mb-4">Our Technology Stack</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-display font-bold text-center mb-3 md:mb-4">Our Technology Stack</h2>
+            <p className="text-sm md:text-lg text-muted-foreground text-center max-w-2xl mx-auto">
               We leverage the best-in-class technologies across all projects for scalability and performance
             </p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {[
               { 
                 title: "Vibe Coding & AI", 
@@ -384,7 +384,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className={`relative border border-[#d2f7be]/10 group-hover:border-violet-500/50 rounded-3xl p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
+                <div className={`relative border border-[#d2f7be]/10 group-hover:border-violet-500/50 rounded-3xl p-4 md:p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="p-3 rounded-2xl bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-500/50 group-hover:to-purple-500/50 transition-all duration-300">
                       <group.Icon size={28} className="text-lime-200 group-hover:text-lime-100 group-hover:scale-110 transition-all duration-300" />
@@ -412,23 +412,23 @@ export default function Services() {
         </div>
 
         {/* Pricing Section */}
-        <div className="py-16 mb-16 border-t border-[#d2f7be]/10">
+        <div className="py-8 md:py-16 mb-8 md:mb-16 border-t border-[#d2f7be]/10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+            className="mb-6 md:mb-12 text-center"
           >
-            <h2 className="text-4xl font-display font-bold mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Simple, Transparent Pricing</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-4">
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Simple, Transparent Pricing</h2>
+            <p className="text-sm md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-3 md:mb-4">
               Pricing below is indicative only based on estimated project complexity ($40/hour rate). Actual costs depend on specific project requirements, complexity, and scope.
             </p>
-            <p className="text-base text-muted-foreground text-center max-w-3xl mx-auto">
+            <p className="text-xs md:text-base text-muted-foreground text-center max-w-3xl mx-auto">
               Every project is unique—we'll provide a custom quote after understanding your vision and technical needs.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto">
             {pricingPlans.map((plan, i) => (
               <motion.div
                 key={plan.id}
@@ -444,21 +444,21 @@ export default function Services() {
                       }
                     : {}
                 }
-                className={`rounded-2xl p-8 transition-all duration-300 cursor-pointer relative ${
+                className={`rounded-2xl p-4 md:p-8 transition-all duration-300 cursor-pointer relative ${
                   (selectedPlan !== null && selectedPlan === plan.id) || (selectedPlan === null && plan.highlight)
                     ? "border-2 border-transparent"
                     : "border border-[#d2f7be]/10 bg-muted/10 hover:bg-muted/20"
                 }`}
               >
-                <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground text-sm mb-6">{plan.description}</p>
-                <div className="mb-8">
-                  <div className="text-4xl font-bold text-primary">{plan.price}</div>
-                  <div className="text-sm text-muted-foreground">{plan.period}</div>
+                <h3 className="text-xl md:text-2xl font-display font-bold mb-2">{plan.name}</h3>
+                <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-6">{plan.description}</p>
+                <div className="mb-6 md:mb-8">
+                  <div className="text-3xl md:text-4xl font-bold text-primary">{plan.price}</div>
+                  <div className="text-xs md:text-sm text-muted-foreground">{plan.period}</div>
                 </div>
                 <Button 
                   size="lg"
-                  className={`w-full h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer mb-8 ${selectedPlan === plan.id || plan.highlight ? "" : "border-[#d2f7be]/10"}`}
+                  className={`w-full h-12 md:h-14 px-6 md:px-8 rounded-full text-base md:text-lg shadow-lg shadow-purple-500/40 cursor-pointer mb-6 md:mb-8 ${selectedPlan === plan.id || plan.highlight ? "" : "border-[#d2f7be]/10"}`}
                   variant={selectedPlan === plan.id || plan.highlight ? "default" : "outline"}
                   style={selectedPlan === plan.id || plan.highlight ? { backgroundColor: '#d2f7be' } : {}}
                   onClick={(e) => {
@@ -468,11 +468,11 @@ export default function Services() {
                 >
                   Get Started
                 </Button>
-                <ul className="space-y-4">
+                <ul className="space-y-2 md:space-y-4">
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-3">
-                      <Check size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
+                      <Check size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-xs md:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -482,15 +482,15 @@ export default function Services() {
         </div>
 
         {/* Process Section - Animated Roadmap */}
-        <div className="border-t border-[#d2f7be]/10 py-20 mb-16">
+        <div className="border-t border-[#d2f7be]/10 py-8 md:py-20 mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-8 md:mb-16"
           >
-            <h2 className="text-4xl font-display font-bold mb-6 text-center">Our Journey to Excellence</h2>
-            <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">Follow the path from concept to launch, delivering quality services and products</p>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-6 text-center">Our Journey to Excellence</h2>
+            <p className="text-sm md:text-lg text-muted-foreground text-center max-w-2xl mx-auto">Follow the path from concept to launch, delivering quality services and products</p>
           </motion.div>
 
           {/* Roadmap Container */}
@@ -502,12 +502,12 @@ export default function Services() {
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 viewport={{ once: true }}
-                className="absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-lime-400 via-purple-400 to-lime-400 origin-left"
+                className="absolute top-6 md:top-8 left-0 right-0 h-1 bg-gradient-to-r from-lime-400 via-purple-400 to-lime-400 origin-left"
                 style={{ originX: 0 }}
               />
 
               {/* Steps Grid */}
-              <div className="grid md:grid-cols-5 gap-6">
+              <div className="grid md:grid-cols-5 gap-3 md:gap-6">
                 {[
                   { 
                     icon: <LayoutTemplate size={32} />, 
