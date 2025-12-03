@@ -21,8 +21,8 @@ export function Footer() {
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
       
       <div className="container mx-auto px-6 relative z-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-12">
+          <div className="md:col-span-1 space-y-4">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="mb-4 flex items-center gap-3"
@@ -39,29 +39,31 @@ export function Footer() {
             </p>
           </div>
           
-          <div className="mt-6 md:mt-0">
-            <h4 className="font-semibold mb-4">Pages</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="/research" className="hover:text-primary transition-colors">Research</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-            </ul>
+          <div className="grid grid-cols-2 gap-6 md:col-span-3">
+            <div>
+              <h4 className="font-semibold mb-4">Pages</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
+                <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
+                <li><Link href="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link></li>
+                <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
+                <li><Link href="/research" className="hover:text-primary transition-colors">Research</Link></li>
+                <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>QA & Automation</li>
+                <li>MVP Development</li>
+                <li>Fullstack Development</li>
+                <li>Telegram Bot Development</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>QA & Automation</li>
-              <li>MVP Development</li>
-              <li>Fullstack Development</li>
-              <li>Telegram Bot Development</li>
-            </ul>
-          </div>
-
-          <div>
+          <div className="md:col-span-1">
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex gap-4 text-muted-foreground">
               <a href="mailto:makeinfosense@gmail.com" className="hover:text-primary transition-colors" title="Email"><Mail size={20} /></a>
