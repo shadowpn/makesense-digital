@@ -512,12 +512,12 @@ export default function Services() {
                 whileInView={{ scaleY: 1 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 viewport={{ once: true }}
-                className="md:hidden absolute left-10 top-0 bottom-0 w-1 bg-gradient-to-b from-lime-400 via-purple-400 to-lime-400 origin-top"
-                style={{ originY: 0 }}
+                className="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-lime-400 via-purple-400 to-lime-400 origin-top"
+                style={{ originY: 0, transform: 'translateX(-50%)' }}
               />
 
               {/* Steps Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-6">
                 {[
                   { 
                     icon: <LayoutTemplate size={32} />, 
@@ -556,7 +556,7 @@ export default function Services() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.15 }}
                     viewport={{ once: true }}
-                    className="relative group md:ml-0 ml-6"
+                    className="relative group"
                   >
                     {/* Step Circle */}
                     <motion.div
