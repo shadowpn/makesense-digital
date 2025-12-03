@@ -184,7 +184,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Email</h3>
-                  <p className="text-muted-foreground">makeinfosense@gmail.com</p>
+                  <p className="text-foreground/90">makeinfosense@gmail.com</p>
                 </div>
               </div>
               
@@ -194,7 +194,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Phone</h3>
-                  <p className="text-muted-foreground">+61 414 599 822</p>
+                  <p className="text-foreground/90">+61 414 599 822</p>
                 </div>
               </div>
 
@@ -204,7 +204,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Office</h3>
-                  <p className="text-muted-foreground">Wolli Creek, NSW, Australia</p>
+                  <p className="text-foreground/90">Wolli Creek, NSW, Australia</p>
                 </div>
               </div>
 
