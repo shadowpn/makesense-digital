@@ -134,12 +134,26 @@ select option:hover {
 }
 
 /* Default/placeholder option styling */
+select option {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  padding: 8px;
+}
+
 select option:first-child {
   background-color: #f0f0f0;
   color: #cbd5e0;
 }
 
-/* When select has empty value (default state) */
+/* When select has empty value (default state) - show placeholder text */
+select:invalid {
+  color: #cbd5e0;
+}
+
+select {
+  color: #1a1a1a;
+}
+
 select:invalid {
   color: #cbd5e0;
 }
