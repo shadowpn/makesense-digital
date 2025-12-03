@@ -156,19 +156,7 @@ export default function Contact() {
 
   return (
     <Layout>
-      <div 
-        className="min-h-screen"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: '600px 600px',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/80 to-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#d2f7be]/2 via-transparent to-transparent" />
-      </div>
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <div className="container mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -456,7 +444,6 @@ export default function Contact() {
             </div>
           </motion.div>
         </div>
-      </div>
       </div>
 
       {dialog.open && (
