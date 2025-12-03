@@ -517,7 +517,7 @@ export default function Services() {
               />
 
               {/* Steps Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-6">
                 {[
                   { 
                     icon: <LayoutTemplate size={32} />, 
@@ -557,6 +557,7 @@ export default function Services() {
                     transition={{ delay: i * 0.15 }}
                     viewport={{ once: true }}
                     className="relative group"
+                    style={i === 4 ? { gridColumn: '1 / -1', justifySelf: 'start' } : i % 2 === 0 ? { justifySelf: 'start' } : { justifySelf: 'end' }}
                   >
                     {/* Step Circle */}
                     <motion.div
