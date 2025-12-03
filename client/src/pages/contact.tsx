@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Loader, X } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
 import { useState } from "react";
-import backgroundImage from "@assets/generated_images/minimal_dark_background.png";
+import backgroundImage from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -160,13 +160,11 @@ export default function Contact() {
         className="min-h-screen relative"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: '700px 700px',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/92 via-background/88 to-background/92" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20">
