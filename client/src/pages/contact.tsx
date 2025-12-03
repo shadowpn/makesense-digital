@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Loader, X } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
 import { useState } from "react";
-import backgroundImage from "@assets/generated_images/light_professional_background.png";
+import backgroundImage from "@assets/generated_images/minimal_dark_background.png";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
