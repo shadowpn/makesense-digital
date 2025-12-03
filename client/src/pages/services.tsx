@@ -496,18 +496,28 @@ export default function Services() {
           {/* Roadmap Container */}
           <div className="max-w-6xl mx-auto">
             <div className="relative">
-              {/* Animated Background Line */}
+              {/* Animated Background Line - Horizontal (Desktop) */}
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 viewport={{ once: true }}
-                className="absolute top-6 md:top-8 left-0 right-0 h-1 bg-gradient-to-r from-lime-400 via-purple-400 to-lime-400 origin-left"
+                className="hidden md:block absolute top-6 md:top-8 left-0 right-0 h-1 bg-gradient-to-r from-lime-400 via-purple-400 to-lime-400 origin-left"
                 style={{ originX: 0 }}
               />
 
+              {/* Animated Background Line - Vertical (Mobile) */}
+              <motion.div
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                viewport={{ once: true }}
+                className="md:hidden absolute left-10 top-0 bottom-0 w-1 bg-gradient-to-b from-lime-400 via-purple-400 to-lime-400 origin-top"
+                style={{ originY: 0 }}
+              />
+
               {/* Steps Grid */}
-              <div className="grid md:grid-cols-5 gap-3 md:gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-6">
                 {[
                   { 
                     icon: <LayoutTemplate size={32} />, 
@@ -546,7 +556,7 @@ export default function Services() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.15 }}
                     viewport={{ once: true }}
-                    className="relative group"
+                    className="relative group md:ml-0 ml-6"
                   >
                     {/* Step Circle */}
                     <motion.div
