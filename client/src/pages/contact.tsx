@@ -3,13 +3,19 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Loader } from "lucide-react";
+import { Mail, MapPin, Phone, Loader, X } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
 import { useState } from "react";
-import { toast } from "sonner";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [dialog, setDialog] = useState<{ open: boolean; title: string; message: string; isSuccess: boolean }>({
+    open: false,
+    title: '',
+    message: '',
+    isSuccess: false
+  });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,48 +26,100 @@ export default function Contact() {
     file: null as File | null
   });
 
+  const validateEmail = (email: string): boolean => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validateForm = (): boolean => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim() || formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters';
+    }
+    if (!formData.email.trim() || !validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const validateFile = (file: File): string | null => {
+    const allowedMimes = ['application/pdf', 'application/zip', 'application/x-zip-compressed', 'image/jpeg', 'image/png', 'video/mp4'];
+    const maxSize = 5 * 1024 * 1024; // 5MB
+
+    if (!allowedMimes.includes(file.type)) {
+      return 'Invalid file type. Allowed: PDF, ZIP, JPG, PNG, MP4';
+    }
+    if (file.size > maxSize) {
+      return 'File size must be less than 5MB';
+    }
+    return null;
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.[0]) {
-      setFormData(prev => ({ ...prev, file: e.target.files![0] }));
+      const file = e.target.files[0];
+      const fileError = validateFile(file);
+      if (fileError) {
+        setDialog({
+          open: true,
+          title: 'Invalid File',
+          message: fileError,
+          isSuccess: false
+        });
+      } else {
+        setFormData(prev => ({ ...prev, file }));
+      }
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
     setLoading(true);
 
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('email', formData.email);
+      formDataToSend.append('name', formData.name.trim());
+      formDataToSend.append('email', formData.email.trim());
       formDataToSend.append('company', formData.company);
       formDataToSend.append('projectType', formData.projectType);
       formDataToSend.append('budget', formData.budget);
-      formDataToSend.append('message', formData.message);
+      formDataToSend.append('message', formData.message.trim());
       if (formData.file) {
         formDataToSend.append('file', formData.file);
       }
 
-      console.log('Sending form data...');
-      
       const response = await fetch('/api/contact', {
         method: 'POST',
         body: formDataToSend
       });
 
-      console.log('Response status:', response.status);
-
       const data = await response.json();
-      console.log('Response data:', data);
 
       if (response.ok) {
-        console.log('Form submitted successfully');
-        toast.success('Сообщение отправлено! Спасибо, мы ответим вам в течение 24 часов.');
+        setDialog({
+          open: true,
+          title: 'Message Sent Successfully',
+          message: 'Thank you for reaching out! We will get back to you within 24 hours.',
+          isSuccess: true
+        });
         setFormData({
           name: '',
           email: '',
@@ -71,18 +129,25 @@ export default function Contact() {
           message: '',
           file: null
         });
-        // Reset file input
         const fileInput = document.getElementById('file-upload') as HTMLInputElement;
         if (fileInput) {
           fileInput.value = '';
         }
       } else {
-        console.log('Error response:', data);
-        toast.error(data.error || 'Ошибка при отправке сообщения');
+        setDialog({
+          open: true,
+          title: 'Error Sending Message',
+          message: data.error || 'Failed to send your message. Please try again.',
+          isSuccess: false
+        });
       }
     } catch (error) {
-      console.error('Submit error:', error);
-      toast.error('Произошла ошибка. Пожалуйста, попробуйте снова.');
+      setDialog({
+        open: true,
+        title: 'Error',
+        message: 'An error occurred. Please try again later.',
+        isSuccess: false
+      });
     } finally {
       setLoading(false);
     }
@@ -149,9 +214,9 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="John Doe" 
-                    className="bg-background/50 border-[#d2f7be]/10 h-12 focus:border-primary/50" 
-                    required
+                    className={`bg-background/50 h-12 focus:border-primary/50 ${errors.name ? 'border-red-500 border-2' : 'border-[#d2f7be]/10'}`}
                   />
+                  {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium ml-1">Email *</label>
@@ -161,9 +226,9 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="john@example.com" 
-                    className="bg-background/50 border-[#d2f7be]/10 h-12 focus:border-primary/50" 
-                    required
+                    className={`bg-background/50 h-12 focus:border-primary/50 ${errors.email ? 'border-red-500 border-2' : 'border-[#d2f7be]/10'}`}
                   />
+                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
               </div>
 
@@ -257,6 +322,37 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
+
+      {dialog.open && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="bg-background border border-[#d2f7be]/20 rounded-2xl p-8 max-w-md w-full shadow-2xl"
+          >
+            <div className="flex items-start justify-between mb-4">
+              <h2 className={`text-2xl font-bold ${dialog.isSuccess ? 'text-green-500' : 'text-red-500'}`}>
+                {dialog.title}
+              </h2>
+              <button
+                onClick={() => setDialog({ ...dialog, open: false })}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <p className="text-muted-foreground mb-6 text-base">{dialog.message}</p>
+            <Button
+              onClick={() => setDialog({ ...dialog, open: false })}
+              className="w-full h-12 rounded-full text-base"
+              style={{ backgroundColor: '#d2f7be' }}
+            >
+              OK
+            </Button>
+          </motion.div>
+        </div>
+      )}
     </Layout>
   );
 }

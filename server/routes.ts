@@ -5,17 +5,25 @@ import multer from "multer";
 import nodemailer from "nodemailer";
 import path from "path";
 
+const ALLOWED_MIMES = ['application/pdf', 'application/zip', 'application/x-zip-compressed', 'image/jpeg', 'image/png', 'video/mp4'];
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+
 const upload = multer({
   storage: multer.memoryStorage(),
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB
+  limits: { fileSize: MAX_FILE_SIZE },
   fileFilter: (req: any, file: any, cb: any) => {
-    const allowedExtensions = ['.pdf', '.zip', '.jpg', '.jpeg', '.png', '.mp4', '.figma', '.xd', '.sketch'];
+    const allowedExtensions = ['.pdf', '.zip', '.jpg', '.jpeg', '.png', '.mp4'];
     const ext = path.extname(file.originalname).toLowerCase();
-    if (allowedExtensions.includes(ext)) {
-      cb(null, true);
-    } else {
-      cb(new Error('File type not allowed'));
+    
+    if (!allowedExtensions.includes(ext)) {
+      return cb(new Error('File extension not allowed. Allowed: PDF, ZIP, JPG, PNG, MP4'));
     }
+    
+    if (!ALLOWED_MIMES.includes(file.mimetype)) {
+      return cb(new Error('Invalid file MIME type'));
+    }
+    
+    cb(null, true);
   }
 });
 
@@ -25,19 +33,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { name, email, company, projectType, budget, message } = req.body;
 
       // Validate required fields
-      if (!name || !email || !message) {
-        return res.status(400).json({ error: "Missing required fields" });
+      if (!name || typeof name !== 'string' || name.trim().length < 2) {
+        return res.status(400).json({ error: "Name must be at least 2 characters" });
+      }
+      if (!email || typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return res.status(400).json({ error: "Please provide a valid email address" });
+      }
+      if (!message || typeof message !== 'string' || message.trim().length === 0) {
+        return res.status(400).json({ error: "Message is required" });
       }
 
-      // Save to storage
+      // Save to storage with sanitized data
       const submission = await storage.saveContactSubmission({
-        name,
-        email,
-        company: company || '',
-        projectType: projectType || '',
-        budget: budget || '',
-        message,
-        fileName: req.file?.originalname
+        name: String(name).trim(),
+        email: String(email).trim().toLowerCase(),
+        company: String(company || '').trim(),
+        projectType: String(projectType || '').trim(),
+        budget: String(budget || '').trim(),
+        message: String(message).trim(),
+        fileName: req.file?.originalname ? String(req.file.originalname).substring(0, 255) : undefined
       });
 
       // Prepare email content
