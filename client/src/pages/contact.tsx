@@ -185,7 +185,7 @@ export default function Contact() {
               Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.
             </p>
 
-            <div className="hidden md:block space-y-4 md:space-y-8">
+            <div className="space-y-4 md:space-y-8">
               <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }}
                 className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
