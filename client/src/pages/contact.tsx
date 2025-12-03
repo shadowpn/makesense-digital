@@ -178,6 +178,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            className="mb-[50px] md:mb-0"
           >
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-4 md:mb-8"><AnimatedText text="Let's talk." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h1>
             <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-12">
