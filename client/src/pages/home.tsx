@@ -167,7 +167,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">We Build, Test & Craft.</h2>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">We Build, Test & Craft.</h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                 From fullstack development to rigorous QA testing and creative vibe coding. We deliver products that look stunning, work flawlessly, and delight users at every interaction.
               </p>
