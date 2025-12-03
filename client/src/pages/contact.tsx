@@ -297,7 +297,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-red-400">*</span> Name</label>
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Name</label>
                     <Input 
                       name="name"
                       value={formData.name}
@@ -313,7 +313,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35 }}
                   >
-                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-red-400">*</span> Email</label>
+                    <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Email</label>
                     <Input 
                       name="email"
                       type="email"
@@ -408,7 +408,7 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.55 }}
                 >
-                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-red-400">*</span> Project Details</label>
+                  <label className="text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"><span className="text-[#d2f7be]">*</span> Project Details</label>
                   <Textarea 
                     name="message"
                     value={formData.message}
@@ -524,33 +524,21 @@ export default function Contact() {
       )}
 
       {/* Quick Chat Button */}
-      <motion.div 
-        className="fixed bottom-8 right-8 z-40 flex gap-3"
+      <motion.a
+        href="https://t.me/61414599822"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 z-40"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
       >
-        <motion.a
-          href="https://wa.me/61414599822"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="p-4 rounded-full bg-gradient-to-r from-[#d2f7be] to-[#c3ecac] text-black shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center group"
-        >
-          <MessageCircle size={24} className="group-hover:scale-110 transition-transform" />
-        </motion.a>
-        <motion.a
-          href="https://t.me/61414599822"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="p-4 rounded-full bg-gradient-to-r from-[#d2f7be] to-[#c3ecac] text-black shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center group"
-        >
+        <div className="p-4 rounded-full bg-gradient-to-r from-[#d2f7be] to-[#c3ecac] text-black shadow-lg shadow-purple-500/40 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center group">
           <Send size={24} className="group-hover:scale-110 transition-transform" />
-        </motion.a>
-      </motion.div>
+        </div>
+      </motion.a>
     </Layout>
   );
 }
