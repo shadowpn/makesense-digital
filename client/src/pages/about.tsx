@@ -262,112 +262,156 @@ export default function About() {
           </div>
         </section>
 
-        {/* Professional Journey Section - 2 Column Timeline */}
-        <section className="py-24 border-t border-[#d2f7be]/10 relative overflow-hidden">
+        {/* Professional Journey Section */}
+        <section className="py-12 md:py-24 border-t border-[#d2f7be]/10 relative overflow-hidden">
           <div 
-            className="absolute inset-0 opacity-60"
+            className="hidden md:block absolute inset-0 opacity-60"
             style={{
               backgroundImage: `url(${journeyBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/15 via-background/10 to-background/15" />
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-background/15 via-background/10 to-background/15" />
           
           <div className="relative z-10 px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-16"
+              className="mb-10 md:mb-16"
             >
               <h2 className="text-2xl md:text-4xl font-display font-bold mb-4">Professional Journey</h2>
               <p className="text-base md:text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
             </motion.div>
 
-            <div className="relative">
-            {/* Center Vertical Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
-            
-            {/* Timeline Grid - 2 Columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            {/* Mobile: Simple list */}
+            <div className="md:hidden space-y-4">
               {timeline.map((item, idx) => {
-                const isLeft = idx % 2 === 0;
                 const isEducation = idx >= 4;
-                const isFirstEducation = idx === 4;
                 return (
-                  <div key={`section-${idx}`}>
-                    {isFirstEducation && (
-                      <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="col-span-full mb-2 mt-8 px-4 md:px-0"
-                      >
-                        <h3 className="text-xl md:text-2xl font-display font-bold text-primary">Education</h3>
-                      </motion.div>
+                  <div key={`mobile-${idx}`}>
+                    {idx === 4 && (
+                      <h3 className="text-lg md:text-2xl font-display font-bold text-primary mb-4 mt-6">Education</h3>
                     )}
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: idx * 0.1 }}
+                      transition={{ delay: idx * 0.05 }}
                       viewport={{ once: true }}
-                      className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${idx === 5 ? 'mt-48' : ''}`}
-                  >
-                    {/* Icon on center line */}
-                    <motion.div
-                      initial={{ opacity: 1, y: 0 }}
-                      animate={activeIndex === idx ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6 }}
-                      className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}
+                      className="p-4 rounded-lg bg-background border border-[#d2f7be]/10 hover:border-primary/30 transition-all"
                     >
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        activeIndex === idx
-                          ? "bg-accent scale-110"
-                          : "bg-primary"
-                      }`}>
-                        {item.type === "work" ? (
-                          <Briefcase size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
-                        ) : (
-                          <GraduationCap size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
-                        )}
-                      </div>
-                    </motion.div>
-
-                    {/* Content Card */}
-                    <div className={`p-6 rounded-xl transition-all duration-300 bg-background border border-[#d2f7be]/10 hover:border-primary/30 ${
-                      isEducation
-                        ? activeIndex === idx
-                          ? "shadow-2xl shadow-primary/60"
-                          : "shadow-lg shadow-accent/40"
-                        : activeIndex === idx
-                        ? "shadow-2xl shadow-primary/60"
-                        : ""
-                    }`}>
-                      <div className="flex items-start justify-between mb-2">
-                        <h4 className="text-base md:text-lg font-bold pr-4">{item.title}</h4>
+                      <div className="flex items-start justify-between mb-2 gap-2">
+                        <h4 className="text-sm font-bold flex-1">{item.title}</h4>
                         <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{item.period}</span>
                       </div>
-                      <p className="text-sm text-primary font-semibold mb-1">{item.company}</p>
-                      <p className="text-xs text-muted-foreground mb-3">{item.location}</p>
+                      <p className="text-xs text-primary font-semibold mb-1">{item.company}</p>
+                      <p className="text-xs text-muted-foreground mb-2">{item.location}</p>
                       {item.details ? (
-                        <ul className="space-y-2">
-                          {item.details.map((detail, i) => (
-                            <li key={i} className="text-xs md:text-sm lg:text-base text-foreground leading-relaxed flex gap-2">
-                              <span className="text-primary flex-shrink-0 mt-1">•</span>
+                        <ul className="space-y-1">
+                          {item.details.slice(0, 2).map((detail, i) => (
+                            <li key={i} className="text-xs text-foreground leading-tight flex gap-2">
+                              <span className="text-primary flex-shrink-0 mt-0.5">•</span>
                               <span>{detail}</span>
                             </li>
                           ))}
+                          {item.details.length > 2 && (
+                            <li className="text-xs text-muted-foreground italic">+{item.details.length - 2} more</li>
+                          )}
                         </ul>
                       ) : (
-                        <p className="text-xs md:text-sm lg:text-base text-foreground leading-relaxed">{item.description}</p>
+                        <p className="text-xs text-foreground leading-tight">{item.description}</p>
                       )}
-                    </div>
                     </motion.div>
                   </div>
                 );
               })}
             </div>
+
+            {/* Desktop: 2 Column Timeline with Icons */}
+            <div className="hidden md:block relative">
+              {/* Center Vertical Line */}
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
+              
+              {/* Timeline Grid - 2 Columns */}
+              <div className="grid grid-cols-2 gap-0">
+                {timeline.map((item, idx) => {
+                  const isLeft = idx % 2 === 0;
+                  const isEducation = idx >= 4;
+                  const isFirstEducation = idx === 4;
+                  return (
+                    <div key={`desktop-${idx}`}>
+                      {isFirstEducation && (
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          className="col-span-full mb-2 mt-8 px-4 md:px-0"
+                        >
+                          <h3 className="text-xl md:text-2xl font-display font-bold text-primary">Education</h3>
+                        </motion.div>
+                      )}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: idx * 0.1 }}
+                        viewport={{ once: true }}
+                        className={`relative pt-8 pb-8 ${isLeft ? 'pr-12' : 'pl-12'} ${!isLeft ? 'mt-24' : ''} ${idx === 5 ? 'mt-48' : ''}`}
+                      >
+                        {/* Icon on center line */}
+                        <motion.div
+                          initial={{ opacity: 1, y: 0 }}
+                          animate={activeIndex === idx ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }}
+                          transition={{ duration: 0.6 }}
+                          className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}
+                        >
+                          <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                            activeIndex === idx
+                              ? "bg-accent scale-110"
+                              : "bg-primary"
+                          }`}>
+                            {item.type === "work" ? (
+                              <Briefcase size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
+                            ) : (
+                              <GraduationCap size={20} className={`transition-colors ${activeIndex === idx ? "text-primary" : "text-accent"}`} />
+                            )}
+                          </div>
+                        </motion.div>
+
+                        {/* Content Card */}
+                        <div className={`p-6 rounded-xl transition-all duration-300 bg-background border border-[#d2f7be]/10 hover:border-primary/30 ${
+                          isEducation
+                            ? activeIndex === idx
+                              ? "shadow-2xl shadow-primary/60"
+                              : "shadow-lg shadow-accent/40"
+                            : activeIndex === idx
+                            ? "shadow-2xl shadow-primary/60"
+                            : ""
+                        }`}>
+                          <div className="flex items-start justify-between mb-2">
+                            <h4 className="text-base md:text-lg font-bold pr-4">{item.title}</h4>
+                            <span className="text-xs text-muted-foreground font-mono whitespace-nowrap">{item.period}</span>
+                          </div>
+                          <p className="text-sm text-primary font-semibold mb-1">{item.company}</p>
+                          <p className="text-xs text-muted-foreground mb-3">{item.location}</p>
+                          {item.details ? (
+                            <ul className="space-y-2">
+                              {item.details.map((detail, i) => (
+                                <li key={i} className="text-xs md:text-sm lg:text-base text-foreground leading-relaxed flex gap-2">
+                                  <span className="text-primary flex-shrink-0 mt-1">•</span>
+                                  <span>{detail}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <p className="text-xs md:text-sm lg:text-base text-foreground leading-relaxed">{item.description}</p>
+                          )}
+                        </div>
+                      </motion.div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
