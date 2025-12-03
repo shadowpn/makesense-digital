@@ -165,8 +165,8 @@ export default function Contact() {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/70 to-background/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#d2f7be]/1 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/92 via-background/88 to-background/92" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
         
         <div className="container mx-auto px-6 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20">
