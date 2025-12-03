@@ -164,7 +164,7 @@ export default function Contact() {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/30 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
         
         <div className="container mx-auto px-6 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20">
