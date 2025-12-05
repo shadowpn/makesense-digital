@@ -189,14 +189,16 @@ export function Sidebar() {
             transition={{ delay: 0.3 }}
             className="text-center pt-6 border-t border-[#d2f7be]/5"
           >
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary flex items-center justify-center gap-2"
-            >
-              Start Project
-              <ArrowRight size={18} />
-            </motion.button>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary flex items-center justify-center gap-2 cursor-pointer"
+              >
+                Start Project
+                <ArrowRight size={18} />
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </motion.aside>
