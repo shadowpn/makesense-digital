@@ -11,7 +11,7 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import fullstackImg from "@assets/generated_images/modern_fullstack_workspace.png";
 import designImg from "@assets/generated_images/professional_design_system_ui.png";
 import devopsImg from "@assets/generated_images/modern_cloud_deployment_tech.png";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { useState, useEffect } from "react";
 import { updateSEO } from "@/utils/seo";
 
@@ -242,9 +242,11 @@ export default function Services() {
                   ))}
                 </div>
 
-                <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>
-                  Learn more
-                </Button>
+                <Link href={`/contact?service=${service.id}`}>
+                  <Button size="lg" className="h-14 px-8 rounded-full text-lg shadow-lg shadow-purple-500/40 cursor-pointer" style={{ backgroundColor: '#d2f7be' }}>
+                    Learn more
+                  </Button>
+                </Link>
               </div>
 
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

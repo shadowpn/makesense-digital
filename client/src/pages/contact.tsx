@@ -6,10 +6,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Loader, X, Copy, Check, MessageCircle, Send } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
+import { useSearch } from "wouter";
 import { updateSEO } from "@/utils/seo";
 import backgroundImage from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 export default function Contact() {
+  const searchString = useSearch();
+  
   useEffect(() => {
     updateSEO({
       title: "Contact Us - SensePower Digital | Let's Make Sense Together",
@@ -38,6 +41,22 @@ export default function Contact() {
     message: '',
     file: null as File | null
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchString);
+    const service = params.get('service');
+    if (service) {
+      const serviceMap: Record<string, string> = {
+        'qa': 'qa',
+        'mvp': 'mvp',
+        'fullstack': 'fullstack',
+        'telegram': 'telegram'
+      };
+      if (serviceMap[service]) {
+        setFormData(prev => ({ ...prev, projectType: serviceMap[service] }));
+      }
+    }
+  }, [searchString]);
 
   const copyToClipboard = (text: string, type: string) => {
     navigator.clipboard.writeText(text);
@@ -393,6 +412,7 @@ export default function Contact() {
                       <option value="mvp">MVP Development</option>
                       <option value="fullstack">Fullstack Development</option>
                       <option value="qa">QA & Testing</option>
+                      <option value="telegram">Telegram Bot Development</option>
                       <option value="design">Design System</option>
                       <option value="other">Other</option>
                     </select>
