@@ -4,6 +4,8 @@ import { FileText, Download, ExternalLink, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
+import { useEffect } from "react";
+import { updateSEO } from "@/utils/seo";
 import researchHeroBg from "@assets/generated_images/research_knowledge_hub_design.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
@@ -87,6 +89,16 @@ const artifacts = [
 ];
 
 export default function Research() {
+  useEffect(() => {
+    updateSEO({
+      title: "Research Hub - SensePower Digital | Making Knowledge Accessible",
+      description: "Explore our research articles, testing frameworks, and design resources. Practical insights on automated testing, dark mode design, and MVP architecture.",
+      keywords: "research, articles, testing frameworks, Playwright, Cypress, design systems, MVP architecture, knowledge hub",
+      ogUrl: "https://sensepower.digital/research",
+      canonicalUrl: "https://sensepower.digital/research"
+    });
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -123,10 +135,24 @@ export default function Research() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-4 md:mb-6 leading-relaxed"
             >
               Artifacts, whitepapers, and thoughts on the future of software development.
             </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
+            >
+              <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Making knowledge accessible.</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground mt-2">
+                Practical insights that help you build better products.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>

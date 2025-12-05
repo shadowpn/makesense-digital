@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
+import { updateSEO } from "@/utils/seo";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/About_desk_1764138287441.jpg";
 import journeyBg from "@assets/generated_images/modern_tech_services_background.png";
@@ -12,6 +13,16 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
 export default function About() {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    updateSEO({
+      title: "About Us - SensePower Digital | Making Complexity Simple",
+      description: "Meet the team behind SensePower Digital. We transform complex tech challenges into simple, working solutions. Professional fullstack development and QA testing services.",
+      keywords: "about us, team, fullstack developer, QA engineer, Sydney Australia, digital studio, web development",
+      ogUrl: "https://sensepower.digital/about",
+      canonicalUrl: "https://sensepower.digital/about"
+    });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -154,10 +165,24 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-4 md:mb-6 leading-relaxed"
             >
               Founded by Nataliia Petrychuk. We're obsessed with design excellence and engineering precision, helping forward-thinking companies launch and scale their digital products since 2022.
             </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
+            >
+              <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Making complexity simple since day one.</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground mt-2">
+                We turn chaos of code and ideas into sense — that's our mission.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>

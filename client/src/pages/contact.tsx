@@ -5,10 +5,21 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Loader, X, Copy, Check, MessageCircle, Send } from "lucide-react";
 import { AnimatedText } from "@/components/animated-text";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { updateSEO } from "@/utils/seo";
 import backgroundImage from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 export default function Contact() {
+  useEffect(() => {
+    updateSEO({
+      title: "Contact Us - SensePower Digital | Let's Make Sense Together",
+      description: "Get in touch with SensePower Digital. Start your project today - MVP development, QA testing, fullstack solutions. Sydney, Australia based.",
+      keywords: "contact, get in touch, hire developer, project inquiry, Sydney Australia, web development, QA testing",
+      ogUrl: "https://sensepower.digital/contact",
+      canonicalUrl: "https://sensepower.digital/contact"
+    });
+  }, []);
+
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [copied, setCopied] = useState<string | null>(null);
@@ -181,9 +192,23 @@ export default function Contact() {
             className="mb-[50px] md:mb-0"
           >
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-4 md:mb-8"><AnimatedText text="Let's talk." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h1>
-            <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-12">
+            <p className="text-base md:text-xl text-muted-foreground mb-4 md:mb-6">
               Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.
             </p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-6 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm"
+            >
+              <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Let's make sense together.</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground mt-2">
+                Turn your idea into something that makes sense.
+              </p>
+            </motion.div>
 
             <div className="space-y-4 md:space-y-8">
               <motion.div 

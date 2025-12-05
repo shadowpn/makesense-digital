@@ -12,7 +12,8 @@ import fullstackImg from "@assets/generated_images/modern_fullstack_workspace.pn
 import designImg from "@assets/generated_images/professional_design_system_ui.png";
 import devopsImg from "@assets/generated_images/modern_cloud_deployment_tech.png";
 import { useLocation } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { updateSEO } from "@/utils/seo";
 
 const services = [
   {
@@ -124,6 +125,16 @@ export default function Services() {
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [selectedFaq, setSelectedFaq] = useState<number | null>(null);
 
+  useEffect(() => {
+    updateSEO({
+      title: "Services - SensePower Digital | Technology That Makes Sense",
+      description: "Professional digital services: QA & Automation, MVP Development, Fullstack Solutions, Telegram Bots. From $40/hour. Technology that actually works.",
+      keywords: "QA testing, automation, MVP development, fullstack, Telegram bots, web development, pricing, Sydney Australia",
+      ogUrl: "https://sensepower.digital/services",
+      canonicalUrl: "https://sensepower.digital/services"
+    });
+  }, []);
+
   const handleContactClick = () => {
     setLocation("/contact");
   };
@@ -164,10 +175,24 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-4 md:mb-6 leading-relaxed"
             >
               We combine engineering precision with design intuition to build software that works flawlessly and looks exceptional.
             </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
+            >
+              <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Technology that actually makes sense.</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground mt-2">
+                From idea to working solution — clear, tested, and reliable.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>

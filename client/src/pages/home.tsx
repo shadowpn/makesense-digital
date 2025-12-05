@@ -4,6 +4,8 @@ import { ArrowRight, Code, Smartphone, CheckCircle, Cpu, Search } from "lucide-r
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
+import { useEffect } from "react";
+import { updateSEO } from "@/utils/seo";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 import ctaBg from "@assets/generated_images/abstract_tech_geometric_pattern_background.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
@@ -19,6 +21,16 @@ const fadeIn = {
 };
 
 export default function Home() {
+  useEffect(() => {
+    updateSEO({
+      title: "SensePower Digital - We Code. We Test. We Make Sense.",
+      description: "Modern UX portfolio and digital studio. We create and test digital products from concept to implementation. Fullstack development, QA automation, and design systems.",
+      keywords: "fullstack development, QA testing, MVP development, digital studio, web design, React, Next.js, automation",
+      ogUrl: "https://sensepower.digital/",
+      canonicalUrl: "https://sensepower.digital/"
+    });
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -57,10 +69,22 @@ export default function Home() {
             
             <motion.p 
               variants={fadeIn} 
-              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-4 md:mb-6 leading-relaxed"
             >
               We create and test digital products at every stage — from concept to full implementation.
             </motion.p>
+            
+            <motion.div 
+              variants={fadeIn}
+              className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm"
+            >
+              <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">We code. We test. We make sense.</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground mt-2">
+                Technology should work. We make it meaningful.
+              </p>
+            </motion.div>
             
             <motion.div variants={fadeIn} className="flex flex-col md:flex-row flex-wrap gap-3 md:gap-4">
               <Link href="/portfolio">

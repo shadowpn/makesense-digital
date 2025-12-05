@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, LayoutTemplate, Code2, Bug, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import { updateSEO } from "@/utils/seo";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
@@ -48,6 +49,16 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  useEffect(() => {
+    updateSEO({
+      title: "Portfolio - SensePower Digital | Projects That Make Sense",
+      description: "Explore our portfolio of digital products and case studies. From EdTech to HealthTech - projects where design meets rigorous engineering.",
+      keywords: "portfolio, case studies, web projects, EdTech, HealthTech, Legal Tech, React, Next.js, fullstack",
+      ogUrl: "https://sensepower.digital/portfolio",
+      canonicalUrl: "https://sensepower.digital/portfolio"
+    });
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -84,10 +95,24 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-8 md:mb-12 leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-4 md:mb-6 leading-relaxed"
             >
               A collection of projects where design meets rigorous engineering.
             </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
+            >
+              <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Digital solutions that make sense.</span>
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground mt-2">
+                Every project is built to work, tested to prove it, and designed to impress.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
