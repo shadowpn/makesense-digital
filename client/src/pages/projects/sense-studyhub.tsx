@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764056223710.png";
 import workHeroBg from "@assets/generated_images/realistic_cozy_study_desk.png";
-import ctaBg from "@assets/generated_images/soft_gradient_cta_background.png";
 
 const projectData = {
   title: "Sense StudyHub",
@@ -241,9 +240,9 @@ export default function SenseStudyHub() {
           className="relative text-center p-6 md:p-12 rounded-2xl md:rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-4 md:mb-[15px]"
         >
           <div 
-            className="absolute inset-0 z-0 opacity-60"
+            className="absolute inset-0 z-0 opacity-40"
             style={{
-              backgroundImage: `url(${ctaBg})`,
+              backgroundImage: `url(${workHeroBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
