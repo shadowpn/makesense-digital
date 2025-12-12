@@ -16,7 +16,7 @@ const projectData = {
   client: "Education Platform",
   description: "Modern online learning platform with curated course catalog, video lessons, and interactive Q&A features.",
   longDescription: "Sense StudyHub (CourseFlow) is a modern online learning platform that allows users to browse, save, and take interactive courses. Registered users gain access to a curated catalog of course cards and can save courses to their personal dashboard. Each course includes detailed description, video lessons, and a comment section where learners can ask questions or leave feedback. The platform includes a full admin panel for uploading and managing courses, built using Django REST Framework on the backend and Next.js + Tailwind CSS on the frontend. Fully responsive and optimized for mobile use.",
-  tags: ["Python", "Django REST", "Next.js", "Tailwind CSS", "JWT Auth", "SQLite/PostgreSQL", "HTML5 Video", "Responsive Mobile"],
+  tags: ["Python", "JavaScript", "Django REST", "Next.js", "Tailwind CSS", "JWT Auth", "SQLite/PostgreSQL", "HTML5 Video", "Responsive Mobile"],
   features: [
     "JWT-based authentication with secure token management",
     "Personal dashboard with enrolled courses pagination",
