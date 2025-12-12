@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, CheckCircle, Zap, Globe, Calendar, Users, Sparkles, CreditCard, MessageSquare } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Zap, Globe, Calendar, Users, Sparkles, CreditCard, MessageSquare } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
@@ -71,32 +71,40 @@ export default function ExpertLash() {
 
   return (
     <Layout>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end justify-center overflow-hidden pb-8">
         <div 
           className="absolute inset-0 z-0 opacity-40"
           style={{
             backgroundImage: `url(${workHeroBg})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center 80%'
           }}
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
-        <div className="container mx-auto px-6 relative z-20 pt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl"
-          >
+        <div className="absolute top-2 md:top-6 left-0 right-0 z-30 container mx-auto px-4 md:px-6">
+          <div className="flex justify-between items-center w-full">
             <Link href="/portfolio">
-              <Button variant="ghost" className="mb-6 gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
+              <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
                 <ArrowLeft size={18} />
                 Back to Portfolio
               </Button>
             </Link>
-            
-            <Badge className="mb-4 bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
-            
+            <Link href="/portfolio/aussie-way-visa" className="hidden md:block">
+              <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-next-project">
+                Next Project
+                <ArrowRight size={18} />
+              </Button>
+            </Link>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl md:mt-[60px] mt-4 mb-0"
+          >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
               {projectData.title}
             </h1>
@@ -105,7 +113,8 @@ export default function ExpertLash() {
               {projectData.description}
             </p>
             
-            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <Badge className="bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
               <div className="flex items-center gap-2">
                 <Calendar size={16} className="text-[#d2f7be]" />
                 <span>{projectData.year}</span>
