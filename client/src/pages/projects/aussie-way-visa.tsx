@@ -236,7 +236,7 @@ export default function AussieWayVisa() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mt-[50px] md:mt-[60px]"
+            className="max-w-4xl mt-[100px] md:mt-[60px]"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
               {projectData.title}
