@@ -133,14 +133,14 @@ export default function SenseStudyHub() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-8 md:mb-16"
         >
           <div className="rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
             <img src={projectImg} alt={projectData.title} className="w-full h-auto" />
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -190,15 +190,15 @@ export default function SenseStudyHub() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+            className="p-4 md:p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
           >
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Zap size={20} className="text-[#d2f7be]" />
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 flex items-center gap-2">
+              <Zap size={18} className="md:w-5 md:h-5 text-[#d2f7be]" />
               Challenges Solved
             </h3>
             <ul className="space-y-3">
@@ -216,10 +216,10 @@ export default function SenseStudyHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+            className="p-4 md:p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
           >
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Globe size={20} className="text-[#d2f7be]" />
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 flex items-center gap-2">
+              <Globe size={18} className="md:w-5 md:h-5 text-[#d2f7be]" />
               Results Achieved
             </h3>
             <ul className="space-y-3">
