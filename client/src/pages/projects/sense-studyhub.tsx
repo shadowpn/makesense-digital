@@ -14,28 +14,28 @@ const projectData = {
   category: "EdTech",
   year: "2024",
   client: "Education Platform",
-  description: "Comprehensive online learning platform with interactive courses and student engagement tools.",
-  longDescription: "Sense StudyHub is a full-featured educational platform designed to provide an engaging and effective online learning experience. The platform supports course creation, student progress tracking, interactive quizzes, and community features. Built with a focus on accessibility and mobile responsiveness to ensure learning is available anywhere.",
-  tags: ["Python", "JavaScript", "Django", "Next.js", "Tailwind", "Authentication", "HTML", "CSS", "Responsive Mobile"],
+  description: "Modern online learning platform with curated course catalog, video lessons, and interactive Q&A features.",
+  longDescription: "Sense StudyHub (CourseFlow) is a modern online learning platform that allows users to browse, save, and take interactive courses. Registered users gain access to a curated catalog of course cards and can save courses to their personal dashboard. Each course includes detailed description, video lessons, and a comment section where learners can ask questions or leave feedback. The platform includes a full admin panel for uploading and managing courses, built using Django REST Framework on the backend and Next.js + Tailwind CSS on the frontend. Fully responsive and optimized for mobile use.",
+  tags: ["Python", "Django REST", "Next.js", "Tailwind CSS", "JWT Auth", "SQLite/PostgreSQL", "HTML5 Video", "Responsive Mobile"],
   features: [
-    "Interactive course modules with video content",
-    "Student progress tracking dashboard",
-    "Secure authentication system",
-    "Mobile-responsive design for learning on-the-go",
-    "Quiz and assessment functionality",
-    "Community discussion forums"
+    "JWT-based authentication with secure token management",
+    "Personal dashboard with enrolled courses pagination",
+    "Course detail pages with HTML5 video player",
+    "Live comment system for Q&A without page reloads",
+    "Admin panel for course CRUD operations",
+    "Mobile-first responsive design from 320px to desktop"
   ],
   challenges: [
-    "Building scalable video streaming infrastructure",
-    "Implementing real-time progress synchronization",
-    "Creating intuitive course navigation",
-    "Ensuring accessibility compliance"
+    "Implementing protected routes with client-side guards",
+    "Building reusable pagination component for multiple lists",
+    "Preserving rich text formatting in course descriptions",
+    "Token refresh automation through custom auth helpers"
   ],
   results: [
-    "10,000+ active student registrations",
-    "95% course completion rate improvement",
-    "Mobile traffic increased by 60%",
-    "Average session duration of 25+ minutes"
+    "Full SPA with real-time data fetching",
+    "Seamless video lesson delivery",
+    "Modern UI with neumorphic design and animations",
+    "Easily portable database from SQLite to PostgreSQL"
   ]
 };
 
@@ -43,14 +43,14 @@ export default function SenseStudyHub() {
   useEffect(() => {
     updateSEO({
       title: "Sense StudyHub - Online Learning Platform | Case Study | SensePower Digital",
-      description: "Comprehensive EdTech platform for online education with interactive courses, student progress tracking, video lessons, quizzes, and community forums. Built with Python, Django, Next.js, and Tailwind CSS.",
-      keywords: "Sense StudyHub, online learning platform, EdTech, education technology, e-learning, Django, Next.js, Python, interactive courses, student portal, LMS, learning management system, online education Australia",
+      description: "Modern EdTech platform with curated course catalog, video lessons, JWT authentication, personal dashboard, and Q&A comment system. Built with Django REST Framework, Next.js, and Tailwind CSS.",
+      keywords: "Sense StudyHub, CourseFlow, online learning platform, EdTech, education technology, e-learning, Django REST, Next.js, Python, JWT authentication, video lessons, LMS, learning management system, course catalog",
       ogTitle: "Sense StudyHub - EdTech Learning Platform | Case Study",
-      ogDescription: "Discover how we built a comprehensive online learning platform with interactive courses, progress tracking, and community features.",
+      ogDescription: "Modern online learning platform with course catalog, video lessons, personal dashboard, and interactive Q&A features.",
       ogImage: "https://makesense.replit.app/og-image.png",
       ogUrl: "https://makesense.replit.app/portfolio/sense-studyhub",
       twitterTitle: "Sense StudyHub - Online Learning Platform | SensePower Digital",
-      twitterDescription: "Case study: EdTech platform with interactive courses, video content, and student engagement tools.",
+      twitterDescription: "Case study: EdTech platform with video lessons, JWT auth, and modern responsive design.",
       twitterImage: "https://makesense.replit.app/og-image.png",
       canonicalUrl: "https://makesense.replit.app/portfolio/sense-studyhub"
     });
@@ -59,7 +59,7 @@ export default function SenseStudyHub() {
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "Sense StudyHub - EdTech Case Study",
-      "description": "Comprehensive online learning platform with interactive courses and student engagement tools.",
+      "description": "Modern online learning platform with curated course catalog, video lessons, and interactive Q&A features.",
       "author": { "@type": "Organization", "name": "SensePower Digital" },
       "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
       "datePublished": "2024-01-01",
