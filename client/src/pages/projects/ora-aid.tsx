@@ -17,7 +17,6 @@ import screenshot6 from "@assets/image_1765519796301.png";
 import screenshot7 from "@assets/image_1765519815804.png";
 
 const projectScreenshots = [
-  { src: projectImg, label: "Main Project View" },
   { src: screenshot1, label: "Homepage" },
   { src: screenshot2, label: "Promo Offer" },
   { src: screenshot3, label: "About Product" },
