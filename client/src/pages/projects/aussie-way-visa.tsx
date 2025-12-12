@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, ChevronLeft, ChevronRight, Zap, CheckCircle, Globe, Calendar, Users, ExternalLink, Handshake } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764055739030.png";
 import heroBg from "@assets/generated_images/sydney_opera_house_sunset_view.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
@@ -163,10 +163,44 @@ export default function AussieWayVisa() {
   useEffect(() => {
     updateSEO({
       title: "Aussie Way Visa - Case Study | SensePower Digital",
-      description: "Modern platform for Australian visa applications and migration services. Next.js, OpenAI API, Calendly integration.",
-      keywords: "Aussie Way Visa, case study, legal tech, immigration, Next.js, OpenAI, Calendly",
-      ogUrl: "https://sensepower.digital/portfolio/aussie-way-visa",
-      canonicalUrl: "https://sensepower.digital/portfolio/aussie-way-visa"
+      description: "Visa Australia Online - comprehensive migration platform by Checkbox Legal. Australian visa applications for study, work, and living. MARA registered lawyers, AI-powered eligibility checker, Calendly booking integration.",
+      keywords: "Aussie Way Visa, Visa Australia Online, Australian visa, migration services, MARA registered, student visa Australia, skilled visa, family visa, immigration consultant Sydney, Checkbox Legal, Next.js, OpenAI API, Calendly, legal tech case study",
+      ogTitle: "Aussie Way Visa - Australian Immigration Platform | Case Study",
+      ogDescription: "Discover how we built a comprehensive visa application platform with AI-powered eligibility checking and seamless consultation booking.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/portfolio/aussie-way-visa",
+      twitterTitle: "Aussie Way Visa - Australian Immigration Platform | SensePower Digital",
+      twitterDescription: "Case study: Modern platform for Australian visa applications with AI assistance and Calendly integration.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/portfolio/aussie-way-visa"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Aussie Way Visa - Case Study",
+      "description": "Visa Australia Online - comprehensive migration platform by Checkbox Legal for Australian visa applications.",
+      "author": {
+        "@type": "Organization",
+        "name": "SensePower Digital"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SensePower Digital",
+        "url": "https://makesense.replit.app"
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-12-12",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://makesense.replit.app/portfolio/aussie-way-visa"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Visa Australia Online",
+        "applicationCategory": "Legal Tech",
+        "operatingSystem": "Web"
+      }
     });
   }, []);
 
