@@ -373,7 +373,7 @@ export default function AussieWayVisa() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative text-center p-12 rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-12 md:mb-20"
+          className="relative text-center p-12 rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-6 md:mb-10"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
