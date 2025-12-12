@@ -15,6 +15,7 @@ import screenshot4 from "@assets/image_1765519752412.png";
 import screenshot5 from "@assets/image_1765519773867.png";
 import screenshot6 from "@assets/image_1765519796301.png";
 import screenshot7 from "@assets/image_1765519815804.png";
+import ctaBg from "@assets/generated_images/soft_teal_mint_gradient_cta.png";
 
 const projectScreenshots = [
   { src: screenshot1, label: "Homepage" },
@@ -343,9 +344,9 @@ export default function OraAid() {
           className="relative text-center p-6 md:p-12 rounded-2xl md:rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-4 md:mb-[15px]"
         >
           <div 
-            className="absolute inset-0 z-0 opacity-40"
+            className="absolute inset-0 z-0 opacity-60"
             style={{
-              backgroundImage: `url(${workHeroBg})`,
+              backgroundImage: `url(${ctaBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
