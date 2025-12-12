@@ -85,13 +85,13 @@ export default function ExpertLash() {
         <div className="absolute top-2 md:top-6 left-0 right-0 z-30 container mx-auto px-4 md:px-6">
           <div className="flex justify-between items-center w-full">
             <Link href="/portfolio">
-              <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
+              <Button variant="ghost" className="gap-2 hover:bg-[#f9a8d4]/10" data-testid="button-back-portfolio">
                 <ArrowLeft size={18} />
                 Back to Portfolio
               </Button>
             </Link>
             <Link href="/portfolio/aussie-way-visa" className="hidden md:block">
-              <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-next-project">
+              <Button variant="ghost" className="gap-2 hover:bg-[#f9a8d4]/10" data-testid="button-next-project">
                 Next Project
                 <ArrowRight size={18} />
               </Button>
@@ -114,13 +114,13 @@ export default function ExpertLash() {
             </p>
             
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <Badge className="bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
+              <Badge className="bg-[#f9a8d4]/10 text-[#f9a8d4] border-[#f9a8d4]/20">{projectData.category}</Badge>
               <div className="flex items-center gap-2">
-                <Calendar size={16} className="text-[#d2f7be]" />
+                <Calendar size={16} className="text-[#f9a8d4]" />
                 <span>{projectData.year}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Sparkles size={16} className="text-[#d2f7be]" />
+                <Sparkles size={16} className="text-[#f9a8d4]" />
                 <span>{projectData.client}</span>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function ExpertLash() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
+          <div className="rounded-3xl overflow-hidden border border-[#f9a8d4]/10 shadow-2xl shadow-purple-500/10">
             <img src={projectImg} alt={projectData.title} className="w-full h-auto" />
           </div>
         </motion.div>
@@ -152,13 +152,13 @@ export default function ExpertLash() {
               {projectData.longDescription}
             </p>
             
-            <h3 className="text-xl font-bold mb-4 text-[#d2f7be]">Key Features</h3>
+            <h3 className="text-xl font-bold mb-4 text-[#f9a8d4]">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {projectData.features.map((feature, i) => (
-                <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-[#d2f7be]/5 border border-[#d2f7be]/10">
-                  {i % 3 === 0 ? <MessageSquare size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0" /> : 
-                   i % 3 === 1 ? <CreditCard size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0" /> :
-                   <Sparkles size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0" />}
+                <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-[#f9a8d4]/5 border border-[#f9a8d4]/10">
+                  {i % 3 === 0 ? <MessageSquare size={20} className="text-[#f9a8d4] mt-0.5 flex-shrink-0" /> : 
+                   i % 3 === 1 ? <CreditCard size={20} className="text-[#f9a8d4] mt-0.5 flex-shrink-0" /> :
+                   <Sparkles size={20} className="text-[#f9a8d4] mt-0.5 flex-shrink-0" />}
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
@@ -172,11 +172,11 @@ export default function ExpertLash() {
             transition={{ delay: 0.1 }}
           >
             <div className="sticky top-24 space-y-6">
-              <div className="p-6 rounded-2xl border border-[#d2f7be]/10 bg-[#d2f7be]/5">
+              <div className="p-6 rounded-2xl border border-[#f9a8d4]/10 bg-[#f9a8d4]/5">
                 <h3 className="text-lg font-bold mb-4">Tech Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {projectData.tags.map((tag, i) => (
-                    <Badge key={i} variant="outline" className="border-[#d2f7be]/20 text-xs">{tag}</Badge>
+                    <Badge key={i} variant="outline" className="border-[#f9a8d4]/20 text-xs">{tag}</Badge>
                   ))}
                 </div>
               </div>
@@ -197,16 +197,16 @@ export default function ExpertLash() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+            className="p-8 rounded-2xl border border-[#f9a8d4]/10 bg-gradient-to-br from-[#f9a8d4]/5 to-transparent"
           >
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Zap size={20} className="text-[#d2f7be]" />
+              <Zap size={20} className="text-[#f9a8d4]" />
               Challenges Solved
             </h3>
             <ul className="space-y-3">
               {projectData.challenges.map((challenge, i) => (
                 <li key={i} className="text-muted-foreground text-sm flex items-center gap-2">
-                  <span className="text-[#d2f7be] flex-shrink-0">•</span>
+                  <span className="text-[#f9a8d4] flex-shrink-0">•</span>
                   {challenge}
                 </li>
               ))}
@@ -218,16 +218,16 @@ export default function ExpertLash() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+            className="p-8 rounded-2xl border border-[#f9a8d4]/10 bg-gradient-to-br from-[#f9a8d4]/5 to-transparent"
           >
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Globe size={20} className="text-[#d2f7be]" />
+              <Globe size={20} className="text-[#f9a8d4]" />
               Results Achieved
             </h3>
             <ul className="space-y-3">
               {projectData.results.map((result, i) => (
                 <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
-                  <CheckCircle size={16} className="text-[#d2f7be] mt-0.5 flex-shrink-0" />
+                  <CheckCircle size={16} className="text-[#f9a8d4] mt-0.5 flex-shrink-0" />
                   {result}
                 </li>
               ))}
@@ -239,7 +239,7 @@ export default function ExpertLash() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative text-center p-6 md:p-12 rounded-2xl md:rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-4 md:mb-[15px]"
+          className="relative text-center p-6 md:p-12 rounded-2xl md:rounded-3xl border border-[#f9a8d4]/10 overflow-hidden mb-4 md:mb-[15px]"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
