@@ -252,8 +252,7 @@ export default function AussieWayVisa() {
           </motion.div>
         </div>
       </section>
-
-      <div className="container mx-auto px-6 pb-12 md:pb-20">
+      <div className="container mx-auto px-6 md:pb-20 mt-[0px] mb-[0px] pl-[24px] pr-[24px] pt-[0px] pb-[0px]">
         <ProjectSlider />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
