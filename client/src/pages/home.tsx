@@ -4,6 +4,7 @@ import { ArrowRight, Code, Smartphone, CheckCircle, Cpu, Search } from "lucide-r
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
+import { HeroBackground } from "@/components/hero-background";
 import { useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
@@ -54,14 +55,7 @@ export default function Home() {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0 opacity-40"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
+        <HeroBackground src={heroBg} position="center" />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">

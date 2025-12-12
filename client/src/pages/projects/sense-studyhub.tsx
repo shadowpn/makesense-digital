@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import { AnimatedText } from "@/components/animated-text";
+import { HeroBackground } from "@/components/hero-background";
 import projectImg from "@assets/изображение_1764056223710.png";
 import workHeroBg from "@assets/generated_images/realistic_cozy_study_desk.png";
 
@@ -73,14 +74,7 @@ export default function SenseStudyHub() {
   return (
     <Layout>
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end justify-center overflow-hidden pb-8 bg-background">
-        <img 
-          src={workHeroBg} 
-          alt="" 
-          aria-hidden="true"
-          fetchPriority="high"
-          loading="eager"
-          className="absolute inset-0 w-full h-full object-cover object-[center_80%] z-0 opacity-40"
-        />
+        <HeroBackground src={workHeroBg} position="center 80%" />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
         <div className="absolute top-2 md:top-6 left-0 right-0 z-30 container mx-auto px-4 md:px-6">

@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import { AnimatedText } from "@/components/animated-text";
+import { HeroBackground } from "@/components/hero-background";
 import projectImg from "@assets/изображение_1764055739030.png";
 import heroBg from "@assets/generated_images/sydney_opera_house_sunset_view.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
@@ -208,14 +209,7 @@ export default function AussieWayVisa() {
   return (
     <Layout>
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end justify-center overflow-hidden pb-8 bg-background">
-        <img 
-          src={heroBg} 
-          alt="" 
-          aria-hidden="true"
-          fetchPriority="high"
-          loading="eager"
-          className="absolute inset-0 w-full h-full object-cover object-[center_80%] z-0 opacity-40"
-        />
+        <HeroBackground src={heroBg} position="center 80%" />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
         <div className="absolute top-2 md:top-6 left-0 right-0 z-30 container mx-auto px-4 md:px-6">
