@@ -121,28 +121,28 @@ function ProjectSlider() {
           
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
             data-testid="button-slider-prev"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={20} className="md:w-6 md:h-6" />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
             data-testid="button-slider-next"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={20} className="md:w-6 md:h-6" />
           </button>
           
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
+          <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 md:gap-2">
             {projectScreenshots.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'w-8 bg-[#d2f7be]' 
+                    ? 'w-6 md:w-8 bg-[#d2f7be]' 
                     : 'bg-white/50 hover:bg-white/80'
                 }`}
                 data-testid={`button-slider-dot-${index}`}
@@ -150,8 +150,8 @@ function ProjectSlider() {
             ))}
           </div>
           
-          <div className="absolute bottom-4 right-4 px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20">
-            <span className="text-sm text-white font-medium">{projectScreenshots[currentIndex].label}</span>
+          <div className="absolute bottom-2 md:bottom-4 right-2 md:right-4 px-2 md:px-4 py-1 md:py-2 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20">
+            <span className="text-xs md:text-sm text-white font-medium">{projectScreenshots[currentIndex].label}</span>
           </div>
         </div>
       </div>
@@ -206,7 +206,7 @@ export default function AussieWayVisa() {
 
   return (
     <Layout>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0 opacity-40"
           style={{
@@ -217,7 +217,7 @@ export default function AussieWayVisa() {
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
-        <div className="container mx-auto px-6 relative z-20 pt-32 md:pt-40">
+        <div className="container mx-auto px-4 md:px-6 relative z-20 pt-24 md:pt-40">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -252,10 +252,10 @@ export default function AussieWayVisa() {
           </motion.div>
         </div>
       </section>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <ProjectSlider />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -317,8 +317,8 @@ export default function AussieWayVisa() {
                 </div>
               </div>
               
-              <Link href="/contact?service=fullstack" className="block w-1/2 mx-auto">
-                <Button size="lg" className="w-full rounded-xl shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
+              <Link href="/contact?service=fullstack" className="block w-full md:w-1/2 mx-auto">
+                <Button size="lg" className="w-full rounded-xl shadow-lg shadow-purple-500/40 text-sm md:text-base" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
                   Start Similar Project
                 </Button>
               </Link>
@@ -326,15 +326,15 @@ export default function AussieWayVisa() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+            className="p-4 md:p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
           >
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Zap size={20} className="text-[#d2f7be]" />
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 flex items-center gap-2">
+              <Zap size={18} className="md:w-5 md:h-5 text-[#d2f7be]" />
               Challenges Solved
             </h3>
             <ul className="space-y-3">
@@ -352,10 +352,10 @@ export default function AussieWayVisa() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+            className="p-4 md:p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
           >
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-              <Globe size={20} className="text-[#d2f7be]" />
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 flex items-center gap-2">
+              <Globe size={18} className="md:w-5 md:h-5 text-[#d2f7be]" />
               Results Achieved
             </h3>
             <ul className="space-y-3">
@@ -373,7 +373,7 @@ export default function AussieWayVisa() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative text-center p-12 rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-4 md:mb-[15px]"
+          className="relative text-center p-6 md:p-12 rounded-2xl md:rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-4 md:mb-[15px]"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
@@ -386,8 +386,8 @@ export default function AussieWayVisa() {
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
-            <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">Ready to build something similar?</h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-4">Ready to build something similar?</h2>
+            <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8 max-w-xl mx-auto">
               Let's discuss your project and create a solution that makes sense for your business.
             </p>
             <Link href="/contact">
