@@ -252,7 +252,7 @@ export default function AussieWayVisa() {
           </motion.div>
         </div>
       </section>
-      <div className="container mx-auto px-6 md:pb-20 mt-[0px] mb-[0px] pl-[24px] pr-[24px] pt-[0px] pb-[0px]">
+      <div className="container mx-auto px-6">
         <ProjectSlider />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
@@ -373,7 +373,7 @@ export default function AussieWayVisa() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative text-center p-12 rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-6 md:mb-10"
+          className="relative text-center p-12 rounded-3xl border border-[#d2f7be]/10 overflow-hidden"
         >
           <div 
             className="absolute inset-0 z-0 opacity-40"
