@@ -181,7 +181,7 @@ export default function SenseStudyHub() {
               
               <div className="text-center">
                 <Link href="/contact?service=fullstack">
-                  <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#c4b5fd' }} data-testid="button-start-similar">
+                  <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
                     Start Similar Project
                   </Button>
                 </Link>
@@ -255,7 +255,7 @@ export default function SenseStudyHub() {
               Let's discuss your project and create a solution that makes sense for your business.
             </p>
             <Link href="/contact">
-              <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#c4b5fd' }} data-testid="button-get-in-touch">
+              <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-get-in-touch">
                 Get in Touch
               </Button>
             </Link>
