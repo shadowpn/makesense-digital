@@ -179,13 +179,11 @@ export default function OraAid() {
                 </div>
               </div>
               
-              <div className="text-center">
-                <Link href="/contact?service=mvp">
-                  <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
-                    Start Similar Project
-                  </Button>
-                </Link>
-              </div>
+              <Link href="/contact?service=mvp" className="block w-1/2 mx-auto">
+                <Button size="lg" className="w-full rounded-xl shadow-lg shadow-purple-500/40 text-sm md:text-base" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
+                  Start Similar Project
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
