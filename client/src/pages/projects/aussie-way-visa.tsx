@@ -184,14 +184,16 @@ export default function AussieWayVisa() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <Link href="/portfolio">
-              <Button variant="ghost" className="mb-6 gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
-                <ArrowLeft size={18} />
-                Back to Portfolio
-              </Button>
-            </Link>
-            
-            <Badge className="mb-4 bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
+            <div className="flex items-center justify-between mb-6">
+              <Link href="/portfolio">
+                <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
+                  <ArrowLeft size={18} />
+                  Back to Portfolio
+                </Button>
+              </Link>
+              
+              <Badge className="bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
+            </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
               {projectData.title}
