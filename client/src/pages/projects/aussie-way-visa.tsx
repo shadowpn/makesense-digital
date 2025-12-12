@@ -33,7 +33,7 @@ const projectData = {
   year: "2024",
   client: "Immigration Consultancy",
   description: "A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.",
-  longDescription: "Visa Australia Online is a migration business of Sydney-based law firm Checkbox Legal, founded in 2023 by experienced Australian lawyer Andre Petrov. As registered migration lawyers approved by the Australian authority for migration agents (MARA), they offer comprehensive visa application services for studying, working, and living in Australia. The platform features AI-powered visa eligibility assessment, integrated Calendly booking for consultations, and detailed guidance through student visas, skilled worker visas, family visas, and regional migration pathways.",
+  longDescription: "Visa Australia Online is a migration business of Sydney-based law firm Checkbox Legal, established in 2023. As registered migration lawyers approved by the Australian authority for migration agents (MARA), they offer comprehensive visa application services for studying, working, and living in Australia. The platform features AI-powered visa eligibility assessment, integrated Calendly booking for consultations, and detailed guidance through student visas, skilled worker visas, family visas, and regional migration pathways.",
   partners: [
     { name: "Checkbox Legal", description: "Sydney-based law firm revitalising legal services with modern technology", url: "https://checkboxlegal.com.au/" },
     { name: "Flat Fee Conveyancing", description: "Expert property conveyancing services across Sydney and NSW", url: "https://flatfeeconveyancing.com.au/" }
