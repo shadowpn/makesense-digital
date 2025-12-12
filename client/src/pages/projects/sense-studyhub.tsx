@@ -128,7 +128,7 @@ export default function SenseStudyHub() {
         </div>
       </section>
 
-      <div className="container mx-auto px-6 py-12 md:py-20">
+      <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -180,7 +180,7 @@ export default function SenseStudyHub() {
               </div>
               
               <Link href="/contact?service=fullstack">
-                <Button size="lg" className="w-full rounded-xl shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
+                <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
                   Start Similar Project
                 </Button>
               </Link>
@@ -235,17 +235,29 @@ export default function SenseStudyHub() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center p-12 rounded-3xl border border-[#d2f7be]/10 bg-[#d2f7be]/5"
+          className="relative text-center p-6 md:p-12 rounded-2xl md:rounded-3xl border border-[#d2f7be]/10 overflow-hidden mb-4 md:mb-[15px]"
         >
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">Ready to build something similar?</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Let's discuss your project and create a solution that makes sense for your business.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-get-in-touch">
-              Get in Touch
-            </Button>
-          </Link>
+          <div 
+            className="absolute inset-0 z-0 opacity-40"
+            style={{
+              backgroundImage: `url(${workHeroBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          
+          <div className="relative z-20">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-4">Ready to build something similar?</h2>
+            <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8 max-w-xl mx-auto">
+              Let's discuss your project and create a solution that makes sense for your business.
+            </p>
+            <Link href="/contact">
+              <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-get-in-touch">
+                Get in Touch
+              </Button>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </Layout>
