@@ -178,7 +178,7 @@ export default function AussieWayVisa() {
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
-        <div className="container mx-auto px-6 relative z-20 pt-20">
+        <div className="container mx-auto px-6 relative z-20 pt-32 md:pt-40">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
