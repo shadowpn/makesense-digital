@@ -217,8 +217,8 @@ export default function AussieWayVisa() {
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
-        <div className="container mx-auto px-4 md:px-6 relative z-20 pt-32 md:pt-40">
-          <div className="flex justify-between items-center mb-6 w-full">
+        <div className="container mx-auto px-4 md:px-6 relative z-20 pt-[10px] md:pt-[10px]">
+          <div className="flex justify-between items-center w-full">
             <Link href="/portfolio">
               <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
                 <ArrowLeft size={18} />
@@ -236,7 +236,7 @@ export default function AussieWayVisa() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl"
+            className="max-w-4xl mt-[30px] md:mt-[60px]"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
               {projectData.title}
