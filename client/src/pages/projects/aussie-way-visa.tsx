@@ -206,7 +206,7 @@ export default function AussieWayVisa() {
 
   return (
     <Layout>
-      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end justify-center overflow-hidden pb-8">
         <div 
           className="absolute inset-0 z-0 opacity-40"
           style={{
