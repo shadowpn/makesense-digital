@@ -15,7 +15,7 @@ import screenshot4 from "@assets/image_1765519752412.png";
 import screenshot5 from "@assets/image_1765519773867.png";
 import screenshot6 from "@assets/image_1765519796301.png";
 import screenshot7 from "@assets/image_1765519815804.png";
-import ctaBg from "@assets/generated_images/soft_teal_mint_gradient_cta.png";
+import ctaBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 const projectScreenshots = [
   { src: screenshot1, label: "Homepage" },
