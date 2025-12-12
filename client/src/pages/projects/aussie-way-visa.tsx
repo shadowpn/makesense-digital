@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ChevronLeft, ChevronRight, Zap, CheckCircle, Globe, Calendar, Users } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Zap, CheckCircle, Globe, Calendar, Users, ExternalLink, Handshake } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { updateSEO } from "@/utils/seo";
@@ -33,7 +33,11 @@ const projectData = {
   year: "2024",
   client: "Immigration Consultancy",
   description: "A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.",
-  longDescription: "Aussie Way Visa is a comprehensive digital platform designed to simplify the Australian immigration process. The platform provides potential migrants with detailed information about visa options, eligibility requirements, and step-by-step guidance through the application process. Integrated with AI-powered assistance and calendar booking for consultations.",
+  longDescription: "Visa Australia Online is a migration business of Sydney-based law firm Checkbox Legal, founded in 2023 by experienced Australian lawyer Andre Petrov. As registered migration lawyers approved by the Australian authority for migration agents (MARA), they offer comprehensive visa application services for studying, working, and living in Australia. The platform features AI-powered visa eligibility assessment, integrated Calendly booking for consultations, and detailed guidance through student visas, skilled worker visas, family visas, and regional migration pathways.",
+  partners: [
+    { name: "Checkbox Legal", description: "Sydney-based law firm revitalising legal services with modern technology", url: "https://checkboxlegal.com.au/" },
+    { name: "Flat Fee Conveyancing", description: "Expert property conveyancing services across Sydney and NSW", url: "https://flatfeeconveyancing.com.au/" }
+  ],
   tags: ["Next.js", "OpenAI API", "Calendly", "Express.js", "Node", "JavaScript", "Tailwind", "REST APIs", "Decap CMS"],
   features: [
     "AI-powered visa eligibility checker",
@@ -236,6 +240,29 @@ export default function AussieWayVisa() {
                   <CheckCircle size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0" />
                   <span className="text-sm">{feature}</span>
                 </div>
+              ))}
+            </div>
+            
+            <h3 className="text-xl font-bold mb-4 text-[#d2f7be] flex items-center gap-2">
+              <Handshake size={20} />
+              Partner Network
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              {projectData.partners.map((partner, i) => (
+                <a 
+                  key={i} 
+                  href={partner.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-[#d2f7be]/5 border border-[#d2f7be]/10 hover:bg-[#d2f7be]/10 transition-colors group"
+                  data-testid={`link-partner-${i}`}
+                >
+                  <ExternalLink size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <div>
+                    <span className="text-sm font-medium block">{partner.name}</span>
+                    <span className="text-xs text-muted-foreground">{partner.description}</span>
+                  </div>
+                </a>
               ))}
             </div>
           </motion.div>
