@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764056223710.png";
-import workHeroBg from "@assets/generated_images/calm_education_study_scene.png";
+import workHeroBg from "@assets/generated_images/realistic_cozy_study_desk.png";
 
 const projectData = {
   title: "Sense StudyHub",
