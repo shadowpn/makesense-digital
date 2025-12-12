@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Zap, CheckCircle, Glo
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
+import { AnimatedText } from "@/components/animated-text";
 import projectImg from "@assets/изображение_1764055739030.png";
 import heroBg from "@assets/generated_images/sydney_opera_house_sunset_view.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
@@ -240,9 +241,9 @@ export default function AussieWayVisa() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl md:mt-[60px] mt-4 mb-0"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
-              {projectData.title}
-            </h1>
+            <div className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
+              <AnimatedText text={projectData.title} staggerDelay={0.05} duration={0.5} initialDelay={0.2} repeat={false} />
+            </div>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
               {projectData.description}
