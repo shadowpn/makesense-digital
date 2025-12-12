@@ -184,16 +184,12 @@ export default function AussieWayVisa() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <div className="flex items-center justify-between mb-6">
-              <Link href="/portfolio">
-                <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
-                  <ArrowLeft size={18} />
-                  Back to Portfolio
-                </Button>
-              </Link>
-              
-              <Badge className="bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
-            </div>
+            <Link href="/portfolio">
+              <Button variant="ghost" className="mb-6 gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
+                <ArrowLeft size={18} />
+                Back to Portfolio
+              </Button>
+            </Link>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
               {projectData.title}
@@ -203,7 +199,8 @@ export default function AussieWayVisa() {
               {projectData.description}
             </p>
             
-            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <Badge className="bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
               <div className="flex items-center gap-2">
                 <Calendar size={16} className="text-[#d2f7be]" />
                 <span>{projectData.year}</span>
