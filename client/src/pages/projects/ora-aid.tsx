@@ -18,13 +18,13 @@ import screenshot7 from "@assets/image_1765519815804.png";
 import ctaBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 const projectScreenshots = [
-  { src: screenshot1, label: "Homepage" },
   { src: screenshot2, label: "Promo Offer" },
   { src: screenshot3, label: "About Product" },
   { src: screenshot4, label: "Features & Benefits" },
   { src: screenshot5, label: "Instructions" },
   { src: screenshot6, label: "Order Form" },
-  { src: screenshot7, label: "FAQ Section" }
+  { src: screenshot7, label: "FAQ Section" },
+  { src: screenshot1, label: "Homepage" }
 ];
 
 const projectData = {
