@@ -317,7 +317,7 @@ export default function AussieWayVisa() {
                 </div>
               </div>
               
-              <Link href="/contact?service=fullstack" className="block w-full md:w-1/2 mx-auto">
+              <Link href="/contact?service=fullstack" className="block w-1/2 mx-auto">
                 <Button size="lg" className="w-full rounded-xl shadow-lg shadow-purple-500/40 text-sm md:text-base" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
                   Start Similar Project
                 </Button>
