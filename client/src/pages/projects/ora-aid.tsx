@@ -2,12 +2,30 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, CheckCircle, Zap, Globe, Calendar, Users, Heart, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Zap, Globe, Calendar, Users, Heart, ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764057538171.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
+import screenshot1 from "@assets/image_1765519688917.png";
+import screenshot2 from "@assets/image_1765519711161.png";
+import screenshot3 from "@assets/image_1765519729055.png";
+import screenshot4 from "@assets/image_1765519752412.png";
+import screenshot5 from "@assets/image_1765519773867.png";
+import screenshot6 from "@assets/image_1765519796301.png";
+import screenshot7 from "@assets/image_1765519815804.png";
+
+const projectScreenshots = [
+  { src: projectImg, label: "Main Project View" },
+  { src: screenshot1, label: "Homepage" },
+  { src: screenshot2, label: "Promo Offer" },
+  { src: screenshot3, label: "About Product" },
+  { src: screenshot4, label: "Features & Benefits" },
+  { src: screenshot5, label: "Instructions" },
+  { src: screenshot6, label: "Order Form" },
+  { src: screenshot7, label: "FAQ Section" }
+];
 
 const projectData = {
   title: "Ora-Aid",
@@ -38,6 +56,103 @@ const projectData = {
     "Strong mobile engagement metrics"
   ]
 };
+
+function ProjectSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % projectScreenshots.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [isAutoPlaying]);
+
+  const goToPrevious = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev - 1 + projectScreenshots.length) % projectScreenshots.length);
+  };
+
+  const goToNext = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev + 1) % projectScreenshots.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setIsAutoPlaying(false);
+    setCurrentIndex(index);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="mb-16"
+    >
+      <div className="relative rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
+        <div className="relative aspect-video overflow-hidden">
+          {projectScreenshots.map((screenshot, index) => (
+            <motion.div
+              key={index}
+              initial={false}
+              animate={{
+                opacity: index === currentIndex ? 1 : 0,
+                scale: index === currentIndex ? 1 : 1.05,
+              }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <img 
+                src={screenshot.src} 
+                alt={screenshot.label} 
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
+          
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+          
+          <button
+            onClick={goToPrevious}
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            data-testid="button-slider-prev"
+          >
+            <ChevronLeft size={20} className="md:w-6 md:h-6" />
+          </button>
+          
+          <button
+            onClick={goToNext}
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            data-testid="button-slider-next"
+          >
+            <ChevronRight size={20} className="md:w-6 md:h-6" />
+          </button>
+          
+          <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 md:gap-2">
+            {projectScreenshots.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'w-6 md:w-8 bg-[#d2f7be]' 
+                    : 'bg-white/50 hover:bg-white/80'
+                }`}
+                data-testid={`button-slider-dot-${index}`}
+              />
+            ))}
+          </div>
+          
+          <div className="absolute bottom-2 md:bottom-4 right-2 md:right-4 px-2 md:px-4 py-1 md:py-2 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20">
+            <span className="text-xs md:text-sm text-white font-medium">{projectScreenshots[currentIndex].label}</span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function OraAid() {
   useEffect(() => {
@@ -129,16 +244,7 @@ export default function OraAid() {
       </section>
 
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
-            <img src={projectImg} alt={projectData.title} className="w-full h-auto" />
-          </div>
-        </motion.div>
+        <ProjectSlider />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           <motion.div
