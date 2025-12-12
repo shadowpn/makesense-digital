@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { useEffect, useState } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764057538171.png";
-import workHeroBg from "@assets/generated_images/happy_family_soft_warm_photo.png";
+import workHeroBg from "@assets/generated_images/soft_blue_white_abstract_waves.png";
 import screenshot1 from "@assets/image_1765519688917.png";
 import screenshot2 from "@assets/image_1765519711161.png";
 import screenshot3 from "@assets/image_1765519729055.png";
