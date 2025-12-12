@@ -223,7 +223,7 @@ export default function AussieWayVisa() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <div className="flex flex-wrap justify-between items-center gap-4 mb-6">
+            <div className="flex justify-between items-center mb-6 max-w-4xl">
               <Link href="/portfolio">
                 <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
                   <ArrowLeft size={18} />
@@ -231,7 +231,7 @@ export default function AussieWayVisa() {
                 </Button>
               </Link>
               <Link href="/portfolio/sense-studyhub" className="hidden md:block">
-                <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-next-project">
+                <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10 mr-0" data-testid="button-next-project">
                   Next Project
                   <ArrowRight size={18} />
                 </Button>
