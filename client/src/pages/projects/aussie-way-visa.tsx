@@ -223,7 +223,7 @@ export default function AussieWayVisa() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <div className="flex justify-between items-center mb-6 max-w-4xl">
+            <div className="flex justify-between items-center mb-6 w-full">
               <Link href="/portfolio">
                 <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
                   <ArrowLeft size={18} />
