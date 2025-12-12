@@ -2,12 +2,24 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Code2, Zap, CheckCircle, Globe, Calendar, Users } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Zap, CheckCircle, Globe, Calendar, Users } from "lucide-react";
 import { Link } from "wouter";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { updateSEO } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764055739030.png";
 import heroBg from "@assets/generated_images/australian_visa_immigration_concept.png";
+import screenshot1 from "@assets/generated_images/aussie_way_homepage_screenshot.png";
+import screenshot2 from "@assets/generated_images/skilled_visa_page_screenshot.png";
+import screenshot3 from "@assets/generated_images/student_visa_page_screenshot.png";
+import screenshot4 from "@assets/generated_images/contact_page_screenshot.png";
+
+const projectScreenshots = [
+  { src: projectImg, label: "Main Project View" },
+  { src: screenshot1, label: "Homepage" },
+  { src: screenshot2, label: "Skilled Visa" },
+  { src: screenshot3, label: "Student Visa" },
+  { src: screenshot4, label: "Contact Page" }
+];
 
 const projectData = {
   title: "Aussie Way Visa",
@@ -38,6 +50,103 @@ const projectData = {
     "Top Google rankings for key visa queries"
   ]
 };
+
+function ProjectSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % projectScreenshots.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [isAutoPlaying]);
+
+  const goToPrevious = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev - 1 + projectScreenshots.length) % projectScreenshots.length);
+  };
+
+  const goToNext = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev + 1) % projectScreenshots.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setIsAutoPlaying(false);
+    setCurrentIndex(index);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="mb-16"
+    >
+      <div className="relative rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
+        <div className="relative aspect-video overflow-hidden">
+          {projectScreenshots.map((screenshot, index) => (
+            <motion.div
+              key={index}
+              initial={false}
+              animate={{
+                opacity: index === currentIndex ? 1 : 0,
+                scale: index === currentIndex ? 1 : 1.05,
+              }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <img 
+                src={screenshot.src} 
+                alt={screenshot.label} 
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
+          
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+          
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            data-testid="button-slider-prev"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            data-testid="button-slider-next"
+          >
+            <ChevronRight size={24} />
+          </button>
+          
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
+            {projectScreenshots.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'w-8 bg-[#d2f7be]' 
+                    : 'bg-white/50 hover:bg-white/80'
+                }`}
+                data-testid={`button-slider-dot-${index}`}
+              />
+            ))}
+          </div>
+          
+          <div className="absolute bottom-4 right-4 px-4 py-2 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20">
+            <span className="text-sm text-white font-medium">{projectScreenshots[currentIndex].label}</span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function AussieWayVisa() {
   useEffect(() => {
@@ -101,16 +210,7 @@ export default function AussieWayVisa() {
       </section>
 
       <div className="container mx-auto px-6 py-12 md:py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
-            <img src={projectImg} alt={projectData.title} className="w-full h-auto" />
-          </div>
-        </motion.div>
+        <ProjectSlider />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           <motion.div
