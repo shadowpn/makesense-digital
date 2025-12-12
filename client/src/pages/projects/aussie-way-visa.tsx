@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ChevronLeft, ChevronRight, Zap, CheckCircle, Globe, Calendar, Users, ExternalLink, Handshake } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Zap, CheckCircle, Globe, Calendar, Users, ExternalLink, Handshake } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
@@ -223,12 +223,20 @@ export default function AussieWayVisa() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl"
           >
-            <Link href="/portfolio">
-              <Button variant="ghost" className="mb-6 gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
-                <ArrowLeft size={18} />
-                Back to Portfolio
-              </Button>
-            </Link>
+            <div className="flex flex-wrap justify-between items-center gap-4 mb-6">
+              <Link href="/portfolio">
+                <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
+                  <ArrowLeft size={18} />
+                  Back to Portfolio
+                </Button>
+              </Link>
+              <Link href="/portfolio/sense-studyhub" className="hidden md:block">
+                <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-next-project">
+                  Next Project
+                  <ArrowRight size={18} />
+                </Button>
+              </Link>
+            </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
               {projectData.title}
