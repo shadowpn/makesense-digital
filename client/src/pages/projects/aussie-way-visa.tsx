@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { updateSEO } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764055739030.png";
-import heroBg from "@assets/generated_images/sydney_opera_house_sunset_view.png";
+import heroBg from "@assets/generated_images/australia_map_visa_passport_concept.png";
 import screenshot1 from "@assets/image_1765510416039.png";
 import screenshot2 from "@assets/image_1765510439243.png";
 import screenshot3 from "@assets/image_1765510473516.png";
