@@ -94,6 +94,7 @@ function ProjectSlider() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
+      className="mb-16"
     >
       <div className="relative rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
         <div className="relative aspect-video overflow-hidden">
