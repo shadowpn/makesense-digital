@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { updateSEO } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764055739030.png";
 import heroBg from "@assets/generated_images/sydney_opera_house_sunset_view.png";
+import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import screenshot1 from "@assets/image_1765510416039.png";
 import screenshot2 from "@assets/image_1765510439243.png";
 import screenshot3 from "@assets/image_1765510473516.png";
@@ -339,17 +340,29 @@ export default function AussieWayVisa() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center p-12 rounded-3xl border border-[#d2f7be]/10 bg-[#d2f7be]/5"
+          className="relative text-center p-12 rounded-3xl border border-[#d2f7be]/10 overflow-hidden"
         >
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">Ready to build something similar?</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Let's discuss your project and create a solution that makes sense for your business.
-          </p>
-          <Link href="/contact">
-            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-get-in-touch">
-              Get in Touch
-            </Button>
-          </Link>
+          <div 
+            className="absolute inset-0 z-0 opacity-40"
+            style={{
+              backgroundImage: `url(${workHeroBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          
+          <div className="relative z-20">
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">Ready to build something similar?</h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+              Let's discuss your project and create a solution that makes sense for your business.
+            </p>
+            <Link href="/contact">
+              <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-get-in-touch">
+                Get in Touch
+              </Button>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </Layout>
