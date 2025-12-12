@@ -217,7 +217,7 @@ export default function AussieWayVisa() {
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
         
-        <div className="absolute top-2 left-0 right-0 z-30 container mx-auto px-4 md:px-6">
+        <div className="absolute top-2 md:top-6 left-0 right-0 z-30 container mx-auto px-4 md:px-6">
           <div className="flex justify-between items-center w-full">
             <Link href="/portfolio">
               <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
