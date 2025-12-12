@@ -203,8 +203,8 @@ export default function ExpertLash() {
             </h3>
             <ul className="space-y-3">
               {projectData.challenges.map((challenge, i) => (
-                <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
-                  <span className="text-[#d2f7be] mt-1">•</span>
+                <li key={i} className="text-muted-foreground text-sm flex items-center gap-2">
+                  <span className="text-[#d2f7be] flex-shrink-0">•</span>
                   {challenge}
                 </li>
               ))}
