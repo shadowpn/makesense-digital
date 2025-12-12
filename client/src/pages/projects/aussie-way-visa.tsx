@@ -94,7 +94,6 @@ function ProjectSlider() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="mb-16"
     >
       <div className="relative rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
         <div className="relative aspect-video overflow-hidden">
@@ -253,7 +252,7 @@ export default function AussieWayVisa() {
         </div>
       </section>
 
-      <div className="container mx-auto px-6 py-12 md:py-20">
+      <div className="container mx-auto px-6 pb-12 md:pb-20">
         <ProjectSlider />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
