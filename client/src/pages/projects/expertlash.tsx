@@ -1,0 +1,227 @@
+import { Layout } from "@/components/layout";
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, CheckCircle, Zap, Globe, Calendar, Users, Sparkles, CreditCard, MessageSquare } from "lucide-react";
+import { Link } from "wouter";
+import { useEffect } from "react";
+import { updateSEO } from "@/utils/seo";
+import projectImg from "@assets/generated_images/expertlash_connect_with_rich_pink_design.png";
+import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
+
+const projectData = {
+  title: "ExpertLash",
+  category: "Beauty Tech",
+  year: "2024",
+  client: "Beauty Industry Platform",
+  description: "Professional lash extension booking and consultation platform. Connect with expert lash technicians and manage appointments seamlessly.",
+  longDescription: "ExpertLash is a comprehensive beauty tech platform that revolutionizes how clients connect with professional lash technicians. Built as a Telegram Bot with a Mini App interface, it provides seamless booking, consultation scheduling, and subscription management. The platform integrates multiple payment providers and offers a premium experience for both clients and beauty professionals.",
+  tags: ["Telegram Bot", "Telegram MiniApp", "Paid Subscription", "Stripe", "PayPal", "Authentication", "Python", "Supabase", "Next.js", "Tailwind"],
+  features: [
+    "Telegram Bot with Mini App interface",
+    "Paid subscription management",
+    "Stripe & PayPal payment integration",
+    "User authentication system",
+    "Appointment booking calendar",
+    "Real-time notifications"
+  ],
+  challenges: [
+    "Integrating Telegram Mini App with web backend",
+    "Building secure payment processing flow",
+    "Managing subscription lifecycle",
+    "Creating intuitive bot conversation flows"
+  ],
+  results: [
+    "500+ active monthly subscribers",
+    "Payment processing success rate of 99.5%",
+    "Bot interaction rate increased by 80%",
+    "Customer satisfaction score of 4.9/5"
+  ]
+};
+
+export default function ExpertLash() {
+  useEffect(() => {
+    updateSEO({
+      title: "ExpertLash - Case Study | SensePower Digital",
+      description: "Professional lash extension booking platform with Telegram Bot. Stripe, PayPal, Supabase integration.",
+      keywords: "ExpertLash, case study, Beauty Tech, Telegram Bot, Stripe, PayPal, subscription platform",
+      ogUrl: "https://sensepower.digital/portfolio/expertlash",
+      canonicalUrl: "https://sensepower.digital/portfolio/expertlash"
+    });
+  }, []);
+
+  return (
+    <Layout>
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0 opacity-40"
+          style={{
+            backgroundImage: `url(${workHeroBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
+        
+        <div className="container mx-auto px-6 relative z-20 pt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl"
+          >
+            <Link href="/portfolio">
+              <Button variant="ghost" className="mb-6 gap-2 hover:bg-[#d2f7be]/10" data-testid="button-back-portfolio">
+                <ArrowLeft size={18} />
+                Back to Portfolio
+              </Button>
+            </Link>
+            
+            <Badge className="mb-4 bg-[#d2f7be]/10 text-[#d2f7be] border-[#d2f7be]/20">{projectData.category}</Badge>
+            
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
+              {projectData.title}
+            </h1>
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
+              {projectData.description}
+            </p>
+            
+            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Calendar size={16} className="text-[#d2f7be]" />
+                <span>{projectData.year}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Sparkles size={16} className="text-[#d2f7be]" />
+                <span>{projectData.client}</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="container mx-auto px-6 py-12 md:py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
+            <img src={projectImg} alt={projectData.title} className="w-full h-auto" />
+          </div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2"
+          >
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">Project Overview</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              {projectData.longDescription}
+            </p>
+            
+            <h3 className="text-xl font-bold mb-4 text-[#d2f7be]">Key Features</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              {projectData.features.map((feature, i) => (
+                <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-[#d2f7be]/5 border border-[#d2f7be]/10">
+                  {i % 3 === 0 ? <MessageSquare size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0" /> : 
+                   i % 3 === 1 ? <CreditCard size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0" /> :
+                   <Sparkles size={20} className="text-[#d2f7be] mt-0.5 flex-shrink-0" />}
+                  <span className="text-sm">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            <div className="sticky top-24 space-y-6">
+              <div className="p-6 rounded-2xl border border-[#d2f7be]/10 bg-[#d2f7be]/5">
+                <h3 className="text-lg font-bold mb-4">Tech Stack</h3>
+                <div className="flex flex-wrap gap-2">
+                  {projectData.tags.map((tag, i) => (
+                    <Badge key={i} variant="outline" className="border-[#d2f7be]/20 text-xs">{tag}</Badge>
+                  ))}
+                </div>
+              </div>
+              
+              <Link href="/contact?service=telegram">
+                <Button size="lg" className="w-full rounded-xl shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-start-similar">
+                  Start Similar Project
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+          >
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+              <Zap size={20} className="text-[#d2f7be]" />
+              Challenges Solved
+            </h3>
+            <ul className="space-y-3">
+              {projectData.challenges.map((challenge, i) => (
+                <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
+                  <span className="text-[#d2f7be] mt-1">•</span>
+                  {challenge}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="p-8 rounded-2xl border border-[#d2f7be]/10 bg-gradient-to-br from-[#d2f7be]/5 to-transparent"
+          >
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+              <Globe size={20} className="text-[#d2f7be]" />
+              Results Achieved
+            </h3>
+            <ul className="space-y-3">
+              {projectData.results.map((result, i) => (
+                <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
+                  <CheckCircle size={16} className="text-[#d2f7be] mt-0.5 flex-shrink-0" />
+                  {result}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center p-12 rounded-3xl border border-[#d2f7be]/10 bg-[#d2f7be]/5"
+        >
+          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">Ready to build something similar?</h2>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Let's discuss your project and create a solution that makes sense for your business.
+          </p>
+          <Link href="/contact">
+            <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-get-in-touch">
+              Get in Touch
+            </Button>
+          </Link>
+        </motion.div>
+      </div>
+    </Layout>
+  );
+}

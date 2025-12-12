@@ -17,6 +17,7 @@ const projects = [
   {
     id: 1,
     title: "Aussie Way Visa",
+    slug: "aussie-way-visa",
     category: "Legal Tech",
     description: "A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.",
     tags: ["Next.js", "OpenAI API", "Calendly", "Express.js", "Node", "JavaScript", "Tailwind", "REST APIs", "Decap CMS"],
@@ -25,6 +26,7 @@ const projects = [
   {
     id: 2,
     title: "Sense StudyHub",
+    slug: "sense-studyhub",
     category: "EdTech",
     description: "Comprehensive online learning platform with interactive courses and student engagement tools.",
     tags: ["Python", "JavaScript", "Django", "Next.js", "Tailwind", "Authentication", "HTML", "CSS", "Responsive Mobile"],
@@ -33,6 +35,7 @@ const projects = [
   {
     id: 3,
     title: "Ora-Aid",
+    slug: "ora-aid",
     category: "HealthTech",
     description: "Self-adhesive intraoral patch for safe, effective oral wound care. Innovative healthcare solution.",
     tags: ["Landing Page", "Bootstrap 5", "HTML", "CSS", "E-commerce", "Email Integration"],
@@ -41,6 +44,7 @@ const projects = [
   {
     id: 4,
     title: "ExpertLash",
+    slug: "expertlash",
     category: "Beauty Tech",
     description: "Professional lash extension booking and consultation platform. Connect with expert lash technicians and manage appointments seamlessly.",
     tags: ["Telegram Bot", "Telegram MiniApp", "Paid Subscription", "Stripe", "PayPal", "Authentication", "Python", "Supabase", "Next.js", "Tailwind"],
@@ -121,41 +125,43 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-12">
           {projects.map((project, index) => (
             <Fragment key={project.id}>
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group cursor-pointer"
-              >
-                <div className="relative aspect-[4/3] mb-2 md:mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
-                  
-                  <div className="absolute top-6 right-6 p-3 bg-black/50 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-[#d2f7be]/10">
-                    <ArrowUpRight className="text-[#d2f7be]" />
+              <Link href={`/portfolio/${project.slug}`} data-testid={`link-project-${project.slug}`}>
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group cursor-pointer"
+                >
+                  <div className="relative aspect-[4/3] mb-2 md:mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
+                    
+                    <div className="absolute top-6 right-6 p-3 bg-black/50 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 border border-[#d2f7be]/10">
+                      <ArrowUpRight className="text-[#d2f7be]" />
+                    </div>
                   </div>
-                </div>
 
-                <div className="flex items-start justify-between mb-2 gap-2">
-                  <h3 className="text-xl md:text-3xl font-display font-bold group-hover:text-primary transition-colors">{project.title}</h3>
-                  <span className="text-muted-foreground font-mono text-xs md:text-sm pt-1 md:pt-2 whitespace-nowrap">{project.category}</span>
-                </div>
-                
-                <p className="text-xs md:text-base text-muted-foreground mb-3 md:mb-4 max-w-md">{project.description}</p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <Badge key={`${project.id}-${tagIndex}`} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-[#d2f7be]/5 text-xs md:text-sm">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </motion.div>
+                  <div className="flex items-start justify-between mb-2 gap-2">
+                    <h3 className="text-xl md:text-3xl font-display font-bold group-hover:text-primary transition-colors">{project.title}</h3>
+                    <span className="text-muted-foreground font-mono text-xs md:text-sm pt-1 md:pt-2 whitespace-nowrap">{project.category}</span>
+                  </div>
+                  
+                  <p className="text-xs md:text-base text-muted-foreground mb-3 md:mb-4 max-w-md">{project.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <Badge key={`${project.id}-${tagIndex}`} variant="secondary" className="rounded-md bg-muted/50 text-muted-foreground font-normal border-[#d2f7be]/5 text-xs md:text-sm">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </motion.div>
+              </Link>
               
               {index === 1 && (
                 <motion.div
