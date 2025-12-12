@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import { useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import researchHeroBg from "@assets/generated_images/research_knowledge_hub_design.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
@@ -91,11 +91,30 @@ const artifacts = [
 export default function Research() {
   useEffect(() => {
     updateSEO({
-      title: "Research Hub - SensePower Digital | Making Knowledge Accessible",
-      description: "Explore our research articles, testing frameworks, and design resources. Practical insights on automated testing, dark mode design, and MVP architecture.",
-      keywords: "research, articles, testing frameworks, Playwright, Cypress, design systems, MVP architecture, knowledge hub",
-      ogUrl: "https://sensepower.digital/research",
-      canonicalUrl: "https://sensepower.digital/research"
+      title: "Research Hub - SensePower Digital | Testing Insights & Design Resources",
+      description: "Explore our research articles, testing frameworks, and design resources. Expert insights on Playwright vs Cypress, dark mode design patterns, MVP architecture, and React performance optimization.",
+      keywords: "research articles, testing frameworks, Playwright tutorial, Cypress guide, dark mode design, MVP architecture patterns, React performance, design systems, E2E testing, automation testing guides, knowledge hub",
+      ogTitle: "Research Hub - Testing & Design Insights | SensePower Digital",
+      ogDescription: "Expert articles on automated testing, design systems, and MVP architecture. Free resources and frameworks.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/research",
+      twitterTitle: "Research Hub | SensePower Digital",
+      twitterDescription: "Free resources: Testing frameworks, design systems, performance guides. Expert insights from Sydney tech studio.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/research"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "SensePower Digital Research Hub",
+      "description": "Research articles, testing frameworks, and design resources.",
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "blogPost": [
+        { "@type": "BlogPosting", "headline": "The State of Automated Testing in 2025", "datePublished": "2025-11-12" },
+        { "@type": "BlogPosting", "headline": "Designing for Dark Mode First", "datePublished": "2025-10-24" },
+        { "@type": "BlogPosting", "headline": "MVP Architecture Patterns", "datePublished": "2025-10-10" }
+      ]
     });
   }, []);
 

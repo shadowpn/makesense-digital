@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import introduceBg from "@assets/Introduce_1764120672692.jpg";
 import nataliiaPhoto from "@assets/Her-Tech-Circle-0362-13_1764908606611.jpg";
 import journeyBg from "@assets/generated_images/modern_tech_services_background.png";
@@ -16,11 +16,30 @@ export default function About() {
 
   useEffect(() => {
     updateSEO({
-      title: "About Us - SensePower Digital | Making Complexity Simple",
-      description: "Meet the team behind SensePower Digital. We transform complex tech challenges into simple, working solutions. Professional fullstack development and QA testing services.",
-      keywords: "about us, team, fullstack developer, QA engineer, Sydney Australia, digital studio, web development",
-      ogUrl: "https://sensepower.digital/about",
-      canonicalUrl: "https://sensepower.digital/about"
+      title: "About Us - SensePower Digital | Sydney Fullstack Developer & QA Engineer",
+      description: "Meet the team behind SensePower Digital. Professional fullstack developer and QA engineer based in Sydney, Australia. 5+ years experience in web development, automation testing, and digital solutions.",
+      keywords: "about SensePower Digital, Sydney developer, QA engineer Australia, fullstack developer Sydney, web development team, tech studio Australia, professional developer, automation testing expert",
+      ogTitle: "About Us - Meet SensePower Digital Team",
+      ogDescription: "Sydney-based fullstack developer and QA engineer transforming complex tech challenges into simple solutions.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/about",
+      twitterTitle: "About SensePower Digital | Sydney Tech Team",
+      twitterDescription: "Meet our team: Professional fullstack developer and QA engineer based in Sydney, Australia.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/about"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About SensePower Digital",
+      "description": "Meet the team behind SensePower Digital - professional fullstack developer and QA engineer.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "SensePower Digital",
+        "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "Australia" },
+        "employee": { "@type": "Person", "jobTitle": "Fullstack Developer & QA Engineer" }
+      }
     });
   }, []);
 

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import { useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import heroBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 import ctaBg from "@assets/generated_images/abstract_tech_geometric_pattern_background.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
@@ -23,11 +23,30 @@ const fadeIn = {
 export default function Home() {
   useEffect(() => {
     updateSEO({
-      title: "SensePower Digital - We Code. We Test. We Make Sense.",
-      description: "Modern UX portfolio and digital studio. We create and test digital products from concept to implementation. Fullstack development, QA automation, and design systems.",
-      keywords: "fullstack development, QA testing, MVP development, digital studio, web design, React, Next.js, automation",
-      ogUrl: "https://sensepower.digital/",
-      canonicalUrl: "https://sensepower.digital/"
+      title: "SensePower Digital - We Code. We Test. We Make Sense. | Sydney Tech Studio",
+      description: "Sydney-based digital studio specializing in fullstack development, QA automation testing, and MVP development. We create and test digital products from concept to implementation using React, Next.js, Python, and Playwright.",
+      keywords: "SensePower Digital, fullstack development Sydney, QA testing Australia, MVP development, digital studio, web development, React developer, Next.js, automation testing, Playwright, Cypress, web design Sydney",
+      ogTitle: "SensePower Digital - We Code. We Test. We Make Sense.",
+      ogDescription: "Sydney digital studio creating and testing digital products. Fullstack development, QA automation, MVP solutions.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/",
+      twitterTitle: "SensePower Digital - Sydney Tech Studio",
+      twitterDescription: "We code. We test. We make sense. Fullstack development & QA automation from Sydney, Australia.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SensePower Digital",
+      "description": "Sydney-based digital studio specializing in fullstack development and QA automation testing.",
+      "url": "https://makesense.replit.app",
+      "logo": "https://makesense.replit.app/og-image.png",
+      "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "Australia" },
+      "sameAs": [],
+      "foundingDate": "2023",
+      "knowsAbout": ["Fullstack Development", "QA Testing", "MVP Development", "React", "Next.js", "Python", "Playwright"]
     });
   }, []);
 

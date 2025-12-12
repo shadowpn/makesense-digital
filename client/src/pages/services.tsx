@@ -13,7 +13,7 @@ import designImg from "@assets/generated_images/professional_design_system_ui.pn
 import devopsImg from "@assets/generated_images/modern_cloud_deployment_tech.png";
 import { useLocation, Link } from "wouter";
 import { useState, useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 
 const services = [
   {
@@ -127,11 +127,35 @@ export default function Services() {
 
   useEffect(() => {
     updateSEO({
-      title: "Services - SensePower Digital | Technology That Makes Sense",
-      description: "Professional digital services: QA & Automation, MVP Development, Fullstack Solutions, Telegram Bots. From $40/hour. Technology that actually works.",
-      keywords: "QA testing, automation, MVP development, fullstack, Telegram bots, web development, pricing, Sydney Australia",
-      ogUrl: "https://sensepower.digital/services",
-      canonicalUrl: "https://sensepower.digital/services"
+      title: "Services & Pricing - SensePower Digital | QA, MVP, Fullstack, Telegram Bots",
+      description: "Professional digital services from Sydney studio: QA & Automation Testing, MVP Development, Fullstack Solutions, Telegram Bot Development. Transparent pricing from $40/hour. Enterprise-grade quality, startup-friendly approach.",
+      keywords: "QA testing services, automation testing Playwright Cypress, MVP development Sydney, fullstack development, Telegram bot development, web development pricing, software development rates, React Next.js developer, Python Django developer",
+      ogTitle: "Services & Pricing - SensePower Digital",
+      ogDescription: "Professional digital services: QA automation, MVP development, fullstack solutions, and Telegram bots. From $40/hour.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/services",
+      twitterTitle: "Services & Pricing | SensePower Digital Sydney",
+      twitterDescription: "QA testing, MVP development, fullstack solutions, Telegram bots. Transparent pricing from $40/hour.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/services"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "provider": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "serviceType": ["QA Testing", "MVP Development", "Fullstack Development", "Telegram Bot Development"],
+      "areaServed": { "@type": "Country", "name": "Australia" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "QA & Automation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "MVP Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fullstack Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Telegram Bot Development" } }
+        ]
+      }
     });
   }, []);
 

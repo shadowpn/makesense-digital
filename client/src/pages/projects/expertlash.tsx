@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle, Zap, Globe, Calendar, Users, Sparkles, CreditCard, MessageSquare } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/generated_images/expertlash_connect_with_rich_pink_design.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
@@ -42,11 +42,30 @@ const projectData = {
 export default function ExpertLash() {
   useEffect(() => {
     updateSEO({
-      title: "ExpertLash - Case Study | SensePower Digital",
-      description: "Professional lash extension booking platform with Telegram Bot. Stripe, PayPal, Supabase integration.",
-      keywords: "ExpertLash, case study, Beauty Tech, Telegram Bot, Stripe, PayPal, subscription platform",
-      ogUrl: "https://sensepower.digital/portfolio/expertlash",
-      canonicalUrl: "https://sensepower.digital/portfolio/expertlash"
+      title: "ExpertLash - Beauty Tech Telegram Bot Platform | Case Study | SensePower Digital",
+      description: "Professional lash extension booking platform built as a Telegram Bot with Mini App interface. Features paid subscriptions via Stripe and PayPal, appointment booking, authentication, and real-time notifications using Python and Supabase.",
+      keywords: "ExpertLash, Telegram Bot development, Beauty Tech, lash extensions booking, Telegram Mini App, Stripe integration, PayPal payments, subscription platform, beauty industry app, appointment scheduling, Supabase, Python bot",
+      ogTitle: "ExpertLash - Beauty Tech Telegram Platform | Case Study",
+      ogDescription: "Learn how we built a comprehensive Telegram Bot with Mini App for beauty professionals with payment integration.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/portfolio/expertlash",
+      twitterTitle: "ExpertLash - Telegram Bot for Beauty Industry | SensePower Digital",
+      twitterDescription: "Case study: Beauty tech platform with Telegram Bot, subscriptions, and payment processing.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/portfolio/expertlash"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ExpertLash - Beauty Tech Case Study",
+      "description": "Professional lash extension booking platform with Telegram Bot and payment integration.",
+      "author": { "@type": "Organization", "name": "SensePower Digital" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-12-12",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://makesense.replit.app/portfolio/expertlash" },
+      "about": { "@type": "SoftwareApplication", "name": "ExpertLash", "applicationCategory": "Business", "operatingSystem": "Telegram" }
     });
   }, []);
 

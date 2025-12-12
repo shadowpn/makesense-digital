@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle, Zap, Globe, Calendar, Users, BookOpen, GraduationCap } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764056223710.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
@@ -42,11 +42,30 @@ const projectData = {
 export default function SenseStudyHub() {
   useEffect(() => {
     updateSEO({
-      title: "Sense StudyHub - Case Study | SensePower Digital",
-      description: "Comprehensive online learning platform with interactive courses. Python, Django, Next.js development.",
-      keywords: "Sense StudyHub, case study, EdTech, education platform, Django, Next.js, online learning",
-      ogUrl: "https://sensepower.digital/portfolio/sense-studyhub",
-      canonicalUrl: "https://sensepower.digital/portfolio/sense-studyhub"
+      title: "Sense StudyHub - Online Learning Platform | Case Study | SensePower Digital",
+      description: "Comprehensive EdTech platform for online education with interactive courses, student progress tracking, video lessons, quizzes, and community forums. Built with Python, Django, Next.js, and Tailwind CSS.",
+      keywords: "Sense StudyHub, online learning platform, EdTech, education technology, e-learning, Django, Next.js, Python, interactive courses, student portal, LMS, learning management system, online education Australia",
+      ogTitle: "Sense StudyHub - EdTech Learning Platform | Case Study",
+      ogDescription: "Discover how we built a comprehensive online learning platform with interactive courses, progress tracking, and community features.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/portfolio/sense-studyhub",
+      twitterTitle: "Sense StudyHub - Online Learning Platform | SensePower Digital",
+      twitterDescription: "Case study: EdTech platform with interactive courses, video content, and student engagement tools.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/portfolio/sense-studyhub"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Sense StudyHub - EdTech Case Study",
+      "description": "Comprehensive online learning platform with interactive courses and student engagement tools.",
+      "author": { "@type": "Organization", "name": "SensePower Digital" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-12-12",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://makesense.replit.app/portfolio/sense-studyhub" },
+      "about": { "@type": "SoftwareApplication", "name": "Sense StudyHub", "applicationCategory": "Education", "operatingSystem": "Web" }
     });
   }, []);
 

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle, Zap, Globe, Calendar, Users, Heart, ShoppingCart } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764057538171.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 
@@ -42,11 +42,30 @@ const projectData = {
 export default function OraAid() {
   useEffect(() => {
     updateSEO({
-      title: "Ora-Aid - Case Study | SensePower Digital",
-      description: "Healthcare product landing page for innovative oral wound care solution. E-commerce, Bootstrap 5 development.",
-      keywords: "Ora-Aid, case study, HealthTech, landing page, e-commerce, Bootstrap 5, healthcare",
-      ogUrl: "https://sensepower.digital/portfolio/ora-aid",
-      canonicalUrl: "https://sensepower.digital/portfolio/ora-aid"
+      title: "Ora-Aid - Healthcare Product Landing Page | Case Study | SensePower Digital",
+      description: "High-converting healthcare product landing page for Ora-Aid intraoral wound care patches. E-commerce integration, email marketing, mobile-optimized design with Bootstrap 5 and conversion optimization.",
+      keywords: "Ora-Aid, healthcare landing page, HealthTech, oral wound care, medical product website, e-commerce, Bootstrap 5, conversion optimization, healthcare marketing, product page design",
+      ogTitle: "Ora-Aid - Healthcare Product Landing Page | Case Study",
+      ogDescription: "See how we built a high-converting landing page for an innovative healthcare product with 40% conversion rate.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/portfolio/ora-aid",
+      twitterTitle: "Ora-Aid - Healthcare Landing Page | SensePower Digital",
+      twitterDescription: "Case study: High-converting product page for innovative oral wound care solution.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/portfolio/ora-aid"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ora-Aid - HealthTech Case Study",
+      "description": "High-converting healthcare product landing page for innovative oral wound care solution.",
+      "author": { "@type": "Organization", "name": "SensePower Digital" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-12-12",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://makesense.replit.app/portfolio/ora-aid" },
+      "about": { "@type": "Product", "name": "Ora-Aid", "category": "Healthcare" }
     });
   }, []);
 

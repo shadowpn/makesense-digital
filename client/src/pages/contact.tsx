@@ -7,7 +7,7 @@ import { Mail, MapPin, Phone, Loader, X, Copy, Check, MessageCircle, Send } from
 import { AnimatedText } from "@/components/animated-text";
 import { useState, useEffect } from "react";
 import { useSearch } from "wouter";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import backgroundImage from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 export default function Contact() {
@@ -15,11 +15,30 @@ export default function Contact() {
   
   useEffect(() => {
     updateSEO({
-      title: "Contact Us - SensePower Digital | Let's Make Sense Together",
-      description: "Get in touch with SensePower Digital. Start your project today - MVP development, QA testing, fullstack solutions. Sydney, Australia based.",
-      keywords: "contact, get in touch, hire developer, project inquiry, Sydney Australia, web development, QA testing",
-      ogUrl: "https://sensepower.digital/contact",
-      canonicalUrl: "https://sensepower.digital/contact"
+      title: "Contact Us - SensePower Digital | Start Your Project Today",
+      description: "Get in touch with SensePower Digital for your next project. MVP development, QA automation testing, fullstack solutions, Telegram bots. Free consultation. Sydney, Australia based studio.",
+      keywords: "contact developer Sydney, hire fullstack developer, QA testing inquiry, project consultation, web development quote, software development Sydney, get in touch, free consultation",
+      ogTitle: "Contact SensePower Digital - Start Your Project",
+      ogDescription: "Ready to build something amazing? Get in touch for MVP development, QA testing, or fullstack solutions.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/contact",
+      twitterTitle: "Contact SensePower Digital | Sydney Tech Studio",
+      twitterDescription: "Start your project today. MVP development, QA testing, fullstack solutions from Sydney, Australia.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/contact"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact SensePower Digital",
+      "description": "Get in touch with SensePower Digital for your next project.",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "SensePower Digital",
+        "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "Australia" },
+        "email": "makeinfosense@gmail.com"
+      }
     });
   }, []);
 

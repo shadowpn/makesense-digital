@@ -6,7 +6,7 @@ import { ArrowUpRight, LayoutTemplate, Code2, Bug, Zap } from "lucide-react";
 import { Link } from "wouter";
 import { AnimatedText } from "@/components/animated-text";
 import { Fragment, useEffect } from "react";
-import { updateSEO } from "@/utils/seo";
+import { updateSEO, addStructuredData } from "@/utils/seo";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
@@ -55,11 +55,34 @@ const projects = [
 export default function Portfolio() {
   useEffect(() => {
     updateSEO({
-      title: "Portfolio - SensePower Digital | Projects That Make Sense",
-      description: "Explore our portfolio of digital products and case studies. From EdTech to HealthTech - projects where design meets rigorous engineering.",
-      keywords: "portfolio, case studies, web projects, EdTech, HealthTech, Legal Tech, React, Next.js, fullstack",
-      ogUrl: "https://sensepower.digital/portfolio",
-      canonicalUrl: "https://sensepower.digital/portfolio"
+      title: "Portfolio - SensePower Digital | Case Studies & Web Projects",
+      description: "Explore our portfolio of successful digital products and case studies. Legal Tech, EdTech, HealthTech, and Beauty Tech projects. React, Next.js, Django, Telegram Bot development from Sydney, Australia.",
+      keywords: "portfolio, case studies, web projects, EdTech, HealthTech, Legal Tech, Beauty Tech, React development, Next.js projects, fullstack portfolio, Sydney web developer, Australian tech studio",
+      ogTitle: "Portfolio - Digital Products & Case Studies | SensePower Digital",
+      ogDescription: "Discover our collection of successful projects from Legal Tech to EdTech. Design meets rigorous engineering.",
+      ogImage: "https://makesense.replit.app/og-image.png",
+      ogUrl: "https://makesense.replit.app/portfolio",
+      twitterTitle: "Portfolio - SensePower Digital | Sydney Tech Studio",
+      twitterDescription: "Explore our portfolio: Legal Tech, EdTech, HealthTech case studies with React, Next.js, Django.",
+      twitterImage: "https://makesense.replit.app/og-image.png",
+      canonicalUrl: "https://makesense.replit.app/portfolio"
+    });
+
+    addStructuredData({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Portfolio - SensePower Digital",
+      "description": "Collection of digital products and case studies from SensePower Digital.",
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Aussie Way Visa", "url": "https://makesense.replit.app/portfolio/aussie-way-visa" },
+          { "@type": "ListItem", "position": 2, "name": "Sense StudyHub", "url": "https://makesense.replit.app/portfolio/sense-studyhub" },
+          { "@type": "ListItem", "position": 3, "name": "Ora-Aid", "url": "https://makesense.replit.app/portfolio/ora-aid" },
+          { "@type": "ListItem", "position": 4, "name": "ExpertLash", "url": "https://makesense.replit.app/portfolio/expertlash" }
+        ]
+      }
     });
   }, []);
 
