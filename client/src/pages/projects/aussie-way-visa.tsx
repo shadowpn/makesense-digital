@@ -208,10 +208,11 @@ export default function AussieWayVisa() {
     <Layout>
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 z-0 opacity-40 bg-[center_20%] md:bg-bottom"
+          className="absolute inset-0 z-0 opacity-40"
           style={{
             backgroundImage: `url(${heroBg})`,
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 80%'
           }}
         />
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
