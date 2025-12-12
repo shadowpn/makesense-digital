@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { updateSEO } from "@/utils/seo";
 import projectImg from "@assets/изображение_1764055739030.png";
-import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
+import heroBg from "@assets/generated_images/australian_visa_immigration_concept.png";
 
 const projectData = {
   title: "Aussie Way Visa",
@@ -56,7 +56,7 @@ export default function AussieWayVisa() {
         <div 
           className="absolute inset-0 z-0 opacity-40"
           style={{
-            backgroundImage: `url(${workHeroBg})`,
+            backgroundImage: `url(${heroBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
