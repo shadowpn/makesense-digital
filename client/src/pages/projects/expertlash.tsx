@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import { AnimatedText } from "@/components/animated-text";
 import { HeroBackground } from "@/components/hero-background";
-import projectImg from "@assets/generated_images/expertlash_connect_with_rich_pink_design.png";
+import projectImg from "@assets/generated_images/lash_course_light_pink_mockup.png";
 import workHeroBg from "@assets/generated_images/online_lash_course_banner.png";
 import ctaBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
