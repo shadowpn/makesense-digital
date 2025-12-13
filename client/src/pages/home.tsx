@@ -13,7 +13,7 @@ import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
 import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
-import expertlashImg from "@assets/generated_images/expertlash_connect_with_rich_pink_design.png";
+import expertlashImg from "@assets/generated_images/lash_course_light_pink_mockup.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
