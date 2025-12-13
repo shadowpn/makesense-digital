@@ -9,7 +9,7 @@ import { updateSEO, addStructuredData } from "@/utils/seo";
 import { AnimatedText } from "@/components/animated-text";
 import { HeroBackground } from "@/components/hero-background";
 import projectImg from "@assets/generated_images/expertlash_connect_with_rich_pink_design.png";
-import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
+import workHeroBg from "@assets/generated_images/online_lash_course_banner.png";
 
 const projectData = {
   title: "ExpertLash",
