@@ -10,6 +10,7 @@ import { AnimatedText } from "@/components/animated-text";
 import { HeroBackground } from "@/components/hero-background";
 import projectImg from "@assets/generated_images/expertlash_connect_with_rich_pink_design.png";
 import workHeroBg from "@assets/generated_images/online_lash_course_banner.png";
+import ctaBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 const projectData = {
   title: "ExpertLash",
@@ -235,14 +236,14 @@ export default function ExpertLash() {
           className="relative text-center p-6 md:p-12 rounded-2xl md:rounded-3xl border border-[#f9a8d4]/10 overflow-hidden mb-4 md:mb-[15px]"
         >
           <div 
-            className="absolute inset-0 z-0 opacity-40"
+            className="absolute inset-0 z-0 opacity-60"
             style={{
-              backgroundImage: `url(${workHeroBg})`,
+              backgroundImage: `url(${ctaBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/30 via-background/20 to-background/30" />
           
           <div className="relative z-20">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-4">Ready to build something similar?</h2>
