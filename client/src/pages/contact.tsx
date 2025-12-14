@@ -15,18 +15,18 @@ export default function Contact() {
   
   useEffect(() => {
     updateSEO({
-      title: "Contact Us - SensePower Digital | Start Your Project Today",
-      description: "Get in touch with SensePower Digital for your next project. MVP development, QA automation testing, fullstack solutions, Telegram bots. Free consultation. Sydney, Australia based studio.",
-      keywords: "contact developer Sydney, hire fullstack developer, QA testing inquiry, project consultation, web development quote, software development Sydney, get in touch, free consultation",
-      ogTitle: "Contact SensePower Digital - Start Your Project",
-      ogDescription: "Ready to build something amazing? Get in touch for MVP development, QA testing, or fullstack solutions.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/contact",
-      twitterTitle: "Contact SensePower Digital | Sydney Tech Studio",
-      twitterDescription: "Start your project today. MVP development, QA testing, fullstack solutions from Sydney, Australia.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/contact"
-    });
+  title: "Contact Us - SensePower Digital | Start Your Project Today",
+  description: "Get in touch with SensePower Digital for your next project. MVP development, QA automation testing, fullstack solutions, Telegram bots. Free consultation. Sydney, Australia based studio.",
+  keywords: "contact developer Sydney, hire fullstack developer, QA testing inquiry, project consultation, web development quote, software development Sydney, get in touch, free consultation",
+  ogTitle: "Contact SensePower Digital - Start Your Project",
+  ogDescription: "Ready to build something amazing? Get in touch for MVP development, QA testing, or fullstack solutions.",
+  ogImage: "https://sensepowerdigital.com/og-image.png",
+  ogUrl: "https://sensepowerdigital.com/contact",
+  twitterTitle: "Contact SensePower Digital | Sydney Tech Studio",
+  twitterDescription: "Start your project today. MVP development, QA testing, fullstack solutions from Sydney, Australia.",
+  twitterImage: "https://sensepowerdigital.com/og-image.png",
+  canonicalUrl: "https://sensepowerdigital.com/contact"
+});
 
     addStructuredData({
       "@context": "https://schema.org",

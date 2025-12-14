@@ -49,12 +49,12 @@ export default function SenseStudyHub() {
       keywords: "Sense StudyHub, CourseFlow, online learning platform, EdTech, education technology, e-learning, Django REST, Next.js, Python, JWT authentication, video lessons, LMS, learning management system, course catalog",
       ogTitle: "Sense StudyHub - EdTech Learning Platform | Case Study",
       ogDescription: "Modern online learning platform with course catalog, video lessons, personal dashboard, and interactive Q&A features.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/portfolio/sense-studyhub",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/portfolio/sense-studyhub",
       twitterTitle: "Sense StudyHub - Online Learning Platform | SensePower Digital",
       twitterDescription: "Case study: EdTech platform with video lessons, JWT auth, and modern responsive design.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/portfolio/sense-studyhub"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/portfolio/sense-studyhub"
     });
 
     addStructuredData({
@@ -63,10 +63,10 @@ export default function SenseStudyHub() {
       "headline": "Sense StudyHub - EdTech Case Study",
       "description": "Modern online learning platform with curated course catalog, video lessons, and interactive Q&A features.",
       "author": { "@type": "Organization", "name": "SensePower Digital" },
-      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://sensepowerdigital.com" },
       "datePublished": "2024-01-01",
       "dateModified": "2024-12-12",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://makesense.replit.app/portfolio/sense-studyhub" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://sensepowerdigital.com/portfolio/sense-studyhub" },
       "about": { "@type": "SoftwareApplication", "name": "Sense StudyHub", "applicationCategory": "Education", "operatingSystem": "Web" }
     });
   }, []);

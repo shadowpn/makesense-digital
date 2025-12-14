@@ -96,12 +96,12 @@ export default function Research() {
       keywords: "research articles, testing frameworks, Playwright tutorial, Cypress guide, dark mode design, MVP architecture patterns, React performance, design systems, E2E testing, automation testing guides, knowledge hub",
       ogTitle: "Research Hub - Testing & Design Insights | SensePower Digital",
       ogDescription: "Expert articles on automated testing, design systems, and MVP architecture. Free resources and frameworks.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/research",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/research",
       twitterTitle: "Research Hub | SensePower Digital",
       twitterDescription: "Free resources: Testing frameworks, design systems, performance guides. Expert insights from Sydney tech studio.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/research"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/research"
     });
 
     addStructuredData({
@@ -109,7 +109,7 @@ export default function Research() {
       "@type": "Blog",
       "name": "SensePower Digital Research Hub",
       "description": "Research articles, testing frameworks, and design resources.",
-      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://sensepowerdigital.com" },
       "blogPost": [
         { "@type": "BlogPosting", "headline": "The State of Automated Testing in 2025", "datePublished": "2025-11-12" },
         { "@type": "BlogPosting", "headline": "Designing for Dark Mode First", "datePublished": "2025-10-24" },

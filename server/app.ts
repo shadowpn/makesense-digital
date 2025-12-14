@@ -28,6 +28,16 @@ app.use(express.json({
 }));
 app.use(express.urlencoded({ extended: false }));
 
+// Редирект с www на корневой домен
+app.use((req, res, next) => {
+  const host = req.headers.host;
+  if (host?.startsWith("www.")) {
+    const newHost = host.replace(/^www\./, "");
+    return res.redirect(301, `${req.protocol}://${newHost}${req.originalUrl}`);
+  }
+  next();
+});
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;

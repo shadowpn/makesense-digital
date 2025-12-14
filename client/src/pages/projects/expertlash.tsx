@@ -50,12 +50,12 @@ export default function ExpertLash() {
       keywords: "ExpertLash, Telegram Bot development, Beauty Tech, lash extensions booking, Telegram Mini App, Stripe integration, PayPal payments, subscription platform, beauty industry app, appointment scheduling, Supabase, Python bot",
       ogTitle: "ExpertLash - Beauty Tech Telegram Platform | Case Study",
       ogDescription: "Learn how we built a comprehensive Telegram Bot with Mini App for beauty professionals with payment integration.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/portfolio/expertlash",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/portfolio/expertlash",
       twitterTitle: "ExpertLash - Telegram Bot for Beauty Industry | SensePower Digital",
       twitterDescription: "Case study: Beauty tech platform with Telegram Bot, subscriptions, and payment processing.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/portfolio/expertlash"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/portfolio/expertlash"
     });
 
     addStructuredData({
@@ -64,10 +64,10 @@ export default function ExpertLash() {
       "headline": "ExpertLash - Beauty Tech Case Study",
       "description": "Professional lash extension booking platform with Telegram Bot and payment integration.",
       "author": { "@type": "Organization", "name": "SensePower Digital" },
-      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://sensepowerdigital.com" },
       "datePublished": "2024-01-01",
       "dateModified": "2024-12-12",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://makesense.replit.app/portfolio/expertlash" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://sensepowerdigital.com/portfolio/expertlash" },
       "about": { "@type": "SoftwareApplication", "name": "ExpertLash", "applicationCategory": "Business", "operatingSystem": "Telegram" }
     });
   }, []);

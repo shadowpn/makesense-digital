@@ -29,12 +29,12 @@ export default function Home() {
       keywords: "SensePower Digital, fullstack development Sydney, QA testing Australia, MVP development, digital studio, web development, React developer, Next.js, automation testing, Playwright, Cypress, web design Sydney",
       ogTitle: "SensePower Digital - We Code. We Test. We Make Sense.",
       ogDescription: "Sydney digital studio creating and testing digital products. Fullstack development, QA automation, MVP solutions.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/",
       twitterTitle: "SensePower Digital - Sydney Tech Studio",
       twitterDescription: "We code. We test. We make sense. Fullstack development & QA automation from Sydney, Australia.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/"
     });
 
     addStructuredData({
@@ -42,8 +42,8 @@ export default function Home() {
       "@type": "Organization",
       "name": "SensePower Digital",
       "description": "Sydney-based digital studio specializing in fullstack development and QA automation testing.",
-      "url": "https://makesense.replit.app",
-      "logo": "https://makesense.replit.app/og-image.png",
+      "url": "https://sensepowerdigital.com",
+      "logo": "https://sensepowerdigital.com/og-image.png",
       "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "Australia" },
       "sameAs": [],
       "foundingDate": "2023",

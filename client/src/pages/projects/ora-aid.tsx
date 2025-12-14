@@ -164,12 +164,12 @@ export default function OraAid() {
       keywords: "Ora-Aid, healthcare landing page, HealthTech, oral wound care, medical product website, e-commerce, Bootstrap 5, conversion optimization, healthcare marketing, product page design",
       ogTitle: "Ora-Aid - Healthcare Product Landing Page | Case Study",
       ogDescription: "See how we built a high-converting landing page for an innovative healthcare product with 40% conversion rate.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/portfolio/ora-aid",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/portfolio/ora-aid",
       twitterTitle: "Ora-Aid - Healthcare Landing Page | SensePower Digital",
       twitterDescription: "Case study: High-converting product page for innovative oral wound care solution.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/portfolio/ora-aid"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/portfolio/ora-aid"
     });
 
     addStructuredData({
@@ -178,10 +178,10 @@ export default function OraAid() {
       "headline": "Ora-Aid - HealthTech Case Study",
       "description": "High-converting healthcare product landing page for innovative oral wound care solution.",
       "author": { "@type": "Organization", "name": "SensePower Digital" },
-      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://sensepowerdigital.com" },
       "datePublished": "2024-01-01",
       "dateModified": "2024-12-12",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://makesense.replit.app/portfolio/ora-aid" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://sensepowerdigital.com/ora-aid" },
       "about": { "@type": "Product", "name": "Ora-Aid", "category": "Healthcare" }
     });
   }, []);

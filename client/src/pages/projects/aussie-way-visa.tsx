@@ -169,12 +169,12 @@ export default function AussieWayVisa() {
       keywords: "Aussie Way Visa, Visa Australia Online, Australian visa, migration services, MARA registered, student visa Australia, skilled visa, family visa, immigration consultant Sydney, Checkbox Legal, Next.js, OpenAI API, Calendly, legal tech case study",
       ogTitle: "Aussie Way Visa - Australian Immigration Platform | Case Study",
       ogDescription: "Discover how we built a comprehensive visa application platform with AI-powered eligibility checking and seamless consultation booking.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/portfolio/aussie-way-visa",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/portfolio/aussie-way-visa",
       twitterTitle: "Aussie Way Visa - Australian Immigration Platform | SensePower Digital",
       twitterDescription: "Case study: Modern platform for Australian visa applications with AI assistance and Calendly integration.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/portfolio/aussie-way-visa"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/portfolio/aussie-way-visa"
     });
 
     addStructuredData({
@@ -189,13 +189,13 @@ export default function AussieWayVisa() {
       "publisher": {
         "@type": "Organization",
         "name": "SensePower Digital",
-        "url": "https://makesense.replit.app"
+        "url": "https://sensepowerdigital.com/"
       },
       "datePublished": "2024-01-01",
       "dateModified": "2024-12-12",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://makesense.replit.app/portfolio/aussie-way-visa"
+        "@id": "https://sensepowerdigital.com/portfolio/aussie-way-visa"
       },
       "about": {
         "@type": "SoftwareApplication",

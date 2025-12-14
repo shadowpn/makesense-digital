@@ -21,12 +21,13 @@ export default function About() {
       keywords: "about SensePower Digital, Sydney developer, QA engineer Australia, fullstack developer Sydney, web development team, tech studio Australia, professional developer, automation testing expert",
       ogTitle: "About Us - Meet SensePower Digital Team",
       ogDescription: "Sydney-based fullstack developer and QA engineer transforming complex tech challenges into simple solutions.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/about",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/about",
       twitterTitle: "About SensePower Digital | Sydney Tech Team",
       twitterDescription: "Meet our team: Professional fullstack developer and QA engineer based in Sydney, Australia.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/about"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/about"
+
     });
 
     addStructuredData({

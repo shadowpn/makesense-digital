@@ -60,12 +60,12 @@ export default function Portfolio() {
       keywords: "portfolio, case studies, web projects, EdTech, HealthTech, Legal Tech, Beauty Tech, React development, Next.js projects, fullstack portfolio, Sydney web developer, Australian tech studio",
       ogTitle: "Portfolio - Digital Products & Case Studies | SensePower Digital",
       ogDescription: "Discover our collection of successful projects from Legal Tech to EdTech. Design meets rigorous engineering.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/portfolio",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/portfolio",
       twitterTitle: "Portfolio - SensePower Digital | Sydney Tech Studio",
       twitterDescription: "Explore our portfolio: Legal Tech, EdTech, HealthTech case studies with React, Next.js, Django.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/portfolio"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/portfolio"
     });
 
     addStructuredData({
@@ -73,14 +73,14 @@ export default function Portfolio() {
       "@type": "CollectionPage",
       "name": "Portfolio - SensePower Digital",
       "description": "Collection of digital products and case studies from SensePower Digital.",
-      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "publisher": { "@type": "Organization", "name": "SensePower Digital", "url": "https://sensepowerdigital.com/" },
       "mainEntity": {
         "@type": "ItemList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Aussie Way Visa", "url": "https://makesense.replit.app/portfolio/aussie-way-visa" },
-          { "@type": "ListItem", "position": 2, "name": "Sense StudyHub", "url": "https://makesense.replit.app/portfolio/sense-studyhub" },
-          { "@type": "ListItem", "position": 3, "name": "Ora-Aid", "url": "https://makesense.replit.app/portfolio/ora-aid" },
-          { "@type": "ListItem", "position": 4, "name": "ExpertLash", "url": "https://makesense.replit.app/portfolio/expertlash" }
+          { "@type": "ListItem", "position": 1, "name": "Aussie Way Visa", "url": "https://sensepowerdigital.com/portfolio/aussie-way-visa" },
+          { "@type": "ListItem", "position": 2, "name": "Sense StudyHub", "url": "https://sensepowerdigital.com/sense-studyhub" },
+          { "@type": "ListItem", "position": 3, "name": "Ora-Aid", "url": "https://sensepowerdigital.com/portfolio/ora-aid" },
+          { "@type": "ListItem", "position": 4, "name": "ExpertLash", "url": "https://sensepowerdigital.com/portfolio/expertlash" }
         ]
       }
     });

@@ -132,18 +132,18 @@ export default function Services() {
       keywords: "QA testing services, automation testing Playwright Cypress, MVP development Sydney, fullstack development, Telegram bot development, web development pricing, software development rates, React Next.js developer, Python Django developer",
       ogTitle: "Services & Pricing - SensePower Digital",
       ogDescription: "Professional digital services: QA automation, MVP development, fullstack solutions, and Telegram bots. From $40/hour.",
-      ogImage: "https://makesense.replit.app/og-image.png",
-      ogUrl: "https://makesense.replit.app/services",
+      ogImage: "https://sensepowerdigital.com/og-image.png",
+      ogUrl: "https://sensepowerdigital.com/services",
       twitterTitle: "Services & Pricing | SensePower Digital Sydney",
       twitterDescription: "QA testing, MVP development, fullstack solutions, Telegram bots. Transparent pricing from $40/hour.",
-      twitterImage: "https://makesense.replit.app/og-image.png",
-      canonicalUrl: "https://makesense.replit.app/services"
+      twitterImage: "https://sensepowerdigital.com/og-image.png",
+      canonicalUrl: "https://sensepowerdigital.com/services"
     });
 
     addStructuredData({
       "@context": "https://schema.org",
       "@type": "Service",
-      "provider": { "@type": "Organization", "name": "SensePower Digital", "url": "https://makesense.replit.app" },
+      "provider": { "@type": "Organization", "name": "SensePower Digital", "url": "https://sensepowerdigital.com" },
       "serviceType": ["QA Testing", "MVP Development", "Fullstack Development", "Telegram Bot Development"],
       "areaServed": { "@type": "Country", "name": "Australia" },
       "hasOfferCatalog": {
