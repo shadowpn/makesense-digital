@@ -2,14 +2,14 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import multer from "multer";
-import nodemailer from "nodemailer";
 import path from "path";
-
+import sgMail from "@sendgrid/mail";
 import { ENV } from "./env";
 
 const ALLOWED_MIMES = ['application/pdf', 'application/zip', 'application/x-zip-compressed', 'image/jpeg', 'image/png', 'video/mp4'];
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
+// Настройка multer
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: MAX_FILE_SIZE },
@@ -29,12 +29,19 @@ const upload = multer({
   }
 });
 
+// Настройка SendGrid
+if (!ENV.SENDGRID_API_KEY) {
+  console.warn("SENDGRID_API_KEY not set. Emails will not be sent.");
+} else {
+  sgMail.setApiKey(ENV.SENDGRID_API_KEY);
+}
+
 export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", upload.single("file"), async (req, res) => {
     try {
       const { name, email, company, projectType, budget, message } = req.body;
 
-      // Validate required fields
+      // Валидация
       if (!name || typeof name !== 'string' || name.trim().length < 2) {
         return res.status(400).json({ error: "Name must be at least 2 characters" });
       }
@@ -45,7 +52,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ error: "Message is required" });
       }
 
-      // Save submission
+      // Сохраняем submission
       const submission = await storage.saveContactSubmission({
         name: name.trim(),
         email: email.trim().toLowerCase(),
@@ -56,22 +63,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         fileName: req.file?.originalname?.substring(0, 255)
       });
 
-      // Prepare email content
-      const emailContent = `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Company:</strong> ${company || 'Not specified'}</p>
-        <p><strong>Project Type:</strong> ${projectType || 'Not specified'}</p>
-        <p><strong>Budget:</strong> ${budget || 'Not specified'}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-        ${req.file ? `<p><strong>File Attached:</strong> ${req.file.originalname}</p>` : ''}
-      `;
-
-      // Check if email credentials are set
-      if (!ENV.CONTACT_EMAIL_USER || !ENV.CONTACT_EMAIL_PASSWORD) {
-        console.warn('Email credentials not configured - form saved but email not sent');
+      // Если SendGrid API не настроен, просто сохраняем
+      if (!ENV.SENDGRID_API_KEY) {
         return res.json({
           success: true,
           submissionId: submission.id,
@@ -79,43 +72,60 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      // Send email to admin
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: ENV.CONTACT_EMAIL_USER,
-          pass: ENV.CONTACT_EMAIL_PASSWORD
-        }
-      });
+      // Подготовка письма администратору
+      const adminMsg: sgMail.MailDataRequired = {
+        from: {
+          email: ENV.CONTACT_EMAIL_USER as string,
+          name: "SensePowerDigital"
+        },
+        to: ENV.CONTACT_EMAIL_RECIPIENT || ENV.CONTACT_EMAIL_USER,
+        subject: `New Project Inquiry from ${name}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Company:</strong> ${company || 'Not specified'}</p>
+          <p><strong>Project Type:</strong> ${projectType || 'Not specified'}</p>
+          <p><strong>Budget:</strong> ${budget || 'Not specified'}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message.replace(/\n/g, '<br>')}</p>
+          ${req.file ? `<p><strong>File Attached:</strong> ${req.file.originalname}</p>` : ''}
+        `,
+        attachments: req.file ? [{
+          content: req.file.buffer.toString('base64'),
+          filename: req.file.originalname,
+          type: req.file.mimetype,
+          disposition: 'attachment'
+        }] : []
+      };
 
+      // Отправка письма администратору
       try {
-        await transporter.sendMail({
-          from: ENV.CONTACT_EMAIL_USER,
-          to: ENV.CONTACT_EMAIL_RECIPIENT || ENV.CONTACT_EMAIL_USER,
-          subject: `New Project Inquiry from ${name}`,
-          html: emailContent,
-          replyTo: email,
-          attachments: req.file ? [{
-            filename: req.file.originalname,
-            content: req.file.buffer
-          }] : []
-        });
+        await sgMail.send(adminMsg);
         console.log('Email sent successfully to admin');
-      } catch (emailError) {
-        console.error('Email sending to admin failed:', emailError);
+      } catch (adminError) {
+        console.error('Email sending to admin failed:', adminError);
       }
 
-      // Send reply to user
+      // Подготовка письма пользователю
+      const userMsg: sgMail.MailDataRequired = {
+        from: {
+          email: ENV.CONTACT_EMAIL_USER as string,
+          name: "SensePowerDigital"
+        },
+        to: email,
+        subject: 'We received your message - SensePowerDigital',
+        html: `<p>Hi ${name},</p>
+               <p>Thank you for reaching out to us. We've received your message and will get back to you within 24 hours.</p>
+               <p>Best regards,<br>SensePowerDigital Team</p>`
+      };
+
+      // Отправка письма пользователю
       try {
-        await transporter.sendMail({
-          from: ENV.CONTACT_EMAIL_USER,
-          to: email,
-          subject: 'We received your message - SensePowerDigital',
-          html: `<p>Hi ${name},</p><p>Thank you for reaching out to us. We've received your message and will get back to you within 24 hours.</p><p>Best regards,<br>SensePowerDigital Team</p>`
-        });
+        await sgMail.send(userMsg);
         console.log('Reply email sent successfully to:', email);
-      } catch (replyError) {
-        console.error('Reply email failed:', replyError);
+      } catch (userError) {
+        console.error('Reply email failed:', userError);
       }
 
       res.json({ success: true, submissionId: submission.id, message: 'Email sent successfully' });
