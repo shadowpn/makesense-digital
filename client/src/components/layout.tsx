@@ -9,14 +9,14 @@ import ctaBg from "@assets/generated_images/bright_light_tech_professional_backg
 
 function MobileHeader() {
   return (
-    <div className="md:hidden sticky top-0 z-30 bg-gradient-to-r from-background via-background to-background/95 border-b border-[#d2f7be]/10 backdrop-blur-xl">
+    <div className="md:hidden sticky top-0 z-30 bg-linear-to-r from-background via-background to-background/95 border-b border-[#d2f7be]/10 backdrop-blur-xl">
       <div className="container mx-auto px-4 py-4 flex items-center justify-center">
         <Link href="/">
           <div className="flex items-center gap-3 cursor-pointer">
-            <div className="w-10 h-10 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg flex-shrink-0">
+            <div className="w-10 h-10 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg shrink-0">
               <img src={logoImg} alt="SensePower Digital" className="w-full h-full object-cover" />
             </div>
-            <div className="text-base font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            <div className="text-base font-display font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">
               SensePower Digital
             </div>
           </div>
@@ -37,7 +37,7 @@ export function Footer() {
           backgroundPosition: 'center'
         }}
       />
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
+      <div className="absolute inset-0 z-10 bg-linear-to-b from-background/40 via-background/60 to-background/80" />
       
       <div className="container mx-auto px-6 relative z-20">
         {/* Mobile Layout */}
@@ -47,10 +47,10 @@ export function Footer() {
               whileHover={{ scale: 1.05 }}
               className="mb-4 flex items-center gap-3"
             >
-              <div className="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors flex-shrink-0">
+              <div className="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors shrink-0">
                 <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              <h3 className="text-xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">
                 SensePower<br/>Digital
               </h3>
             </motion.div>
@@ -101,10 +101,10 @@ export function Footer() {
               whileHover={{ scale: 1.05 }}
               className="mb-4 flex items-center gap-3"
             >
-              <div className="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors flex-shrink-0">
+              <div className="w-14 h-14 rounded-full border-2 border-primary/30 overflow-hidden bg-[#d2f7be]/5 shadow-lg hover:border-primary/60 transition-colors shrink-0">
                 <img src={logoImg} alt="SensePower Digital Logo" className="w-full h-full object-cover" />
               </div>
-              <h3 className="text-xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              <h3 className="text-xl font-display font-bold tracking-tighter bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">
                 SensePower<br/>Digital
               </h3>
             </motion.div>
@@ -171,9 +171,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col md:flex-row">
       <Sidebar />
-      <div className="flex-grow flex flex-col w-full md:w-auto">
+      <div className="grow flex flex-col w-full md:w-auto">
         <MobileHeader />
-        <main className="flex-grow">
+        <main className="grow">
           {children}
         </main>
         <Footer />

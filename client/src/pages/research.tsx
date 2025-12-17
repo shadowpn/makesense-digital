@@ -130,7 +130,7 @@ export default function Research() {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
+        <div className="absolute inset-0 z-10 bg-linear-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div
@@ -146,7 +146,7 @@ export default function Research() {
                 staggerDelay={0.06} 
                 duration={0.6}
                 initialDelay={1.8}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+                className="text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary"
               />
             </div>
             
@@ -166,7 +166,7 @@ export default function Research() {
               className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
             >
               <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Making knowledge accessible.</span>
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Making knowledge accessible.</span>
               </p>
               <p className="text-sm md:text-base text-muted-foreground mt-2">
                 Practical insights that help you build better products.
@@ -245,7 +245,7 @@ export default function Research() {
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          <div className="absolute inset-0 z-10 bg-linear-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
             <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>

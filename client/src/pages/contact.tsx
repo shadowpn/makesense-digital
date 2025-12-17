@@ -220,7 +220,7 @@ export default function Contact() {
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/50 via-background/70 to-background" />
         
         <div className="container mx-auto px-6 pt-32 md:pt-20 pb-8 md:pb-20 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20">
@@ -229,7 +229,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-[50px] md:mb-0"
           >
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-4 md:mb-8"><AnimatedText text="Let's talk." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary" /></h1>
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-4 md:mb-8"><AnimatedText text="Let's talk." staggerDelay={0.06} duration={0.6} initialDelay={0.3} className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary" /></h1>
             <p className="text-base md:text-xl text-muted-foreground mb-4 md:mb-6">
               Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.
             </p>
@@ -241,7 +241,7 @@ export default function Contact() {
               className="mb-6 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm"
             >
               <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Let's make sense together.</span>
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Let's make sense together.</span>
               </p>
               <p className="text-sm md:text-base text-muted-foreground mt-2">
                 Turn your idea into something that makes sense.
@@ -251,9 +251,9 @@ export default function Contact() {
             <div className="space-y-4 md:space-y-8">
               <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
+                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-linear-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
               >
-                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 shrink-0">
                   <Mail size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -264,7 +264,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => copyToClipboard('makeinfosense@gmail.com', 'email')}
-                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all flex-shrink-0"
+                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all shrink-0"
                 >
                   {copied === 'email' ? <Check size={18} /> : <Copy size={18} />}
                 </motion.button>
@@ -272,9 +272,9 @@ export default function Contact() {
               
               <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
+                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-linear-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 cursor-pointer group"
               >
-                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 shrink-0">
                   <Phone size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -285,7 +285,7 @@ export default function Contact() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => copyToClipboard('+61 414 599 822', 'phone')}
-                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all flex-shrink-0"
+                  className="p-2 rounded-lg bg-[#d2f7be]/10 hover:bg-[#d2f7be]/20 text-[#d2f7be] transition-all shrink-0"
                 >
                   {copied === 'phone' ? <Check size={18} /> : <Copy size={18} />}
                 </motion.button>
@@ -293,9 +293,9 @@ export default function Contact() {
 
               <motion.div 
                 whileHover={{ scale: 1.02, y: -2 }}
-                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-gradient-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 group"
+                className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-linear-to-r from-[#d2f7be]/5 to-transparent border border-[#d2f7be]/10 hover:border-[#d2f7be]/30 transition-all duration-300 group"
               >
-                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                <div className="p-3 md:p-4 rounded-full bg-muted/30 border border-[#d2f7be]/5 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 shrink-0">
                   <MapPin size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div className="min-w-0">
@@ -318,25 +318,25 @@ export default function Contact() {
                     backgroundPosition: 'center'
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-background/40 via-background/60 to-background/40" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/3 via-transparent to-[#c3ecac]/2 blur-xl" />
+                <div className="absolute inset-0 bg-linear-to-br from-background/40 via-background/60 to-background/40" />
+                <div className="absolute inset-0 bg-linear-to-br from-[#d2f7be]/3 via-transparent to-[#c3ecac]/2 blur-xl" />
                 <div className="relative space-y-2 md:space-y-4 p-3 md:p-4">
                   <h3 className="text-base md:text-lg font-bold text-[#d2f7be]">Why Provide Details?</h3>
                   <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-muted-foreground">
                     <li className="flex items-start gap-2 md:gap-3">
-                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
+                      <span className="text-[#d2f7be] font-bold shrink-0">→</span>
                       <span><strong className="text-foreground">Better Analysis</strong> - More information helps us understand your vision</span>
                     </li>
                     <li className="flex items-start gap-2 md:gap-3">
-                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
+                      <span className="text-[#d2f7be] font-bold shrink-0">→</span>
                       <span><strong className="text-foreground">Accurate Quotes</strong> - Detailed requirements lead to precise pricing</span>
                     </li>
                     <li className="flex items-start gap-2 md:gap-3">
-                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
+                      <span className="text-[#d2f7be] font-bold shrink-0">→</span>
                       <span><strong className="text-foreground">Faster Solutions</strong> - Clear specifications speed up development</span>
                     </li>
                     <li className="flex items-start gap-2 md:gap-3">
-                      <span className="text-[#d2f7be] font-bold flex-shrink-0">→</span>
+                      <span className="text-[#d2f7be] font-bold shrink-0">→</span>
                       <span><strong className="text-foreground">Perfect Fit</strong> - We deliver exactly what you need</span>
                     </li>
                   </ul>
@@ -351,8 +351,8 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#d2f7be]/5 via-transparent to-[#c3ecac]/3 rounded-3xl blur-2xl" />
-            <div className="relative bg-gradient-to-br from-muted/20 via-muted/10 to-muted/5 p-4 md:p-8 lg:p-12 rounded-3xl border border-[#d2f7be]/15 backdrop-blur-sm shadow-2xl shadow-purple-500/10">
+            <div className="absolute inset-0 bg-linear-to-br from-[#d2f7be]/5 via-transparent to-[#c3ecac]/3 rounded-3xl blur-2xl" />
+            <div className="relative bg-linear-to-br from-muted/20 via-muted/10 to-muted/5 p-4 md:p-8 lg:p-12 rounded-3xl border border-[#d2f7be]/15 backdrop-blur-sm shadow-2xl shadow-purple-500/10">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 lg:space-y-7">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <motion.div 
@@ -367,7 +367,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="John Doe" 
-                      className={`bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 transition-all duration-300 px-4 text-base font-medium ${errors.name ? 'border-red-500 shadow-lg shadow-red-500/20' : 'border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 shadow-lg shadow-purple-500/10'}`}
+                      className={`bg-linear-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 transition-all duration-300 px-4 text-base font-medium ${errors.name ? 'border-red-500 shadow-lg shadow-red-500/20' : 'border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 shadow-lg shadow-purple-500/10'}`}
                     />
                     {errors.name && <p className="text-red-400 text-xs ml-1 font-medium">{errors.name}</p>}
                   </motion.div>
@@ -384,7 +384,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="john@example.com" 
-                      className={`bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 transition-all duration-300 px-4 text-base font-medium ${errors.email ? 'border-red-500 shadow-lg shadow-red-500/20' : 'border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 shadow-lg shadow-purple-500/10'}`}
+                      className={`bg-linear-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 transition-all duration-300 px-4 text-base font-medium ${errors.email ? 'border-red-500 shadow-lg shadow-red-500/20' : 'border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 shadow-lg shadow-purple-500/10'}`}
                     />
                     {errors.email && <p className="text-red-400 text-xs ml-1 font-medium">{errors.email}</p>}
                   </motion.div>
@@ -403,7 +403,7 @@ export default function Contact() {
                       value={formData.company}
                       onChange={handleChange}
                       placeholder="Your Company" 
-                      className="bg-gradient-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 transition-all duration-300 px-4 text-base font-medium shadow-lg shadow-purple-500/10"
+                      className="bg-linear-to-br from-background/40 to-background/20 h-12 rounded-xl border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 transition-all duration-300 px-4 text-base font-medium shadow-lg shadow-purple-500/10"
                     />
                   </motion.div>
                   <motion.div 
@@ -412,13 +412,13 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.45 }}
                   >
-                    <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Project Type</label>
+                    <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"> <span className="text-[#d2f7be]">*</span> Project Type</label>
                     <select 
                       name="projectType"
                       value={formData.projectType}
                       onChange={handleChange}
                       required
-                      className="w-full bg-gradient-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-[#1a1a1a]"
+                      className="w-full bg-linear-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-[#1a1a1a]"
                       style={{
                         backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d2f7be' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
                         backgroundRepeat: 'no-repeat',
@@ -426,12 +426,12 @@ export default function Contact() {
                         backgroundSize: '1.5em',
                         paddingRight: '2.5rem'
                       }}
-                    >
-                      <option value="" disabled hidden>Select project type</option>
-                      <option value="mvp">MVP Development</option>
+                    > 
+                      <option value="" disabled hidden> Select project type</option>
                       <option value="fullstack">Fullstack Development</option>
                       <option value="qa">QA & Testing</option>
                       <option value="telegram">Telegram Bot Development</option>
+                      <option value="mvp">MVP Development</option>
                       <option value="design">Design System</option>
                       <option value="other">Other</option>
                     </select>
@@ -444,13 +444,13 @@ export default function Contact() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide">Budget Range</label>
+                  <label className="text-xs md:text-sm font-semibold ml-1 text-[#d2f7be] uppercase tracking-wide"> <span className="text-[#d2f7be]">*</span> Budget Range</label>
                   <select 
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
                     required
-                    className="w-full bg-gradient-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-[#1a1a1a]"
+                    className="w-full bg-linear-to-br from-background/60 to-background/40 h-12 rounded-xl border-2 border-[#d2f7be]/30 hover:border-[#d2f7be]/50 focus:border-[#d2f7be]/70 transition-all duration-300 px-4 text-base font-semibold focus:outline-none shadow-lg shadow-purple-500/20 appearance-none cursor-pointer text-[#1a1a1a]"
                     style={{
                       backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d2f7be' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
                       backgroundRepeat: 'no-repeat',
@@ -484,7 +484,7 @@ export default function Contact() {
                       textarea.style.height = Math.max(140, textarea.scrollHeight) + 'px';
                     }}
                     placeholder="Tell us about your project, goals, timeline, and requirements..." 
-                    className="bg-gradient-to-br from-background/40 to-background/20 border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 rounded-xl min-h-[140px] focus:outline-none resize-none transition-all duration-300 px-4 py-3 text-base font-medium shadow-lg shadow-purple-500/10 overflow-hidden"
+                    className="bg-linear-to-br from-background/40 to-background/20 border-2 border-[#d2f7be]/20 hover:border-[#d2f7be]/40 focus:border-[#d2f7be]/60 rounded-xl min-h-[140px] focus:outline-none resize-none transition-all duration-300 px-4 py-3 text-base font-medium shadow-lg shadow-purple-500/10 overflow-hidden"
                     required
                   />
                 </motion.div>

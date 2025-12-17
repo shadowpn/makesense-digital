@@ -161,7 +161,7 @@ export default function About() {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
+        <div className="absolute inset-0 z-10 bg-linear-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div
@@ -177,7 +177,7 @@ export default function About() {
                 staggerDelay={0.06} 
                 duration={0.6}
                 initialDelay={1.8}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+                className="text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary"
               />
             </div>
             
@@ -187,7 +187,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mb-4 md:mb-6 leading-relaxed"
             >
-              Founded by Nataliia Petrychuk. We're obsessed with design excellence and engineering precision, helping forward-thinking companies launch and scale their digital products since 2022.
+              Founded by Nataliia Petrychuk. We're obsessed with design excellence and engineering precision, helping forward-thinking companies launch and scale their digital products since 2024.
             </motion.p>
             
             <motion.div 
@@ -197,7 +197,7 @@ export default function About() {
               className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
             >
               <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Making complexity simple since day one.</span>
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Making complexity simple since day one.</span>
               </p>
               <p className="text-sm md:text-base text-muted-foreground mt-2">
                 We turn chaos of code and ideas into sense — that's our mission.
@@ -232,7 +232,7 @@ export default function About() {
             <div className="col-span-1 md:col-span-2 space-y-6 md:space-y-8">
               {/* Header */}
               <div>
-                <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">Nataliia Petrychuk</h2>
+                <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary">Nataliia Petrychuk</h2>
                 <p className="text-base md:text-xl text-foreground font-semibold mb-4">Full-Stack Developer & QA Engineer</p>
                 <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                   Full Stack Developer and QA Engineer passionate about building modern, user-centric, and reliable web products. I combine front-end and back-end development skills with strong QA expertise to deliver applications that are not only functional, but truly work at scale. Experienced with React.js, Node.js, REST APIs, and end-to-end testing practices, I enjoy turning ideas into working MVPs and improving products through thoughtful testing and iteration.
@@ -260,7 +260,7 @@ export default function About() {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Core Skills & Expertise</h2>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Core Skills & Expertise</h2>
             <p className="text-base md:text-lg text-muted-foreground">Deep technical proficiency across QA, automation, and full-stack development</p>
           </motion.div>
 
@@ -297,7 +297,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.08 }}
                 viewport={{ once: true }}
-                className="group p-6 md:p-8 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
+                className="group p-6 md:p-8 rounded-2xl bg-linear-to-br from-primary/5 to-transparent border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
               >
                 <h3 className="text-base md:text-xl font-display font-bold mb-4 text-primary group-hover:text-accent transition-colors">{skill.title}</h3>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{skill.description}</p>
@@ -316,7 +316,7 @@ export default function About() {
               backgroundPosition: 'center'
             }}
           />
-          <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-background/20 via-background/10 to-background/20" />
+          <div className="hidden md:block absolute inset-0 bg-linear-to-b from-background/20 via-background/10 to-background/20" />
           
           <div className="relative z-10 px-6">
             <motion.div
@@ -325,7 +325,7 @@ export default function About() {
               viewport={{ once: true }}
               className="mb-10 md:mb-16"
             >
-              <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Professional Journey</h2>
+              <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Professional Journey</h2>
               <p className="text-base md:text-lg text-muted-foreground">A decade of growth across QA, development, and continuous learning</p>
             </motion.div>
 
@@ -355,7 +355,7 @@ export default function About() {
                         <ul className="space-y-1">
                           {item.details.slice(0, 2).map((detail, i) => (
                             <li key={i} className="text-xs text-foreground leading-tight flex gap-2">
-                              <span className="text-primary flex-shrink-0 mt-0.5">•</span>
+                              <span className="text-primary shrink-0 mt-0.5">•</span>
                               <span>{detail}</span>
                             </li>
                           ))}
@@ -375,7 +375,7 @@ export default function About() {
             {/* Desktop: 2 Column Timeline with Icons */}
             <div className="hidden md:block relative">
               {/* Center Vertical Line */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-primary via-accent to-primary/30 transform -translate-x-1/2" />
               
               {/* Timeline Grid - 2 Columns */}
               <div className="grid grid-cols-2 gap-0">
@@ -407,7 +407,7 @@ export default function About() {
                           initial={{ opacity: 1, y: 0 }}
                           animate={activeIndex === idx ? { opacity: 1, y: -10 } : { opacity: 1, y: 0 }}
                           transition={{ duration: 0.6 }}
-                          className={`absolute top-8 transform z-10 ${isLeft ? 'right-[-24px]' : 'left-[-24px]'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}
+                          className={`absolute top-8 transform z-10 ${isLeft ? '-right-6' : '-left-6'} w-12 h-12 rounded-full bg-background flex items-center justify-center`}
                         >
                           <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                             activeIndex === idx
@@ -442,7 +442,7 @@ export default function About() {
                             <ul className="space-y-2">
                               {item.details.map((detail, i) => (
                                 <li key={i} className="text-xs md:text-sm lg:text-base text-foreground leading-relaxed flex gap-2">
-                                  <span className="text-primary flex-shrink-0 mt-1">•</span>
+                                  <span className="text-primary shrink-0 mt-1">•</span>
                                   <span>{detail}</span>
                                 </li>
                               ))}
@@ -475,7 +475,7 @@ export default function About() {
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          <div className="absolute inset-0 z-10 bg-linear-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
             <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>

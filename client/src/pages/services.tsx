@@ -175,7 +175,7 @@ export default function Services() {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/30 to-background" />
+        <div className="absolute inset-0 z-10 bg-linear-to-b from-background/10 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div
@@ -191,7 +191,7 @@ export default function Services() {
                 staggerDelay={0.06} 
                 duration={0.6}
                 initialDelay={1.8}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+                className="text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary"
               />
             </div>
             
@@ -211,7 +211,7 @@ export default function Services() {
               className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
             >
               <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Technology that actually makes sense.</span>
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Technology that actually makes sense.</span>
               </p>
               <p className="text-sm md:text-base text-muted-foreground mt-2">
                 From idea to working solution — clear, tested, and reliable.
@@ -230,7 +230,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="group relative rounded-[2rem] overflow-hidden border border-[#d2f7be]/10 bg-muted/10 hover:bg-muted/20 transition-colors"
+              className="group relative rounded-4xl overflow-hidden border border-[#d2f7be]/10 bg-muted/10 hover:bg-muted/20 transition-colors"
             >
               <div className="p-6 md:p-10 lg:p-16 relative z-10">
                 <div className="w-20 md:w-24 h-20 md:h-24 mb-4 md:mb-8 rounded-2xl overflow-hidden bg-black/50 border border-[#d2f7be]/10 shadow-2xl flex items-center justify-center">
@@ -273,7 +273,7 @@ export default function Services() {
                 </Link>
               </div>
 
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
         </div>
@@ -293,7 +293,7 @@ export default function Services() {
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/20 via-background/40 to-background" />
+          <div className="absolute inset-0 z-10 bg-linear-to-b from-background/20 via-background/40 to-background" />
           
           <div className="relative z-20">
             <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>
@@ -319,7 +319,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="mb-6 md:mb-12 text-center"
           >
-            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Additional Services</h2>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Additional Services</h2>
             <p className="text-sm md:text-lg text-muted-foreground text-center max-w-2xl mx-auto">
               Beyond our core offerings, we provide specialized services to enhance your digital product
             </p>
@@ -434,12 +434,12 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className={`relative border border-[#d2f7be]/10 group-hover:border-violet-500/50 rounded-3xl p-3 md:p-8 bg-gradient-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
+                <div className={`relative border border-[#d2f7be]/10 group-hover:border-violet-500/50 rounded-3xl p-3 md:p-8 bg-linear-to-br ${group.color} backdrop-blur-xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/40`}>
                   <div className="flex items-center gap-2 md:gap-4 mb-4 md:mb-6">
-                    <div className="p-2 md:p-3 rounded-2xl bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-500/50 group-hover:to-purple-500/50 transition-all duration-300 flex-shrink-0">
+                    <div className="p-2 md:p-3 rounded-2xl bg-linear-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-500/50 group-hover:to-purple-500/50 transition-all duration-300 shrink-0">
                       <group.Icon size={20} className="md:w-7 md:h-7 text-lime-200 group-hover:text-lime-100 group-hover:scale-110 transition-all duration-300" />
                     </div>
-                    <h3 className="text-base md:text-2xl font-display font-bold bg-gradient-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent group-hover:from-lime-100 group-hover:via-yellow-50 group-hover:to-lime-100 transition-all duration-300">{group.title}</h3>
+                    <h3 className="text-base md:text-2xl font-display font-bold bg-linear-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent group-hover:from-lime-100 group-hover:via-yellow-50 group-hover:to-lime-100 transition-all duration-300">{group.title}</h3>
                   </div>
                   <div className="flex flex-wrap gap-1 md:gap-2">
                     {group.items.map((item, j) => (
@@ -449,7 +449,7 @@ export default function Services() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: i * 0.1 + j * 0.05 }}
                         viewport={{ once: true }}
-                        className="px-2 md:px-4 py-1 md:py-2 rounded-full font-mono text-xs md:text-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 text-lime-200 hover:text-lime-100 hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/20"
+                        className="px-2 md:px-4 py-1 md:py-2 rounded-full font-mono text-xs md:text-sm bg-linear-to-r from-primary/20 to-accent/20 border border-primary/30 text-lime-200 hover:text-lime-100 hover:from-primary/30 hover:to-accent/30 transition-all cursor-pointer hover:shadow-lg hover:shadow-primary/20"
                       >
                         {item}
                       </motion.span>
@@ -469,7 +469,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="mb-6 md:mb-12 text-center"
           >
-            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Simple, Transparent Pricing</h2>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Simple, Transparent Pricing</h2>
             <p className="text-sm md:text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-3 md:mb-4">
               Pricing below is indicative only based on estimated project complexity ($40/hour rate). Actual costs depend on specific project requirements, complexity, and scope.
             </p>
@@ -521,7 +521,7 @@ export default function Services() {
                 <ul className="space-y-2 md:space-y-4">
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-3">
-                      <Check size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                      <Check size={16} className="text-primary shrink-0 mt-0.5" />
                       <span className="text-xs md:text-sm">{feature}</span>
                     </li>
                   ))}
@@ -552,7 +552,7 @@ export default function Services() {
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 viewport={{ once: true }}
-                className="hidden md:block absolute top-6 md:top-8 left-0 right-0 h-1 bg-gradient-to-r from-lime-400 via-purple-400 to-lime-400 origin-left"
+                className="hidden md:block absolute top-6 md:top-8 left-0 right-0 h-1 bg-linear-to-r from-lime-400 via-purple-400 to-lime-400 origin-left"
                 style={{ originX: 0 }}
               />
 
@@ -562,7 +562,7 @@ export default function Services() {
                 whileInView={{ scaleY: 1 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
                 viewport={{ once: true }}
-                className="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-lime-400 via-purple-400 to-lime-400 origin-top"
+                className="md:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-lime-400 via-purple-400 to-lime-400 origin-top"
                 style={{ originY: 0, transform: 'translateX(-50%)' }}
               />
 
@@ -612,11 +612,11 @@ export default function Services() {
                     {/* Step Circle */}
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center border-2 border-lime-200/50 bg-gradient-to-br ${step.color} backdrop-blur-md relative overflow-hidden group-hover:border-lime-200 transition-all duration-300`}
+                      className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center border-2 border-lime-200/50 bg-linear-to-br ${step.color} backdrop-blur-md relative overflow-hidden group-hover:border-lime-200 transition-all duration-300`}
                       style={{ color: '#c3ecac' }}
                     >
                       {/* Animated gradient background on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-lime-400/0 via-lime-400/10 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-linear-to-r from-lime-400/0 via-lime-400/10 to-lime-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="relative z-10">{step.icon}</div>
                       
                       {/* Pulse animation */}
@@ -629,7 +629,7 @@ export default function Services() {
 
                     {/* Step Content */}
                     <div className="md:text-center relative z-10">
-                      <h4 className="text-lg font-display font-bold mb-2 bg-gradient-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent">{step.title}</h4>
+                      <h4 className="text-lg font-display font-bold mb-2 bg-linear-to-r from-lime-200 via-yellow-100 to-lime-200 bg-clip-text text-transparent">{step.title}</h4>
                       <p className="text-xs text-muted-foreground">{step.desc}</p>
                     </div>
 
@@ -662,7 +662,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mt-16 p-8 rounded-2xl border border-lime-100/30 bg-gradient-to-r from-lime-500/10 via-purple-500/10 to-lime-500/10 backdrop-blur-md"
+              className="text-center mt-16 p-8 rounded-2xl border border-lime-100/30 bg-linear-to-r from-lime-500/10 via-purple-500/10 to-lime-500/10 backdrop-blur-md"
             >
               <div className="flex items-center justify-center gap-3 mb-2">
                 <Trophy size={28} className="text-lime-100" />
@@ -687,7 +687,7 @@ export default function Services() {
             >
               <div>
                 <div className="flex items-center gap-3 mb-3 md:mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
                     <Zap size={20} />
                   </div>
                   <h3 className="text-lg md:text-2xl font-display font-bold">Velocity + Quality</h3>
@@ -699,7 +699,7 @@ export default function Services() {
 
               <div>
                 <div className="flex items-center gap-3 mb-3 md:mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
                     <Target size={20} />
                   </div>
                   <h3 className="text-lg md:text-2xl font-display font-bold">User-Obsessed</h3>
@@ -711,7 +711,7 @@ export default function Services() {
 
               <div>
                 <div className="flex items-center gap-3 mb-3 md:mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                  <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
                     <Users size={20} />
                   </div>
                   <h3 className="text-lg md:text-2xl font-display font-bold">True Partnership</h3>
@@ -728,7 +728,7 @@ export default function Services() {
               viewport={{ once: true }}
               className="relative rounded-3xl overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-3xl" />
+              <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-transparent to-primary/10 rounded-3xl" />
               <div className="relative p-6 md:p-12 flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
@@ -752,7 +752,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="mb-8 md:mb-16 text-center"
           >
-            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Frequently Asked Questions</h2>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-3 md:mb-4 inline-block bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Frequently Asked Questions</h2>
             <p className="text-sm md:text-lg text-muted-foreground text-center max-w-2xl mx-auto">Everything you need to know about our services, process, and partnerships</p>
           </motion.div>
 
@@ -816,11 +816,11 @@ export default function Services() {
                 className={`group rounded-2xl p-4 md:p-6 transition-all duration-300 cursor-pointer ${
                   selectedFaq === i
                     ? "border-2 border-transparent"
-                    : "border border-[#d2f7be]/10 hover:border-lime-200/50 bg-gradient-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md"
+                    : "border border-[#d2f7be]/10 hover:border-lime-200/50 bg-linear-to-r from-white/2 to-white/1 hover:from-lime-500/5 hover:to-purple-500/5 backdrop-blur-md"
                 }`}
               >
                 <div className="flex items-start gap-3 md:gap-4">
-                  <div style={{ color: '#c3ecac' }} className="font-bold flex-shrink-0 mt-0.5">
+                  <div style={{ color: '#c3ecac' }} className="font-bold shrink-0 mt-0.5">
                     <HelpCircle size={20} className="md:w-6 md:h-6" />
                   </div>
                   <div className="flex-1 min-w-0">

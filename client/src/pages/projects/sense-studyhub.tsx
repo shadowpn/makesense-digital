@@ -75,7 +75,7 @@ export default function SenseStudyHub() {
     <Layout>
       <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end justify-center overflow-hidden pb-8 bg-background">
         <HeroBackground src={workHeroBg} position="center 80%" />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/50 to-background" />
+        <div className="absolute inset-0 z-10 bg-linear-to-b from-background/0 via-background/50 to-background" />
         
         <div className="absolute top-2 md:top-6 left-0 right-0 z-30 container mx-auto px-4 md:px-6">
           <div className="flex justify-between items-center w-full">
@@ -100,7 +100,7 @@ export default function SenseStudyHub() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-4xl md:mt-[60px] mt-4 mb-0"
           >
-            <div className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
+            <div className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">
               <AnimatedText text={projectData.title} staggerDelay={0.05} duration={0.5} initialDelay={0.2} repeat={false} />
             </div>
             
@@ -151,7 +151,7 @@ export default function SenseStudyHub() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {projectData.features.map((feature, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-[#c4b5fd]/5 border border-[#c4b5fd]/10">
-                  <BookOpen size={20} className="text-[#c4b5fd] mt-0.5 flex-shrink-0" />
+                  <BookOpen size={20} className="text-[#c4b5fd] mt-0.5 shrink-0" />
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
@@ -188,7 +188,7 @@ export default function SenseStudyHub() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-4 md:p-8 rounded-2xl border border-[#c4b5fd]/10 bg-gradient-to-br from-[#c4b5fd]/5 to-transparent"
+            className="p-4 md:p-8 rounded-2xl border border-[#c4b5fd]/10 bg-linear-to-br from-[#c4b5fd]/5 to-transparent"
           >
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 flex items-center gap-2">
               <Zap size={18} className="md:w-5 md:h-5 text-[#c4b5fd]" />
@@ -197,7 +197,7 @@ export default function SenseStudyHub() {
             <ul className="space-y-3">
               {projectData.challenges.map((challenge, i) => (
                 <li key={i} className="text-muted-foreground text-sm flex items-center gap-2">
-                  <span className="text-[#c4b5fd] flex-shrink-0">•</span>
+                  <span className="text-[#c4b5fd] shrink-0">•</span>
                   {challenge}
                 </li>
               ))}
@@ -209,7 +209,7 @@ export default function SenseStudyHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-4 md:p-8 rounded-2xl border border-[#c4b5fd]/10 bg-gradient-to-br from-[#c4b5fd]/5 to-transparent"
+            className="p-4 md:p-8 rounded-2xl border border-[#c4b5fd]/10 bg-linear-to-br from-[#c4b5fd]/5 to-transparent"
           >
             <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 flex items-center gap-2">
               <Globe size={18} className="md:w-5 md:h-5 text-[#c4b5fd]" />
@@ -218,7 +218,7 @@ export default function SenseStudyHub() {
             <ul className="space-y-3">
               {projectData.results.map((result, i) => (
                 <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
-                  <CheckCircle size={16} className="text-[#c4b5fd] mt-0.5 flex-shrink-0" />
+                  <CheckCircle size={16} className="text-[#c4b5fd] mt-0.5 shrink-0" />
                   {result}
                 </li>
               ))}
@@ -240,7 +240,7 @@ export default function SenseStudyHub() {
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          <div className="absolute inset-0 z-10 bg-linear-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-4">Ready to build something similar?</h2>

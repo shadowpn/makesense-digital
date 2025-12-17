@@ -98,7 +98,7 @@ export default function Portfolio() {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
+        <div className="absolute inset-0 z-10 bg-linear-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div 
@@ -114,7 +114,7 @@ export default function Portfolio() {
                 staggerDelay={0.06} 
                 duration={0.6}
                 initialDelay={1.8}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+                className="text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary"
               />
             </div>
             
@@ -134,7 +134,7 @@ export default function Portfolio() {
               className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm max-w-2xl"
             >
               <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">Digital solutions that make sense.</span>
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">Digital solutions that make sense.</span>
               </p>
               <p className="text-sm md:text-base text-muted-foreground mt-2">
                 Every project is built to work, tested to prove it, and designed to impress.
@@ -156,7 +156,7 @@ export default function Portfolio() {
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
-                  <div className="relative aspect-[4/3] mb-2 md:mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
+                  <div className="relative aspect-4/3 mb-2 md:mb-6 rounded-3xl overflow-hidden border border-[#d2f7be]/10">
                     <img 
                       src={project.image} 
                       alt={project.title} 
@@ -201,7 +201,7 @@ export default function Portfolio() {
                       backgroundPosition: 'center'
                     }}
                   />
-                  <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+                  <div className="absolute inset-0 z-10 bg-linear-to-b from-background/10 via-background/5 to-background/10" />
                   
                   <div className="relative z-20">
                     <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>
@@ -240,7 +240,7 @@ export default function Portfolio() {
               staggerDelay={0.06} 
               duration={0.6}
               initialDelay={0.3}
-              className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary inline"
+              className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary inline"
             />
           </h2>
           <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -281,10 +281,10 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="group relative p-4 md:p-8 rounded-3xl border border-[#d2f7be]/10 bg-gradient-to-br from-white/5 to-white/0 hover:border-primary/50 transition-all duration-300"
+              className="group relative p-4 md:p-8 rounded-3xl border border-[#d2f7be]/10 bg-linear-to-br from-white/5 to-white/0 hover:border-primary/50 transition-all duration-300"
             >
               {/* Background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+              <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
               
               <div className="relative z-10">
                 {/* Step number */}
@@ -293,7 +293,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Icon */}
-                <div className="w-12 md:w-14 h-12 md:h-14 mb-4 md:mb-6 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300 border border-primary/20 group-hover:border-primary/50 shadow-lg shadow-primary/10">
+                <div className="w-12 md:w-14 h-12 md:h-14 mb-4 md:mb-6 rounded-2xl bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300 border border-primary/20 group-hover:border-primary/50 shadow-lg shadow-primary/10">
                   {step.icon}
                 </div>
 

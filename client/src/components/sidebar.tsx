@@ -70,7 +70,7 @@ export function Sidebar() {
         initial={isMobile ? "closed" : "open"}
         animate={isMobile ? (isOpen ? "open" : "closed") : "open"}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-background via-background to-background/95 border-r border-[#d2f7be]/10 backdrop-blur-xl z-40 md:sticky md:top-0 md:z-30 overflow-y-auto hide-scrollbar"
+        className="fixed left-0 top-0 h-screen w-64 bg-linear-to-b from-background via-background to-background/95 border-r border-[#d2f7be]/10 backdrop-blur-xl z-40 md:sticky md:top-0 md:z-30 overflow-y-auto hide-scrollbar"
       >
         <div className="p-8 space-y-8 h-full flex flex-col">
           {/* Profile Section */}
@@ -101,7 +101,7 @@ export function Sidebar() {
                 />
               </motion.div>
             </motion.div>
-            <h1 className="text-2xl font-display font-black tracking-tight mb-1 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+            <h1 className="text-2xl font-display font-black tracking-tight mb-1 bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">
               SensePower
               <br/>Digital
             </h1>
@@ -126,7 +126,7 @@ export function Sidebar() {
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 text-muted-foreground hover:text-primary transition-all duration-300 border border-[#d2f7be]/5 hover:border-primary/50 font-bold text-sm"
+                  className="p-2 rounded-lg bg-linear-to-br from-primary/20 to-accent/20 hover:from-primary/30 hover:to-accent/30 text-muted-foreground hover:text-primary transition-all duration-300 border border-[#d2f7be]/5 hover:border-primary/50 font-bold text-sm"
                   title={social.label}
                 >
                   <Icon size={20} />
@@ -136,7 +136,7 @@ export function Sidebar() {
           </motion.div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="h-px bg-linear-to-r from-transparent via-primary/30 to-transparent" />
 
           {/* Navigation */}
           <nav className="space-y-2 flex-1">
@@ -155,7 +155,7 @@ export function Sidebar() {
                     onClick={() => isMobile && setIsOpen(false)}
                     className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 relative overflow-hidden group ${
                       isActive
-                        ? "bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/50"
+                        ? "bg-linear-to-r from-primary/20 to-accent/20 text-primary border border-primary/50"
                         : "text-foreground/70 hover:text-foreground hover:bg-[#d2f7be]/5 border border-transparent hover:border-primary/30"
                     }`}
                   >
@@ -193,7 +193,7 @@ export function Sidebar() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full px-4 py-3 rounded-xl bg-linear-to-r from-primary to-accent text-primary-foreground text-sm font-medium hover:shadow-lg hover:shadow-primary/50 transition-all border border-primary/50 hover:border-primary flex items-center justify-center gap-2 cursor-pointer"
               >
                 Start Project
                 <ArrowRight size={18} />

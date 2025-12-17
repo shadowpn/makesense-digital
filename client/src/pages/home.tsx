@@ -56,7 +56,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <HeroBackground src={heroBg} position="center" />
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/0 via-background/30 to-background" />
+        <div className="absolute inset-0 z-10 bg-linear-to-b from-background/0 via-background/30 to-background" />
         
         <div className="container mx-auto px-6 relative z-20">
           <motion.div 
@@ -76,7 +76,7 @@ export default function Home() {
                 staggerDelay={0.06} 
                 duration={0.6}
                 initialDelay={1.8}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+                className="text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary"
               />
             </div>
             
@@ -92,7 +92,7 @@ export default function Home() {
               className="mb-8 md:mb-12 p-4 md:p-6 rounded-2xl border border-[#d2f7be]/20 bg-[#d2f7be]/5 backdrop-blur-sm"
             >
               <p className="text-lg md:text-2xl lg:text-3xl font-display font-bold tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">We code. We test. We make sense.</span>
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-accent to-primary">We code. We test. We make sense.</span>
               </p>
               <p className="text-sm md:text-base text-muted-foreground mt-2">
                 Technology should work. We make it meaningful.
@@ -137,7 +137,7 @@ export default function Home() {
             whileHover={{ scale: 0.98 }}
             className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 w-full">
               <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">LEGAL TECH</div>
@@ -150,7 +150,7 @@ export default function Home() {
              whileHover={{ scale: 0.98 }}
              className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 h-64 md:h-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={sensestudyhubImg} alt="Sense StudyHub" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
               <div className="mb-2 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-mono inline-block backdrop-blur-md">EDTECH</div>
@@ -162,7 +162,7 @@ export default function Home() {
              whileHover={{ scale: 0.98 }}
              className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 md:row-span-2 h-64 md:h-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={oraidImg} alt="Ora-Aid" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
               <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
@@ -175,7 +175,7 @@ export default function Home() {
              whileHover={{ scale: 0.98 }}
              className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 h-64 md:h-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
               <div className="mb-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
@@ -187,7 +187,7 @@ export default function Home() {
              whileHover={{ scale: 0.98 }}
              className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 h-64 md:h-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={expertlashImg} alt="ExpertLash" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
               <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">BEAUTY TECH</div>
@@ -202,7 +202,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="text-2xl md:text-5xl font-display font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">We Build, Test & Craft.</h2>
+              <h2 className="text-2xl md:text-5xl font-display font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">We Build, Test & Craft.</h2>
               <p className="text-muted-foreground text-base md:text-lg mb-8 leading-relaxed">
                 From fullstack development to rigorous QA testing and creative vibe coding. We deliver products that look stunning, work flawlessly, and delight users at every interaction.
               </p>
@@ -214,7 +214,7 @@ export default function Home() {
                   "Production-Ready Solutions – From MVP to Scale"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-base md:text-lg">
-                    <CheckCircle className="text-primary flex-shrink-0 mt-0.5" size={20} />
+                    <CheckCircle className="text-primary shrink-0 mt-0.5" size={20} />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -276,7 +276,7 @@ export default function Home() {
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-background/10 via-background/5 to-background/10" />
+          <div className="absolute inset-0 z-10 bg-linear-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
             <h2 className="text-2xl md:text-4xl font-display font-bold mb-4 md:mb-6">Ready to work together?</h2>
