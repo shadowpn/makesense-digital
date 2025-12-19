@@ -14,6 +14,7 @@ import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
 import expertlashImg from "@assets/generated_images/lash_course_light_pink_mockup.png";
+import aboutNataliia from  "@assets/About_us.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -114,6 +115,70 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* About / Mission Section */}
+      <section className="container mx-auto px-6 mb-5 lg:mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid md:grid-cols-2 gap-10 md:gap-16 items-center"
+        >
+          {/* Image */}
+          <div className="relative group">
+            <div className="absolute inset-0 rounded-3xl bg-linear-to-tr from-primary/20 via-accent/10 to-transparent blur-2xl opacity-60 group-hover:opacity-80 transition-opacity" />
+            <img
+              src={aboutNataliia} // замени на свою фотографию
+              alt="Founder portrait"
+              className="relative z-10 w-full h-[420px] md:h-[520px] object-cover rounded-3xl border border-[#d2f7be]/10"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="max-w-xl">
+            <div className="mb-4 inline-block px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-primary text-xs md:text-sm font-mono">
+              ABOUT US
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-6 leading-tight">
+              <AnimatedText
+                text={`Human-centered digital \n products, built with \n         purpose.`}
+                staggerDelay={0.04}
+                duration={0.5}
+                initialDelay={0.2}
+                className="text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary whitespace-normal break-normal"
+              />
+            </h2>
+
+
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
+              We are a product-focused digital studio dedicated to building meaningful, human-centered experiences. We believe technology should be clear, reliable, and genuinely helpful — not complex for the sake of complexity.
+            </p>
+
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
+              Our mission is to design, test, and ship digital products that solve real
+              problems, scale confidently, and feel effortless for users.
+            </p>
+
+      {/* Mission bullets */}
+      <ul className="space-y-4">
+        {[
+          "Build practical, production-ready solutions",
+          "Combine clean code with thoughtful UX",
+          "Test thoroughly — quality is never optional",
+          "Create technology that actually makes sense"
+        ].map((item, i) => (
+          <li key={i} className="flex items-start gap-3 text-base md:text-lg">
+            <CheckCircle className="text-primary shrink-0 mt-0.5" size={20} />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </motion.div>
+</section>
+
 
       {/* Selected Works - Bento Grid */}
       <section className="container mx-auto px-6">
