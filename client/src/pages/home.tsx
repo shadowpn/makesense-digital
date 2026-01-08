@@ -14,7 +14,7 @@ import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
 import expertlashImg from "@assets/generated_images/lash_course_light_pink_mockup.png";
-import landingImg from "@assets/generated_images/modern_landing_page_showcase_mockup.png";
+import vibesImg from "@assets/generated_images/vibecoding_branding_preview_image.png";
 import tennisImg from "@assets/stock_images/professional_tennis__6813864c.jpg";
 import aboutNataliia from  "@assets/About_us.png";
 
@@ -199,7 +199,7 @@ export default function Home() {
           </a>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 md:grid-rows-4 gap-4 md:gap-6 h-auto md:h-[1200px]">
+        <div className="grid md:grid-cols-3 md:grid-rows-4 gap-4 md:gap-6 h-auto md:h-[2400px]">
           <motion.div 
             whileHover={{ scale: 0.98 }}
             className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
@@ -264,13 +264,13 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="md:row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
+             className="md:row-span-2 rounded-3xl overflow-hidden relative group bg-purple-500/10 border border-purple-500/20 p-6 h-64 md:h-auto"
           >
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
-            <img src={landingImg} alt="Professional Landing Page" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
+            <img src={vibesImg} alt="VibeCoding" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 w-full">
-              <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">DESIGN</div>
-              <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Modern Landing Page</h3>
+              <div className="mb-3 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
+              <h3 className="text-xl md:text-2xl font-display font-bold mb-2">VibeCoding</h3>
               <p className="text-gray-300 text-xs line-clamp-2">High-converting presentation page.</p>
             </div>
           </motion.div>
