@@ -199,7 +199,7 @@ export default function Home() {
           </a>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 md:grid-rows-3 gap-4 md:gap-6 h-auto md:h-[927px]">
+        <div className="grid md:grid-cols-3 md:grid-rows-4 gap-4 md:gap-6 h-auto md:h-[1200px]">
           <motion.div 
             whileHover={{ scale: 0.98 }}
             className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
@@ -261,31 +261,30 @@ export default function Home() {
               <h3 className="text-lg md:text-xl font-display font-bold">ExpertLash</h3>
             </div>
           </motion.div>
-        </div>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-4 md:mt-6">
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="md:col-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-80"
+             className="md:row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
           >
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={landingImg} alt="Professional Landing Page" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 w-full">
               <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">DESIGN</div>
-              <h3 className="text-2xl md:text-4xl font-display font-bold mb-2">Modern Landing Page</h3>
-              <p className="text-gray-300 text-sm md:text-base max-w-md line-clamp-2 md:line-clamp-none">High-converting presentation page for a tech product.</p>
+              <h3 className="text-xl md:text-2xl font-display font-bold mb-2">Modern Landing Page</h3>
+              <p className="text-gray-300 text-xs line-clamp-2">High-converting presentation page.</p>
             </div>
           </motion.div>
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 h-64 md:h-80"
+             className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
           >
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={tennisImg} alt="Tennis Connect" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
-            <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
-              <div className="mb-2 px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-mono inline-block backdrop-blur-md">SPORT TECH</div>
-              <h3 className="text-lg md:text-xl font-display font-bold">Tennis Connect</h3>
+            <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 w-full">
+              <div className="mb-3 px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-mono inline-block backdrop-blur-md">SPORT TECH</div>
+              <h3 className="text-2xl md:text-4xl font-display font-bold mb-2">Tennis Connect</h3>
+              <p className="text-gray-300 text-sm md:text-base max-w-md">Professional tennis court booking and community platform.</p>
             </div>
           </motion.div>
         </div>
