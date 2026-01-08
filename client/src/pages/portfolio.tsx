@@ -80,7 +80,9 @@ export default function Portfolio() {
           { "@type": "ListItem", "position": 1, "name": "Aussie Way Visa", "url": "https://sensepowerdigital.com/portfolio/aussie-way-visa" },
           { "@type": "ListItem", "position": 2, "name": "Sense StudyHub", "url": "https://sensepowerdigital.com/sense-studyhub" },
           { "@type": "ListItem", "position": 3, "name": "Ora-Aid", "url": "https://sensepowerdigital.com/portfolio/ora-aid" },
-          { "@type": "ListItem", "position": 4, "name": "ExpertLash", "url": "https://sensepowerdigital.com/portfolio/expertlash" }
+          { "@type": "ListItem", "position": 4, "name": "ExpertLash", "url": "https://sensepowerdigital.com/portfolio/expertlash" },
+          { "@type": "ListItem", "position": 5, "name": "TennisConnect", "url": "https://sensepowerdigital.com/portfolio/tennis-connect-platform" },
+          { "@type": "ListItem", "position": 6, "name": "VibeCode Landing", "url": "https://sensepowerdigital.com/portfolio/landing-vibecode" }
         ]
       }
     });

@@ -14,8 +14,8 @@ import aussiewayImg from "@assets/изображение_1764055739030.png";
 import sensestudyhubImg from "@assets/изображение_1764056223710.png";
 import oraidImg from "@assets/изображение_1764057538171.png";
 import expertlashImg from "@assets/generated_images/lash_course_light_pink_mockup.png";
-import vibesImg from "@assets/generated_images/vibecoding_branding_preview_image.png";
-import tennisImg from "@assets/stock_images/professional_tennis__6813864c.jpg";
+import vibesImg from "@assets/vibecode_land/vibe_code_home.png";
+import tennisImg from "@assets/tennis-connect/main3_home.png";
 import aboutNataliia from  "@assets/About_us.png";
 
 const fadeIn = {
@@ -199,7 +199,7 @@ export default function Home() {
           </a>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 md:grid-rows-6 gap-4 md:gap-6 h-auto md:h-[1800px]">
+        <div className=" grid md:grid-cols-3 gap-4 md:gap-6">
           <motion.div 
             whileHover={{ scale: 0.98 }}
             className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
