@@ -261,10 +261,12 @@ export default function Home() {
               <h3 className="text-lg md:text-xl font-display font-bold">ExpertLash</h3>
             </div>
           </motion.div>
+        </div>
 
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6 mt-4 md:mt-6">
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="md:col-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-auto"
+             className="md:col-span-2 rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-6 h-64 md:h-80"
           >
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={landingImg} alt="Professional Landing Page" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
@@ -277,7 +279,7 @@ export default function Home() {
 
           <motion.div 
              whileHover={{ scale: 0.98 }}
-             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 h-64 md:h-auto"
+             className="rounded-3xl overflow-hidden relative group bg-muted/30 border border-[#d2f7be]/5 p-4 h-64 md:h-80"
           >
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={tennisImg} alt="Tennis Connect" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
