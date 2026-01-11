@@ -16,28 +16,28 @@ const projectData = {
   category: "EdTech",
   year: "2024",
   client: "Education Platform",
-  description: "Modern online learning platform with curated course catalog, video lessons, and interactive Q&A features.",
-  longDescription: "Sense StudyHub (CourseFlow) is a modern online learning platform that allows users to browse, save, and take interactive courses. Registered users gain access to a curated catalog of course cards and can save courses to their personal dashboard. Each course includes detailed description, video lessons, and a comment section where learners can ask questions or leave feedback. The platform includes a full admin panel for uploading and managing courses, built using Django REST Framework on the backend and Next.js + Tailwind CSS on the frontend. Fully responsive and optimized for mobile use.",
+  description: "Modern EdTech platform for scalable online learning with video lessons, JWT authentication, and interactive Q&A.",
+  longDescription: "Sense StudyHub (CourseFlow) is a modern online learning platform designed for structured and interactive education. Users can browse a curated catalog of courses, save them to a personal dashboard, and access detailed course pages with video lessons and rich descriptions. Each course includes a live comment section where learners can ask questions or leave feedback without page reloads. The platform features a full admin panel for managing courses and content, powered by Django REST Framework on the backend and Next.js with Tailwind CSS on the frontend. The application is fully responsive and optimized for mobile-first usage.", 
   tags: ["Python", "JavaScript", "Django REST", "Next.js", "Tailwind CSS", "JWT Auth", "SQLite/PostgreSQL", "HTML5 Video", "Responsive Mobile"],
   features: [
-    "JWT-based authentication with secure token management",
-    "Personal dashboard with enrolled courses pagination",
+    "JWT-based authentication with secure access and refresh token handling",
+    "Personalized user dashboard with paginated enrolled courses",
     "Course detail pages with HTML5 video player",
-    "Live comment system for Q&A without page reloads",
+    "Real-time comment system for course Q&A without full page reloads",
     "Admin panel for course CRUD operations",
     "Mobile-first responsive design from 320px to desktop"
   ],
   challenges: [
     "Implementing protected routes with client-side guards",
-    "Building reusable pagination component for multiple lists",
+    "Designing a reusable pagination component shared across multiple data-driven views",
     "Preserving rich text formatting in course descriptions",
-    "Token refresh automation through custom auth helpers"
+    "Automating JWT token refresh flow using custom authentication helpers"
   ],
   results: [
-    "Full SPA with real-time data fetching",
+    "Production-ready single-page application with real-time data fetching",
     "Seamless video lesson delivery",
     "Modern UI with neumorphic design and animations",
-    "Easily portable database from SQLite to PostgreSQL"
+    "Database architecture designed for seamless migration from SQLite to PostgreSQ"
   ]
 };
 
@@ -243,9 +243,9 @@ export default function SenseStudyHub() {
           <div className="absolute inset-0 z-10 bg-linear-to-b from-background/10 via-background/5 to-background/10" />
           
           <div className="relative z-20">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-4">Ready to build something similar?</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-4">Ready to build a scalable platform like this?</h2>
             <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8 max-w-xl mx-auto">
-              Let's discuss your project and create a solution that makes sense for your business.
+              Let’s discuss your idea and design a scalable, user-focused solution tailored to your business goals.
             </p>
             <Link href="/contact">
               <Button size="lg" className="rounded-full px-8 shadow-lg shadow-purple-500/40" style={{ backgroundColor: '#d2f7be' }} data-testid="button-get-in-touch">
