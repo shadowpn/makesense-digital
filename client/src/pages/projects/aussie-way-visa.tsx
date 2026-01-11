@@ -8,16 +8,16 @@ import { useState, useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import { AnimatedText } from "@/components/animated-text";
 import { HeroBackground } from "@/components/hero-background";
-import projectImg from "@assets/изображение_1764055739030.png";
+import projectImg from "@assets/aussie_way_visa/1764055739030.png";
 import heroBg from "@assets/generated_images/sydney_opera_house_sunset_view.png";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
-import screenshot1 from "@assets/image_1765510416039.png";
-import screenshot2 from "@assets/image_1765510439243.png";
-import screenshot3 from "@assets/image_1765510473516.png";
-import screenshot4 from "@assets/image_1765510500300.png";
-import screenshot5 from "@assets/image_1765510522693.png";
-import screenshot6 from "@assets/image_1765510539881.png";
-import screenshot7 from "@assets/image_1765510562795.png";
+import screenshot1 from "@assets/aussie_way_visa/image_1765510416039.png";
+import screenshot2 from "@assets/aussie_way_visa/image_1765510439243.png";
+import screenshot3 from "@assets/aussie_way_visa/image_1765510473516.png";
+import screenshot4 from "@assets/aussie_way_visa/image_1765510500300.png";
+import screenshot5 from "@assets/aussie_way_visa/image_1765510522693.png";
+import screenshot6 from "@assets/aussie_way_visa/image_1765510539881.png";
+import screenshot7 from "@assets/aussie_way_visa/image_1765510562795.png";
 
 const projectScreenshots = [
   { src: projectImg, label: "Main Project View" },
@@ -220,7 +220,7 @@ export default function AussieWayVisa() {
                 Back to Portfolio
               </Button>
             </Link>
-            <Link href="/portfolio/sense-studyhub" className="hidden md:block">
+            <Link href="/portfolio/tennis-connect-platform" className="hidden md:block">
               <Button variant="ghost" className="gap-2 hover:bg-[#d2f7be]/10" data-testid="button-next-project">
                 Next Project
                 <ArrowRight size={18} />

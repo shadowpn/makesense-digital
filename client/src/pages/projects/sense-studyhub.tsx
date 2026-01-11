@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import { AnimatedText } from "@/components/animated-text";
 import { HeroBackground } from "@/components/hero-background";
-import projectImg from "@assets/изображение_1764056223710.png";
+import projectImg from "@assets/sense_study/1764056223710.png";
 import workHeroBg from "@assets/generated_images/realistic_cozy_study_desk.png";
 
 const projectData = {

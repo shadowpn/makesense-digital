@@ -10,13 +10,13 @@ import { AnimatedText } from "@/components/animated-text";
 import { HeroBackground } from "@/components/hero-background";
 import projectImg from "@assets/изображение_1764057538171.png";
 import workHeroBg from "@assets/generated_images/happy_family_on_white_bed.png";
-import screenshot1 from "@assets/image_1765519688917.png";
-import screenshot2 from "@assets/image_1765519711161.png";
-import screenshot3 from "@assets/image_1765519729055.png";
-import screenshot4 from "@assets/image_1765519752412.png";
-import screenshot5 from "@assets/image_1765519773867.png";
-import screenshot6 from "@assets/image_1765519796301.png";
-import screenshot7 from "@assets/image_1765519815804.png";
+import screenshot1 from "@assets/ora_aid/image_1765519688917.png";
+import screenshot2 from "@assets/ora_aid/image_1765519711161.png";
+import screenshot3 from "@assets/ora_aid/image_1765519729055.png";
+import screenshot4 from "@assets/ora_aid/image_1765519752412.png";
+import screenshot5 from "@assets/ora_aid/image_1765519773867.png";
+import screenshot6 from "@assets/ora_aid/image_1765519796301.png";
+import screenshot7 from "@assets/ora_aid/image_1765519815804.png";
 import ctaBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
 
 const projectScreenshots = [

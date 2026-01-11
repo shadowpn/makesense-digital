@@ -8,10 +8,12 @@ import { AnimatedText } from "@/components/animated-text";
 import { Fragment, useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import workHeroBg from "@assets/1709706757448_1764139146885.jpg";
-import aussiewayImg from "@assets/изображение_1764055739030.png";
-import sensestudyhubImg from "@assets/изображение_1764056223710.png";
-import oraidImg from "@assets/image_1765519688917.png";
-import expertlashImg from "@assets/generated_images/lash_course_light_pink_mockup.png";
+import aussiewayImg from "@assets/aussie_way_visa/1764055739030.png";
+import sensestudyhubImg from "@assets/sense_study/1764056223710.png";
+import oraidImg from "@assets/ora_aid/image_1765519688917.png";
+import expertlashImg from "@assets/expert_lash/main_lash.png";
+import tennisImg from "@assets/tennis-connect/main3_home.png";
+import vibesImg from "@assets/vibecode_land/vibe_code_home.png";
 
 const projects = [
   {
@@ -25,12 +27,30 @@ const projects = [
   },
   {
     id: 2,
+    title: "TennisConnect",
+    slug: "tennis-connect-platform",
+    category: "Sport Tech",
+    description: "TennisConnect is a community-driven tennis platform that connects players, coaches, clubs, and tournaments in one place, offering a seamless and modern experience for discovering, connecting, and growing within the tennis community.",
+    tags: [ "Sports Tech", "Community Platform", "React", "TypeScript", "Node.js", "PostgreSQL", "Authentication", "Role-Based Access", "Real-Time Messaging", "Responsive Design"],
+    image: tennisImg
+  },
+  {
+    id: 5,
     title: "Sense StudyHub",
     slug: "sense-studyhub",
     category: "EdTech",
     description: "Comprehensive online learning platform with interactive courses and student engagement tools.",
     tags: ["Python", "JavaScript", "Django", "Next.js", "Tailwind", "Authentication", "HTML", "CSS", "Responsive Mobile"],
     image: sensestudyhubImg
+  },
+  {
+    id: 6,
+    title: "VibeCode Landing Page",
+    slug: "landing-vibecode",
+    category: "AI-Powered Development",
+    description: "AI-assisted landing page creation service that helps founders and small businesses quickly design, build, and launch modern, high-converting websites.",
+    tags: [ "AI Website Builder", "Landing Page Service", "Vibe Coding", "No-Code / Low-Code", "Next.js", "Tailwind CSS", "Fast Launch"],
+    image: vibesImg
   },
   {
     id: 3,
@@ -49,7 +69,8 @@ const projects = [
     description: "Professional lash extension booking and consultation platform. Connect with expert lash technicians and manage appointments seamlessly.",
     tags: ["Telegram Bot", "Telegram MiniApp", "Paid Subscription", "Stripe", "PayPal", "Authentication", "Python", "Supabase", "Next.js", "Tailwind"],
     image: expertlashImg
-  }
+  },
+
 ];
 
 export default function Portfolio() {

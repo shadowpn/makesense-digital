@@ -14,6 +14,8 @@ import AussieWayVisa from "@/pages/projects/aussie-way-visa";
 import SenseStudyHub from "@/pages/projects/sense-studyhub";
 import OraAid from "@/pages/projects/ora-aid";
 import ExpertLash from "@/pages/projects/expertlash";
+import TennisConnect from "@/pages/projects/tennis-connect-platform";
+import VibeCodeLanding from "@/pages/projects/landing-vibecode"
 
 function Router() {
   return (
@@ -25,6 +27,8 @@ function Router() {
       <Route path="/portfolio/sense-studyhub" component={SenseStudyHub} />
       <Route path="/portfolio/ora-aid" component={OraAid} />
       <Route path="/portfolio/expertlash" component={ExpertLash} />
+      <Route path="/portfolio/tennis-connect-platform" component={TennisConnect} />
+      <Route path="/portfolio/landing-vibecode" component={VibeCodeLanding} />
       <Route path="/services" component={Services} />
       <Route path="/research" component={Research} />
       <Route path="/contact" component={Contact} />
