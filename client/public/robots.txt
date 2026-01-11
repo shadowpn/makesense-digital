@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api
 
-Sitemap: https://sensepower.digital/sitemap.xml
+Sitemap: https://sensepowerdigital.com/sitemap.xml
