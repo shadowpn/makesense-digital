@@ -131,7 +131,7 @@ export default function Home() {
           <div className="relative group">
             <div className="absolute inset-0 rounded-3xl bg-linear-to-tr from-primary/20 via-accent/10 to-transparent blur-2xl opacity-60 group-hover:opacity-80 transition-opacity" />
             <img
-              src={aboutNataliia} // замени на свою фотографию
+              src={aboutNataliia} 
               alt="Founder portrait"
               className="relative z-10 w-full h-[420px] md:h-[520px] object-cover rounded-3xl border border-[#d2f7be]/10"
             />
@@ -143,17 +143,15 @@ export default function Home() {
               ABOUT US
             </div>
 
-            <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-6 leading-tight">
-              <AnimatedText
-                text={`Human-centered digital \n products, built with \n         purpose.`}
-                staggerDelay={0.04}
-                duration={0.5}
-                initialDelay={0.2}
-                className="text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary whitespace-normal break-normal"
-              />
-            </h2>
-
-
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-6 leading-tight
+                        text-transparent bg-clip-text bg-linear-to-r from-primary via-accent to-primary"
+            >
+              Human-centered digital products, built with purpose.
+            </motion.h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
               We are a product-focused digital studio dedicated to building meaningful, human-centered experiences. We believe technology should be clear, reliable, and genuinely helpful — not complex for the sake of complexity.
             </p>

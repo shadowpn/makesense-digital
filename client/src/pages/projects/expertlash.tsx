@@ -118,7 +118,7 @@ function ProjectSlider() {
           
           <button
             onClick={goToPrevious}
-            className="absolute bg-[#f9a8d4] left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
             data-testid="button-slider-prev"
           >
             <ChevronLeft size={20} className="md:w-6 md:h-6" />
