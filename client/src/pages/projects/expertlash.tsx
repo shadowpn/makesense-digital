@@ -2,15 +2,32 @@ import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, CheckCircle, Zap, Globe, Calendar, Users, Sparkles, CreditCard, MessageSquare } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle, Zap, Globe, Calendar, Users, Sparkles, CreditCard, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { updateSEO, addStructuredData } from "@/utils/seo";
 import { AnimatedText } from "@/components/animated-text";
 import { HeroBackground } from "@/components/hero-background";
-import projectImg from "@assets/generated_images/lash_course_light_pink_mockup.png";
+import projectImg from "@assets/expert_lash/main_lash.png";
 import workHeroBg from "@assets/generated_images/online_lash_course_banner.png";
 import ctaBg from "@assets/generated_images/abstract_digital_dark_mode_hero_background.png";
+
+import screenshot1 from "@assets/expert_lash/lash1.png";
+import screenshot2 from "@assets/expert_lash/lash2.png";
+import screenshot3 from "@assets/expert_lash/lash3.png";
+import screenshot4 from "@assets/expert_lash/lash5.png";
+import screenshot5 from "@assets/expert_lash/lash6.png";
+import screenshot6 from "@assets/expert_lash/lash7.png";
+
+const projectScreenshots = [
+  { src: projectImg, label: "Main Project View" },
+  { src: screenshot1, label: "Testimonials" },
+  { src: screenshot2, label: "My Certifications" },
+  { src: screenshot3, label: "Product Carts" },
+  { src: screenshot4, label: "Live Traning" },
+  { src: screenshot5, label: "Login Page" },
+  { src: screenshot6, label: "Online cousrses page" },  
+];
 
 const projectData = {
   title: "ExpertLash",
@@ -41,6 +58,103 @@ const projectData = {
     "Customer satisfaction score of 4.9/5"
   ]
 };
+
+function ProjectSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % projectScreenshots.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [isAutoPlaying]);
+
+  const goToPrevious = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev - 1 + projectScreenshots.length) % projectScreenshots.length);
+  };
+
+  const goToNext = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prev) => (prev + 1) % projectScreenshots.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setIsAutoPlaying(false);
+    setCurrentIndex(index);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="mb-16"
+    >
+      <div className="relative rounded-3xl overflow-hidden border border-[#d2f7be]/10 shadow-2xl shadow-purple-500/10">
+        <div className="relative aspect-video overflow-hidden">
+          {projectScreenshots.map((screenshot, index) => (
+            <motion.div
+              key={index}
+              initial={false}
+              animate={{
+                opacity: index === currentIndex ? 1 : 0,
+                scale: index === currentIndex ? 1 : 1.05,
+              }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <img 
+                src={screenshot.src} 
+                alt={screenshot.label} 
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          ))}
+          
+          <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
+          
+          <button
+            onClick={goToPrevious}
+            className="absolute bg-[#f9a8d4] left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            data-testid="button-slider-prev"
+          >
+            <ChevronLeft size={20} className="md:w-6 md:h-6" />
+          </button>
+          
+          <button
+            onClick={goToNext}
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20 text-white hover:bg-black/70 transition-all hover:scale-110"
+            data-testid="button-slider-next"
+          >
+            <ChevronRight size={20} className="md:w-6 md:h-6" />
+          </button>
+          
+          <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 md:gap-2">
+            {projectScreenshots.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'w-6 md:w-8 bg-[#f9a8d4]' 
+                    : 'bg-white/50 hover:bg-white/80'
+                }`}
+                data-testid={`button-slider-dot-${index}`}
+              />
+            ))}
+          </div>
+          
+          <div className="absolute bottom-2 md:bottom-4 right-2 md:right-4 px-2 md:px-4 py-1 md:py-2 rounded-full bg-black/50 backdrop-blur-md border border-[#d2f7be]/20">
+            <span className="text-xs md:text-sm text-white font-medium">{projectScreenshots[currentIndex].label}</span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function ExpertLash() {
   useEffect(() => {
@@ -125,18 +239,10 @@ export default function ExpertLash() {
       </section>
 
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="rounded-3xl overflow-hidden border border-[#f9a8d4]/10 shadow-2xl shadow-purple-500/10">
-            <img src={projectImg} alt={projectData.title} className="w-full h-auto" />
-          </div>
-        </motion.div>
+      <ProjectSlider />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-16">
+      
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
