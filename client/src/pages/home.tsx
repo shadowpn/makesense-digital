@@ -205,9 +205,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={aussiewayImg} alt="Aussie Way Visa" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 w-full">
-              <div className="mb-3 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">LEGAL TECH</div>
-              <h3 className="text-2xl md:text-4xl font-display font-bold mb-2">Aussie Way Visa</h3>
-              <p className="text-gray-300 text-sm md:text-base max-w-md line-clamp-2 md:line-clamp-none">A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.</p>
+              <div className="mb-3 ml-1 md:ml-0 px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-mono inline-block backdrop-blur-md">LEGAL TECH</div>
+              <h3 className="text-2xl md:text-4xl font-display font-bold mb-2 ml-1 md:ml-0">Aussie Way Visa</h3>
+              <p className="text-gray-300 text-sm md:text-base max-w-md line-clamp-2 md:line-clamp-none ml-1 md:ml-0 mb-2 md:mb-0">A modern platform for Australian visa applications and migration services. Study, work, and live in Australia with expert legal guidance.</p>
             </div>
           </motion.div>
 
@@ -218,8 +218,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={sensestudyhubImg} alt="Sense StudyHub" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
-              <div className="mb-2 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-mono inline-block backdrop-blur-md">EDTECH</div>
-              <h3 className="text-lg md:text-xl font-display font-bold">Sense StudyHub</h3>
+              <div className="mb-2 ml-1 md:ml-0 px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-mono inline-block backdrop-blur-md">EDTECH</div>
+              <h3 className="text-lg md:text-xl font-display font-bold ml-1 md:ml-0">Sense StudyHub</h3>
             </div>
           </motion.div>
 
@@ -230,9 +230,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={oraidImg} alt="Ora-Aid" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
-              <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
-              <h3 className="text-lg md:text-xl font-display font-bold mb-2">Ora-Aid</h3>
-              <p className="text-gray-300 text-xs line-clamp-1 md:line-clamp-none">Self-adhesive intraoral patch for safe, effective oral wound care.</p>
+              <div className="mb-2 ml-1 md:ml-0 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">HEALTHTECH</div>
+              <h3 className="text-lg md:text-xl font-display font-bold mb-2 ml-1 md:ml-0">Ora-Aid</h3>
+              <p className="text-gray-300 text-xs line-clamp-1 md:line-clamp-none ml-1 md:ml-0">Self-adhesive intraoral patch for safe, effective oral wound care.</p>
             </div>
           </motion.div>
 
@@ -243,8 +243,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80" alt="Dev Tool" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
-              <div className="mb-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
-              <h3 className="text-lg md:text-xl font-display font-bold">MVP Platform</h3>
+              <div className="mb-2 ml-1 md:ml-0 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
+              <h3 className="text-lg md:text-xl font-display font-bold ml-1 md:ml-0">MVP Platform</h3>
             </div>
           </motion.div>
 
@@ -255,8 +255,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={expertlashImg} alt="ExpertLash" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-[30px] left-0 p-4 md:p-6 z-20 w-full">
-              <div className="mb-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">BEAUTY TECH</div>
-              <h3 className="text-lg md:text-xl font-display font-bold">ExpertLash</h3>
+              <div className="mb-2 ml-1 md:ml-0 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-mono inline-block backdrop-blur-md">BEAUTY TECH</div>
+              <h3 className="text-lg md:text-xl font-display font-bold ml-1 md:ml-0">ExpertLash</h3>
             </div>
           </motion.div>
 
@@ -267,9 +267,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={vibesImg} alt="VibeCoding" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 w-full">
-              <div className="mb-3 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
-              <h3 className="text-xl md:text-2xl font-display font-bold mb-2">VibeCoding</h3>
-              <p className="text-gray-300 text-xs line-clamp-2">High-converting presentation page.</p>
+              <div className="mb-3 ml-1 md:ml-0 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono inline-block backdrop-blur-md">DEVELOPMENT</div>
+              <h3 className="text-xl md:text-2xl font-display font-bold mb-2 ml-1 md:ml-0">VibeCoding</h3>
+              <p className="text-gray-300 text-xs line-clamp-2 ml-1 md:ml-0 mb-2 md:mb-0">High-converting presentation page.</p>
             </div>
           </motion.div>
 
@@ -280,9 +280,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent z-10" />
             <img src={tennisImg} alt="Tennis Connect" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-2xl" />
             <div className="absolute bottom-0 left-0 p-6 md:p-10 z-20 w-full">
-              <div className="mb-3 px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-mono inline-block backdrop-blur-md">SPORT TECH</div>
-              <h3 className="text-2xl md:text-4xl font-display font-bold mb-2">Tennis Connect</h3>
-              <p className="text-gray-300 text-sm md:text-base max-w-md">Professional tennis court booking and community platform.</p>
+              <div className="mb-3 ml-1 md:ml-0 px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-xs font-mono inline-block backdrop-blur-md">SPORT TECH</div>
+              <h3 className="text-2xl md:text-4xl font-display font-bold mb-2 ml-1 md:ml-0">Tennis Connect</h3>
+              <p className="text-gray-300 text-sm md:text-base max-w-md ml-1 md:ml-0 mb-2 md:mb-0">Professional tennis court booking and community platform.</p>
             </div>
           </motion.div>
         </div>
